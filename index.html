@@ -3,307 +3,315 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="description" content="陪一个女孩从七岁走到三十岁：200天、六个成长阶段、分阶段指标体系与回忆碎片图鉴。名字由你来取。">
-<meta name="color-scheme" content="dark">
+<meta name="description" content="陪一个女孩从七岁走到三十岁：三时段日程、地图探索、商店送礼、爱好养成、回忆碎片图鉴，名字由你来取。">
+<meta name="color-scheme" content="light">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌞</text></svg>">
 <style>
 :root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
-html{color-scheme:dark}
-body{margin:0;font:14px/1.5 system-ui,-apple-system,sans-serif;background:#191411}
+html{color-scheme:light}
+body{margin:0;font:14px/1.5 system-ui,-apple-system,sans-serif;background:#FFF8EE}
 img{max-width:100%}
 [hidden]{display:none!important}
-
-/* ---- 人物与场景 ---- */
-.card.pic{padding:0;overflow:hidden}
-.band{display:block;width:100%;height:70px}
-.evbody{padding:0 18px 2px;display:grid;grid-template-columns:100px 1fr;gap:15px;align-items:start}
-.pfwrap{margin-top:-52px}
-.pt{display:block;border-radius:12px;box-shadow:0 12px 26px -16px #000,0 0 0 2px var(--panel2)}
-.evfoot{padding:4px 18px 16px}
-.hd{border-radius:50%;background:#2A221B;display:block}
-.ava{overflow:hidden;background:none!important;box-shadow:0 0 0 1px rgba(240,196,78,.35),0 6px 16px -9px rgba(232,134,79,.9)!important}
-.ava.sad{box-shadow:0 0 0 1px rgba(140,130,120,.4)!important}
-.todaystrip{display:flex;flex-wrap:wrap;gap:6px 14px;align-items:baseline;
-  border-top:1px dashed var(--line2);border-bottom:1px dashed var(--line2);
-  padding:9px 0;margin:14px 0 2px;font-size:12px;color:var(--tx3)}
-.todaystrip b{color:var(--tx2);font-weight:400}
-.todaystrip .sep{color:var(--line3)}
-.bigpt{display:flex;gap:18px;align-items:center;flex-wrap:wrap}
-@media(max-width:480px){
-  .evbody{grid-template-columns:76px 1fr;gap:11px;padding:0 14px 2px}
-  .pfwrap{margin-top:-40px}
-  .evfoot{padding:4px 14px 14px}
-  .band{height:58px}
-}
 </style>
+</head>
+<body>
 <title>伴她长大</title>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=ZCOOL+QingKe+HuangYou&family=Noto+Sans+SC:wght@300;400;500;700&family=Space+Mono:wght@400;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=ZCOOL+QingKe+HuangYou&family=Baloo+2:wght@500;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap">
 <style>
 :root{
-  --ink:#171310; --ink2:#1E1915; --panel:#241E19; --panel2:#2B241D; --raise:#342B22;
-  --line:#3A3028; --line2:#4E4136; --line3:#6B5A49;
-  --tx:#F6EFE5; --tx2:#C0B2A3; --tx3:#8C7C6D;
-  --her:#E8864F; --sun:#F0C44E; --sys:#8CBBA8;
-  --good:#8FC08B; --bad:#DE7266; --cream:#FCF6EC;
-  --r:10px;
-  --sh1:0 1px 0 rgba(255,236,206,.045) inset;
-  --sh2:0 20px 46px -30px rgba(0,0,0,.95);
-  color-scheme:dark;
+  --cream:#FFF8EE; --paper:#FFFFFF; --soft:#FFF2E2; --soft2:#FFE8D2;
+  --pink:#FFD9E3; --pink2:#F2789E; --sky:#D6EAF8; --sky2:#5BA7D9;
+  --orange:#FF9A52; --gold:#F5B82E; --mint:#CDEBDC; --mint2:#4FAE86;
+  --ink:#4B3A32; --ink2:#7A6558; --ink3:#A7948A;
+  --line:#F0E0CC; --line2:#E4CFB4;
+  --bad:#C9564C; --bad2:#F7DEDA; --cool:#7D93A8;
+  --r:14px; --rs:10px;
+  --sh:0 10px 28px -18px rgba(120,85,50,.55);
+  --sh2:0 2px 0 rgba(255,255,255,.9) inset, 0 12px 30px -20px rgba(120,85,50,.6);
+  color-scheme:light;
 }
 *{box-sizing:border-box}
 html,body{height:100%}
-body{margin:0;background:var(--ink);color:var(--tx);
-  -webkit-text-size-adjust:100%;text-size-adjust:100%;overflow-x:hidden;
+body{margin:0;background:var(--cream);color:var(--ink);
   font-family:"Noto Sans SC",-apple-system,BlinkMacSystemFont,"PingFang SC",sans-serif;
-  font-size:15px;line-height:1.75;-webkit-font-smoothing:antialiased;
+  font-size:15px;line-height:1.7;-webkit-font-smoothing:antialiased;
+  -webkit-text-size-adjust:100%;text-size-adjust:100%;overflow-x:hidden;
   background-image:
-    radial-gradient(1000px 520px at 86% -14%, rgba(240,196,78,.13), transparent 58%),
-    radial-gradient(760px 440px at 2% 104%, rgba(232,134,79,.10), transparent 60%),
-    linear-gradient(180deg, rgba(255,255,255,.012), transparent 30%);
+    radial-gradient(900px 420px at 88% -10%, rgba(255,217,227,.55), transparent 62%),
+    radial-gradient(760px 420px at 4% 8%, rgba(214,234,248,.5), transparent 60%),
+    radial-gradient(700px 400px at 50% 108%, rgba(245,184,46,.18), transparent 64%);
   background-attachment:fixed}
-.wrap{max-width:660px;margin:0 auto;padding:0 20px;padding-block:0 60px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 16px;padding-block:0 92px}
 
-/* ================= HUD ================= */
-.hud{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;
-  background:linear-gradient(180deg,rgba(23,19,16,.986) 72%,rgba(23,19,16,.84));
-  backdrop-filter:blur(12px);margin:0 -20px;padding:10px 20px 13px;
-  border-bottom:1px solid var(--line)}
-.hudtop{display:flex;align-items:center;gap:10px;margin-bottom:10px}
-.agebox{display:flex;align-items:baseline;gap:6px;padding:2px 11px 3px;border-radius:99px;
-  background:radial-gradient(70% 140% at 50% 120%, rgba(240,196,78,.26), rgba(240,196,78,.06));
-  border:1px solid rgba(240,196,78,.34)}
-.agebox s{text-decoration:none;font-family:"Space Mono",monospace;font-size:9.5px;letter-spacing:.2em;color:var(--sun);opacity:.8}
-.agebox b{font-family:"ZCOOL QingKe HuangYou",cursive;font-size:21px;color:var(--cream);line-height:1.1}
-.agebox u{text-decoration:none;font-size:10.5px;color:var(--sun)}
-.stg{font-size:12px;color:var(--tx2);letter-spacing:.06em}
-.dayno{font-family:"Space Mono",monospace;font-size:10.5px;color:var(--tx3);letter-spacing:.06em}
-.frag{margin-left:auto;font-family:"Space Mono",monospace;font-size:11px;color:var(--sys);
-  border:1px solid rgba(140,187,168,.38);padding:3px 10px;border-radius:99px;cursor:pointer;background:rgba(140,187,168,.05);
-  transition:.18s;white-space:nowrap}
-@media(hover:hover){.frag:hover{background:rgba(140,187,168,.16);border-color:var(--sys)}}
-.frag.pump{animation:pump .7s cubic-bezier(.3,1.5,.4,1)}
-.frag.crack{animation:crk .66s ease}
-@keyframes pump{0%{transform:scale(1)}26%{transform:scale(1.22)}55%{transform:scale(.97)}100%{transform:scale(1)}}
-@keyframes crk{0%,100%{transform:translateX(0)}20%{transform:translateX(-4px)}40%{transform:translateX(4px)}60%{transform:translateX(-3px)}80%{transform:translateX(2px)}}
-
-.spine{display:flex;gap:3px;margin-bottom:11px}
-.spine i{height:4px;flex:1;background:#2E2721;border-radius:99px;position:relative;overflow:hidden}
-.spine i.done{background:var(--line3)}
-.spine i.now{background:#38302a}
+/* ===== 顶部状态栏 ===== */
+.topbar{position:sticky;top:env(safe-area-inset-top,0px);z-index:30;margin:0 -16px 0;padding:9px 16px;
+  background:rgba(255,248,238,.93);backdrop-filter:blur(12px);border-bottom:2px solid var(--line)}
+.tb{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.pill{display:inline-flex;align-items:center;gap:5px;background:var(--paper);border:1.5px solid var(--line2);
+  border-radius:99px;padding:3px 11px;font-size:12px;color:var(--ink2);box-shadow:0 2px 0 rgba(228,207,180,.5)}
+.pill b{font-family:"Baloo 2","ZCOOL QingKe HuangYou",cursive;font-size:16px;color:var(--ink);line-height:1}
+.pill.day{background:linear-gradient(180deg,#FFF,var(--soft));border-color:var(--gold)}
+.pill.age{background:linear-gradient(180deg,#FFF7E2,#FFE9BC);border-color:var(--gold)}
+.pill.coin{background:linear-gradient(180deg,#FFFBEA,#FFF0C2);border-color:#E9C45E;color:#8A6A14}
+.pill.coin b{color:#8A6A14}
+.pill.mood{background:var(--paper)}
+.pill.stage{background:linear-gradient(180deg,#FFF,var(--pink));border-color:#F3BCCB;color:#9C4A63}
+.pill.season{background:linear-gradient(180deg,#FFF,var(--sky));border-color:#AFD4EC;color:#2E6B95}
+.spine{display:flex;gap:3px;margin-top:8px}
+.spine i{height:5px;flex:1;background:#F2E3D0;border-radius:99px;position:relative;overflow:hidden}
+.spine i.done{background:var(--line2)}
 .spine i.now::after{content:"";position:absolute;inset:0;width:var(--p,0%);
-  background:linear-gradient(90deg,var(--her),var(--sun));border-radius:99px}
+  background:linear-gradient(90deg,var(--orange),var(--gold));border-radius:99px}
 
-.grp{font-family:"Space Mono",monospace;font-size:9px;letter-spacing:.2em;color:var(--tx3);
-  margin:2px 0 5px;display:flex;align-items:center;gap:8px}
+/* ===== 三栏布局 ===== */
+.game{display:grid;grid-template-columns:208px minmax(0,1fr) 220px;gap:14px;margin-top:14px;align-items:start}
+@media(max-width:900px){.game{grid-template-columns:1fr;gap:11px}}
+
+.panel{background:var(--paper);border:2px solid var(--line);border-radius:var(--r);
+  box-shadow:var(--sh);overflow:hidden}
+.phead{font-size:11px;letter-spacing:.14em;color:var(--ink3);padding:9px 13px 0;font-weight:500}
+.pbody{padding:11px 13px 13px}
+
+/* 人物卡 */
+.chcard{text-align:center}
+.chcard .frame{background:linear-gradient(170deg,var(--sky),var(--pink));padding:12px 10px 0;position:relative}
+.chcard .frame::after{content:"";position:absolute;inset:auto 0 0 0;height:22px;
+  background:linear-gradient(180deg,transparent,var(--paper))}
+.pt{display:block;margin:0 auto;position:relative;z-index:1;filter:drop-shadow(0 8px 14px rgba(120,85,50,.25))}
+.chname{font-family:"ZCOOL QingKe HuangYou",cursive;font-size:21px;margin-top:4px}
+.chsub{font-size:11.5px;color:var(--ink3);margin-top:-2px}
+.chdesc{font-size:12px;color:var(--ink2);line-height:1.65;margin-top:8px;text-align:left;
+  background:var(--soft);border-radius:var(--rs);padding:8px 10px}
+.tags{display:flex;flex-wrap:wrap;gap:4px;margin-top:9px;justify-content:center}
+.tag{font-size:10.5px;background:var(--soft2);border:1px solid var(--line2);color:#9A6B3C;
+  border-radius:99px;padding:1px 8px}
+.tag.p{background:var(--pink);border-color:#F3BCCB;color:#9C4A63}
+.tag.s{background:var(--sky);border-color:#AFD4EC;color:#2E6B95}
+
+/* 属性条 */
+.stat{margin-bottom:9px}
+.stat .l{display:flex;justify-content:space-between;align-items:baseline;font-size:11.5px;color:var(--ink2)}
+.stat .l b{font-family:"Baloo 2",monospace;font-size:13px;color:var(--ink);font-variant-numeric:tabular-nums}
+.stat .l .dt{font-size:10px;margin-left:3px}
+.stat .t{height:9px;border-radius:99px;background:#F3E6D6;overflow:hidden;margin-top:3px;position:relative;
+  border:1px solid rgba(0,0,0,.04)}
+.stat .f{height:100%;border-radius:99px;transition:width .5s cubic-bezier(.2,.8,.3,1)}
+.grp{font-size:10px;letter-spacing:.16em;color:var(--ink3);margin:3px 0 7px;display:flex;align-items:center;gap:7px}
 .grp::after{content:"";flex:1;height:1px;background:var(--line)}
-.bars{display:grid;grid-template-columns:1fr 1fr;gap:5px 18px;margin-bottom:7px}
-.bar{display:grid;grid-template-columns:1fr auto;gap:1px 8px;align-items:baseline}
-.bar .n{font-size:11px;color:var(--tx2);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.bar .v{font-family:"Space Mono",monospace;font-size:12.5px;font-variant-numeric:tabular-nums;text-align:right}
-.bar .t{grid-column:1/3;height:5px;background:#2E2721;border-radius:99px;position:relative;overflow:hidden;margin-top:1px}
-.bar .f{height:100%;border-radius:99px;transition:width .55s cubic-bezier(.2,.8,.3,1)}
-.bar .t::after{content:"";position:absolute;top:0;bottom:0;width:1px;background:rgba(255,255,255,.18);left:60%}
-.bar.rev .t::after{left:40%}
-.bar .dt{font-family:"Space Mono",monospace;font-size:9.5px;margin-left:4px}
-.bar.low .v{color:var(--bad)} .bar.hi .v{color:var(--good)}
+.up{color:var(--mint2)}.dn{color:var(--bad)}
 
-.chips{display:flex;flex-wrap:wrap;gap:5px;margin-top:9px}
-.chip{font-size:10.5px;padding:2px 9px;border-radius:99px;border:1px solid var(--line2);color:var(--tx2)}
-.chip.b{border-color:rgba(143,192,139,.45);color:var(--good);background:rgba(143,192,139,.08)}
-.chip.d{border-color:rgba(222,114,102,.45);color:var(--bad);background:rgba(222,114,102,.08)}
-
-/* ================= 版式 ================= */
-h1{font-family:"ZCOOL QingKe HuangYou",cursive;font-size:40px;font-weight:400;letter-spacing:.03em;
-  margin:34px 0 8px;line-height:1.25;text-wrap:balance}
-h1 small{display:block;font-family:"Noto Sans SC";font-size:11.5px;font-weight:300;letter-spacing:.34em;
-  color:var(--sun);margin-bottom:12px;opacity:.85}
-.lede{color:var(--tx2);font-size:14.5px;max-width:44em}
-.eyebrow{font-size:10.5px;letter-spacing:.24em;color:var(--tx3);font-family:"Space Mono",monospace}
-
-.daybar{display:flex;align-items:center;gap:10px;margin:18px 0 2px}
-.daybar .d{font-family:"ZCOOL QingKe HuangYou",cursive;font-size:19px;color:var(--cream)}
-.daybar .s{font-size:11.5px;color:var(--tx3)}
-.daybar::after{content:"";flex:1;height:1px;background:linear-gradient(90deg,var(--line2),transparent)}
-
-.card{background:linear-gradient(180deg,var(--panel2),var(--panel));border:1px solid var(--line);
-  border-radius:var(--r);padding:18px 18px 16px;box-shadow:var(--sh1),var(--sh2);margin-top:14px}
-.card.tight{padding:14px 16px}
-.scene{color:var(--tx2);font-size:14.5px;line-height:1.95}
-.scene::before{content:"";display:block;width:22px;height:3px;border-radius:3px;
-  background:linear-gradient(90deg,var(--sun),var(--her));margin-bottom:12px}
-
-.say{display:flex;gap:11px;margin-top:16px;align-items:flex-start}
-.ava{flex:0 0 36px;height:36px;border-radius:50%;display:grid;place-items:center;
-  font-family:"ZCOOL QingKe HuangYou",cursive;font-size:16px;color:#2A1A10;
-  background:linear-gradient(150deg,#FAD591,#E8864F);
-  box-shadow:0 0 0 1px rgba(240,196,78,.3),0 6px 18px -8px rgba(232,134,79,.9)}
-.ava.sad{background:linear-gradient(150deg,#8E8077,#5A4F47);color:#E6DCD2;box-shadow:none}
-.bub{background:var(--raise);border:1px solid var(--line2);border-radius:4px 14px 14px 14px;
-  padding:11px 15px;font-size:15.5px;line-height:1.9;color:var(--cream);max-width:100%;box-shadow:var(--sh1)}
+/* ===== 中间舞台 ===== */
+.stage{min-height:260px}
+.band{display:block;width:100%;height:86px}
+.sbody{padding:14px 16px 16px}
+.scenetag{display:inline-block;font-size:11px;background:var(--soft);border:1px solid var(--line2);
+  border-radius:99px;padding:1px 10px;color:var(--ink2);margin-bottom:9px}
+.story{font-size:15px;line-height:1.95;color:var(--ink)}
+.story b{color:var(--pink2)}
+.say{display:flex;gap:10px;margin-top:13px;align-items:flex-start}
+.ava{flex:0 0 42px;height:42px;border-radius:50%;overflow:hidden;background:linear-gradient(170deg,var(--sky),var(--pink));
+  box-shadow:0 4px 10px -5px rgba(120,85,50,.6)}
+.bub{background:var(--soft);border:1.5px solid var(--line2);border-radius:4px 14px 14px 14px;
+  padding:10px 14px;font-size:15px;line-height:1.85;max-width:100%}
 .me{justify-content:flex-end}
-.me .bub{background:#262D27;border-color:#3A453A;border-radius:14px 4px 14px 14px;color:var(--tx)}
-.react{margin-top:14px;padding-left:47px}
+.me .bub{background:var(--sky);border-color:#AFD4EC;border-radius:14px 4px 14px 14px}
 
-/* ================= 选项 ================= */
-.opts{display:flex;flex-direction:column;gap:9px;margin-top:18px}
-.opt{touch-action:manipulation;text-align:left;background:var(--ink2);border:1px solid var(--line);color:var(--tx);
-  border-radius:8px;padding:12px 15px;cursor:pointer;font:inherit;font-size:14.5px;line-height:1.7;
-  display:grid;grid-template-columns:auto 1fr;gap:3px 11px;align-items:baseline;
-  transition:border-color .18s,background .18s,transform .18s,box-shadow .18s}
-@media(hover:hover){.opt:hover{border-color:var(--her);background:#2B2219;transform:translateY(-1px);
-  box-shadow:0 8px 22px -16px rgba(232,134,79,.9)}}
-.opt:focus-visible{outline:2px solid var(--sun);outline-offset:2px}
-.opt .k{font-family:"Space Mono",monospace;font-size:11px;color:var(--her);opacity:.85}
-.opt .tag{grid-column:2;font-size:10.5px;color:var(--tx3)}
+.opts{display:flex;flex-direction:column;gap:8px;margin-top:14px}
+.opt{text-align:left;background:var(--paper);border:2px solid var(--line);border-radius:var(--rs);
+  padding:11px 14px;cursor:pointer;font:inherit;font-size:14.5px;color:var(--ink);transition:.16s;
+  display:grid;grid-template-columns:auto 1fr;gap:2px 10px;align-items:baseline;touch-action:manipulation}
+.opt .k{font-family:"Baloo 2",monospace;font-size:12px;color:var(--orange)}
 .opt .tx{grid-column:2;grid-row:1}
-.opt[disabled]{opacity:.34;cursor:default;transform:none}
-.opt.picked{border-color:var(--her);background:#31261B;opacity:1;box-shadow:var(--sh1)}
+.opt .tag2{grid-column:2;font-size:10.5px;color:var(--ink3)}
+@media(hover:hover){.opt:hover{border-color:var(--orange);background:var(--soft);transform:translateY(-1px);
+  box-shadow:0 8px 18px -14px rgba(255,154,82,.95)}}
+.opt:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+.opt[disabled]{opacity:.5;cursor:default}
+.opt.picked{border-color:var(--orange);background:var(--soft2)}
 
-/* ================= 日程 ================= */
-.routine{display:flex;gap:13px;align-items:flex-start;border-radius:var(--r);
-  background:linear-gradient(100deg,rgba(240,196,78,.10),rgba(240,196,78,.02));
-  border:1px solid rgba(240,196,78,.22);padding:12px 15px;margin-top:14px}
-.routine .ic{flex:0 0 34px;height:34px;border-radius:9px;display:grid;place-items:center;font-size:17px;
-  background:rgba(240,196,78,.14);border:1px solid rgba(240,196,78,.28)}
-.routine .h{font-size:13.5px;color:var(--sun);letter-spacing:.04em}
-.routine .p{font-size:12.5px;color:var(--tx2);line-height:1.7;margin-top:1px}
+/* ===== 底部菜单 ===== */
+.menu{position:fixed;left:0;right:0;bottom:0;z-index:40;background:rgba(255,248,238,.96);
+  backdrop-filter:blur(12px);border-top:2px solid var(--line);
+  padding:8px 12px calc(8px + env(safe-area-inset-bottom,0px))}
+.menuin{max-width:1080px;margin:0 auto;display:grid;grid-template-columns:repeat(8,1fr);gap:6px}
+@media(max-width:700px){.menuin{grid-template-columns:repeat(4,1fr)}}
+.mb{background:var(--paper);border:2px solid var(--line);border-radius:12px;padding:6px 2px 5px;
+  font:inherit;font-size:11px;color:var(--ink2);cursor:pointer;transition:.16s;touch-action:manipulation;
+  display:flex;flex-direction:column;align-items:center;gap:1px;line-height:1.25}
+.mb i{font-style:normal;font-size:17px}
+@media(hover:hover){.mb:hover{border-color:var(--orange);background:var(--soft);color:var(--ink)}}
+.mb.on{border-color:var(--orange);background:var(--soft2);color:#9A5A1E}
+.mb[disabled]{opacity:.42;cursor:default}
 
-.agrid{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-top:14px}
-.act{touch-action:manipulation;text-align:left;background:var(--ink2);border:1px solid var(--line);
-  border-radius:9px;padding:12px 13px;cursor:pointer;font:inherit;color:var(--tx);
-  display:flex;flex-direction:column;gap:6px;transition:.18s;min-height:92px}
-@media(hover:hover){.act:hover{border-color:var(--sun);background:#2B2419;transform:translateY(-2px);
-  box-shadow:0 10px 24px -18px rgba(240,196,78,.9)}}
-.act:focus-visible{outline:2px solid var(--sun);outline-offset:2px}
-.act .an{font-size:14.5px;line-height:1.4}
-.act .at{font-size:11.5px;color:var(--tx3);line-height:1.55;flex:1}
-.act .fx{display:flex;flex-wrap:wrap;gap:4px}
-.act.sp{background:linear-gradient(140deg,rgba(232,134,79,.13),var(--ink2));border-color:rgba(232,134,79,.45)}
-.act.sp .an{color:var(--her)}
-.eff{font-size:10px;padding:1px 7px;border-radius:99px;font-family:"Space Mono",monospace;letter-spacing:.02em;white-space:nowrap}
-.eff.u{background:rgba(143,192,139,.14);color:#A9D5A4;border:1px solid rgba(143,192,139,.3)}
-.eff.d{background:rgba(222,114,102,.13);color:#E9968C;border:1px solid rgba(222,114,102,.3)}
+/* ===== 通用块 ===== */
+.btn{display:inline-flex;align-items:center;gap:7px;background:linear-gradient(180deg,#FFB877,var(--orange));
+  border:none;color:#fff;padding:11px 24px;border-radius:99px;font:inherit;font-size:14px;font-weight:500;
+  cursor:pointer;transition:.16s;margin-top:14px;box-shadow:0 6px 16px -8px rgba(255,154,82,.9);touch-action:manipulation}
+@media(hover:hover){.btn:hover{filter:brightness(1.06);transform:translateY(-1px)}}
+.btn.g{background:linear-gradient(180deg,#8FD3B5,var(--mint2));box-shadow:0 6px 16px -8px rgba(79,174,134,.9)}
+.btn.w{background:var(--paper);color:var(--ink2);border:2px solid var(--line2);box-shadow:none}
+.btn:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+.row{display:flex;flex-wrap:wrap;gap:9px;align-items:center}
 
-/* ================= 按钮 ================= */
-.btn{touch-action:manipulation;display:inline-flex;align-items:center;gap:8px;
-  background:linear-gradient(180deg,rgba(232,134,79,.16),rgba(232,134,79,.06));
-  border:1px solid var(--her);color:#FFD9BE;padding:10px 22px;border-radius:99px;
-  font:inherit;font-size:13.5px;letter-spacing:.05em;cursor:pointer;transition:.18s;margin-top:18px}
-@media(hover:hover){.btn:hover{background:var(--her);color:#1B1208;box-shadow:0 10px 26px -16px rgba(232,134,79,1)}}
-.btn.g{border-color:var(--sys);color:#BCE0D1;background:linear-gradient(180deg,rgba(140,187,168,.16),rgba(140,187,168,.05))}
-@media(hover:hover){.btn.g:hover{background:var(--sys);color:#10201B}}
-.btn.q{border-color:var(--line2);color:var(--tx2);background:none;font-size:12px;padding:7px 15px}
-@media(hover:hover){.btn.q:hover{background:var(--raise);color:var(--tx)}}
-.btn:focus-visible{outline:2px solid var(--sun);outline-offset:3px}
-.row{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+.note{border-radius:var(--rs);padding:9px 13px;margin-top:12px;font-size:13px;border:1.5px solid}
+.note.y{background:#FFF6DC;border-color:#EFD796;color:#8A6A14}
+.note.p{background:#FFF0F4;border-color:#F3BCCB;color:#9C4A63}
+.note.b{background:#EEF7FD;border-color:#AFD4EC;color:#2E6B95}
+.note.r{background:var(--bad2);border-color:#E9B6AF;color:#A33E35}
+.note.g{background:#EDF8F2;border-color:#B6E0CB;color:#2F7A58}
 
-.banner{border-radius:8px;border:1px solid rgba(240,196,78,.3);
-  background:linear-gradient(100deg,rgba(240,196,78,.13),transparent 76%);
-  padding:10px 15px;margin-top:16px;font-size:13px;color:var(--sun)}
-.banner.v{border-color:rgba(232,134,79,.35);background:linear-gradient(100deg,rgba(232,134,79,.14),transparent 76%);color:#F7A878}
-.banner.c{border-color:rgba(222,114,102,.38);background:linear-gradient(100deg,rgba(222,114,102,.14),transparent 76%);color:#EE9388}
-.banner.s{border-color:rgba(140,187,168,.35);background:linear-gradient(100deg,rgba(140,187,168,.13),transparent 76%);color:#A6D3C0}
+/* 栅格卡（活动/商店/地图/图鉴） */
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(168px,1fr));gap:10px;margin-top:12px}
+.gc{background:var(--paper);border:2px solid var(--line);border-radius:var(--rs);padding:11px 12px;
+  cursor:pointer;font:inherit;color:var(--ink);text-align:left;transition:.16s;display:flex;flex-direction:column;gap:5px;
+  touch-action:manipulation}
+@media(hover:hover){.gc:hover{border-color:var(--orange);transform:translateY(-2px);box-shadow:0 10px 20px -16px rgba(255,154,82,1)}}
+.gc[disabled]{opacity:.45;cursor:default;transform:none}
+.gc .n{font-size:14.5px;display:flex;align-items:center;gap:6px}
+.gc .n em{font-style:normal;font-size:17px}
+.gc .d{font-size:11.5px;color:var(--ink3);line-height:1.5;flex:1}
+.gc .fx{display:flex;flex-wrap:wrap;gap:4px}
+.gc .price{font-family:"Baloo 2",monospace;font-size:13px;color:#8A6A14;background:#FFF4D4;
+  border:1px solid #EFD796;border-radius:99px;padding:0 8px;align-self:flex-start}
+.gc .stars{font-size:11px;color:var(--gold);letter-spacing:1px}
+.eff{font-size:10px;padding:1px 7px;border-radius:99px;border:1px solid}
+.eff.u{background:#EDF8F2;border-color:#B6E0CB;color:#2F7A58}
+.eff.d{background:var(--bad2);border-color:#E9B6AF;color:#A33E35}
 
-.deltas{display:grid;grid-template-columns:repeat(auto-fit,minmax(102px,1fr));gap:8px;margin-top:14px}
-.dl{border:1px solid var(--line);border-radius:7px;padding:9px 11px;background:var(--ink2)}
-.dl .n{font-size:11px;color:var(--tx3)}
-.dl .v{font-family:"Space Mono",monospace;font-size:17px;font-variant-numeric:tabular-nums}
-.dl .c{font-family:"Space Mono",monospace;font-size:11px;margin-left:5px}
-.up{color:var(--good)}.dn{color:var(--bad)}.fl{color:var(--tx3)}
+/* 日程三时段 */
+.slots{display:grid;grid-template-columns:repeat(3,1fr);gap:9px;margin-top:12px}
+@media(max-width:560px){.slots{grid-template-columns:1fr}}
+.slot{border:2px dashed var(--line2);border-radius:var(--rs);padding:10px 11px;background:var(--soft);min-height:74px}
+.slot.filled{border-style:solid;background:var(--paper);border-color:var(--orange)}
+.slot .h{font-size:11px;color:var(--ink3);letter-spacing:.1em}
+.slot .v{font-size:14px;margin-top:3px}
+.slot .v.e{color:var(--ink3)}
+.slot.cur{box-shadow:0 0 0 3px rgba(245,184,46,.35)}
 
-/* ================= 图鉴 ================= */
-.fgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(152px,1fr));gap:9px;margin-top:14px}
-.fc{border:1px solid var(--line);background:var(--ink2);padding:11px 12px;border-radius:8px;cursor:pointer;
-  text-align:left;font:inherit;color:var(--tx);transition:.18s;min-height:72px}
-.fc .r{font-family:"Space Mono",monospace;font-size:9px;letter-spacing:.16em}
-.fc .t{font-size:13.5px;margin-top:4px;line-height:1.5}
-.fc.lock{opacity:.26;cursor:default}
-.fc.n{border-color:var(--line2)} .fc.n .r{color:var(--tx3)}
-.fc.r2{border-color:rgba(240,196,78,.5);background:linear-gradient(145deg,rgba(240,196,78,.07),var(--ink2))} .fc.r2 .r{color:var(--sun)}
-.fc.r3{border-color:rgba(232,134,79,.65);background:linear-gradient(145deg,rgba(232,134,79,.13),var(--ink2));
-  box-shadow:0 0 22px -14px rgba(232,134,79,1)} .fc.r3 .r{color:var(--her)}
-@media(hover:hover){.fc:not(.lock):hover{border-color:var(--sun);transform:translateY(-2px)}}
-.story{border-left:3px solid var(--sun);padding:6px 0 6px 17px;margin-top:16px;color:var(--cream);font-size:15.5px;line-height:2.05}
+/* 爱好 */
+.hb{background:var(--paper);border:2px solid var(--line);border-radius:var(--rs);padding:11px 13px;margin-top:9px}
+.hb .top{display:flex;justify-content:space-between;align-items:baseline;gap:8px}
+.hb .lv{font-size:11.5px;color:#9A5A1E;background:var(--soft2);border:1px solid var(--line2);border-radius:99px;padding:0 9px}
+.hb .t{height:8px;border-radius:99px;background:#F3E6D6;overflow:hidden;margin-top:6px}
+.hb .f{height:100%;background:linear-gradient(90deg,var(--gold),var(--orange))}
+.hb .sk{font-size:11.5px;color:var(--ink3);margin-top:5px}
 
-.nameform{display:flex;gap:11px;flex-wrap:wrap;align-items:center;margin-top:20px}
-.nameform input{background:var(--ink2);border:1px solid var(--line2);color:var(--tx);font:inherit;font-size:18px;
-  padding:11px 16px;border-radius:9px;width:210px;max-width:100%;text-align:center;letter-spacing:.1em;
-  font-family:"ZCOOL QingKe HuangYou",cursive}
-.nameform input:focus{outline:2px solid var(--sun);outline-offset:2px;border-color:var(--sun)}
+/* 碎片 */
+.fc{background:var(--paper);border:2px solid var(--line);border-radius:var(--rs);padding:11px 12px;cursor:pointer;
+  font:inherit;color:var(--ink);text-align:left;transition:.16s;min-height:76px;touch-action:manipulation}
+.fc .r{font-size:9.5px;letter-spacing:.14em;font-family:"Baloo 2",monospace}
+.fc .t{font-size:13.5px;margin-top:4px;line-height:1.45}
+.fc.lock{opacity:.4;cursor:default;background:var(--soft)}
+.fc.n{border-color:var(--line2)} .fc.n .r{color:var(--ink3)}
+.fc.r2{border-color:var(--gold);background:linear-gradient(160deg,#FFF9E6,var(--paper))} .fc.r2 .r{color:#B8860B}
+.fc.r3{border-color:var(--pink2);background:linear-gradient(160deg,#FFF0F5,var(--paper));
+  box-shadow:0 6px 18px -12px rgba(242,120,158,.9)} .fc.r3 .r{color:var(--pink2)}
+@media(hover:hover){.fc:not(.lock):hover{transform:translateY(-2px)}}
+.fstory{background:var(--soft);border-left:4px solid var(--gold);border-radius:0 var(--rs) var(--rs) 0;
+  padding:13px 16px;margin-top:14px;font-size:15px;line-height:2}
+
+/* 弹窗 */
+.mask{position:fixed;inset:0;z-index:60;background:rgba(75,58,50,.42);backdrop-filter:blur(3px);
+  display:grid;place-items:center;padding:18px}
+.modal{background:var(--paper);border:3px solid var(--gold);border-radius:18px;max-width:460px;width:100%;
+  box-shadow:0 30px 60px -28px rgba(90,60,30,.7);overflow:hidden;max-height:86vh;overflow-y:auto}
+.modal .mh{background:linear-gradient(180deg,#FFF3D6,#FFE6B8);padding:11px 16px;font-size:14px;color:#8A6A14;
+  border-bottom:2px solid #EFD796;display:flex;align-items:center;gap:7px}
+.modal .mb2{padding:14px 16px 16px}
+.modal.bad{border-color:#E9B6AF}.modal.bad .mh{background:linear-gradient(180deg,#FDECEA,#F9DAD6);color:#A33E35;border-bottom-color:#E9B6AF}
+.modal.good{border-color:#B6E0CB}.modal.good .mh{background:linear-gradient(180deg,#EDF8F2,#DBF0E5);color:#2F7A58;border-bottom-color:#B6E0CB}
+
+/* 开场 */
+h1{font-family:"ZCOOL QingKe HuangYou",cursive;font-size:44px;font-weight:400;margin:26px 0 8px;line-height:1.2}
+h1 small{display:block;font-family:"Noto Sans SC";font-size:12px;font-weight:300;letter-spacing:.3em;color:var(--orange);margin-bottom:10px}
+h2{font-family:"ZCOOL QingKe HuangYou",cursive;font-size:26px;font-weight:400;margin:0 0 6px}
+.lede{color:var(--ink2);font-size:14.5px;max-width:42em}
+.nameform{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-top:18px}
+.nameform input{background:var(--paper);border:2px solid var(--line2);border-radius:12px;color:var(--ink);
+  font-family:"ZCOOL QingKe HuangYou",cursive;font-size:20px;padding:10px 16px;width:220px;max-width:100%;text-align:center}
+.nameform input:focus{outline:3px solid var(--gold);outline-offset:1px;border-color:var(--gold)}
 .nameform .btn{margin-top:0}
-.hint{font-size:12px;color:var(--tx3);margin-top:9px}
+.hint{font-size:12px;color:var(--ink3);margin-top:8px}
+.qnum{font-size:11px;letter-spacing:.16em;color:var(--orange);font-family:"Baloo 2",monospace}
+.qtxt{font-size:19px;line-height:1.7;margin:7px 0 2px}
+.prog{display:flex;gap:4px;margin-top:14px}
+.prog i{height:4px;flex:1;background:#F3E6D6;border-radius:99px}
+.prog i.on{background:linear-gradient(90deg,var(--orange),var(--gold))}
 
-.qnum{font-family:"Space Mono",monospace;font-size:10.5px;letter-spacing:.18em;color:var(--sun)}
-.qtxt{font-size:19px;line-height:1.75;margin:9px 0 2px;text-wrap:balance}
-.prog{display:flex;gap:4px;margin-top:16px}
-.prog i{height:3px;flex:1;background:#2E2721;border-radius:99px}
-.prog i.on{background:linear-gradient(90deg,var(--her),var(--sun))}
-
-.end{text-align:center;padding:26px 0}
-.end .tier{font-family:"Space Mono",monospace;font-size:10.5px;letter-spacing:.28em;color:var(--sun)}
-.end h2{font-family:"ZCOOL QingKe HuangYou",cursive;font-size:32px;margin:12px 0 16px;font-weight:400}
-.end p{color:var(--tx2);text-align:left;max-width:40em;margin:0 auto 12px;font-size:14.5px}
-.fin{color:var(--cream);font-size:16.5px;line-height:2.05;text-align:left;max-width:40em;margin:20px auto 0;
-  border-left:3px solid var(--her);padding-left:17px}
+/* 结算 */
+.gradebox{display:flex;align-items:center;gap:16px;flex-wrap:wrap;justify-content:center;margin:10px 0 4px}
+.grade{font-family:"Baloo 2",cursive;font-size:62px;line-height:1;width:104px;height:104px;border-radius:26px;
+  display:grid;place-items:center;color:#fff;box-shadow:0 14px 30px -16px rgba(0,0,0,.5)}
+.grade.S{background:linear-gradient(160deg,#FFD66B,#F09A2C)}
+.grade.A{background:linear-gradient(160deg,#9BD9B6,#4FAE86)}
+.grade.B{background:linear-gradient(160deg,#AFD4EC,#5BA7D9)}
+.grade.C{background:linear-gradient(160deg,#E7C9E0,#B07AA6)}
+.grade.D{background:linear-gradient(160deg,#B6C4D2,#7D93A8)}
+.grade.E{background:linear-gradient(160deg,#E9A79F,#C9564C)}
+.kw{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:9px;margin-top:12px}
+.kwc{background:var(--soft);border:1.5px solid var(--line2);border-radius:var(--rs);padding:9px 12px}
+.kwc .k{font-size:11px;color:var(--ink3)}
+.kwc .v{font-size:14.5px;margin-top:1px}
+.fin{background:var(--soft);border-left:4px solid var(--pink2);border-radius:0 var(--rs) var(--rs) 0;
+  padding:14px 17px;margin-top:16px;font-size:15.5px;line-height:2;text-align:left}
 
 #fx{position:fixed;inset:0;pointer-events:none;z-index:900;overflow:hidden;contain:strict}
 #fx span{position:absolute;left:0;top:0;will-change:transform,opacity;line-height:1;user-select:none}
-#fx .vig{position:absolute;inset:0;background:radial-gradient(ellipse at 50% 25%,transparent 36%,rgba(70,92,120,.38) 100%)}
-.fade{animation:fu .42s cubic-bezier(.2,.8,.3,1) both}
-@keyframes fu{from{opacity:0;transform:translateY(9px)}to{opacity:1;transform:none}}
+#fx .vig{position:absolute;inset:0;background:radial-gradient(ellipse at 50% 25%,transparent 38%,rgba(125,147,168,.3) 100%)}
+.fade{animation:fu .38s cubic-bezier(.2,.8,.3,1) both}
+@keyframes fu{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.pop{animation:pp .34s cubic-bezier(.2,1.4,.4,1) both}
+@keyframes pp{from{opacity:0;transform:scale(.9)}to{opacity:1;transform:scale(1)}}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
-.foot{margin-top:30px;color:var(--tx3);font-size:11.5px;display:flex;gap:12px;flex-wrap:wrap;align-items:center}
-.lnk{color:var(--tx3);background:none;border:0;font:inherit;font-size:11.5px;text-decoration:underline;
+.foot{margin-top:22px;color:var(--ink3);font-size:11.5px;display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+.lnk{color:var(--ink3);background:none;border:0;font:inherit;font-size:11.5px;text-decoration:underline;
   text-underline-offset:3px;cursor:pointer;padding:0}
-@media(hover:hover){.lnk:hover{color:var(--her)}}
-details{margin-top:16px;border-top:1px solid var(--line);padding-top:13px}
-summary{cursor:pointer;font-size:12px;color:var(--tx3);letter-spacing:.06em}
-details ul{margin:10px 0 0;padding-left:18px;color:var(--tx2);font-size:12.5px;line-height:1.95}
+@media(hover:hover){.lnk:hover{color:var(--orange)}}
+details{margin-top:14px;border-top:2px solid var(--line);padding-top:12px}
+summary{cursor:pointer;font-size:12.5px;color:var(--ink3)}
+details ul{margin:9px 0 0;padding-left:18px;color:var(--ink2);font-size:12.5px;line-height:1.9}
 
-@media(max-width:480px){
-  .wrap{padding:0 14px;padding-block:0 40px}
-  .hud{margin:0 -14px;padding:8px 14px 11px}
-  .hudtop{gap:7px;margin-bottom:8px}
-  .agebox{padding:1px 9px 2px}.agebox b{font-size:18px}.agebox s{font-size:8.5px}
-  .stg{font-size:11px}.dayno{display:none}
-  .frag{font-size:10px;padding:2px 8px}
-  .bars{grid-template-columns:1fr 1fr;gap:4px 12px}
-  .bar .n{font-size:10px}.bar .v{font-size:11.5px}
-  .grp{font-size:8.5px;margin:1px 0 4px}
-  h1{font-size:31px;margin-top:24px}
-  .lede{font-size:13.5px}
-  .card{padding:15px 14px 14px}
-  .daybar .d{font-size:17px}
-  .qtxt{font-size:17px}
-  .scene{font-size:14px}
-  .bub{font-size:15px;padding:10px 13px}
-  .ava{flex:0 0 30px;height:30px;font-size:14px}
-  .react{padding-left:18px}
-  .opt{padding:13px;font-size:14px}
-  .agrid{grid-template-columns:1fr 1fr;gap:7px}
-  .act{padding:10px 11px;min-height:84px}
-  .act .an{font-size:13.5px}.act .at{font-size:11px}
-  .eff{font-size:9.5px;padding:1px 6px}
-  .routine{padding:10px 12px;gap:10px}
-  .btn{min-height:44px}
-  .deltas{grid-template-columns:repeat(auto-fit,minmax(86px,1fr));gap:7px}
-  .fgrid{grid-template-columns:1fr 1fr;gap:7px}
-  .end h2{font-size:26px}.fin{font-size:15.5px}
+@media(max-width:900px){
+  .chcard{display:grid;grid-template-columns:120px 1fr;gap:0}
+  .chcard .frame{padding:10px 6px 0}
+  .chcard .frame::after{display:none}
+  .chcard .pbody{padding:11px 13px}
+  .chname{margin-top:0;text-align:left}.chsub{text-align:left}.tags{justify-content:flex-start}
 }
+@media(max-width:480px){
+  .wrap{padding:0 12px;padding-block:0 88px}
+  .topbar{margin:0 -12px;padding:8px 12px}
+  .pill{font-size:11px;padding:2px 9px}.pill b{font-size:14px}
+  h1{font-size:34px}
+  .band{height:68px}.sbody{padding:13px 13px 14px}
+  .story{font-size:14.5px}.bub{font-size:14.5px;padding:9px 12px}
+  .ava{flex:0 0 36px;height:36px}
+  .opt{padding:12px 13px;font-size:14px}
+  .grid{grid-template-columns:1fr 1fr;gap:8px}
+  .gc{padding:10px}
+  .mb{font-size:10px}.mb i{font-size:16px}
+  .grade{font-size:50px;width:86px;height:86px}
+  .chcard{grid-template-columns:104px 1fr}
+}
+.ava svg{width:100%;height:100%;display:block}
+.chcard .frame svg{max-width:100%}
 </style>
 
-</head>
-<body>
 <div id="fx" aria-hidden="true"></div>
 <div class="wrap">
-  <div class="hud" id="hud" hidden></div>
-  <div id="app"></div>
+  <div class="topbar" id="topbar" hidden></div>
+  <div class="game">
+    <div id="charcard"></div>
+    <div id="stage"></div>
+    <div id="statpanel"></div>
+  </div>
   <div class="foot">
     <span id="gname">伴她长大</span>
     <button class="lnk" id="restart">重新开始</button>
     <span id="savenote"></span>
   </div>
 </div>
+<div class="menu" id="menu" hidden></div>
 
 <script>
 /* ============ 指标与阶段 ============ */
@@ -824,6 +832,7 @@ const AFTER={t:"隐藏后记 · 她写给你的那封信",
  p:["你集齐了她全部的回忆碎片。那意味着这二十三年里，她每一次欲言又止，你都接住了。","三十岁生日那天，她给了你一个信封。"],
  f:"“我从七岁开始，就一直在偷偷观察一件事：<br>到底要做到什么程度，才会有人一直不走。”<br>“我试过考好成绩，试过当最开朗的那个，试过把所有人都照顾好。”<br>“后来我发现，答案根本不在我这边。”<br>“答案是——有的人就是会留下来。”<br>“谢谢你是那个人。”"};
 
+
 /* ============ 人物形象 · 内联SVG（六个阶段不同长相，三种表情） ============ */
 const SKIN="#F2C9A8", SKIN2="#E0AE89", HAIRD="#2A1C16", HAIRL="#4A3226", LIP="#C96A5C";
 const LOOK={
@@ -888,10 +897,10 @@ function portrait(stage,expr,size){
   return `<svg class="pt" viewBox="0 0 120 146" width="${w}" height="${Math.round(w*146/120)}" aria-hidden="true">
    <defs><clipPath id="pc${stage}"><rect x="0" y="0" width="120" height="146" rx="12"/></clipPath>
    <linearGradient id="pg${stage}" x1="0" y1="0" x2="0" y2="1">
-     <stop offset="0" stop-color="#3A2F26"/><stop offset="1" stop-color="#241D18"/></linearGradient></defs>
+     <stop offset="0" stop-color="#FFFFFF" stop-opacity="0"/><stop offset="1" stop-color="#FFFFFF" stop-opacity=".5"/></linearGradient></defs>
    <g clip-path="url(#pc${stage})">
     <rect width="120" height="146" fill="url(#pg${stage})"/>
-    <circle cx="60" cy="40" r="46" fill="#F0C44E" opacity=".10"/>
+    <circle cx="60" cy="40" r="46" fill="#F5B82E" opacity=".20"/>
     ${hairBack(L)}
     <g transform="translate(60 68) scale(${s}) translate(-60 -68)">
       <path d="M38 96 q22 10 44 0 l0 -14 l-44 0z" fill="${SKIN2}"/>
@@ -941,149 +950,321 @@ function motifOf(txt,stage){
   return stage>=5?"office":stage>=4?"out":"home";
 }
 
-/* ============ 白天固定日程 ============ */
-const ROUTINE={
- 1:{n:"上学",ic:"🎒",t:"七点半的闹钟，排队做早操，四节课，中午在食堂抢窗口。",d:{grade:0.7,spress:0.6,focus:0.25,eq:0.1}},
- 2:{n:"上学",ic:"📘",t:"早自习到晚自习，中间隔着一整个青春期。",d:{grade:0.8,spress:0.9,ident:-0.1}},
- 3:{n:"上学 · 高考倒计时",ic:"⏳",t:"五点半起，十一点回。墙上的数字每天少一个。",d:{grade:1.0,spress:1.3,goal:0.1}},
- 4:{n:"上课",ic:"🎓",t:"大课小课，点名靠运气，课表自己排。",d:{major:0.6,spress:0,social:0.15}},
- 5:{n:"上班",ic:"💼",t:"九点打卡，日报周报，会从下午两点开到六点。",d:{work:0.8,money:0.45,stress:0.9}},
- 6:{n:"上班",ic:"🏙",t:"熟门熟路了。熟到有时候会走神想别的。",d:{work:0.55,career:0.1,stress:0.7}}
-};
-/* ============ 放学后 / 下班后 · 自选安排 ============ */
-const ACTV=[
-/* --- 小学 --- */
-{s:1,n:"写作业",t:"摊开本子，一道一道啃。",d:{grade:3.4,focus:2.2,spress:1.6,mood:-1.4},r:"写完了！你检查一下嘛。"},
-{s:1,n:"上补习班",t:"周三周五各一次，回来天已经黑了。",d:{grade:5,focus:1.6,spress:4,mood:-3,emo:-1.2},r:"……我今天好困。但是那道题我会了。"},
-{s:1,n:"兴趣班 · 上台那种",t:"合唱、朗诵、小主持，哪个都想试。",d:{mood:4.6,love:1.6,emo:2,eq:1.2,grade:-1.4,focus:-0.8},r:"老师让我站第一排！"},
-{s:1,n:"楼下疯跑一小时",t:"和一群小孩玩到路灯亮。",d:{mood:5,stress:-4.5,emo:2.6,eq:1,grade:-2,focus:-1.2},r:"我们玩了一个新游戏！规则是我定的！"},
-{s:1,n:"一起读绘本",t:"一人一页，念错要重来。",d:{focus:4,eq:2.2,trust:2.4,mood:2.2,grade:1},r:"下一页我念！你别抢。"},
-{s:1,n:"看动画片",t:"就看一集。说好的。",d:{mood:3.6,stress:-2.6,focus:-2.6,grade:-1.4},r:"再一集……最后一集！"},
-{s:1,n:"今天早点睡",t:"九点关灯，台灯也关。",d:{stress:-5,emo:3.4,spress:-3,grade:-1.2,focus:1.2},r:"那你讲个故事再走。"},
-/* --- 初中 --- */
-{s:2,n:"刷题",t:"一本五三，一支红笔。",d:{grade:4.4,spress:3.4,focus:1.4,mood:-2},r:"错了七道。……别看。"},
-{s:2,n:"上补习班",t:"周末两个半天，教室在六楼。",d:{grade:5.4,spress:4.4,mood:-3,emo:-1.4},r:"今天讲的我都会了。真的。"},
-{s:2,n:"去操场跑两圈",t:"不为别的，就是想喘口气。",d:{look:-3.6,stress:-4.4,emo:2.6,mood:2.4,grade:-1.2},r:"跑完好像没那么烦了。"},
-{s:2,n:"和朋友出去玩",t:"奶茶店坐一下午，什么正事也没干。",d:{ident:3.6,mood:4.4,eq:2.2,social:0,grade:-2,spress:-2.4},r:"她们说我讲笑话最好笑。"},
-{s:2,n:"研究穿搭和护肤",t:"对着镜子换了五套。",d:{look:-5,mood:3,ident:2.4,grade:-1.6},r:"这样是不是好看一点……算了你别看。"},
-{s:2,n:"写日记",t:"写给谁都不是，就写给自己。",d:{emo:3.6,ident:2.8,stress:-3.4,eq:1},r:"……不给你看。"},
-{s:2,n:"今天早点睡",t:"十点半，手机扣下。",d:{stress:-5,emo:3.4,spress:-3,look:-1.2,grade:-1.2},r:"行吧。那你别吵我。"},
-/* --- 高中 --- */
-{s:3,n:"刷题到十一点",t:"做完一套理综，手是抖的。",d:{grade:5,spress:4.6,emo:-2.2,mood:-2.2},r:"还行。再来一套我也行。"},
-{s:3,n:"一对一补课",t:"贵，但确实补得动。",d:{grade:6,spress:3.4,conf:1.4,mood:-2.4},r:"老师说我那块其实不弱。"},
-{s:3,n:"查大学和专业",t:"招生简章翻到凌晨。",d:{goal:5.4,conf:2.4,mood:1.6,grade:-1.6},r:"我找到一个特别想去的学校。你听我说——"},
-{s:3,n:"跑步",t:"晚自习前绕操场四圈。",d:{stress:-5,emo:3,conf:1.8,spress:-2.6,grade:-1},r:"跑的时候脑子是空的，挺好。"},
-{s:3,n:"去找老师聊聊",t:"不是聊分数，是聊以后。",d:{goal:4.6,conf:2.6,eq:2,trust:1.4,grade:1},r:"老师说我适合跟人打交道的方向。"},
-{s:3,n:"偷偷画画 / 看小说",t:"课本下面压着另一本。",d:{mood:5,stress:-3.6,emo:2.4,conf:1.4,grade:-2.6,spress:-1.4},r:"就二十分钟。真的就二十分钟。"},
-{s:3,n:"今天早点睡",t:"十点半熄灯，闹钟往后调半小时。",d:{stress:-5.6,emo:3.8,spress:-3.6,grade:-1.4},r:"……好。那明天我早起补。"},
-/* --- 大学 --- */
-{s:4,n:"泡图书馆",t:"啃专业书，啃到闭馆音乐响。",d:{major:5,intern:1.6,conf:1.4,social:-1.6,mood:-1.6},r:"今天看懂了一整章。"},
-{s:4,n:"跑社团活动",t:"策划、拉赞助、熬夜改海报。",d:{social:5,mood:3.6,conf:2.4,eq:2,major:-2,stress:1.4},r:"这次活动是我主持的！"},
-{s:4,n:"改简历 / 作品集",t:"又是一个版本号。",d:{intern:5.4,conf:-1.4,stress:2.4,major:1},r:"版本11。总有一版能行吧。"},
-{s:4,n:"去实习",t:"地铁一小时，打杂也认。",d:{intern:6,major:2,stress:3,mood:-2.2,money:0},r:"今天带教让我自己做了一页。"},
-{s:4,n:"健身房",t:"练到说不出话。",d:{stress:-5,conf:2.6,emo:3,mood:2},r:"我今天加了五公斤。"},
-{s:4,n:"和朋友通宵聊天",t:"从食堂聊到天台。",d:{social:5,emo:3,mood:4.4,eq:1.6,stress:1.6,major:-1.6},r:"我们聊到四点。她们都说我特别会聊。"},
-{s:4,n:"一个人待一天",t:"谁也不见，给自己充电。",d:{stress:-5.6,emo:4,social:-2.4,mood:1.6},r:"今天谁都没理，舒服。"},
-/* --- 职场 --- */
-{s:5,n:"加班打磨方案",t:"办公楼最后两层灯。",d:{work:5.4,money:1.6,stress:4,mood:-3,resil:-1},r:"这版我自己挺满意的。"},
-{s:5,n:"复盘 / 学新技能",t:"下班后再给自己上两小时课。",d:{work:4.6,resil:2.4,career:0,mood:-1.6,stress:1.4},r:"学了个新工具，下次能快一半。"},
-{s:5,n:"攒钱 / 理财",t:"记账，退订，比价。",d:{money:5,mood:-2,resil:1.4},r:"这个月存下来了。有点安全感。"},
-{s:5,n:"接个副业",t:"周末两天全搭进去。",d:{money:5.4,work:1.6,stress:3.6,mood:-2.4,rel:-1.4},r:"多一份收入，心就定一点。"},
-{s:5,n:"经营亲密关系",t:"好好吃一顿饭，手机扣着。",d:{rel:5,mood:3.4,emo:2.4,eq:1.6,work:-1.6},r:"今天没聊工作，挺好的。"},
-{s:5,n:"运动",t:"夜跑五公里。",d:{stress:-5.4,resil:2.6,emo:3,mood:2},r:"跑完才觉得这一天是我自己的。"},
-{s:5,n:"请假躺一天",t:"窗帘不拉开，什么也不干。",d:{stress:-7,emo:4.6,mood:4,work:-2.4,money:-1.4},r:"……我好久没有这样了。"},
-/* --- 稳定 --- */
-{s:6,n:"深耕手上的项目",t:"做那件已经做了很久的事。",d:{career:5,work:3.4,stress:2.2,mood:-1.4},r:"它开始像个东西了。"},
-{s:6,n:"做那件一直想做的事",t:"没人要求你做，所以更难开始。",d:{career:5.4,accept:4.4,mood:3.4,work:-2,stress:1.4},r:"今天写了第一行。只写了第一行。"},
-{s:6,n:"去做心理咨询",t:"一周一次，五十分钟。",d:{accept:5.4,stress:-5.4,emo:4,rel:1.4,work:-1},r:"她问了我一个我自己从来不敢问的问题。"},
-{s:6,n:"经营亲密关系",t:"把时间真的花在那个人身上。",d:{rel:5.4,mood:3.4,emo:2.4,eq:1.6,work:-1.6},r:"我们今天聊了以后的事。"},
-{s:6,n:"规律作息 + 运动",t:"十一点睡，七点起，跑三公里。",d:{stress:-5.6,emo:3.6,accept:2.4,work:1.4},r:"身体好像在还我钱。"},
-{s:6,n:"带新人 / 对外分享",t:"把自己踩过的坑讲给别人。",d:{career:4,eq:3,work:2.4,conf:0,mood:2},r:"有人说我讲得清楚。……我挺开心的。"},
-{s:6,n:"彻底放空一天",t:"不计划，不复盘，不自责。",d:{stress:-6.6,emo:4.6,accept:3.4,mood:3.4,work:-2,career:-1.4},r:"原来什么都不干也不会塌。"}
+
+/* ============ 时间 / 季节 ============ */
+const MON=["1月","2月","3月","4月","5月","6月","7月","8月","9月","10月","11月","12月"];
+const SEASON=m=>m<=2||m===12?{n:"冬",e:"❄️"}:m<=5?{n:"春",e:"🌸"}:m<=8?{n:"夏",e:"🌿"}:{n:"秋",e:"🍂"};
+const MOODFACE=v=>v>=78?{e:"😊",n:"开心"}:v>=62?{e:"🙂",n:"还不错"}:v>=48?{e:"😐",n:"平静"}:v>=34?{e:"😔",n:"低落"}:{e:"🥺",n:"很委屈"};
+
+/* ============ 人物卡描述 ============ */
+const CHDESC={
+1:"扎着羊角辫，手里总攥着彩笔，眼睛很亮，笑起来有点得意。",
+2:"开始在意穿搭和刘海，书包带上挂了小挂件，表情有点倔，又有点害羞。",
+3:"校服外套不好好穿，手腕上有倒计时手环，眼神里是压着的野心。",
+4:"休闲外套配电脑包，走路很快，对什么都好奇，但偶尔会突然发呆。",
+5:"通勤装，工牌挂绳，手机壳上还是她喜欢的那个图案，眼下有一点疲惫。",
+6:"风格定下来了，眼神笃定，身边放着她自己做出来的东西。"};
+const CHTAG=[["狮子座","p"],["ENFP","s"],["爱展示",""],["怕被否定",""],["情绪来得快",""],["喜欢仪式感","p"],["三分钟热度",""],["重朋友","s"]];
+
+/* ============ 三时段活动池 ============ */
+/* lk = 她的喜欢度 1-5；cost 可选 */
+const SLOTN=["上午","下午","晚上"];
+const ACT=[
+/* 小学 */
+{s:1,c:"学",n:"上课",e:"📚",t:"老老实实坐满四节课。",lk:2,d:{grade:3.4,spress:2,focus:1.6,mood:-1}},
+{s:1,c:"学",n:"课后补习",e:"✏️",t:"六楼那间教室，回来天已经黑了。",lk:1,d:{grade:5,spress:4,focus:1.4,mood:-3,trust:-1}},
+{s:1,c:"学",n:"阅读",e:"📖",t:"一人一页，念错要重来。",lk:3,d:{focus:3.4,eq:1.8,grade:1.6,mood:1.4}},
+{s:1,c:"学",n:"兴趣课 · 上台那种",e:"🎤",t:"合唱、朗诵、小主持，哪个都想试。",lk:5,d:{mood:4.6,love:1.6,emo:2,eq:1.2,grade:-1},hb:"表演",hx:12},
+{s:1,c:"休",n:"午睡",e:"😴",t:"窗帘一拉，世界安静。",lk:4,d:{stress:-4.4,emo:2.6,spress:-2,grade:-1}},
+{s:1,c:"休",n:"看动画",e:"📺",t:"就看一集。说好的。",lk:5,d:{mood:3.8,stress:-2.6,focus:-2.4,grade:-1.2}},
+{s:1,c:"休",n:"散步",e:"🌳",t:"绕小区走一圈，捡了两片叶子。",lk:4,d:{stress:-3.4,emo:2.2,mood:2,eq:0.8}},
+{s:1,c:"社",n:"去公园疯跑",e:"🛝",t:"和一群小孩玩到路灯亮。",lk:5,d:{mood:5,stress:-4.4,emo:2.6,eq:1.4,grade:-1.6,focus:-1}},
+{s:1,c:"才",n:"画画",e:"🎨",t:"趴在地板上画，纸比人还大。",lk:5,d:{mood:4.6,conf:0,focus:-1.4,emo:2.4,love:1},hb:"画画",hx:14},
+{s:1,c:"才",n:"唱歌",e:"🎵",t:"把遥控器当话筒。",lk:5,d:{mood:4.4,emo:2.4,eq:1,focus:-1},hb:"唱歌",hx:13},
+{s:1,c:"才",n:"手工",e:"✂️",t:"剪出来的东西只有她认得。",lk:4,d:{focus:3.6,mood:2.6,emo:1.4},hb:"手工",hx:12},
+/* 初中 */
+{s:2,c:"学",n:"上课",e:"📚",t:"早自习到晚自习。",lk:2,d:{grade:3.6,spress:2.4,mood:-1.2}},
+{s:2,c:"学",n:"刷题",e:"✏️",t:"一本五三，一支红笔。",lk:1,d:{grade:4.6,spress:3.6,mood:-2.2,ident:-0.8}},
+{s:2,c:"学",n:"补习班",e:"🏫",t:"周末两个半天。",lk:1,d:{grade:5.4,spress:4.4,mood:-3,emo:-1.4}},
+{s:2,c:"学",n:"阅读",e:"📖",t:"课本下面压着另一本。",lk:4,d:{ident:2.6,mood:2.4,eq:1.6,stress:-2,grade:1}},
+{s:2,c:"休",n:"听音乐",e:"🎧",t:"一首歌循环三十遍。",lk:5,d:{stress:-4,emo:3,mood:2.6,look:-1}},
+{s:2,c:"休",n:"发呆",e:"🌙",t:"什么也不想，就是看窗外。",lk:3,d:{stress:-4.6,emo:2.6,spress:-2.4,grade:-1}},
+{s:2,c:"社",n:"和朋友出去",e:"🧋",t:"奶茶店坐一下午。",lk:5,d:{ident:3.6,mood:4.4,eq:2.2,grade:-1.8,spress:-2.4}},
+{s:2,c:"社",n:"逛书店",e:"📚",t:"从文学区走到杂志区。",lk:4,d:{ident:2.6,mood:2.6,grade:1.4,eq:1.2}},
+{s:2,c:"才",n:"画画",e:"🎨",t:"课本边角全是涂鸦。",lk:5,d:{mood:4,ident:2.6,look:-1.4,grade:-1.2},hb:"画画",hx:14},
+{s:2,c:"才",n:"表演 · 排练",e:"🎭",t:"为了汇演留到很晚。",lk:5,d:{mood:4.2,ident:3,eq:1.6,spress:1.4,grade:-1.4},hb:"表演",hx:15},
+{s:2,c:"才",n:"写作",e:"✒️",t:"写给谁都不是，就写给自己。",lk:4,d:{emo:3.4,ident:2.8,stress:-3,eq:1},hb:"写作",hx:13},
+{s:2,c:"才",n:"舞蹈",e:"💃",t:"对着镜子一遍遍抠动作。",lk:4,d:{look:-4,mood:3.4,conf:0,stress:-2,emo:1.6},hb:"舞蹈",hx:14},
+/* 高中 */
+{s:3,c:"学",n:"上课",e:"📚",t:"五点半起，十一点回。",lk:2,d:{grade:3.8,spress:3,mood:-1.4}},
+{s:3,c:"学",n:"刷题",e:"✏️",t:"做完一套理综，手是抖的。",lk:1,d:{grade:5,spress:4.6,emo:-2,mood:-2.2}},
+{s:3,c:"学",n:"一对一补课",e:"🧑‍🏫",t:"贵，但确实补得动。",lk:2,d:{grade:6,spress:3.4,conf:1.4,mood:-2.4}},
+{s:3,c:"学",n:"查大学和专业",e:"🔭",t:"招生简章翻到凌晨。",lk:4,d:{goal:5.4,conf:2.4,mood:1.6,grade:-1.4}},
+{s:3,c:"休",n:"跑步",e:"🏃",t:"晚自习前绕操场四圈。",lk:4,d:{stress:-5,emo:3,conf:1.8,spress:-2.6,grade:-1}},
+{s:3,c:"休",n:"听音乐发呆",e:"🎧",t:"耳机一戴，谁也不理。",lk:5,d:{stress:-5.4,emo:3.6,spress:-3,grade:-1.2}},
+{s:3,c:"社",n:"去广播站",e:"📻",t:"午间十五分钟，是她的。",lk:5,d:{conf:4,mood:4,eq:2,goal:1.6,grade:-1},hb:"表演",hx:14},
+{s:3,c:"社",n:"逛书店",e:"📚",t:"在心理学那一排站了很久。",lk:4,d:{goal:2.6,mood:2.4,eq:1.6,stress:-2}},
+{s:3,c:"才",n:"画画",e:"🎨",t:"给班级画了黑板报。",lk:5,d:{mood:4,conf:3,grade:-1.4},hb:"画画",hx:15},
+{s:3,c:"才",n:"写作",e:"✒️",t:"偷偷投了一个征文。",lk:4,d:{ident:0,conf:2.6,mood:3,emo:2,grade:-1},hb:"写作",hx:15},
+{s:3,c:"才",n:"排练节目",e:"🎭",t:"元旦汇演的压轴。",lk:5,d:{conf:4.4,mood:4.4,spress:1.6,grade:-1.6},hb:"表演",hx:16},
+/* 大学 */
+{s:4,c:"学",n:"上课",e:"🎓",t:"大课小课，点名靠运气。",lk:2,d:{major:3.6,social:1,mood:-1}},
+{s:4,c:"学",n:"泡图书馆",e:"📚",t:"啃专业书，啃到闭馆音乐响。",lk:2,d:{major:5,intern:1.6,conf:1.4,social:-1.6,mood:-1.6}},
+{s:4,c:"学",n:"改简历/作品集",e:"📝",t:"又是一个版本号。",lk:2,d:{intern:5.4,conf:-1.2,stress:2.4,major:1}},
+{s:4,c:"休",n:"健身房",e:"🏋️",t:"练到说不出话。",lk:4,d:{stress:-5,conf:2.6,emo:3,mood:2}},
+{s:4,c:"休",n:"一个人充电",e:"🛋",t:"谁也不见，追一整天剧。",lk:4,d:{stress:-5.6,emo:4,social:-2.2,mood:1.6}},
+{s:4,c:"社",n:"社团活动",e:"🎪",t:"策划、拉赞助、熬夜改海报。",lk:5,d:{social:5,mood:3.6,conf:2.4,eq:2,major:-2,stress:1.4}},
+{s:4,c:"社",n:"参加聚会",e:"🍻",t:"从食堂聊到天台。",lk:5,d:{social:4.6,emo:2.6,mood:4,eq:1.6,stress:1.2,major:-1.4}},
+{s:4,c:"社",n:"拜访朋友",e:"🚲",t:"骑车穿过半个城。",lk:4,d:{social:3.6,emo:2.6,mood:3,eq:1.4}},
+{s:4,c:"才",n:"画画/设计",e:"🎨",t:"接了一张海报的活。",lk:5,d:{mood:3.6,conf:2.6,intern:2,major:-1},hb:"画画",hx:16},
+{s:4,c:"才",n:"排一台戏",e:"🎭",t:"剧社年末公演。",lk:5,d:{conf:4.6,social:3,mood:4.4,major:-2},hb:"表演",hx:18},
+{s:4,c:"才",n:"写东西",e:"✒️",t:"开了个没人看的专栏。",lk:4,d:{conf:2.4,emo:2.6,mood:3,intern:1.4},hb:"写作",hx:16},
+{s:4,c:"工",n:"实习",e:"💼",t:"地铁一小时，打杂也认。",lk:3,d:{intern:6,major:2,stress:3,mood:-2,money:3}},
+{s:4,c:"工",n:"兼职",e:"🧾",t:"周末两天全搭进去。",lk:2,d:{money:5,intern:1.6,stress:2.6,mood:-2}},
+/* 职场 */
+{s:5,c:"工",n:"上班",e:"🏙",t:"九点打卡，会开到六点。",lk:2,d:{work:3.6,money:2,stress:3,resil:0.6}},
+{s:5,c:"工",n:"项目加班",e:"🌙",t:"办公楼最后两层灯。",lk:1,d:{work:5.4,money:1.6,stress:4,mood:-3,resil:-1}},
+{s:5,c:"工",n:"复盘/学新技能",e:"📈",t:"下班后再给自己上两小时课。",lk:3,d:{work:4.6,resil:2.4,mood:-1.4,stress:1.4}},
+{s:5,c:"工",n:"职场社交",e:"🤝",t:"认识几个能说上话的人。",lk:3,d:{resil:2.6,work:1.6,eq:2.4,social:0,mood:1}},
+{s:5,c:"休",n:"夜跑",e:"🏃",t:"跑完才觉得这一天是自己的。",lk:4,d:{stress:-5.4,resil:2.6,emo:3,mood:2}},
+{s:5,c:"休",n:"请假躺一天",e:"🛏",t:"窗帘不拉开。",lk:5,d:{stress:-7,emo:4.6,mood:4,work:-2.4,money:-1.2}},
+{s:5,c:"社",n:"约会/陪伴",e:"🍽",t:"好好吃一顿饭，手机扣着。",lk:5,d:{rel:5,mood:3.4,emo:2.4,eq:1.6,work:-1.6}},
+{s:5,c:"社",n:"去展会",e:"🖼",t:"看看别人在做什么。",lk:5,d:{mood:3.6,work:1.6,career:0,emo:2,eq:1.2}},
+{s:5,c:"才",n:"接一个创作活",e:"🎨",t:"下班后自己做的东西。",lk:5,d:{mood:4,money:2.6,work:1.6,stress:1.4},hb:"画画",hx:18},
+{s:5,c:"才",n:"上台分享",e:"🎤",t:"行业小沙龙，二十个人。",lk:5,d:{resil:3,eq:2.6,work:2,mood:4},hb:"表演",hx:20},
+{s:5,c:"学",n:"攒钱理财",e:"🐷",t:"记账，退订，比价。",lk:2,d:{money:5,mood:-2,resil:1.4}},
+/* 稳定期 */
+{s:6,c:"工",n:"上班",e:"🏙",t:"熟门熟路，熟到会走神。",lk:2,d:{work:3.4,career:0.8,stress:2.4}},
+{s:6,c:"工",n:"深耕项目",e:"🛠",t:"做那件已经做了很久的事。",lk:4,d:{career:5,work:3.4,stress:2.2,mood:-1}},
+{s:6,c:"工",n:"做一直想做的事",e:"✨",t:"没人要求你做，所以更难开始。",lk:5,d:{career:5.4,accept:4.4,mood:3.4,work:-2,stress:1.4}},
+{s:6,c:"工",n:"带新人/对外分享",e:"🎤",t:"把踩过的坑讲给别人。",lk:5,d:{career:4,eq:3,work:2.4,mood:2},hb:"表演",hx:18},
+{s:6,c:"休",n:"心理咨询",e:"🫧",t:"一周一次，五十分钟。",lk:4,d:{accept:5.4,stress:-5.4,emo:4,rel:1.4,work:-1}},
+{s:6,c:"休",n:"规律作息+运动",e:"🏃",t:"十一点睡，七点起。",lk:4,d:{stress:-5.6,emo:3.6,accept:2.4,work:1.4}},
+{s:6,c:"休",n:"彻底放空",e:"🛋",t:"不计划，不复盘，不自责。",lk:5,d:{stress:-6.6,emo:4.6,accept:3.4,mood:3.4,work:-2,career:-1.2}},
+{s:6,c:"社",n:"经营亲密关系",e:"🫶",t:"把时间真的花在那个人身上。",lk:5,d:{rel:5.4,mood:3.4,emo:2.4,eq:1.6,work:-1.6}},
+{s:6,c:"社",n:"老朋友聚会",e:"🥂",t:"不比惨，也不比好。",lk:4,d:{mood:3.6,emo:2.4,accept:2,eq:1.6,rel:1.4}},
+{s:6,c:"才",n:"做自己的作品",e:"🎨",t:"署自己的名。",lk:5,d:{career:3.6,accept:3,mood:3.4,work:-1},hb:"画画",hx:20}
 ];
+
+/* ============ 爱好 ============ */
+const HOBN=["画画","唱歌","表演","写作","舞蹈","手工"];
+const HOBSK={
+ 画画:["随手涂鸦","班级黑板报","校园插画","海报与视觉设计","独立画集"],
+ 唱歌:["跟着哼","班级合唱领唱","校园十佳","小型演出","登台专场"],
+ 表演:["讲故事","文艺汇演","主持与控场","舞台剧主角","公开演讲"],
+ 写作:["日记","作文被当范文","校刊专栏","公开发表","出版计划"],
+ 舞蹈:["跟着跳","课间操领操","社团汇演","比赛队员","编舞"],
+ 手工:["剪剪贴贴","手账达人","文创小摊","定制订单","工作室"]};
+const LVN=["","L1 初学","L2 感兴趣","L3 熟练","L4 出色","L5 精通"];
+const LVEXP=[0,100,220,380,600,9999];
+
+/* ============ 商店 ============ */
+const SHOP=[
+{n:"薯条",e:"🍟",c:"零食",p:10,st:[1,2,3,4,5,6],lk:4,d:{mood:3,love:1},r:"“先吃我的！”（然后抢你的）"},
+{n:"冰淇淋",e:"🍦",c:"零食",p:12,st:[1,2,3,4,5,6],lk:4,d:{mood:3.4,emo:1.4,stress:-1.4},r:"“我可以一口气吃完哦。”"},
+{n:"奶茶",e:"🧋",c:"零食",p:16,st:[2,3,4,5,6],lk:5,d:{mood:4,stress:-2,love:1.4},r:"“三分糖，去冰——你居然记得。”"},
+{n:"蛋糕",e:"🍰",c:"零食",p:28,st:[1,2,3,4,5,6],lk:5,d:{mood:4.6,love:2.4,emo:1.6},r:"“为什么突然买蛋糕！……但是我好开心。”"},
+{n:"漂亮笔记本",e:"📓",c:"文创",p:15,st:[1,2,3,4,5,6],lk:5,d:{mood:4,love:3,focus:1.4,ident:1.4},r:"（当场翻开，开始记她的脑洞）"},
+{n:"一整盒彩色笔",e:"🖍",c:"文创",p:22,st:[1,2,3],lk:5,d:{mood:4.4,love:2.4},hb:"画画",hx:18,r:"“这个颜色我找了好久！”"},
+{n:"手账本+贴纸",e:"🏷",c:"文创",p:26,st:[2,3,4],lk:5,d:{mood:4.2,ident:2.4,love:2.4},hb:"手工",hx:16,r:"“我今晚就要排版。”"},
+{n:"鲜花",e:"💐",c:"礼物",p:20,st:[1,2,3,4,5,6],lk:5,d:{mood:5.4,love:4.6,trust:3},r:"“……太浪费啦。”（但插进了瓶子，拍了九张照）"},
+{n:"玩偶",e:"🧸",c:"礼物",p:35,st:[1,2,3],lk:5,d:{mood:5,love:3.6,emo:2.4},r:"“它叫……嗯，我要想一个很正式的名字。”"},
+{n:"相框（里面是你们的照片）",e:"🖼",c:"礼物",p:40,st:[2,3,4,5,6],lk:5,d:{love:5.4,trust:4,mood:4},r:"（看了很久）“你什么时候洗出来的。”"},
+{n:"音乐盒",e:"🎵",c:"礼物",p:45,st:[1,2,3,4],lk:4,d:{mood:4,emo:2.6,love:3},r:"“晚上睡不着我就听它。”"},
+{n:"香水",e:"🌸",c:"礼物",p:60,st:[4,5,6],lk:4,d:{mood:3.6,love:3,look:-3},r:"“这个味道……挺像我的。”"},
+{n:"手写信",e:"✉️",c:"礼物",p:0,st:[1,2,3,4,5,6],lk:5,d:{love:6,trust:5,emo:3.4,mood:3.4},r:"（读完没说话，把信折好收进了抽屉最里面）",once:1},
+{n:"游乐园门票",e:"🎡",c:"活动",p:60,st:[1,2,3],lk:5,d:{mood:8,love:5,emo:3,stress:-3},r:"“我们几点出发？！我要列路线！”"},
+{n:"演唱会门票",e:"🎫",c:"活动",p:80,st:[2,3,4,5,6],lk:5,d:{mood:9,love:6,emo:3.4,eq:1},r:"（尖叫）“我要开始想那天穿什么了！”"},
+{n:"画展门票",e:"🖌",c:"活动",p:45,st:[3,4,5,6],lk:4,d:{mood:4.4,career:0,love:2.6},hb:"画画",hx:14,r:"“这幅我能看一小时。”"},
+{n:"电影票",e:"🎬",c:"活动",p:35,st:[2,3,4,5,6],lk:4,d:{mood:4,love:2.4,stress:-2.4},r:"“散场之后我要跟你复盘两小时。”"},
+{n:"习题册",e:"📕",c:"学习",p:25,st:[1,2,3],lk:1,d:{grade:5,spress:6,mood:-5,love:-3},r:"（沉默三秒）“……你是不是不喜欢我了。”"},
+{n:"辅导书",e:"📗",c:"学习",p:30,st:[2,3],lk:1,d:{grade:5.4,spress:6,mood:-4.6,trust:-2.4},r:"“哦。谢谢。”（放进了柜子最下层）"},
+{n:"计时器",e:"⏱",c:"学习",p:18,st:[2,3,4,5,6],lk:2,d:{focus:4,work:0,spress:2,mood:-1.4},r:"“……你是想让我更有效率是吗。”"},
+{n:"职业装/通勤包",e:"👜",c:"礼物",p:90,st:[4,5,6],lk:4,d:{conf:0,work:2,mood:4,love:3.4,resil:2},r:"“穿上好像真的像个大人了。”"},
+{n:"她喜欢的那个牌子的本子",e:"📔",c:"文创",p:38,st:[4,5,6],lk:5,d:{mood:4.4,love:4,career:1.4},r:"“你怎么知道是这个牌子。”"}
+];
+const GIFTBOX={
+ 生日:{n:"生日礼盒",e:"🎁",p:88,d:{mood:10,love:8,trust:5,emo:4},r:"“……我今年本来没打算过的。”（然后哭了）"},
+ 儿童节:{n:"儿童节礼盒",e:"🎈",p:40,d:{mood:8,love:5,emo:3},r:"“我都这么大了！……但是我很喜欢。”"},
+ 毕业季:{n:"毕业礼盒",e:"🎓",p:66,d:{mood:8,love:6,conf:3,accept:2},r:"“这一段就这么过去了啊。”"},
+ 跨年:{n:"跨年礼盒",e:"🎆",p:55,d:{mood:8,love:5.4,emo:3.4},r:"“新年第一个礼物是你给的。”"}};
+
+/* ============ 地图 ============ */
+const MAP={
+1:[{n:"家",e:"🏠",tag:["聊天","休息"],k:"home"},{n:"学校",e:"🏫",tag:["同学","老师"],k:"school"},
+   {n:"公园",e:"🌳",tag:["疯跑","偶遇"],k:"out"},{n:"肯德基",e:"🍗",tag:["童年限定碎片"],k:"party",lei:"kfc"},
+   {n:"书店",e:"📚",tag:["安静","聊天"],k:"home",lei:"book"},{n:"游乐园",e:"🎡",tag:["稀有碎片"],k:"out",lei:"park"},
+   {n:"美术馆",e:"🖼",tag:["才艺灵感"],k:"stage"}],
+2:[{n:"学校走廊",e:"🚪",tag:["同学","流言"],k:"school"},{n:"小卖部",e:"🏪",tag:["零食","偶遇"],k:"school"},
+   {n:"奶茶店",e:"🧋",tag:["闺蜜局"],k:"party"},{n:"书店",e:"📚",tag:["安静"],k:"home",lei:"book"},
+   {n:"体育馆",e:"🏐",tag:["运动","减压"],k:"out"},{n:"艺术教室",e:"🎨",tag:["才艺提升"],k:"stage",lei:"show"}],
+3:[{n:"教室",e:"📝",tag:["成绩","压力"],k:"school"},{n:"自习室",e:"💡",tag:["专注"],k:"school"},
+   {n:"操场",e:"🏃",tag:["减压"],k:"out"},{n:"广播站",e:"📻",tag:["高光","才艺"],k:"stage"},
+   {n:"礼堂",e:"🎭",tag:["汇演","稀有碎片"],k:"stage",lei:"show"},{n:"书店",e:"📚",tag:["目标"],k:"home",lei:"book"}],
+4:[{n:"社团招新区",e:"🎪",tag:["社交","新爱好"],k:"out"},{n:"教室",e:"🎓",tag:["专业"],k:"school"},
+   {n:"图书馆",e:"📚",tag:["专注"],k:"home",lei:"book"},{n:"招聘会",e:"💼",tag:["实习竞争力"],k:"office"},
+   {n:"剧场",e:"🎭",tag:["才艺高光"],k:"stage",lei:"show"},{n:"咖啡馆",e:"☕",tag:["谈心"],k:"party",lei:"heart"}],
+5:[{n:"公司",e:"🏢",tag:["工作","PUA风险"],k:"office"},{n:"会议室",e:"🗂",tag:["表现机会"],k:"office"},
+   {n:"咖啡馆",e:"☕",tag:["谈心","减压"],k:"party",lei:"heart"},{n:"展会",e:"🖼",tag:["眼界","灵感"],k:"stage"},
+   {n:"团建场地",e:"🍻",tag:["人际","累"],k:"out"},{n:"加班的办公室",e:"🌙",tag:["稀有碎片"],k:"night",lei:"ot"}],
+6:[{n:"公司",e:"🏢",tag:["事业"],k:"office"},{n:"咖啡馆",e:"☕",tag:["自我梳理"],k:"party",lei:"heart"},
+   {n:"演播室",e:"🎙",tag:["高光时刻"],k:"stage"},{n:"展会",e:"🖼",tag:["同行"],k:"office"},
+   {n:"小时候那个公园",e:"🌳",tag:["限定碎片"],k:"out"},{n:"她自己的工作台",e:"🛠",tag:["作品"],k:"home"}]
+};
+/* 地图偶遇（非 lei 的地点用这个随机池） */
+const ENC=[
+{k:"school",q:"“今天有人说我上课话太多。”",o:[
+  {tx:"话多是因为脑子转得快。但举手这件事我们练一练。",d:{eq:3,focus:2.4,conf:2,trust:2.6},r:"“……行吧。那我明天举手。”"},
+  {tx:"那你以后少说点。",d:{conf:-4,ident:-3,mood:-3.4,trust:-2.4},r:"“哦。”"}]},
+{k:"school",q:"“老师把我的作文念了！全班都听见了！”",o:[
+  {tx:"念到哪一句你自己最得意？",d:{mood:5,conf:3.4,love:2.4,eq:1.4},r:"（一字不差地背了出来）"},
+  {tx:"不错，继续保持。",d:{mood:-1,conf:-1},r:"“……就这样啊。”"}]},
+{k:"out",q:"“我们再待五分钟好不好，就五分钟。”",o:[
+  {tx:"十分钟。多的那五分钟我请客。",d:{mood:5,love:3.4,stress:-3.4,emo:2.4},r:"（笑得很大声）"},
+  {tx:"该回去了。",d:{mood:-3,love:-2.4},r:"“……哦。”"}]},
+{k:"party",q:"“这家我早就想来了，你看我没骗你吧。”",o:[
+  {tx:"你推荐的从来没踩过雷。",d:{mood:4.4,conf:3,love:3},r:"（尾巴要翘起来了）"},
+  {tx:"还行吧，一般。",d:{mood:-3.4,conf:-3,love:-2.6},r:"“……下次不带你来了。”"}]},
+{k:"office",q:"“刚才那个人是不是在阴阳我。”",o:[
+  {tx:"是。而且他说的不对，我站你这边。",d:{resil:4,trust:4,love:3,emo:2.6},r:"“……你这么一说我就不气了。”"},
+  {tx:"你可能想多了。",d:{trust:-4,emo:-3.4,resil:-2.6,stress:3},r:"“嗯，我想多了。”"}]},
+{k:"stage",q:"“我站在那个位置上的时候，好像整个人都亮了。”",o:[
+  {tx:"那就继续站上去。这件事你天生会。",d:{conf:5,mood:4.4,career:0,love:2.6,emo:2},r:"（用力点头）"},
+  {tx:"别太飘，台下苦功更重要。",d:{conf:-4.4,mood:-4,trust:-2.6},r:"“……我知道。”"}]},
+{k:"night",q:"“这么晚了你还来，图什么呀。”",o:[
+  {tx:"不图什么。你一个人在这儿我不放心。",d:{trust:5,love:4.4,emo:3.4,stress:-4},r:"（低头继续改，耳朵是红的）"},
+  {tx:"顺路。",d:{love:-2.6,trust:-2},r:"“哦。顺路啊。”"}]},
+{k:"home",q:"“我今天有一个超棒的想法，你要不要听。”",o:[
+  {tx:"要。你从头讲，我不打断。",d:{mood:5,love:4,trust:3.4,ident:2.6},r:"（讲了二十分钟，中间没停）"},
+  {tx:"等会儿吧，我有点事。",d:{mood:-4,love:-3.4,trust:-3},r:"“……那算了。”"}]}
+];
+
+/* ============ 聊天话题 ============ */
+const TOPIC=[
+{n:"夸夸她",e:"🌟",need:{},b:[
+ {q:"“你突然夸我干嘛，是不是有事求我。”",o:[
+   {tx:"没事求你。就是今天想起你某个瞬间，觉得你挺厉害的。",d:{mood:4,love:3.4,conf:3},r:"“……哪个瞬间。你说清楚。”"},
+   {tx:"随便夸夸。",d:{mood:-2,love:-1.6},r:"“随便夸的不算。”"}]},
+ {q:"“那你说，我最厉害的是什么。”",o:[
+   {tx:"你能让一屋子人跟着你高兴，这个不是努力能学的。",d:{conf:4.4,mood:4,ident:3,love:3},r:"（整个人都亮了）"},
+   {tx:"你很努力啊。",d:{conf:-1,mood:-1},r:"“努力？这不就是说我笨嘛。”"}]}]},
+{n:"听她吐槽",e:"💬",need:{},b:[
+ {q:"“我今天真的要气死了，你听我说——”",o:[
+   {tx:"说。我不插嘴，你讲完为止。",d:{emo:5,stress:-5,trust:4,eq:1.6},r:"（一口气讲了四十分钟）"},
+   {tx:"这事其实也有你的问题。",d:{emo:-5,trust:-5,mood:-4,stress:4},r:"“……行，是我的问题。”"}]},
+ {q:"“我是不是很小气，老是记着这些。”",o:[
+   {tx:"不是小气。是你把事放在心上，这不是缺点。",d:{ident:4,emo:4,accept:2,love:3},r:"（长长地出了一口气）"},
+   {tx:"确实该放下了。",d:{ident:-4,emo:-4,trust:-3},r:"“嗯，我放下。”"}]}]},
+{n:"陪她回忆童年",e:"🧸",need:{},b:[
+ {q:"“你还记不记得我小时候那件特别蠢的事。”",o:[
+   {tx:"记得。但我记得的版本里，你一点都不蠢。",d:{love:4.4,accept:3,mood:3.4,trust:3},r:"（愣了一下）“……你讲给我听。”"},
+   {tx:"哈哈那件事确实挺蠢的。",d:{mood:-3,accept:-3,love:-2.6},r:"“……我就知道你会这么说。”"}]}]},
+{n:"鼓励她上台",e:"🎤",need:{},b:[
+ {q:"“那个名额我其实挺想要的……但是我怕我不行。”",o:[
+   {tx:"你每次说不行，最后都站上去了。这次也一样。",d:{conf:5,mood:4,goal:2,career:0,love:2.6},r:"“……那我去报名了啊。你不许反悔。”"},
+   {tx:"那就别勉强自己。",d:{conf:-4,mood:-3,ident:-2.6},r:"“嗯。也对。”"}]}]},
+{n:"提醒她别太累",e:"🌙",need:{},b:[
+ {q:"“我没事呀，我还能再撑一下。”",o:[
+   {tx:"撑得住我也不想你撑。今天到此为止，剩下的明天说。",d:{stress:-6,emo:4,trust:4,love:3},r:"“……好吧。听你的。”"},
+   {tx:"那你加油。",d:{stress:2,emo:-2,trust:-2},r:"“嗯。”"}]}]},
+{n:"和她脑洞未来",e:"🔮",need:{},b:[
+ {q:"“你说我三十岁的时候会在干嘛？”",o:[
+   {tx:"在做一件只有你做得出来的事。而且我还在旁边。",d:{goal:3,accept:3.4,love:4.4,mood:4,career:0},r:"“……那你要说话算话。”"},
+   {tx:"这谁说得准呢。",d:{mood:-3,love:-2.6,goal:-2},r:"“也是。”"}]}]}];
+
+/* ============ 纪念日 ============ */
+const ANNIV={
+ bday:{n:"生日",e:"🎂",box:"生日",sc:"八月五号。她嘴上说今年不过了，但一早就醒了。",
+   q:"“……今年就不折腾了吧。真的。”",o:[
+   {tx:"不行。你一年就这一天，我要折腾。",d:{mood:7,love:6,emo:4},r:"（嘴角压不住）“那随你。”"},
+   {tx:"那就简单吃碗面。",d:{mood:-5,love:-4.4,emo:-3},r:"“嗯，挺好的。”"}]},
+ child:{n:"儿童节",e:"🎈",box:"儿童节",sc:"六一。她说这个节日已经跟她没关系了。",
+   q:"“我都多大了……你别乱来啊。”",o:[
+   {tx:"（还是买了气球和儿童套餐）",d:{mood:6.4,love:5,emo:3.4},r:"“……幼稚死了。”（但玩具收起来了）"},
+   {tx:"那就不过了。",d:{mood:-3.4,love:-3},r:"“对嘛，多大了。”"}]},
+ grad:{n:"毕业季",e:"🎓",box:"毕业季",sc:"散伙饭那天，她提前退场，一个人站在教学楼下面。",
+   q:"“这一段……就这么没了啊。”",o:[
+   {tx:"没没。它变成你的一部分了，往后都在。",d:{accept:5,emo:4.4,love:4,mood:3.4,conf:2},r:"（很久没说话，然后用力抱了一下）"},
+   {tx:"往前看吧，别伤感了。",d:{accept:-4,emo:-4,love:-3},r:"“嗯。往前看。”"}]},
+ ny:{n:"跨年",e:"🎆",box:"跨年",sc:"倒数十秒，她把手机举得老高，要拍下这一刻。",
+   q:"“新的一年，我许个愿好不好。”",o:[
+   {tx:"许。说给我听，我帮你记一年。",d:{love:6,trust:4.4,emo:3.4,mood:4.4},r:"（凑过来很小声说了三个）"},
+   {tx:"许愿没用啦。",d:{mood:-4,love:-3.4,emo:-2.6},r:"“……也是。”"}]}};
 
 /* ============ 引擎 ============ */
 const $=id=>document.getElementById(id);
 const cl=v=>Math.max(0,Math.min(100,Math.round(v*10)/10));
 const shuf=n=>{const a=[...Array(n).keys()];for(let i=n-1;i>0;i--){const j=Math.random()*(i+1)|0;[a[i],a[j]]=[a[j],a[i]]}return a};
 const R=(x,y)=>x+Math.random()*(y-x), RI=(x,y)=>Math.floor(R(x,y+1)), PICK=a=>a[RI(0,a.length-1)];
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 let S=null;
 const T=s=>String(s==null?"":s).replace(/\{N\}/g,(S&&S.nm)||"她");
 const hp=k=>IND[k].rev?100-S.A[k]:S.A[k];
-const stageOf=d=>STG.find(s=>d>=s.d0&&d<=s.d1)||STG[STG.length-1];
+const stageOf=d=>STG.find(x=>d>=x.d0&&d<=x.d1)||STG[5];
 const ageOf=d=>{const s=stageOf(d);return Math.min(s.a1,s.a0+Math.floor((d-s.d0)/(s.d1-s.d0+1)*(s.a1-s.a0+1)))};
+function dateOf(d){const base=new Date(2004,7,20);const t=new Date(base.getTime()+(d-1)*42*864e5);
+  return{m:t.getMonth()+1,d:t.getDate(),y:t.getFullYear()}}
+const ANNIVDAY={14:"child",30:"bday",50:"grad",68:"bday",85:"grad",100:"ny",110:"bday",115:"grad",135:"bday",150:"grad",165:"ny",175:"bday",196:"bday"};
 
-/* ---------- 特效：对=爱心 / 错=哭泣 / 不对不错=微笑 ---------- */
+/* ---------- 特效 ---------- */
 const FX={
- love:{g:[["❤️","💗","💖"],["♥","❥","❣"],["💘","💝","💞"],["🩷","💕","💓"],["❤","♡","💗"],["💖","✨","💝"],["🌟","💕","❤️","✨"]],
-  p:[["#FF6B9D","#FFC2D8","#FF3D7F"],["#EFC04C","#FFE6A8","#E8864F"],["#FF8A5B","#FFC978","#FF5E78"],["#E0697A","#FFD1DC","#C2426B"],["#F3A8CC","#FFFFFF","#FF79B0"],["#EFC04C","#FFF0C4","#FFAD5B"],["#FF4D6D","#FFB3C6","#FFE0E9"]],
-  m:["rise","burst","spiral","corners","wave"],badge:"pump",cap:110,base:18,per:5},
- cry:{g:[["💧","😢","💔"],["😭","💧","🥺"],["💧","💧","🌧"],["💔","🥀","💧"],["😞","💧","💧"]],
-  p:[["#7FA6D9","#BBD2EE","#4F6E9E"],["#8E9BE8","#C7CDF5","#5A63A8"],["#9AA5B8","#D3DAE6","#6B7385"],["#6FC3C0","#C4EAE8","#3F7F7D"],["#A08FB8","#D8CCE8","#6B5A82"]],
-  m:["fall","drip","streak","welldown","sink"],badge:"crack",vig:1,cap:95,base:15,per:4},
- smile:{g:[["😊","·"],["😊","🙂","·"],["😊","☺","·"],["🙂","😊","·"]],
-  p:[["#D9C9A8","#EFE4CE","#B9A98A"],["#C7D6C0","#E6EFE1","#9FB398"],["#E8D3B0","#F6ECD9","#C0A880"],["#CFD8DE","#E9EFF3","#A3B0BA"]],
-  m:["rise","wave","corners"],badge:null,cap:18,base:9,per:0}};
+ love:{g:[["❤️","💗","💖"],["💕","✨","💛"],["💘","💝","💞"],["🌟","💕","❤️"],["💖","✨","🧡"]],
+  p:[["#F2789E","#FFD9E3","#FF6B9D"],["#F5B82E","#FFE9BC","#FF9A52"],["#FF9A52","#FFD3A8","#F2789E"],["#5BA7D9","#D6EAF8","#F2789E"]],
+  m:["rise","burst","spiral","corners","wave"],cap:110,base:18,per:5},
+ cry:{g:[["💧","😢","💔"],["😭","💧","🥺"],["💧","💧","🌧"],["😞","💧","💧"]],
+  p:[["#7D93A8","#C3D4E0","#5B7183"],["#8FA9D4","#C7D6EC","#5A6B8F"],["#9AA5B8","#D3DAE6","#6B7385"]],
+  m:["fall","drip","streak","welldown","sink"],vig:1,cap:95,base:15,per:4},
+ smile:{g:[["😊","·"],["😊","🙂","·"],["😊","☺","·"]],
+  p:[["#F5B82E","#FFF0C4","#E0A24A"],["#4FAE86","#CDEBDC","#8FD3B5"],["#5BA7D9","#D6EAF8","#9CC9E8"]],
+  m:["rise","wave","corners"],cap:18,base:9,per:0}};
 let fxSeq=0;
-function J0(g){
-  let h=0,net=0;
-  for(const k in g){const rv=IND[k]&&IND[k].rev?-1:1;net+=g[k]*rv;if(g[k]*rv<0)h-=g[k]*rv}
+function J0(g){let h=0,net=0;
+  for(const k in g){if(!IND[k])continue;const rv=IND[k].rev?-1:1;net+=g[k]*rv;if(g[k]*rv<0)h-=g[k]*rv}
   if(net>=4)return{v:1,mag:Math.max(1,net/4)};
   if(net<=-4)return{v:-1,mag:Math.max(1,h/3)};
-  return{v:0,mag:1};
-}
+  return{v:0,mag:1}}
 function burst(kind,mag){
   const fx=$("fx");if(!fx)return;const cfg=FX[kind]||FX.smile;
-  const box=$("fragbtn");
-  if(box){box.classList.remove("pump","crack");if(cfg.badge){void box.offsetWidth;box.classList.add(cfg.badge)}}
   if(window.matchMedia&&matchMedia("(prefers-reduced-motion: reduce)").matches)return;
   const W=innerWidth,H=innerHeight;
   const gl=PICK(cfg.g),pal=PICK(cfg.p),mode=cfg.m[(fxSeq+++RI(0,2))%cfg.m.length];
   const dens=Math.min(1,Math.max(.4,(W*H)/(1280*800)));
-  const n=Math.max(kind==="smile"?6:8,Math.round(Math.min(cfg.cap,cfg.base+mag*cfg.per+R(0,kind==="smile"?6:14))*dens));
+  const n=Math.max(kind==="smile"?6:8,Math.round(Math.min(cfg.cap,cfg.base+mag*cfg.per+R(0,12))*dens));
   if(cfg.vig){const vg=document.createElement("div");vg.className="vig";fx.appendChild(vg);
     const va=vg.animate([{opacity:0},{opacity:1,offset:.25},{opacity:0}],{duration:R(1100,1800),easing:"ease-in-out",fill:"forwards"});
     va.onfinish=()=>vg.remove();setTimeout(()=>vg.remove(),2400)}
   for(let i=0;i<n;i++){
     const el=document.createElement("span");el.textContent=PICK(gl);
-    el.style.fontSize=R(kind==="smile"?14:12,kind==="smile"?34:42)*(Math.random()<.12?1.6:1)+"px";
-    if(Math.random()<(kind==="love"?.45:.8)){const c=PICK(pal);el.style.color=c;el.style.textShadow="0 0 "+R(5,18)+"px "+c}
-    let kf,x,y,dur=R(1400,3000),delay=R(0,kind==="smile"?420:680);
+    el.style.fontSize=R(kind==="smile"?14:12,kind==="smile"?32:40)*(Math.random()<.12?1.6:1)+"px";
+    if(Math.random()<.5){const c=PICK(pal);el.style.color=c;el.style.textShadow="0 0 "+R(5,16)+"px "+c}
+    let kf,x,y,dur=R(1400,2900),delay=R(0,kind==="smile"?400:640);
     if(mode==="rise"){x=R(-20,W);y=H+40;const dx=R(-130,130);
       kf=[{transform:`translate(${x}px,${y}px) scale(.4)`,opacity:0},{offset:.12,opacity:1},
           {offset:.6,transform:`translate(${x+dx*.6}px,${y-H*.62}px) rotate(${R(-40,40)}deg) scale(1)`},
           {transform:`translate(${x+dx}px,${y-H-120}px) rotate(${R(-120,120)}deg) scale(.7)`,opacity:0}];}
-    else if(mode==="burst"){const cx=W/2,cy=H/2,a=R(0,6.283),d=R(120,Math.max(W,H)*.78);dur=R(900,1900);
+    else if(mode==="burst"){const cx=W/2,cy=H/2,a=R(0,6.283),d2=R(120,Math.max(W,H)*.78);dur=R(900,1900);
       kf=[{transform:`translate(${cx}px,${cy}px) scale(.2)`,opacity:0},
-          {offset:.15,opacity:1,transform:`translate(${cx+Math.cos(a)*d*.25}px,${cy+Math.sin(a)*d*.25}px) scale(1.1)`},
-          {transform:`translate(${cx+Math.cos(a)*d}px,${cy+Math.sin(a)*d+R(0,160)}px) scale(.5) rotate(${R(-200,200)}deg)`,opacity:0}];}
+          {offset:.15,opacity:1,transform:`translate(${cx+Math.cos(a)*d2*.25}px,${cy+Math.sin(a)*d2*.25}px) scale(1.1)`},
+          {transform:`translate(${cx+Math.cos(a)*d2}px,${cy+Math.sin(a)*d2+R(0,160)}px) scale(.5) rotate(${R(-200,200)}deg)`,opacity:0}];}
     else if(mode==="spiral"){const cx=W/2,cy=H*.56,a0=R(0,6.283),rr=R(90,Math.min(W,H)*.55),tn=R(1.2,2.4);dur=R(1800,3200);
       kf=[{transform:`translate(${cx}px,${cy}px) scale(.3)`,opacity:0},{offset:.2,opacity:1},
-          {offset:.6,transform:`translate(${cx+Math.cos(a0+tn*3.14)*rr*.5}px,${cy+Math.sin(a0+tn*3.14)*rr*.5-H*.1}px) scale(1.05)`},
           {transform:`translate(${cx+Math.cos(a0+tn*6.28)*rr}px,${cy+Math.sin(a0+tn*6.28)*rr-H*.35}px) scale(.6) rotate(${R(-220,220)}deg)`,opacity:0}];}
     else if(mode==="corners"){const lf=Math.random()<.5,sx=lf?-30:W+30,sy=H+30,ex=lf?R(W*.3,W):R(0,W*.7);
       kf=[{transform:`translate(${sx}px,${sy}px) scale(.3)`,opacity:0},{offset:.14,opacity:1},
-          {offset:.55,transform:`translate(${(sx+ex)/2}px,${R(H*.1,H*.4)}px) scale(1.1) rotate(${R(-60,60)}deg)`},
           {transform:`translate(${ex}px,-80px) scale(.6) rotate(${R(-160,160)}deg)`,opacity:0}];}
     else if(mode==="wave"){x=R(0,W);y=H*R(.45,.95);const am=R(40,150);
       kf=[{transform:`translate(${x}px,${y}px) scale(.3)`,opacity:0},
           {offset:.2,opacity:1,transform:`translate(${x+am}px,${y-H*.2}px) scale(1)`},
-          {offset:.6,transform:`translate(${x-am*.7}px,${y-H*.5}px) scale(1.05) rotate(${R(-50,50)}deg)`},
           {transform:`translate(${x+am*.4}px,-70px) scale(.55) rotate(${R(-140,140)}deg)`,opacity:0}];}
     else if(mode==="fall"){x=R(0,W);y=-50;const dx=R(-40,40);
       kf=[{transform:`translate(${x}px,${y}px) scale(.5)`,opacity:0},{offset:.12,opacity:1},
           {transform:`translate(${x+dx}px,${H+70}px) scale(.8) rotate(${R(-40,40)}deg)`,opacity:0}];}
     else if(mode==="drip"){x=R(W*.2,W*.8);y=-40;dur=R(900,1700);
       kf=[{transform:`translate(${x}px,${y}px) scaleY(.6)`,opacity:0},{offset:.1,opacity:1},
-          {offset:.8,transform:`translate(${x+R(-14,14)}px,${H*.86}px) scaleY(1.5) scaleX(.75)`,opacity:1},
           {transform:`translate(${x+R(-26,26)}px,${H*.95}px) scaleY(.4) scaleX(1.6)`,opacity:0}];}
     else if(mode==="streak"){const dir=Math.random()<.5?1:-1;x=dir>0?R(-120,W*.6):R(W*.4,W+120);y=-60;dur=R(800,1500);
       kf=[{transform:`translate(${x}px,${y}px) rotate(${dir*16}deg) scale(.6)`,opacity:0},{offset:.1,opacity:.95},
           {transform:`translate(${x+dir*R(160,420)}px,${H+80}px) rotate(${dir*16}deg) scale(1)`,opacity:0}];}
-    else if(mode==="welldown"){const cx=W/2,cy=H*.3,a=R(.25,2.89),d=R(120,Math.max(W,H)*.7);dur=R(1200,2200);
-      kf=[{transform:`translate(${cx}px,${cy}px) scale(.2)`,opacity:0},
-          {offset:.18,opacity:1,transform:`translate(${cx+Math.cos(a)*d*.3}px,${cy+Math.sin(a)*d*.3}px) scale(1)`},
-          {transform:`translate(${cx+Math.cos(a)*d}px,${cy+Math.sin(a)*d+H*.35}px) scale(.6)`,opacity:0}];}
     else{x=R(0,W);y=H*R(.2,.6);dur=R(1800,3200);
       kf=[{transform:`translate(${x}px,${y}px) scale(.4)`,opacity:0},{offset:.2,opacity:.9},
           {transform:`translate(${x+R(-50,50)}px,${H+60}px) scale(.7)`,opacity:0}];}
@@ -1092,437 +1273,609 @@ function burst(kind,mag){
     an.onfinish=()=>el.remove();setTimeout(()=>el.remove(),dur+delay+400);
   }
 }
-const SADFACE=["😢","🥺","😔","😞","😣","🙁"];
 
 /* ---------- 状态 ---------- */
-function fresh(){return{ph:"name",nm:"",qi:0,qc:0,qlog:[],qord:null,day:1,A:{},risk:0,
-  frags:[],used:[],acts:0,label:null,lines:{},pre:{},ban:[],cur:null,phase2:0,bonus:0,end:null,back:null};}
-function save(){try{localStorage.setItem("bzd_save",JSON.stringify(S))}catch(e){}}
-function load(){try{const r=localStorage.getItem("bzd_save");return r?JSON.parse(r):null}catch(e){return null}}
-function ban(t,c){S.ban.push({t,c})}
-function bans(){const b=S.ban.map(x=>`<div class="banner ${x.t}">${T(x.c)}</div>`).join("");S.ban=[];return b}
+function fresh(){return{ph:"name",scr:"plan",nm:"",qi:0,qc:0,qlog:[],qord:null,
+ day:1,A:{},money:60,hob:{},frags:[],used:[],usedEnc:[],usedTop:[],slots:[null,null,null],
+ risk:0,rlv:0,lines:{},bought:[],pre:{},notes:[],cur:null,run:0,end:null,bonus:0,hl:{}}}
+function save(){try{localStorage.setItem("bzd2",JSON.stringify(S))}catch(e){}}
+function load(){try{const r=localStorage.getItem("bzd2");return r?JSON.parse(r):null}catch(e){return null}}
+function note(t,c){S.notes.push({t,c})}
+function notes(){const h=S.notes.map(x=>`<div class="note ${x.t}">${T(x.c)}</div>`).join("");S.notes=[];return h}
 
-function apply(d){
-  const act=stageOf(S.day).ind, out={};
-  for(const k in d){
-    if(!act.includes(k))continue;
-    const before=S.A[k];S.A[k]=cl(before+d[k]);
-    out[k]=Math.round((S.A[k]-before)*10)/10;
-  }
-  return out;
-}
+function apply(d){const act=stageOf(S.day).ind,out={};
+  for(const k in d){if(!act.includes(k))continue;const b=S.A[k];S.A[k]=cl(b+d[k]);out[k]=Math.round((S.A[k]-b)*10)/10}
+  return out}
 function getFrag(id){
   if(!id||S.frags.includes(id))return;
   const f=FRAG.find(x=>x.id===id);if(!f)return;
   S.frags.push(id);
-  ban(f.r===3?"v":f.r===2?"":"s",(f.r===3?"🔶 限定碎片":f.r===2?"🔸 稀有碎片":"🔹 回忆碎片")+"【"+T(f.n)+"】已收入图鉴。");
-  const lvl=Math.floor(S.frags.length/6);
-  if(lvl>S.bonus){S.bonus=lvl;["trust","love","eq"].forEach(k=>{if(S.A[k]!=null)S.A[k]=cl(S.A[k]+2)});
-    ban("s","🔹 碎片收集达到 "+S.frags.length+" 块：信任、爱意、情商各永久 +2。")}
+  note(f.r===3?"p":f.r===2?"y":"b",(f.r===3?"🔶 解锁限定碎片":f.r===2?"🔸 解锁稀有碎片":"🔹 解锁回忆碎片")+"《"+T(f.n)+"》");
+  const lv=Math.floor(S.frags.length/6);
+  if(lv>S.bonus){S.bonus=lv;["trust","love","eq"].forEach(k=>{if(S.A[k]!=null)S.A[k]=cl(S.A[k]+2)});
+    note("g","🔹 碎片收集到 "+S.frags.length+" 块：信任、爱意、情商各永久 +2")}
 }
+function addHob(n,x){
+  if(!n||!x)return;S.hob[n]=(S.hob[n]||0)+x;
+  const lv=hobLv(n);
+  if(lv>(S.hl[n]||0)){S.hl[n]=lv;
+    note("y","⭐ 爱好【"+n+"】升到 "+LVN[lv]+"：解锁「"+HOBSK[n][lv-1]+"」");
+    if(lv>=4){apply({conf:4,mood:4,career:0});note("p","✨ "+T("{N}")+"在"+n+"上有了拿得出手的东西，自信心大涨。")}}
+}
+function hobLv(n){const e=S.hob[n]||0;for(let i=4;i>=0;i--)if(e>=LVEXP[i])return i+1===6?5:i+1;return 1}
+function hobLvOf(e){let l=1;for(let i=1;i<5;i++)if(e>=LVEXP[i])l=i+1;return l}
 function riskTick(){
   const act=stageOf(S.day).ind;let bad=0;
   act.forEach(k=>{const h=hp(k);if(h<60){S.risk+=(60-h)*0.011;bad++}});
   if(!bad)S.risk=Math.max(0,S.risk-1.2);
   const lv=S.risk>=80?3:S.risk>=50?2:S.risk>=25?1:0;
-  if(lv>(S.rlv||0)){S.rlv=lv;
-    ban("c",["","⚠️ 心理隐患 · 一级：她开始睡不好，话变少了。有指标长期低于 60。",
-      "⚠️ 心理隐患 · 二级：她不再主动分享。再这样下去会出事。",
-      "⚠️ 心理隐患 · 三级：她已经撑不住了。再不扭转，就来不及了。"][lv])}
-  else if(lv<(S.rlv||0)){S.rlv=lv;ban("s","🟢 隐患等级回落。她最近气色好了一些。")}
+  if(lv>S.rlv){S.rlv=lv;note("r",["","⚠️ 心理隐患一级："+T("{N}")+"开始睡不好，话变少了。","⚠️ 心理隐患二级：她不再主动分享了。再这样会出事。","⚠️ 心理隐患三级：她已经撑不住了。再不扭转就来不及。"][lv])}
+  else if(lv<S.rlv){S.rlv=lv;note("g","🟢 隐患等级回落，她最近气色好了一些。")}
   if(S.risk>=100)return "ill";
   if(S.A.trust<=15||S.A.love<=15)return "cut";
-  return null;
-}
+  return null}
+function decay(){stageOf(S.day).ind.forEach(k=>{
+  if(hp(k)<=62)return;                       // 低于62不再衰减：怠慢拿不到好结局，但不会把她单独推进危险区
+  const d=IND[k].p?0.75:1.6;                 // 一天三个时段只够喂三四项，剩下的在回落
+  S.A[k]=cl(S.A[k]+(IND[k].rev?d:-d))})}
 
-/* ---------- 渲染 ---------- */
-function render(h){$("app").innerHTML=h;const c=$("app").firstElementChild;if(c)c.classList.add("fade");save()}
-function on(id,fn){const e=$(id);if(e)e.onclick=fn}
-function curExpr(){const m=S.A.mood||50,e=S.A.emo||50;return (m>=70&&e>=65)?"happy":(m<=45||e<=45)?"sad":"calm"}
-function say(q,ex){const x=ex||curExpr();return q?`<div class="say"><span class="ava ${x==="sad"?"sad":""}">${head(stageOf(S.day).k,x)}</span><div class="bub">${T(q)}</div></div>`:""}
-function hud(){
-  const h=$("hud");if(S.ph==="name"||S.ph==="quiz"){h.hidden=true;return}
-  h.hidden=false;
-  const st=stageOf(S.day),A=S.A;
+/* ---------- 渲染骨架 ---------- */
+function curExpr(){const m=S.A.mood||50,e=S.A.emo||50;return(m>=72&&e>=64)?"happy":(m<=46||e<=46)?"sad":"calm"}
+function say(q,ex,me){const x=ex||curExpr();
+  if(me)return `<div class="say me"><div class="bub">${T(q)}</div></div>`;
+  return q?`<div class="say"><span class="ava">${head(stageOf(S.day).k,x)}</span><div class="bub">${T(q)}</div></div>`:""}
+function effChips(d,lim){const act=stageOf(S.day).ind;
+  return Object.keys(d).filter(k=>IND[k]&&act.includes(k)&&Math.abs(d[k])>=1)
+   .sort((a,b)=>Math.abs(d[b])-Math.abs(d[a])).slice(0,lim||4)
+   .map(k=>{const good=IND[k].rev?d[k]<0:d[k]>0;
+     return `<span class="eff ${good?"u":"d"}">${IND[k].n}${good?"+":"−"}</span>`}).join("")}
+const stars=n=>"★".repeat(n)+"☆".repeat(5-n);
+
+function drawTop(){
+  const st=stageOf(S.day),dt=dateOf(S.day),se=SEASON(dt.m),mf=MOODFACE(S.A.mood||50);
   const spine=STG.map(s=>{const done=S.day>s.d1,now=s.k===st.k;
     const p=now?Math.round((S.day-s.d0+1)/(s.d1-s.d0+1)*100):0;
     return `<i class="${done?"done":""} ${now?"now":""}" style="--p:${p}%"></i>`}).join("");
-  const mk=k=>{const v=A[k],hv=hp(k),rev=IND[k].rev;
-    const c=hv>=75?"var(--good)":hv>=60?"var(--sun)":hv>=45?"var(--her)":"var(--bad)";
+  $("topbar").innerHTML=`<div class="tb">
+    <span class="pill day">第 <b>${S.day}</b> / 200 天</span>
+    <span class="pill age"><b>${ageOf(S.day)}</b> 岁</span>
+    <span class="pill stage">${st.n}</span>
+    <span class="pill season">${se.e} ${se.n} · ${dt.m}月${dt.d}日</span>
+    <span class="pill coin">💰 <b>${Math.round(S.money)}</b> 元</span>
+    <span class="pill mood">${mf.e} ${mf.n}</span>
+  </div><div class="spine">${spine}</div>`;
+  $("topbar").hidden=false}
+function drawChar(){
+  const st=stageOf(S.day).k;
+  $("charcard").innerHTML=`<div class="panel chcard">
+    <div class="frame">${portrait(st,curExpr(),132)}</div>
+    <div class="pbody">
+      <div class="chname">${esc(S.nm)}</div>
+      <div class="chsub">${ageOf(S.day)}岁 · 1997.08.05 · 狮子座 ENFP</div>
+      <div class="chdesc">${T(CHDESC[st])}</div>
+      <div class="tags">${CHTAG.map(t=>`<span class="tag ${t[1]}">${t[0]}</span>`).join("")}</div>
+    </div></div>`}
+function drawStats(){
+  const st=stageOf(S.day),A=S.A;
+  const mk=k=>{const v=A[k],h=hp(k),rev=IND[k].rev;
+    const c=h>=85?"linear-gradient(90deg,#8FD3B5,#4FAE86)":h>=70?"linear-gradient(90deg,#FFD98A,#F5B82E)":
+            h>=60?"linear-gradient(90deg,#FFC08A,#FF9A52)":"linear-gradient(90deg,#E9A79F,#C9564C)";
     const p=S.pre&&S.pre[k]!=null?Math.round((v-S.pre[k])*10)/10:0;
     const good=rev?p<0:p>0;
-    return `<div class="bar ${rev?"rev":""} ${hv<60?"low":hv>=75?"hi":""}">
-      <span class="n">${IND[k].n}${rev?"<i>↓好</i>":""}</span>
-      <span class="v">${Math.round(v)}${Math.abs(p)>=0.1?`<span class="dt ${good?"up":"dn"}">${p>0?"+":""}${p}</span>`:""}</span>
-      <span class="t"><span class="f" style="width:${v}%;background:${c}"></span></span></div>`};
+    return `<div class="stat"><div class="l"><span>${IND[k].n}${rev?"<span style='font-size:9px;color:#A7948A'> 越低越好</span>":""}</span>
+      <span><b>${Math.round(v)}</b>${Math.abs(p)>=.1?`<span class="dt ${good?"up":"dn"}">${p>0?"+":""}${p}</span>`:""}</span></div>
+      <div class="t"><div class="f" style="width:${v}%;background:${c}"></div></div></div>`};
   const own=st.ind.filter(k=>!IND[k].p),per=st.ind.filter(k=>IND[k].p);
-  const bars=`<div class="grp">本阶段</div><div class="bars">${own.map(mk).join("")}</div>
-    <div class="grp">一直带着</div><div class="bars">${per.map(mk).join("")}</div>`;
-  h.innerHTML=`<div class="hudtop">
-      <span class="agebox"><s>AGE</s><b>${ageOf(S.day)}</b><u>岁</u></span>
-      <span class="stg">${st.n}</span>
-      <span class="dayno">DAY ${S.day}/200</span>
-      <button class="frag" id="fragbtn">碎片 ${S.frags.length}/${FRAG.length}</button>
-    </div>
-    <div class="spine">${spine}</div>
-    ${bars}`;
-  on("fragbtn",()=>{S.back=S.ph;S.ph="atlas";atlas()});
-}
+  $("statpanel").innerHTML=`<div class="panel"><div class="phead">属性面板 · ${st.n}</div><div class="pbody">
+    <div class="grp">本阶段</div>${own.map(mk).join("")}
+    <div class="grp">一直带着</div>${per.map(mk).join("")}
+    </div></div>`}
+const MENU=[["plan","🗓","安排日程"],["map","🗺","外出探索"],["shop","🛍","打开商店"],["gift","🎁","赠送礼物"],
+            ["chat","💬","聊天陪伴"],["atlas","🧩","碎片图鉴"],["hobby","⭐","爱好进度"],["goal","🎯","阶段目标"]];
+function drawMenu(){
+  $("menu").innerHTML=`<div class="menuin">${MENU.map(m=>
+    `<button class="mb ${S.scr===m[0]?"on":""}" data-s="${m[0]}" ${S.running?"disabled":""}><i>${m[1]}</i>${m[2]}</button>`).join("")}</div>`;
+  $("menu").hidden=false;
+  document.querySelectorAll(".mb").forEach(b=>b.onclick=()=>{S.scr=b.dataset.s;draw()})}
+function center(h){$("stage").innerHTML=h;const c=$("stage").firstElementChild;if(c)c.classList.add("fade")}
+function draw(){
+  if(S.ph==="name"||S.ph==="quiz"||S.ph==="end"){$("topbar").hidden=true;$("menu").hidden=true;
+    $("charcard").innerHTML="";$("statpanel").innerHTML="";}
+  else{drawTop();drawChar();drawStats();drawMenu()}
+  if(S.running){save();return}
+  const f={plan:scrPlan,map:scrMap,shop:scrShop,gift:scrGift,chat:scrChat,atlas:scrAtlas,hobby:scrHobby,goal:scrGoal}[S.scr];
+  if(S.ph==="day"&&f)f();
+  save()}
+function on(id,fn){const e=$(id);if(e)e.onclick=fn}
 
-/* ---------- 取名 ---------- */
+/* ---------- 弹窗 ---------- */
+function modal(title,body,cls){
+  const m=document.createElement("div");m.className="mask";m.id="mask";
+  m.innerHTML=`<div class="modal pop ${cls||""}"><div class="mh">${title}</div><div class="mb2">${body}</div></div>`;
+  document.body.appendChild(m);return m}
+function closeModal(){const m=$("mask");if(m)m.remove()}
+
+/* ================= 界面：安排日程 ================= */
+function slotLabel(s){
+  if(!s)return null;
+  if(s.t==="act"){const a=ACT[s.i];return a.e+" "+T(a.n)}
+  if(s.t==="map"){const m=MAP[stageOf(S.day).k][s.i];return m.e+" "+T(m.n)}
+  if(s.t==="chat"){const c=TOPIC[s.i];return c.e+" "+T(c.n)}
+  return null}
+function firstEmpty(){return S.slots.findIndex(x=>!x)}
+function putSlot(o){const i=firstEmpty();if(i<0){alert("今天三个时段都排满了。");return false}S.slots[i]=o;return true}
+function slotsHTML(){
+  return `<div class="slots">${SLOTN.map((n,i)=>{const l=slotLabel(S.slots[i]);
+    return `<div class="slot ${l?"filled":""} ${!l&&firstEmpty()===i?"cur":""}">
+      <div class="h">${n}</div><div class="v ${l?"":"e"}">${l||"还没安排"}</div>
+      ${l?`<button class="lnk" data-clr="${i}" style="margin-top:4px">清空</button>`:""}</div>`}).join("")}</div>`}
+function bindClear(){document.querySelectorAll("[data-clr]").forEach(b=>b.onclick=()=>{S.slots[+b.dataset.clr]=null;draw()})}
+function scrPlan(){
+  const st=stageOf(S.day),list=ACT.map((a,i)=>({a,i})).filter(o=>o.a.s===st.k);
+  const cats=["学","休","社","才","工"],cn={学:"学习类",休:"休息类",社:"社交类",才:"才艺类",工:"打工/实习"};
+  const full=S.slots.every(x=>x);
+  center(`<div class="panel"><div class="phead">日程安排 · 第 ${S.day} 天</div><div class="pbody">
+    ${notes()}
+    ${slotsHTML()}
+    ${full?`<div class="note g">三个时段都排好了。点下面开始这一天。</div>
+      <button class="btn" id="go">▶ 开始这一天</button>`:
+      cats.filter(c=>list.some(o=>o.a.c===c)).map(c=>`
+      <div class="grp" style="margin-top:14px">${cn[c]}</div>
+      <div class="grid">${list.filter(o=>o.a.c===c).map(o=>`
+        <button class="gc" data-a="${o.i}">
+          <span class="n"><em>${o.a.e}</em>${T(o.a.n)}</span>
+          <span class="d">${T(o.a.t)}</span>
+          <span class="stars">${stars(o.a.lk)}</span>
+          <span class="fx">${effChips(o.a.d)}${o.a.hb?`<span class="eff u">${o.a.hb}经验</span>`:""}</span>
+        </button>`).join("")}</div>`).join("")}
+    </div></div>`);
+  bindClear();
+  document.querySelectorAll("[data-a]").forEach(b=>b.onclick=()=>{if(putSlot({t:"act",i:+b.dataset.a}))draw()});
+  on("go",startDay)}
+
+/* ================= 界面：探索 ================= */
+function scrMap(){
+  const st=stageOf(S.day).k,ms=MAP[st];
+  center(`<div class="panel"><div class="phead">外出探索 · ${stageOf(S.day).n}地图</div><div class="pbody">
+    ${notes()}${slotsHTML()}
+    <div class="note b">选一个地点，它会占掉一个时段。带 <b>剧情</b> 标记的地点会进入连续对话。</div>
+    <div class="grid">${ms.map((m,i)=>`<button class="gc" data-m="${i}">
+      <span class="n"><em>${m.e}</em>${T(m.n)}</span>
+      <span class="d">${m.tag.map(t=>"【"+t+"】").join("")}</span>
+      <span class="fx">${m.lei?'<span class="eff u">剧情 · 5轮</span>':'<span class="eff u">偶遇</span>'}</span>
+    </button>`).join("")}</div></div></div>`);
+  bindClear();
+  document.querySelectorAll("[data-m]").forEach(b=>b.onclick=()=>{if(putSlot({t:"map",i:+b.dataset.m})){S.scr="plan";draw()}})}
+
+/* ================= 界面：聊天 ================= */
+function scrChat(){
+  center(`<div class="panel"><div class="phead">聊天陪伴 · 话题</div><div class="pbody">
+    ${notes()}${slotsHTML()}
+    ${say(PICK(["“今天有好多话想跟你说。”","“你陪我说说话嘛。”","“……你最近都不怎么找我聊天。”"]))}
+    <div class="note b">挑一个话题，它会占掉一个时段，进入多轮对话。</div>
+    <div class="grid">${TOPIC.map((t,i)=>`<button class="gc" data-t="${i}">
+      <span class="n"><em>${t.e}</em>${T(t.n)}</span>
+      <span class="d">${t.b.length} 轮对话</span></button>`).join("")}</div>
+    </div></div>`);
+  bindClear();
+  document.querySelectorAll("[data-t]").forEach(b=>b.onclick=()=>{if(putSlot({t:"chat",i:+b.dataset.t})){S.scr="plan";draw()}})}
+
+/* ================= 界面：商店 / 礼物 ================= */
+function scrShop(){
+  const st=stageOf(S.day).k;
+  const list=SHOP.map((g,i)=>({g,i})).filter(o=>o.g.st.includes(st)&&!(o.g.once&&S.bought.includes(o.i)));
+  const cats=["零食","文创","礼物","活动","学习"];
+  center(`<div class="panel"><div class="phead">商店 · 零花钱 ${Math.round(S.money)} 元</div><div class="pbody">
+    ${notes()}
+    <div class="note y">买下的东西会进背包，去【赠送礼物】送给${T("{N}")}。送礼不占时段。</div>
+    ${cats.filter(c=>list.some(o=>o.g.c===c)).map(c=>`
+      <div class="grp" style="margin-top:12px">${c}</div>
+      <div class="grid">${list.filter(o=>o.g.c===c).map(o=>`
+        <button class="gc" data-b="${o.i}" ${S.money<o.g.p?"disabled":""}>
+          <span class="n"><em>${o.g.e}</em>${T(o.g.n)}</span>
+          <span class="price">${o.g.p===0?"免费":o.g.p+" 元"}</span>
+          <span class="d">她的喜欢度 ${stars(o.g.lk)}</span>
+          <span class="fx">${effChips(o.g.d,3)}</span>
+        </button>`).join("")}</div>`).join("")}
+    </div></div>`);
+  document.querySelectorAll("[data-b]").forEach(b=>b.onclick=()=>{
+    const i=+b.dataset.b,g=SHOP[i];
+    if(S.money<g.p)return;
+    S.money-=g.p;S.bought.push(i);
+    note("g","🛍 买下了「"+T(g.n)+"」，放进了背包。");S.scr="gift";draw()})}
+function scrGift(){
+  const own={};S.bought.forEach(i=>own[i]=(own[i]||0)+1);
+  const ks=Object.keys(own);
+  center(`<div class="panel"><div class="phead">赠送礼物 · 背包</div><div class="pbody">
+    ${notes()}
+    ${ks.length?`<div class="note p">投其所好加分很高；送错会让她沉默。</div>
+      <div class="grid">${ks.map(i=>{const g=SHOP[+i];return `<button class="gc" data-g="${i}">
+        <span class="n"><em>${g.e}</em>${T(g.n)}</span>
+        <span class="d">她的喜欢度 ${stars(g.lk)}</span>
+        <span class="fx">×${own[i]}</span></button>`}).join("")}</div>`
+      :`<div class="note y">背包是空的。先去【打开商店】买点东西。</div>`}
+    </div></div>`);
+  document.querySelectorAll("[data-g]").forEach(b=>b.onclick=()=>giveGift(+b.dataset.g))}
+function giveGift(i){
+  const g=SHOP[i];
+  const k=S.bought.indexOf(i);if(k<0)return;S.bought.splice(k,1);
+  const d={...g.d};
+  if(g.lk>=5)d.love=(d.love||0)+1.5;
+  apply(d);if(g.hb)addHob(g.hb,g.hx||10);
+  const Jv=J0(d);
+  if(g.lk<=1&&Math.random()<.5)getFrag(null);
+  if(g.lk>=5&&Math.random()<.35){const pool=FRAG.filter(f=>f.st===stageOf(S.day).k&&!S.frags.includes(f.id));if(pool.length)getFrag(PICK(pool).id)}
+  const m=modal((Jv.v>0?"🎁 ":"😶 ")+"你把「"+T(g.n)+"」给了她",
+    `${say(g.r,Jv.v>0?"happy":Jv.v<0?"sad":"calm")}
+     <div class="grid" style="grid-template-columns:1fr">${effChips(d,6)?`<div class="fx" style="display:flex;flex-wrap:wrap;gap:4px">${effChips(d,6)}</div>`:""}</div>
+     <div class="row" style="justify-content:flex-end"><button class="btn" id="ok">好</button></div>`,
+    Jv.v>0?"good":Jv.v<0?"bad":"");
+  burst(Jv.v>0?"love":Jv.v<0?"cry":"smile",Jv.mag);
+  m.querySelector("#ok").onclick=()=>{closeModal();draw()}}
+
+/* ================= 界面：图鉴 / 爱好 / 目标 ================= */
+function scrAtlas(){
+  center(`<div class="panel"><div class="phead">回忆碎片图鉴 · ${S.frags.length}/${FRAG.length}</div><div class="pbody">
+    ${notes()}
+    ${STG.map(s=>{const fs=FRAG.filter(f=>f.st===s.k),got=fs.filter(f=>S.frags.includes(f.id)).length,
+      miss=S.day>s.d1&&got<fs.length;
+      return `<div class="grp" style="margin-top:12px">${s.n} ${s.a0}–${s.a1}岁 · ${got}/${fs.length}${miss?" · <span style='color:#C9564C'>已永久关闭</span>":""}</div>
+      <div class="grid">${fs.map(f=>{const has=S.frags.includes(f.id);
+        return `<button class="fc ${has?(f.r===3?"r3":f.r===2?"r2":"n"):"lock"}" ${has?`data-f="${f.id}"`:"disabled"}>
+          <div class="r">${f.r===3?"LIMITED":f.r===2?"RARE":"COMMON"}</div>
+          <div class="t">${has?T(f.n):"？？？"}</div></button>`}).join("")}</div>`}).join("")}
+    </div></div>`);
+  document.querySelectorAll("[data-f]").forEach(b=>b.onclick=()=>{
+    const f=FRAG.find(x=>x.id===b.dataset.f);
+    center(`<div class="panel"><div class="phead">${f.r===3?"限定碎片":f.r===2?"稀有碎片":"回忆碎片"} · ${STG[f.st-1].n}</div>
+      <div class="pbody"><h2>${T(f.n)}</h2><div class="fstory">${T(f.t)}</div>
+      <button class="btn w" id="bk">返回图鉴</button></div></div>`);
+    on("bk",scrAtlas)})}
+function scrHobby(){
+  const ks=HOBN.filter(n=>S.hob[n]);
+  center(`<div class="panel"><div class="phead">爱好进度</div><div class="pbody">
+    ${notes()}
+    <div class="note y">反复安排同一类才艺活动会积累经验。L4 起会在汇演、比赛、面试、职场里触发高光。</div>
+    ${ks.length?ks.map(n=>{const e=S.hob[n],lv=hobLvOf(e),nx=LVEXP[lv]||e,pv=LVEXP[lv-1]||0;
+      const pct=lv>=5?100:Math.round((e-pv)/((nx-pv)||1)*100);
+      return `<div class="hb"><div class="top"><b style="font-size:15px">${n}</b><span class="lv">${LVN[lv]}</span></div>
+        <div class="t"><div class="f" style="width:${pct}%"></div></div>
+        <div class="sk">经验 ${Math.round(e)}${lv<5?" / "+nx:" · 已满级"}　｜　高光技能：${HOBSK[n].slice(0,lv).join("、")}</div></div>`}).join("")
+      :`<div class="note b">她还没有开始任何一项爱好。去【安排日程】里选才艺类活动试试。</div>`}
+    </div></div>`)}
+function scrGoal(){
+  const st=stageOf(S.day);
+  center(`<div class="panel"><div class="phead">阶段目标 · ${st.n}</div><div class="pbody">
+    ${notes()}
+    <div class="note y">${T(st.intro)}</div>
+    <div class="grp" style="margin-top:12px">本阶段权重（越靠前越影响结局）</div>
+    <div class="grid">${Object.keys(st.w).map(k=>`<div class="gc" style="cursor:default">
+      <span class="n">${IND[k].n}</span>
+      <span class="d">权重 ${st.w[k]}　当前 ${Math.round(S.A[k])}（健康度 ${Math.round(hp(k))}）</span>
+      <span class="fx">${hp(k)>=75?'<span class="eff u">良好</span>':hp(k)>=60?'<span class="eff u">稳定</span>':'<span class="eff d">偏低风险</span>'}</span>
+    </div>`).join("")}</div>
+    <div class="grp" style="margin-top:14px">阶段信息</div>
+    <div class="grid">
+      <div class="gc" style="cursor:default"><span class="n">阶段区间</span><span class="d">第 ${st.d0}–${st.d1} 天 · ${st.a0}–${st.a1}岁</span></div>
+      <div class="gc" style="cursor:default"><span class="n">升级后封存</span><span class="d">${st.seal.length?st.seal.map(k=>IND[k].n).join("、"):"无"}</span></div>
+      <div class="gc" style="cursor:default"><span class="n">本阶段碎片</span><span class="d">${FRAG.filter(f=>f.st===st.k&&S.frags.includes(f.id)).length}/${FRAG.filter(f=>f.st===st.k).length}（出阶段后关闭）</span></div>
+      <div class="gc" style="cursor:default"><span class="n">隐藏剧情</span><span class="d">${S.lines[st.k]?"已触发":"需信任 ≥"+SLINE[st.k].need.trust+" 且爱意 ≥"+SLINE[st.k].need.love}</span></div>
+      <div class="gc" style="cursor:default"><span class="n">心理隐患</span><span class="d">${Math.round(S.risk)} / 100　${["正常","一级","二级","三级"][S.rlv]}</span></div>
+    </div></div></div>`)}
+
+/* ================= 一天的执行 ================= */
+function shell(){drawTop();drawChar();drawStats();drawMenu()}
+function startDay(){S.running=1;S.run=0;S.pre={...S.A};runStep()}
+function runStep(){
+  if(S.run>=3)return dayEvent();
+  const s=S.slots[S.run];
+  if(!s){S.run++;return runStep()}
+  if(s.t==="act")return runAct(ACT[s.i]);
+  if(s.t==="chat")return topicRun(s.i,0,"");
+  const m=MAP[stageOf(S.day).k][s.i];
+  if(m.lei&&LEI.find(l=>l.id===m.lei))return leiRun(m.lei,0,"");
+  return runEnc(m)}
+function runAct(a){
+  const g=apply(a.d);if(a.hb)addHob(a.hb,a.hx||10);
+  const Jv=J0(a.d);
+  const dis=a.lk>=4?"她很乐意":a.lk===3?"她没什么意见":"她兴致不高";
+  shell();
+  center(`<div class="panel"><div class="band" style="height:0"></div><div class="sbody">
+    <span class="scenetag">${SLOTN[S.run]} · ${T(a.n)}</span>
+    <div class="story">${T(a.t)}<br><span style="color:#A7948A;font-size:13px">${dis} ${stars(a.lk)}</span></div>
+    ${say(a.r||"（她照做了）",Jv.v>0?"happy":Jv.v<0?"sad":"calm")}
+    <div class="row" style="margin-top:10px">${effChips(a.d,6)}</div>
+    ${notes()}
+    <button class="btn" id="nx">继续 · ${SLOTN[S.run+1]||"今天的事"}</button>
+  </div></div>`);
+  burst(Jv.v>0?"love":Jv.v<0?"cry":"smile",Jv.mag);
+  on("nx",()=>{S.run++;runStep()})}
+function runEnc(m){
+  let pool=ENC.map((e,i)=>({e,i})).filter(o=>o.e.k===m.k&&!S.usedEnc.includes(o.i));
+  if(!pool.length){S.usedEnc=[];pool=ENC.map((e,i)=>({e,i})).filter(o=>o.e.k===m.k)}
+  if(!pool.length)pool=ENC.map((e,i)=>({e,i}));
+  const p=PICK(pool);S.usedEnc.push(p.i);const e=p.e,ord=shuf(e.o.length);
+  shell();
+  center(`<div class="panel">${sceneBand(m.k)}<div class="sbody">
+    <span class="scenetag">${SLOTN[S.run]} · ${m.e} ${T(m.n)}</span>
+    <div class="story">你们在${T(m.n)}待了一会儿。</div>
+    ${say(e.q)}
+    <div class="opts">${ord.map((oi,i)=>`<button class="opt" data-i="${oi}"><span class="k">${"ABCD"[i]}</span><span class="tx">${T(e.o[oi].tx)}</span></button>`).join("")}</div>
+  </div></div>`);
+  document.querySelectorAll("[data-i]").forEach(b=>b.onclick=()=>{
+    const o=e.o[+b.dataset.i];apply(o.d);const Jv=J0(o.d);
+    if(Jv.v>0&&Math.random()<.3){const fp=FRAG.filter(f=>f.st===stageOf(S.day).k&&!S.frags.includes(f.id));if(fp.length)getFrag(PICK(fp).id)}
+    shell();
+    center(`<div class="panel">${sceneBand(m.k)}<div class="sbody">
+      <span class="scenetag">${SLOTN[S.run]} · ${m.e} ${T(m.n)}</span>
+      ${say(e.q)}${say(o.tx,"",1)}${say(o.r,Jv.v>0?"happy":Jv.v<0?"sad":"calm")}
+      <div class="row" style="margin-top:10px">${effChips(o.d,6)}</div>${notes()}
+      <button class="btn" id="nx">继续</button></div></div>`);
+    burst(Jv.v>0?"love":Jv.v<0?"cry":"smile",Jv.mag);
+    on("nx",()=>{S.run++;runStep()})})}
+function leiRun(id,bi,log){
+  const l=LEI.find(x=>x.id===id);if(!l){S.run++;return runStep()}
+  const mp=MAP[stageOf(S.day).k].find(x=>x.lei===id)||{k:"home",e:"📍",n:l.n};
+  shell();
+  if(bi<l.b.length){
+    const b=l.b[bi],ord=shuf(b.o.length);
+    center(`<div class="panel">${sceneBand(mp.k)}<div class="sbody">
+      <span class="scenetag">${SLOTN[S.run]} · ${T(l.n)} · 第 ${bi+1}/${l.b.length} 轮</span>
+      ${bi===0?`<div class="story">${T(l.i)}</div>`:""}${log}${say(b.q)}
+      <div class="opts">${ord.map((oi,i)=>`<button class="opt" data-i="${oi}"><span class="k">${"ABCD"[i]}</span><span class="tx">${T(b.o[oi].tx)}</span></button>`).join("")}</div>
+    </div></div>`);
+    document.querySelectorAll("[data-i]").forEach(x=>x.onclick=()=>{
+      const o=b.o[+x.dataset.i];apply(o.d);const Jv=J0(o.d);
+      burst(Jv.v>0?"love":Jv.v<0?"cry":"smile",Jv.mag);
+      leiRun(id,bi+1,log+say(b.q)+say(o.tx,"",1)+say(o.r,Jv.v>0?"happy":Jv.v<0?"sad":"calm"))});
+    return}
+  const f=l.fin,ord=shuf(f.o.length);
+  center(`<div class="panel">${sceneBand(mp.k)}<div class="sbody">
+    <span class="scenetag">${SLOTN[S.run]} · ${T(l.n)} · 结尾</span>
+    <div class="story">${T(f.sc)}</div>${say(f.q)}
+    <div class="opts">${ord.map((oi,i)=>`<button class="opt" data-i="${oi}"><span class="k">${"ABCD"[i]}</span><span class="tx">${T(f.o[oi].tx)}</span><span class="tag2">倾向：${T(f.o[oi].tag)}</span></button>`).join("")}</div>
+  </div></div>`);
+  document.querySelectorAll("[data-i]").forEach(x=>x.onclick=()=>{
+    const o=f.o[+x.dataset.i];apply(o.d);const Jv=J0(o.d);if(o.f)getFrag(o.f);
+    shell();
+    center(`<div class="panel">${sceneBand(mp.k)}<div class="sbody">
+      <span class="scenetag">${SLOTN[S.run]} · ${T(l.n)}</span>
+      <div class="story">${T(f.sc)}</div>${say(f.q)}${say(o.tx,"",1)}${say(o.r,Jv.v>0?"happy":Jv.v<0?"sad":"calm")}
+      <div class="row" style="margin-top:10px">${effChips(o.d,6)}</div>${notes()}
+      <button class="btn" id="nx">继续</button></div></div>`);
+    burst(Jv.v>0?"love":Jv.v<0?"cry":"smile",Jv.mag);
+    on("nx",()=>{S.run++;runStep()})})}
+function topicRun(ti,bi,log){
+  const t=TOPIC[ti];shell();
+  if(bi<t.b.length){
+    const b=t.b[bi],ord=shuf(b.o.length);
+    center(`<div class="panel"><div class="sbody">
+      <span class="scenetag">${SLOTN[S.run]} · 聊天 · ${T(t.n)} · ${bi+1}/${t.b.length}</span>
+      ${log}${say(b.q)}
+      <div class="opts">${ord.map((oi,i)=>`<button class="opt" data-i="${oi}"><span class="k">${"ABCD"[i]}</span><span class="tx">${T(b.o[oi].tx)}</span></button>`).join("")}</div>
+    </div></div>`);
+    document.querySelectorAll("[data-i]").forEach(x=>x.onclick=()=>{
+      const o=b.o[+x.dataset.i];apply(o.d);const Jv=J0(o.d);
+      burst(Jv.v>0?"love":Jv.v<0?"cry":"smile",Jv.mag);
+      if(Jv.v>0&&bi===t.b.length-1&&Math.random()<.4){
+        const fp=FRAG.filter(f=>f.st===stageOf(S.day).k&&!S.frags.includes(f.id));if(fp.length)getFrag(PICK(fp).id)}
+      topicRun(ti,bi+1,log+say(b.q)+say(o.tx,"",1)+say(o.r,Jv.v>0?"happy":Jv.v<0?"sad":"calm"))});
+    return}
+  center(`<div class="panel"><div class="sbody">
+    <span class="scenetag">${SLOTN[S.run]} · 聊天 · ${T(t.n)}</span>${log}${notes()}
+    <button class="btn" id="nx">继续</button></div></div>`);
+  on("nx",()=>{S.run++;runStep()})}
+
+/* ================= 当日事件（弹窗） ================= */
+function dayEvent(){
+  const st=stageOf(S.day);
+  const an=ANNIVDAY[S.day];
+  if(an&&!S.lines["an"+S.day]){S.lines["an"+S.day]=1;return annivRun(ANNIV[an])}
+  const L=SLINE[st.k];
+  if(L&&!S.lines[st.k]&&S.A.trust>=L.need.trust&&S.A.love>=L.need.love&&S.day>=st.d0+3){
+    S.lines[st.k]=1;return evRun({sc:L.sc,q:L.q,o:L.o,bt:L.bt},"hidden")}
+  let pool=EV.map((e,i)=>({e,i})).filter(o=>o.e.s===st.k&&!S.used.includes(o.i));
+  if(!pool.length){S.used=S.used.filter(i=>EV[i].s!==st.k);pool=EV.map((e,i)=>({e,i})).filter(o=>o.e.s===st.k)}
+  const p=PICK(pool);S.used.push(p.i);
+  evRun(p.e)}
+function evRun(d,kind){
+  const ord=shuf(d.o.length),st=stageOf(S.day);S.curEv={o:d.o};
+  shell();
+  const m=modal(kind==="hidden"?"✨ "+T(d.bt||"隐藏剧情"):"💬 今天还发生了一件事",
+    `<div class="story">${T(d.sc)}</div>${say(d.q)}
+     <div class="opts">${ord.map((oi,i)=>`<button class="opt" data-i="${oi}"><span class="k">${"ABCD"[i]}</span><span class="tx">${T(d.o[oi].tx)}</span>${d.o[oi].tag?`<span class="tag2">倾向：${T(d.o[oi].tag)}</span>`:""}</button>`).join("")}</div>`,
+    kind==="hidden"?"good":"");
+  m.querySelectorAll("[data-i]").forEach(b=>b.onclick=()=>{
+    const o=d.o[+b.dataset.i];apply(o.d);if(o.f)getFrag(o.f);if(o.acc)S.A.accept!=null&&apply({accept:o.acc});
+    const Jv=J0(o.d);if(Jv.v>0)apply({eq:0.8});
+    closeModal();
+    const m2=modal(Jv.v>0?"😊 她的反应":Jv.v<0?"😢 她的反应":"😐 她的反应",
+      `${say(o.r,Jv.v>0?"happy":Jv.v<0?"sad":"calm")}
+       <div class="row" style="margin-top:10px">${effChips(o.d,6)}</div>${notes()}
+       <div class="row" style="justify-content:flex-end"><button class="btn" id="ok">结束这一天</button></div>`,
+      Jv.v>0?"good":Jv.v<0?"bad":"");
+    burst(Jv.v>0?"love":Jv.v<0?"cry":"smile",Jv.mag);
+    m2.querySelector("#ok").onclick=()=>{closeModal();S.curEv=null;dayEnd()}})}
+function annivRun(a){
+  const ord=shuf(a.o.length),box=GIFTBOX[a.box];S.curEv={o:a.o};
+  shell();
+  const m=modal(a.e+" 纪念日 · "+a.n,
+    `<div class="story">${T(a.sc)}</div>${say(a.q)}
+     <div class="opts">${ord.map((oi,i)=>`<button class="opt" data-i="${oi}"><span class="k">${"ABCD"[i]}</span><span class="tx">${T(a.o[oi].tx)}</span></button>`).join("")}</div>
+     ${box?`<div class="note y">限定商品上架：<b>${box.e} ${box.n}</b>（${box.p} 元）${S.money>=box.p?"":"（零花钱不够）"}</div>
+       <button class="opt" id="buybox" ${S.money>=box.p?"":"disabled"}><span class="k">🎁</span><span class="tx">买下${box.n}送给她</span></button>`:""}`,"good");
+  const fin=(o,extra)=>{
+    apply(o.d);const Jv=J0(o.d);
+    const fp=FRAG.filter(f=>f.st===stageOf(S.day).k&&f.r>=2&&!S.frags.includes(f.id));
+    if(Jv.v>0&&fp.length&&Math.random()<.75)getFrag(PICK(fp).id);
+    closeModal();
+    const m2=modal(a.e+" "+a.n,
+      `${say(o.r,Jv.v>0?"happy":Jv.v<0?"sad":"calm")}${extra||""}
+       <div class="row" style="margin-top:10px">${effChips(o.d,6)}</div>${notes()}
+       <div class="row" style="justify-content:flex-end"><button class="btn" id="ok">结束这一天</button></div>`,Jv.v>0?"good":"");
+    burst(Jv.v>0?"love":Jv.v<0?"cry":"smile",Jv.mag+1);
+    m2.querySelector("#ok").onclick=()=>{closeModal();dayEnd()}};
+  m.querySelectorAll("[data-i]").forEach(b=>b.onclick=()=>fin(a.o[+b.dataset.i]));
+  const bb=m.querySelector("#buybox");
+  if(bb)bb.onclick=()=>{S.money-=box.p;apply(box.d);
+    fin(a.o[0],`<div class="note p">你还把 ${box.e}${box.n} 给了她。</div>${say(box.r,"happy")}`)}}
+
+/* ================= 日终 / 阶段 / 结局 ================= */
+function dayEnd(){
+  const st=stageOf(S.day);
+  let earn=6+RI(0,4)+(st.k>=4?6:0)+(st.k>=5?9:0);
+  S.slots.forEach(s=>{if(s&&s.t==="act"){const a=ACT[s.i];if(a.c==="工")earn+=10}});
+  S.money+=earn;note("y","💰 这一天结束，零花钱 +"+earn+"（现在 "+Math.round(S.money)+" 元）");
+  const r=riskTick();
+  S.running=0;S.slots=[null,null,null];S.scr="plan";
+  if(r)return ending(r);
+  if(S.day>=200)return finale();
+  decay();
+  const old=st;S.day++;const nw=stageOf(S.day);
+  if(nw.k!==old.k)return stageBreak(old,nw);
+  draw()}
+function stageBreak(old,nw){
+  nw.ind.forEach(k=>{if(S.A[k]!=null)return;
+    const hs=old.ind.filter(x=>!IND[x].rev).map(x=>S.A[x]);
+    const avg=hs.reduce((a,b)=>a+b,0)/(hs.length||1);
+    const seed=cl(avg*0.55+26+RI(-5,5));
+    S.A[k]=IND[k].rev?cl(100-seed):seed});
+  S.running=0;shell();
+  center(`<div class="panel"><div class="phead">阶段结算</div><div class="pbody">
+    <h2>${old.n}（${old.a0}–${old.a1}岁）结束了</h2>
+    <div class="note y">${T(nw.intro)}</div>
+    <div class="grp" style="margin-top:12px">${old.n}最终面板</div>
+    <div class="grid">${old.ind.map(k=>{const h=hp(k);
+      return `<div class="gc" style="cursor:default"><span class="n">${IND[k].n}</span>
+      <span class="d" style="font-size:19px;color:${h>=85?"#2F7A58":h>=70?"#B8860B":h>=60?"#7A6558":"#C9564C"}">${Math.round(S.A[k])}</span></div>`}).join("")}</div>
+    ${old.seal.length?`<div class="note b">本阶段专属指标已封存：${old.seal.map(k=>IND[k].n+" "+Math.round(S.A[k])).join("　")}</div>`:""}
+    <div class="note p">本阶段碎片 ${FRAG.filter(f=>f.st===old.k&&S.frags.includes(f.id)).length}/${FRAG.filter(f=>f.st===old.k).length}（没拿到的已永久关闭）</div>
+    <div class="grp" style="margin-top:12px">进入 ${nw.n} · 新开放指标</div>
+    <div class="grid">${nw.ind.filter(k=>!old.ind.includes(k)).map(k=>`<div class="gc" style="cursor:default">
+      <span class="n">${IND[k].n} <span class="eff u">新</span></span><span class="d" style="font-size:19px">${Math.round(S.A[k])}</span></div>`).join("")}</div>
+    <div class="note g">新地图与新商品已解锁。</div>
+    <button class="btn" id="nx">开始 ${nw.n}</button></div></div>`);
+  on("nx",draw)}
+const GRADE={perfect:["S","完美温情结局"],calm:["A","安稳成长结局"],normal:["B","普通人生结局"],
+  burn:["C","内耗疲惫结局"],ill:["D","心理危机结局"],cut:["E","关系决裂结局"]};
+function finale(){
+  const st=STG[5],hs=st.ind.map(hp);
+  if(hs.every(h=>h>=75))return ending("perfect");
+  if(hs.every(h=>h>=60))return ending(hs.every(h=>h>=68)?"calm":"normal");
+  if(hs.filter(h=>h<60).length<=3&&hs.every(h=>h>=48))return ending("burn");
+  return ending("ill")}
+function ending(k){
+  S.end=k;S.ph="end";S.running=0;
+  const e=ENDS[k==="normal"?"calm":k]||ENDS.calm, g=GRADE[k]||GRADE.normal, full=S.frags.length>=FRAG.length;
+  const st=STG[5],act=st.ind.filter(x=>S.A[x]!=null);
+  const hi=act.slice().sort((a,b)=>hp(b)-hp(a))[0], lo=act.slice().sort((a,b)=>hp(a)-hp(b))[0];
+  const topHob=HOBN.filter(n=>S.hob[n]).sort((a,b)=>S.hob[b]-S.hob[a])[0];
+  const kw={事业:hp("career")>=75?"做着自己选的事":hp("work")>=70?"稳住了，但谈不上热爱":"一直在将就",
+    感情:hp("rel")>=75?"有人接得住她":hp("rel")>=60?"平稳，偶尔孤单":"还在一个人扛",
+    性格:hp("accept")>=75?"舒展、接纳自己":hp("accept")>=60?"大致和解了":"仍然在跟自己较劲",
+    关系:hp("trust")>=80&&hp("love")>=80?"你是她唯一不设防的人":hp("trust")>=60?"长久但有距离":"已经疏远"};
+  document.body.innerHTML=`<div id="fx" aria-hidden="true"></div><div class="wrap"><div id="endwrap"></div></div>`;
+  $("endwrap").innerHTML=`<div class="panel fade" style="margin-top:22px"><div class="pbody" style="text-align:center">
+    <div class="gradebox"><div class="grade ${g[0]}">${g[0]}</div>
+      <div style="text-align:left"><div style="font-size:12px;color:#A7948A">最终年龄 30 岁 · 第 200 天</div>
+      <h2 style="margin:2px 0 0">${g[1]}</h2><div style="color:#7A6558">${T(e.t)}</div></div></div>
+    ${portrait(6,k==="perfect"||k==="calm"?"happy":k==="ill"||k==="cut"?"sad":"calm",120)}
+    <div class="kw">${Object.keys(kw).map(x=>`<div class="kwc"><div class="k">${x}</div><div class="v">${kw[x]}</div></div>`).join("")}</div>
+    ${e.p.map(x=>`<p style="text-align:left;color:#7A6558;margin:10px 0 0">${T(x)}</p>`).join("")}
+    <div class="fin">${T(e.f)}</div>
+    ${k==="perfect"&&full?`<div class="note p" style="text-align:left">🔶 全碎片收集完成，解锁隐藏后记</div>
+      <h2 style="margin-top:18px">${T(AFTER.t)}</h2>
+      ${AFTER.p.map(x=>`<p style="text-align:left;color:#7A6558">${T(x)}</p>`).join("")}
+      <div class="fin">${T(AFTER.f)}</div>`:""}
+    <div class="grp" style="margin-top:18px">终章数据</div>
+    <div class="grid">
+      <div class="gc" style="cursor:default"><span class="n">最高属性</span><span class="d">${IND[hi].n} ${Math.round(S.A[hi])}</span></div>
+      <div class="gc" style="cursor:default"><span class="n">最低属性</span><span class="d">${IND[lo].n} ${Math.round(S.A[lo])}</span></div>
+      <div class="gc" style="cursor:default"><span class="n">回忆碎片</span><span class="d">${S.frags.length} / ${FRAG.length}</span></div>
+      <div class="gc" style="cursor:default"><span class="n">最高爱好</span><span class="d">${topHob?topHob+" "+LVN[hobLvOf(S.hob[topHob])]:"没有发展起来"}</span></div>
+      <div class="gc" style="cursor:default"><span class="n">隐藏剧情</span><span class="d">${[1,2,3,4,5,6].filter(i=>S.lines[i]).length} / 6</span></div>
+      <div class="gc" style="cursor:default"><span class="n">心理隐患</span><span class="d">${Math.round(S.risk)} / 100</span></div>
+    </div>
+    <div class="row" style="justify-content:center"><button class="btn" id="again">再陪她长大一次</button></div>
+  </div></div>`;
+  burst(k==="perfect"||k==="calm"?"love":k==="ill"||k==="cut"?"cry":"smile",8);
+  on("again",()=>{try{localStorage.removeItem("bzd2")}catch(e){}location.reload()})}
+
+/* ================= 开场 ================= */
 function nameScreen(){
-  hud();
-  render(`<div><h1><small>陪伴养育 · 7岁 → 30岁 · 200天</small>伴<span style="color:var(--her)">她</span>长大</h1>
-  <p class="lede">这是一个陪一个女孩从七岁走到三十岁的游戏。她狮子座，ENFP：热情、话多、想象力旺盛，要强又爱面子；共情力很强，也很容易内耗。她把所有事都第一时间讲给你听——前提是你一直在听。</p>
-  <p class="lede" style="margin-top:14px">先给她一个名字。整个游戏里，她的名字、她说的每一句话、她藏起来的每一段回忆，都会用这个名字。</p>
-  <div class="nameform">
-    <input id="nm" maxlength="8" placeholder="输入她的名字" autocomplete="off">
-    <button class="btn" id="go">就叫这个名字</button>
-  </div>
-  <p class="hint">不填的话，默认叫「SC」。最多 8 个字。</p>
-  <details><summary>玩法与底线（展开）</summary><ul>
-  <li>一共 <b>200 天</b>，分六个阶段：小学 → 初中 → 高中 → 大学 → 初入职场 → 稳定抉择。每天一个突发事件。</li>
-  <li>每个阶段<b>开放不同指标</b>；专属指标在升学后封存，<b>信任、爱意、情商、心理压力</b>四项永久继承。</li>
-  <li>任何一项生效指标<b>长期低于 60</b>，会累积心理隐患；累满触发心理疾病坏结局。信任或爱意跌穿，直接决裂。</li>
-  <li>每过一天，高于 62 的指标会<b>自然回落一点</b>。你一天只顾得上三四项，想让某一项真正站稳，就得反复去喂它。</li>
-  <li>每天可以主动发起一次<b>休闲事件</b>（去肯德基、逛书店、过生日、吵架后和解……），每次五轮对话加一个分支。</li>
-  <li><b>回忆碎片</b>分普通 / 稀有 / 限定三种。限定碎片只在特定年龄段出现，<b>错过永远拿不到</b>。集齐全套解锁隐藏后记。</li>
-  <li>每次选择都有反馈：<b>对了落爱心，错了落眼泪，不对不错是一脸微笑</b>。</li>
-  </ul></details></div>`);
-  const inp=$("nm");if(inp)inp.focus();
-  const go=()=>{const v=(($("nm")||{}).value||"").trim();S.nm=v||"SC";
+  S.ph="name";draw();
+  center(`<div class="panel"><div class="pbody">
+    <h1><small>陪伴养成 · 7岁 → 30岁 · 200天</small>伴<span style="color:#F2789E">她</span>长大</h1>
+    <p class="lede">这是一个陪一个女孩从七岁走到三十岁的养成游戏。她狮子座、ENFP：热情、话多、想象力旺盛，要强又爱面子；共情力强，也很容易内耗。</p>
+    <p class="lede" style="margin-top:10px">先给她取个名字。之后所有剧情、对话、碎片故事都会用这个名字。</p>
+    <div class="nameform"><input id="nm" maxlength="8" placeholder="输入她的名字" autocomplete="off">
+      <button class="btn" id="go">就叫这个名字</button></div>
+    <p class="hint">不填默认叫「SC」。最多 8 个字。</p>
+    <details><summary>玩法速览</summary><ul>
+      <li><b>每天三个时段</b>（上午/下午/晚上），自由安排学习、休息、社交、才艺、打工，或者带她外出探索、陪她聊天。</li>
+      <li><b>零花钱与商店</b>：每天结束有收入，可以买零食、文创、礼物、门票。送礼投其所好大幅加分，送习题册她会沉默。</li>
+      <li><b>爱好等级 L1–L5</b>：反复安排同一类才艺会积累经验，L4 起触发高光剧情。</li>
+      <li><b>六个阶段各有独立指标</b>，专属指标升学后封存；信任、爱意、情商、心理压力永久继承。</li>
+      <li>任一指标长期低于 60 会累积<b>心理隐患</b>；信任或爱意跌穿则直接决裂。</li>
+      <li><b>31 块回忆碎片</b>，限定碎片过了年龄段永久关闭；集齐解锁隐藏后记。</li>
+      <li>结局分 <b>S / A / B / C / D / E</b> 六档。</li>
+    </ul></details>
+  </div></div>`);
+  const i=$("nm");if(i)i.focus();
+  const go=()=>{S.nm=(($("nm")||{}).value||"").trim()||"SC";
     try{$("gname").textContent="伴"+S.nm+"长大"}catch(e){}
     S.ph="quiz";quiz()};
-  on("go",go);
-  if(inp)inp.onkeydown=e=>{if(e.key==="Enter")go()};
-}
-
-/* ---------- 摸底 ---------- */
+  on("go",go);if(i)i.onkeydown=e=>{if(e.key==="Enter")go()}}
 function quiz(){
-  hud();
+  draw();
   if(!S.qord||S.qord.length!==QUIZ.length)S.qord=QUIZ.map(q=>shuf(q.o.length));
   const Q=QUIZ[S.qi],od=S.qord[S.qi];
-  render(`<div style="padding-top:24px"><div class="eyebrow">开局摸底 · 你有多懂${T("{N}")}</div>
-   <div class="card"><span class="qnum">第 ${S.qi+1} 题 / 共 8 题</span>
+  center(`<div class="panel"><div class="pbody">
+    <span class="qnum">开局摸底 · 第 ${S.qi+1} / 8 题</span>
     <div class="qtxt">${T(Q.q)}</div>
     <div class="opts">${od.map((oi,i)=>`<button class="opt" data-i="${oi}"><span class="k">${"ABCD"[i]}</span><span class="tx">${T(Q.o[oi])}</span></button>`).join("")}</div>
     <div class="prog">${QUIZ.map((_,i)=>`<i class="${i<=S.qi?"on":""}"></i>`).join("")}</div>
-   </div></div>`);
-  document.querySelectorAll(".opt").forEach(b=>b.onclick=()=>{
+  </div></div>`);
+  document.querySelectorAll("[data-i]").forEach(b=>b.onclick=()=>{
     const i=+b.dataset.i,ok=i===Q.a;S.qlog.push(ok);if(ok)S.qc++;
-    S.qi++;S.qi<8?quiz():quizEnd();
-  });
-}
+    S.qi++;S.qi<8?quiz():quizEnd()})}
 function quizEnd(){
   const base=Math.max(35,Math.min(72,55+S.qc*3-(8-S.qc)*2));
   STG[0].ind.forEach(k=>{S.A[k]=IND[k].rev?cl(100-base):cl(base+RI(-3,3))});
   S.A.love=cl(Math.min(base,50));
-  S.ph="day";S.day=1;
+  S.money=40+S.qc*8;
+  if(S.qc>=6){S.hob["画画"]=30;S.hob["表演"]=30;S.hl["画画"]=1;S.hl["表演"]=1}
+  else if(S.qc>=3){S.hob["画画"]=20;S.hl["画画"]=1}
+  S.ph="day";S.day=1;S.scr="plan";
   const word=S.qc>=7?"你几乎全中。你是真的看得见她。":S.qc>=5?"你大致懂她。剩下的，二十三年里慢慢补。":
-    S.qc>=3?"你只摸到了她的外壳。她很多话不会直说，你要学着听。":"你几乎不了解她。这二十三年会走得很吃力。";
-  hud();
-  render(`<div style="padding-top:18px"><div class="eyebrow">摸底结算</div>
-   <h1 style="margin-top:6px;font-size:26px">答对 ${S.qc} / 8</h1>
-   <p class="lede">${word}</p>
-   <div class="card"><div class="eyebrow">答案</div><ul style="color:var(--tx2);font-size:13px;line-height:2;padding-left:18px;margin:10px 0 0">
-    ${QUIZ.map((q,i)=>`<li>${S.qlog[i]?"<span class='up'>✓</span>":"<span class='dn'>✗</span>"} ${T(QEXP[i])}</li>`).join("")}</ul></div>
-   <div class="card"><div class="eyebrow">小学阶段 · 初始面板</div>
-    <div class="deltas">${STG[0].ind.map(k=>`<div class="dl"><div class="n">${IND[k].n}</div><div class="v">${Math.round(S.A[k])}</div></div>`).join("")}</div>
-    <p style="color:var(--tx3);font-size:12px;margin:12px 0 0">心理压力与学习压力是反向指标，越低越好。爱意开局不会太高——那是要一天一天陪出来的。</p></div>
-   ${say("（她抬头看你，书包带滑到了胳膊肘）<br>你是来接我的吗？<br>……那我跟你说，我今天在学校画了一张画！")}
-   <button class="btn" id="go">开始第 1 天</button></div>`);
-  on("go",()=>{nextEvent()});
-}
-
-/* ---------- 每日事件 ---------- */
-function pickEvent(){
-  const st=stageOf(S.day).k;
-  let pool=EV.map((e,i)=>({e,i})).filter(o=>o.e.s===st&&!S.used.includes(o.i));
-  if(!pool.length){S.used=S.used.filter(i=>EV[i].s!==st);pool=EV.map((e,i)=>({e,i})).filter(o=>o.e.s===st)}
-  const p=pool[Math.floor(Math.random()*pool.length)];S.used.push(p.i);
-  return {k:"ev",d:p.e,ord:shuf(p.e.o.length)};
-}
-function nextEvent(){
-  const st=stageOf(S.day),L=SLINE[st.k];
-  if(L&&!S.lines[st.k]&&S.A.trust>=L.need.trust&&S.A.love>=L.need.love&&S.day>=st.d0+4){
-    S.lines[st.k]=1;S.cur={k:"st",d:L,ord:shuf(L.o.length)};
-  } else S.cur=pickEvent();
-  S.acts=0;S.today=null;S.pre={...S.A};
-  actStep();
-}
-function effChips(d){
-  const act=stageOf(S.day).ind;
-  return Object.keys(d).filter(k=>act.includes(k)&&Math.abs(d[k])>=1).sort((a,b)=>Math.abs(d[b])-Math.abs(d[a])).slice(0,4)
-   .map(k=>{const good=IND[k].rev?d[k]<0:d[k]>0;const big=Math.abs(d[k])>=4;
-     return `<span class="eff ${good?"u":"d"}">${IND[k].n}${good?"↑":"↓"}${big?(good?"↑":"↓"):""}</span>`}).join("");
-}
-function actStep(){
-  hud();const st=stageOf(S.day),rt=ROUTINE[st.k];
-  const list=ACTV.filter(a=>a.s===st.k);
-  const lei=LEI.filter(l=>l.st.includes(st.k));
-  render(`<div style="padding-top:12px">${bans()}
-    <div class="daybar"><span class="d">第 ${S.day} 天</span><span class="s">${ageOf(S.day)} 岁 · ${st.n}</span></div>
-    <div class="routine"><span class="ic">${rt.ic}</span>
-      <span><span class="h">白天 · ${T(rt.n)}（固定）</span><span class="p">${T(rt.t)}</span></span></div>
-    <div class="card tight"><div class="eyebrow">${st.k>=5?"下班之后":"放学之后"} · 今天安排她做什么</div>
-      <div class="agrid">
-        ${list.map((a,i)=>`<button class="act" data-i="${i}">
-            <span class="an">${T(a.n)}</span><span class="at">${T(a.t)}</span>
-            <span class="fx">${effChips(a.d)}</span></button>`).join("")}
-        ${lei.length?`<button class="act sp" data-lei="1">
-            <span class="an">陪${T("{N}")}出去</span><span class="at">把这半天整个给她。五轮对话 + 一个分支。</span>
-            <span class="fx"><span class="eff u">信任↑</span><span class="eff u">爱意↑</span><span class="eff u">碎片</span></span></button>`:""}
-      </div></div></div>`);
-  document.querySelectorAll(".act").forEach(b=>b.onclick=()=>{
-    apply(rt.d);
-    if(b.dataset.lei){leisurePick();return}
-    const a=list[+b.dataset.i];apply(a.d);
-    S.today={r:T(rt.n),a:T(a.n),ar:T(a.r)};
-    step();
-  });
-}
-function leisurePick(){
-  hud();const st=stageOf(S.day),lei=LEI.filter(l=>l.st.includes(st.k));
-  render(`<div style="padding-top:12px">
-    <div class="daybar"><span class="d">第 ${S.day} 天</span><span class="s">陪${T("{N}")}出去</span></div>
-    <div class="card tight"><div class="eyebrow">选一件事</div><div class="agrid">
-      ${lei.map(l=>`<button class="act sp" data-id="${l.id}"><span class="an">${T(l.n)}</span><span class="at">${l.cd}</span></button>`).join("")}
-    </div></div></div>`);
-  document.querySelectorAll(".act").forEach(b=>b.onclick=()=>leisure(b.dataset.id));
-}
-function step(){
-  hud();const it=S.cur,d=it.d,st=stageOf(S.day);
-  const mo=motifOf(T(d.sc)+T(d.q),st.k);
-  render(`<div style="padding-top:12px">${bans()}
-    ${d.bt?`<div class="banner v">${T(d.bt)}</div>`:""}
-    <div class="card pic">
-      ${sceneBand(mo)}
-      <div class="evbody">
-        <div class="pfwrap">${portrait(st.k,curExpr(),100)}</div>
-        <div><div class="eyebrow">${ageOf(S.day)} 岁 · ${st.n} · 第 ${S.day} 天</div>
-          ${S.today?`<div class="todaystrip"><span>白天 <b>${S.today.r}</b></span><span class="sep">·</span>
-             <span>放学后 <b>${S.today.a}</b></span></div>
-             <p class="scene" style="margin-top:10px">${T(d.sc)}</p>`
-            :`<p class="scene" style="margin-top:10px">${T(d.sc)}</p>`}
-        </div>
-      </div>
-      <div class="evfoot">
-        ${S.today&&S.today.ar?say(S.today.ar,"happy"):""}
-        ${say(d.q)}
-        <div class="opts">${it.ord.map((oi,i)=>{const o=d.o[oi];
-          return `<button class="opt" data-i="${oi}"><span class="k">${"ABCD"[i]}</span><span class="tx">${T(o.tx)}</span>${o.tag?`<span class="tag">倾向：${T(o.tag)}</span>`:""}</button>`}).join("")}</div>
-      </div></div></div>`);
-  document.querySelectorAll(".opt").forEach(b=>b.onclick=()=>resolve(+b.dataset.i));
-}
-function resolve(i){
-  const it=S.cur,d=it.d,o=d.o[i],pos=it.ord.indexOf(i),st=stageOf(S.day);
-  apply(o.d);if(J0(o.d).v>0)apply({eq:0.8});if(o.f)getFrag(o.f);
-  const J=J0(o.d);
-  const r=riskTick();
-  hud();
-  const A=S.A,p=S.pre;
-  const rows=st.ind.filter(k=>Math.abs((A[k]||0)-(p[k]||0))>0.05).map(k=>{
-    const c=Math.round((A[k]-p[k])*10)/10,good=IND[k].rev?c<0:c>0;
-    return `<div class="dl"><div class="n">${IND[k].n}</div><div class="v">${Math.round(A[k])}<span class="c ${good?"up":"dn"}">${c>0?"▲"+c:"▼"+Math.abs(c)}</span></div></div>`}).join("");
-  const last=S.day>=200,boundary=S.day===st.d1&&!last;
-  render(`<div style="padding-top:12px"><div class="card pic">
-      ${sceneBand(motifOf(T(d.sc)+T(d.q),st.k))}
-      <div class="evbody"><div class="pfwrap">${portrait(st.k,J.v>0?"happy":J.v<0?"sad":"calm",100)}</div>
-        <div><div class="eyebrow">${ageOf(S.day)} 岁 · ${st.n} · 第 ${S.day} 天</div>
-        <p class="scene" style="margin-top:10px">${T(d.sc)}</p></div></div>
-      <div class="evfoot">${say(d.q)}
-        <div class="opts"><button class="opt picked" disabled><span class="k">${"ABCD"[pos<0?0:pos]}</span><span class="tx">${T(o.tx)}</span></button></div>
-        <div class="react">${say(o.r,J.v>0?"happy":J.v<0?"sad":"calm")}</div></div>
-    </div>${bans()}
-    ${rows?`<div class="card tight"><div class="eyebrow">今天的变动</div><div class="deltas">${rows}</div></div>`:""}
-    <div class="row"><button class="btn" id="nx">${last?"三十岁 · 终章结算":boundary?"进入下一个阶段":"进入第 "+(S.day+1)+" 天"}</button>
-      ${last?"":`<button class="btn q" id="sk">快进 7 天（自动中庸）</button>`}</div></div>`);
-  burst(J.v>0?"love":J.v<0?"cry":"smile",J.mag);
-  if(r)return on("nx",()=>ending(r)),on("sk",()=>ending(r));
-  on("nx",()=>{if(last)return finale();advance()});
-  on("sk",skip);
-}
-function decay(){
-  // 生活会往下漂：高于62的生效指标每天自然回落，低于62就不再掉。
-  // 你一天只顾得上三四项，想让某一项真正站稳，就得反复回去喂它。
-  const act=stageOf(S.day).ind;
-  act.forEach(k=>{
-    if(hp(k)<=62)return;
-    const d=IND[k].p?0.35:0.8;
-    S.A[k]=cl(S.A[k]+(IND[k].rev?d:-d));
-  });
-}
-function advance(){
-  decay();
-  const old=stageOf(S.day);
-  S.day++;
-  const nw=stageOf(S.day);
-  if(nw.k!==old.k)return stageBreak(old,nw);
-  nextEvent();
-}
-function skip(){
-  for(let n=0;n<7&&S.day<200;n++){
-    decay();
-    const old=stageOf(S.day);S.day++;
-    const nw=stageOf(S.day);
-    if(nw.k!==old.k)return stageBreak(old,nw);
-    const st=nw,rt=ROUTINE[st.k];apply(rt.d);
-    const pool=ACTV.filter(a=>a.s===st.k);
-    let pa=pool[0],pb=1e9;pool.forEach(a=>{const v=Math.abs(J0(a.d).v);if(v<pb){pb=v;pa=a}});
-    apply(pa.d);
-    S.cur=pickEvent();S.acts=0;S.today={r:T(rt.n),a:T(pa.n),ar:T(pa.r)};S.pre={...S.A};
-    const d=S.cur.d;let best=d.o[0],bn=1e9;
-    d.o.forEach(o=>{const v=Math.abs(J0(o.d).v);if(v<bn){bn=v;best=o}});
-    apply(best.d);
-    const r=riskTick();
-    if(r){hud();return ending(r)}
-  }
-  if(S.day>=200)return finale();
-  nextEvent();
-}
-/* ---------- 阶段结算 ---------- */
-function stageBreak(old,nw){
-  old.seal.forEach(k=>{});
-  nw.ind.forEach(k=>{
-    if(S.A[k]!=null)return;
-    const hs=old.ind.filter(x=>!IND[x].rev).map(x=>S.A[x]);
-    const avg=hs.reduce((a,b)=>a+b,0)/(hs.length||1);
-    const seed=cl(avg*0.55+26+RI(-5,5));
-    S.A[k]=IND[k].rev?cl(100-seed):seed;
-  });
-  S.ph="day";hud();
-  const sealed=old.seal.map(k=>IND[k].n+" "+Math.round(S.A[k])).join("　");
-  render(`<div style="padding-top:18px">${bans()}
-    <div class="banner">📌 阶段结算 · ${old.n}（${old.a0}–${old.a1}岁）结束</div>
-    <div class="card"><div class="eyebrow">${old.n}阶段 · 最终面板</div>
-      <div class="deltas">${old.ind.map(k=>{const hv=hp(k);
-        return `<div class="dl"><div class="n">${IND[k].n}</div><div class="v" style="color:${hv>=75?"var(--good)":hv>=60?"var(--tx)":"var(--bad)"}">${Math.round(S.A[k])}</div></div>`}).join("")}</div>
-      ${sealed?`<p style="color:var(--tx3);font-size:12px;margin:12px 0 0">本阶段专属指标已封存：${sealed}</p>`:""}
-      <p style="color:var(--tx3);font-size:12px;margin:6px 0 0">碎片进度 ${S.frags.length}/${FRAG.length}　｜　本阶段限定碎片 ${FRAG.filter(f=>f.st===old.k&&S.frags.includes(f.id)).length}/${FRAG.filter(f=>f.st===old.k).length}（错过的已永久关闭）</p>
-    </div>
-    <div class="card"><div class="eyebrow">下一阶段 · ${nw.n}（${nw.a0}–${nw.a1}岁）</div>
-      <p class="scene">${T(nw.intro)}</p>
-      <div class="deltas">${nw.ind.filter(k=>!old.ind.includes(k)).map(k=>`<div class="dl"><div class="n">${IND[k].n}<span style="color:var(--sun)"> 新</span></div><div class="v">${Math.round(S.A[k])}</div></div>`).join("")}</div>
-    </div>
-    <button class="btn" id="nx">开始 ${nw.n}</button></div>`);
-  on("nx",nextEvent);
-}
-
-/* ---------- 休闲事件 ---------- */
-function leisure(id,bi,log){
-  const l=LEI.find(x=>x.id===id);if(!l)return;
-  bi=bi||0;log=log||"";
-  hud();
-  if(bi<l.b.length){
-    const b=l.b[bi],od=shuf(b.o.length);
-    render(`<div style="padding-top:16px"><div class="banner v">💛 ${T(l.n)} · 第 ${bi+1}/${l.b.length} 轮</div>
-      <div class="card">${bi===0?`<p class="scene">${T(l.i)}</p>`:""}${log}${say(b.q)}
-      <div class="opts">${od.map((oi,i)=>`<button class="opt" data-i="${oi}"><span class="k">${"ABCD"[i]}</span><span class="tx">${T(b.o[oi].tx)}</span></button>`).join("")}</div>
-      </div></div>`);
-    document.querySelectorAll(".opt").forEach(x=>x.onclick=()=>{
-      const o=b.o[+x.dataset.i];const J=J0(o.d);if(J.v>0)apply({eq:0.8});apply(o.d);
-      burst(J.v>0?"love":J.v<0?"cry":"smile",J.mag);
-      const nl=log+say(b.q)+`<div class="say me"><div class="bub">${T(o.tx)}</div></div>`+
-        `<div class="react">${say(o.r,J.v<0?PICK(SADFACE):"")}</div>`;
-      leisure(id,bi+1,nl);
-    });
-    return;
-  }
-  const f=l.fin,od=shuf(f.o.length);
-  render(`<div style="padding-top:16px"><div class="banner">💛 ${T(l.n)} · 结尾分支</div>
-    <div class="card"><p class="scene">${T(f.sc)}</p>${say(f.q)}
-    <div class="opts">${od.map((oi,i)=>`<button class="opt" data-i="${oi}"><span class="k">${"ABCD"[i]}</span><span class="tx">${T(f.o[oi].tx)}</span><span class="tag">倾向：${T(f.o[oi].tag)}</span></button>`).join("")}</div>
-    </div></div>`);
-  document.querySelectorAll(".opt").forEach(x=>x.onclick=()=>{
-    const o=f.o[+x.dataset.i];const J=J0(o.d);if(J.v>0)apply({eq:0.8});apply(o.d);if(o.f)getFrag(o.f);
-    S.acts=1;hud();
-    render(`<div style="padding-top:16px"><div class="card"><p class="scene">${T(f.sc)}</p>${say(f.q)}
-      <div class="opts"><button class="opt picked" disabled><span class="tx">${T(o.tx)}</span></button></div>
-      <div class="react">${say(o.r,J.v<0?PICK(SADFACE):"")}</div></div>${bans()}
-      <button class="btn" id="bk">回到今天</button></div>`);
-    burst(J.v>0?"love":J.v<0?"cry":"smile",J.mag);
-    on("bk",()=>{const r=S.A.trust<=15||S.A.love<=15?"cut":null;if(r)return ending(r);S.today={r:T(ROUTINE[stageOf(S.day).k].n),a:T(l.n),ar:""};step()});
-  });
-}
-/* ---------- 碎片图鉴 ---------- */
-function atlas(){
-  hud();
-  const byStage=STG.map(s=>{
-    const fs=FRAG.filter(f=>f.st===s.k);
-    const got=fs.filter(f=>S.frags.includes(f.id)).length;
-    const missed=S.day>s.d1;
-    return `<div class="card"><div class="eyebrow">${s.n} · ${s.a0}–${s.a1}岁 · ${got}/${fs.length}${missed&&got<fs.length?"　<span style='color:var(--bad)'>已永久关闭</span>":""}</div>
-      <div class="fgrid">${fs.map(f=>{const has=S.frags.includes(f.id);
-        return `<button class="fc ${has?(f.r===3?"r3":f.r===2?"r2":"n"):"lock"}" ${has?`data-id="${f.id}"`:"disabled"}>
-          <div class="r">${f.r===3?"LIMITED":f.r===2?"RARE":"COMMON"}</div>
-          <div class="t">${has?T(f.n):"？？？"}</div></button>`}).join("")}</div></div>`}).join("");
-  render(`<div style="padding-top:16px">
-    <div class="eyebrow">回忆碎片图鉴</div>
-    <h1 style="font-size:26px;margin-top:6px">${T("{N}")}藏起来的 ${S.frags.length} 段</h1>
-    <p class="lede">她很多话不会直接说。你接住过的那些瞬间，都在这里。</p>
-    ${byStage}
-    <button class="btn" id="bk">返回</button></div>`);
-  document.querySelectorAll(".fc[data-id]").forEach(b=>b.onclick=()=>{
-    const f=FRAG.find(x=>x.id===b.dataset.id);
-    render(`<div style="padding-top:16px"><div class="eyebrow">${f.r===3?"限定碎片":f.r===2?"稀有碎片":"回忆碎片"} · ${STG[f.st-1].n}</div>
-      <h1 style="font-size:25px;margin-top:6px">${T(f.n)}</h1>
-      <div class="story">${T(f.t)}</div>
-      <button class="btn" id="bk">返回图鉴</button></div>`);
-    on("bk",atlas);
-  });
-  on("bk",()=>{S.ph="day";if(S.end)return ending(S.end);S.cur?step():nextEvent()});
-}
-
-/* ---------- 结局 ---------- */
-function finale(){
-  const st=STG[5],hs=st.ind.map(hp);
-  if(hs.every(h=>h>=75))return ending("perfect");
-  if(hs.every(h=>h>=60))return ending("calm");
-  if(hs.filter(h=>h<60).length<=3&&hs.every(h=>h>=48))return ending("burn");
-  return ending("ill");
-}
-function ending(k){
-  S.end=k;S.ph="end";const e=ENDS[k];const full=S.frags.length>=FRAG.length;
-  hud();
-  render(`<div class="end" style="padding-top:8px">
-    <div class="tier">${e.tier} · ${ageOf(S.day)}岁 · 第 ${S.day} 天</div>
-    <h2>${T(e.t)}</h2>
-    ${e.p.map(x=>`<p>${T(x)}</p>`).join("")}
-    <div class="fin">${T(e.f)}</div>
-    ${k==="perfect"&&full?`<div class="banner v" style="text-align:left">🔶 全碎片收集完成，解锁隐藏后记。</div>
-      <h2 style="font-size:24px;margin-top:22px">${T(AFTER.t)}</h2>
-      ${AFTER.p.map(x=>`<p>${T(x)}</p>`).join("")}
-      <div class="fin">${T(AFTER.f)}</div>`:""}
-    <div class="card" style="text-align:left"><div class="eyebrow">终章数据</div>
-      <div class="deltas">${STG[5].ind.map(x=>`<div class="dl"><div class="n">${IND[x].n}</div><div class="v">${Math.round(S.A[x])}</div></div>`).join("")}</div>
-      <p style="color:var(--tx3);font-size:12px;margin:12px 0 0">回忆碎片 ${S.frags.length}/${FRAG.length}　｜　心理隐患值 ${Math.round(S.risk)}　｜　阶段隐藏剧情 ${Object.keys(S.lines).length}/6</p>
-    </div>
-    <div class="row" style="justify-content:center">
-      <button class="btn g" id="atl">查看碎片图鉴</button>
-      <button class="btn" id="again">重新开始</button></div></div>`);
-  on("atl",()=>{S.ph="atlas";atlas()});
-  on("again",reset);
-}
-function reset(){try{localStorage.removeItem("bzd_save")}catch(e){}S=fresh();nameScreen()}
-
-/* ---------- 启动 ---------- */
-function boot(hot){
-  S=(hot&&hot.S)||load()||fresh();
-  if(!S.A||!S.nm&&S.ph!=="name")S=fresh();
-  S.ban=S.ban||[];
+    S.qc>=3?"你只摸到了她的外壳。她很多话不会直说。":"你几乎不了解她。这二十三年会走得很吃力。";
+  shell();
+  center(`<div class="panel"><div class="pbody">
+    <h2>摸底结果：答对 ${S.qc} / 8</h2>
+    <p class="lede">${word}</p>
+    <div class="grp" style="margin-top:12px">答案</div>
+    <ul style="color:#7A6558;font-size:13px;line-height:1.95;padding-left:18px">
+      ${QUIZ.map((q,i)=>`<li>${S.qlog[i]?"<span class='up'>✓</span>":"<span class='dn'>✗</span>"} ${T(QEXP[i])}</li>`).join("")}</ul>
+    <div class="grp" style="margin-top:12px">小学阶段 · 初始面板</div>
+    <div class="grid">${STG[0].ind.map(k=>`<div class="gc" style="cursor:default">
+      <span class="n">${IND[k].n}</span><span class="d" style="font-size:19px">${Math.round(S.A[k])}</span></div>`).join("")}</div>
+    <div class="note y">初始零花钱 ${S.money} 元${Object.keys(S.hob).length?"　｜　初始爱好倾向："+Object.keys(S.hob).join("、"):""}</div>
+    ${say("（她抬头看你，书包带滑到了胳膊肘）<br>你是来接我的吗？<br>……那我跟你说，我今天在学校画了一张画！","happy")}
+    <button class="btn" id="go">开始第 1 天</button></div></div>`);
+  on("go",()=>{S.scr="plan";draw()})}
+function reset(){try{localStorage.removeItem("bzd2")}catch(e){}S=fresh();nameScreen()}
+function boot(){
+  S=load()||fresh();
+  if(!S.A||!S.slots)S=fresh();
+  S.notes=S.notes||[];S.running=0;
   try{if(S.nm)$("gname").textContent="伴"+S.nm+"长大"}catch(e){}
   if(S.ph==="end"&&S.end)return ending(S.end);
-  if(S.ph==="atlas")return atlas();
   if(S.ph==="quiz")return quiz();
-  if(S.ph==="day")return S.cur?step():nextEvent();
-  nameScreen();
-}
+  if(S.ph==="day"){S.scr=S.scr||"plan";return draw()}
+  nameScreen()}
 $("restart").onclick=()=>{if(confirm("重新开始？当前进度会被清空。"))reset()};
-try{if(localStorage.getItem("bzd_save"))$("savenote").textContent="· 进度自动保存在本机"}catch(e){}
-if(window.claude&&window.claude.hot){
-  window.claude.hot.snapshot(()=>({S}));
-  window.claude.hot.ready?window.claude.hot.ready(d=>boot(d)):boot(window.claude.hot.data);
-}else boot();
+try{if(localStorage.getItem("bzd2"))$("savenote").textContent="· 进度自动保存在本机";}catch(e){}
+boot();
 </script>
 </body>
 </html>
