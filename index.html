@@ -856,8 +856,8 @@ function getFrag(id){
 }
 function riskTick(){
   const act=stageOf(S.day).ind;let bad=0;
-  act.forEach(k=>{const h=hp(k);if(h<60){S.risk+=(60-h)*0.013;bad++}});
-  if(!bad)S.risk=Math.max(0,S.risk-0.8);
+  act.forEach(k=>{const h=hp(k);if(h<60){S.risk+=(60-h)*0.011;bad++}});
+  if(!bad)S.risk=Math.max(0,S.risk-1.2);
   const lv=S.risk>=80?3:S.risk>=50?2:S.risk>=25?1:0;
   if(lv>(S.rlv||0)){S.rlv=lv;
     ban("c",["","⚠️ 心理隐患 · 一级：她开始睡不好，话变少了。有指标长期低于 60。",
@@ -912,6 +912,7 @@ function nameScreen(){
   <li>一共 <b>200 天</b>，分六个阶段：小学 → 初中 → 高中 → 大学 → 初入职场 → 稳定抉择。每天一个突发事件。</li>
   <li>每个阶段<b>开放不同指标</b>；专属指标在升学后封存，<b>信任、爱意、情商、心理压力</b>四项永久继承。</li>
   <li>任何一项生效指标<b>长期低于 60</b>，会累积心理隐患；累满触发心理疾病坏结局。信任或爱意跌穿，直接决裂。</li>
+  <li>每过一天，高于 62 的指标会<b>自然回落一点</b>。你一天只顾得上三四项，想让某一项真正站稳，就得反复去喂它。</li>
   <li>每天可以主动发起一次<b>休闲事件</b>（去肯德基、逛书店、过生日、吵架后和解……），每次五轮对话加一个分支。</li>
   <li><b>回忆碎片</b>分普通 / 稀有 / 限定三种。限定碎片只在特定年龄段出现，<b>错过永远拿不到</b>。集齐全套解锁隐藏后记。</li>
   <li>每次选择都有反馈：<b>对了落爱心，错了落眼泪，不对不错是一脸微笑</b>。</li>
@@ -992,7 +993,7 @@ function step(){
 function resolve(i){
   const it=S.cur,d=it.d,o=d.o[i],pos=it.ord.indexOf(i);
   const g=apply(o.d);if(o.f)getFrag(o.f);
-  const J=judge(o.d);
+  const J=judge(o.d);if(J.v>0)apply({eq:0.8});
   hud();
   render(`<div style="padding-top:16px"><div class="card">
       <div class="eyebrow">${ageOf(S.day)} 岁 · ${stageOf(S.day).n} · 第 ${S.day} 天</div>
@@ -1031,7 +1032,18 @@ function dayEnd(){
   on("nx",()=>{ if(last)return finale(); advance(); });
   on("sk",skip);
 }
+function decay(){
+  // 生活是会往下漂的：每过一天，所有生效指标的“健康度”自然下滑，
+  // 你每天只能顾到三四项，剩下的就会掉——这是这个游戏真正的取舍。
+  const act=stageOf(S.day).ind;
+  act.forEach(k=>{
+    if(hp(k)<=62)return;              // 只磨损盈余，不会把她单独推进危险区
+    const d=IND[k].p?0.35:0.8;
+    S.A[k]=cl(S.A[k]+(IND[k].rev?d:-d));
+  });
+}
 function advance(){
+  decay();
   const old=stageOf(S.day);
   S.day++;
   const nw=stageOf(S.day);
@@ -1044,6 +1056,7 @@ function skip(){
     S.day++;
     const nw=stageOf(S.day);
     if(nw.k!==old.k){return stageBreak(old,nw)}
+    decay();
     S.cur=pickEvent();S.acts=0;S.pre={...S.A};
     const d=S.cur.d;
     let best=d.o[0],bn=1e9;
@@ -1097,7 +1110,7 @@ function leisure(id,bi,log){
       <div class="opts">${od.map((oi,i)=>`<button class="opt" data-i="${oi}"><span class="k">${"ABCD"[i]}</span><span class="tx">${T(b.o[oi].tx)}</span></button>`).join("")}</div>
       </div></div>`);
     document.querySelectorAll(".opt").forEach(x=>x.onclick=()=>{
-      const o=b.o[+x.dataset.i];const J=judge(o.d);apply(o.d);
+      const o=b.o[+x.dataset.i];const J=judge(o.d);if(J.v>0)apply({eq:0.8});apply(o.d);
       burst(J.v>0?"love":J.v<0?"cry":"smile",J.mag);
       const nl=log+say(b.q)+`<div class="say me"><div class="bub">${T(o.tx)}</div></div>`+
         `<div class="react">${say(o.r,J.v<0?PICK(SADFACE):"")}</div>`;
@@ -1111,7 +1124,7 @@ function leisure(id,bi,log){
     <div class="opts">${od.map((oi,i)=>`<button class="opt" data-i="${oi}"><span class="k">${"ABCD"[i]}</span><span class="tx">${T(f.o[oi].tx)}</span><span class="tag">倾向：${T(f.o[oi].tag)}</span></button>`).join("")}</div>
     </div></div>`);
   document.querySelectorAll(".opt").forEach(x=>x.onclick=()=>{
-    const o=f.o[+x.dataset.i];const J=judge(o.d);apply(o.d);if(o.f)getFrag(o.f);
+    const o=f.o[+x.dataset.i];const J=judge(o.d);if(J.v>0)apply({eq:0.8});apply(o.d);if(o.f)getFrag(o.f);
     S.acts=1;hud();
     render(`<div style="padding-top:16px"><div class="card"><p class="scene">${T(f.sc)}</p>${say(f.q)}
       <div class="opts"><button class="opt picked" disabled><span class="tx">${T(o.tx)}</span></button></div>
