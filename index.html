@@ -1,0 +1,1219 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="description" content="陪一个女孩从七岁走到三十岁：200天、六个成长阶段、分阶段指标体系与回忆碎片图鉴。名字由你来取。">
+<meta name="color-scheme" content="dark">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌞</text></svg>">
+<style>
+:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{color-scheme:dark}
+body{margin:0;font:14px/1.5 system-ui,-apple-system,sans-serif;background:#191411}
+img{max-width:100%}
+[hidden]{display:none!important}
+</style>
+<title>伴她长大</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=ZCOOL+QingKe+HuangYou&family=Noto+Sans+SC:wght@300;400;500;700&family=Space+Mono:wght@400;700&display=swap">
+<style>
+:root{
+  --ink:#191411; --ink2:#201A16; --panel:#26201B; --raise:#312821;
+  --line:#3C3229; --line2:#52453A;
+  --tx:#F3EBE1; --tx2:#BCADA0; --tx3:#8A7A6D;
+  --her:#E8864F;       /* 她的声音 · 暖橙，狮子座的那点太阳 */
+  --sun:#EFC04C;       /* 强调 · 金 */
+  --sys:#86B5A4;       /* 系统 · 远一点的青 */
+  --good:#8FC08B; --bad:#DE7266; --cream:#FBF4EA;
+  --shadow:0 18px 40px -26px rgba(0,0,0,.95);
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{margin:0;background:var(--ink);color:var(--tx);
+  -webkit-text-size-adjust:100%;text-size-adjust:100%;overflow-x:hidden;
+  font-family:"Noto Sans SC",-apple-system,BlinkMacSystemFont,"PingFang SC",sans-serif;
+  font-size:15px;line-height:1.75;-webkit-font-smoothing:antialiased;
+  background-image:
+    radial-gradient(900px 480px at 88% -10%, rgba(239,192,76,.11), transparent 60%),
+    radial-gradient(700px 420px at 4% 102%, rgba(232,134,79,.09), transparent 62%);
+  background-attachment:fixed}
+.wrap{max-width:640px;margin:0 auto;padding:0 18px;padding-block:0 56px}
+
+/* ---- 顶部 ---- */
+.hud{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;
+  background:linear-gradient(180deg,rgba(25,20,17,.985) 74%,rgba(25,20,17,.86));
+  backdrop-filter:blur(10px);margin:0 -18px;padding:9px 18px 11px;border-bottom:1px solid var(--line)}
+.hudtop{display:flex;align-items:center;gap:9px;flex-wrap:wrap;margin-bottom:8px}
+.age{font-family:"Space Mono",monospace;font-size:11px;letter-spacing:.12em;color:var(--sun)}
+.age b{font-size:19px;color:var(--tx)}
+.stg{font-size:11.5px;color:var(--tx2);border:1px solid var(--line2);padding:1px 8px;border-radius:99px}
+.frag{margin-left:auto;font-family:"Space Mono",monospace;font-size:11.5px;color:var(--sys);
+  border:1px solid rgba(134,181,164,.4);padding:2px 9px;border-radius:99px;cursor:pointer;background:none}
+@media(hover:hover){.frag:hover{background:rgba(134,181,164,.12)}}
+.spine{display:flex;gap:3px;margin-bottom:9px}
+.spine i{height:3px;flex:1;background:#332A23;position:relative;overflow:hidden}
+.spine i.done{background:var(--line2)}
+.spine i.now::after{content:"";position:absolute;inset:0;width:var(--p,0%);background:var(--sun)}
+.bars{display:grid;grid-template-columns:1fr 1fr;gap:4px 16px}
+.bar{display:grid;grid-template-columns:72px 1fr 32px;align-items:center;gap:7px}
+.bar .n{font-size:11px;color:var(--tx2);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.bar .n i{font-style:normal;color:var(--sun);font-size:9px;vertical-align:super}
+.bar .t{height:5px;background:#332A23;position:relative;overflow:hidden}
+.bar .f{height:100%;transition:width .5s cubic-bezier(.2,.8,.3,1)}
+.bar .v{font-family:"Space Mono",monospace;font-size:12px;text-align:right;font-variant-numeric:tabular-nums}
+.bar .t::after{content:"";position:absolute;top:-2px;bottom:-2px;width:1px;background:var(--line2);left:60%}
+.bar.rev .t::after{left:40%}
+.bar.low .v{color:var(--bad)}
+.bar.hi .v{color:var(--good)}
+.chips{display:flex;flex-wrap:wrap;gap:5px;margin-top:8px}
+.chip{font-size:10.5px;padding:2px 8px;border:1px solid var(--line2);color:var(--tx2)}
+.chip.b{border-color:rgba(143,192,139,.45);color:var(--good);background:rgba(143,192,139,.07)}
+.chip.d{border-color:rgba(222,114,102,.45);color:var(--bad);background:rgba(222,114,102,.07)}
+
+h1{font-family:"ZCOOL QingKe HuangYou",cursive;font-size:38px;font-weight:400;letter-spacing:.03em;margin:32px 0 6px;line-height:1.3}
+h1 small{display:block;font-family:"Noto Sans SC";font-size:12px;font-weight:300;letter-spacing:.3em;color:var(--sun);margin-bottom:10px}
+.lede{color:var(--tx2);font-size:14px;max-width:46em}
+.eyebrow{font-size:11px;letter-spacing:.24em;color:var(--tx3);font-family:"Space Mono",monospace}
+
+.card{background:var(--panel);border:1px solid var(--line);border-radius:3px;padding:18px;box-shadow:var(--shadow);margin-top:16px}
+.scene{color:var(--tx2);font-size:14.5px;line-height:1.95}
+.scene::before{content:"";display:block;width:24px;height:2px;background:var(--sun);margin-bottom:12px}
+.say{display:flex;gap:11px;margin-top:16px;align-items:flex-start}
+.ava{flex:0 0 34px;height:34px;border-radius:50%;display:grid;place-items:center;
+  font-family:"ZCOOL QingKe HuangYou",cursive;font-size:15px;color:#2A1A10;
+  background:linear-gradient(150deg,#F7C97F,#E8864F);box-shadow:0 0 18px -6px rgba(232,134,79,.7)}
+.ava.sad{background:linear-gradient(150deg,#8E8077,#5E534B);color:#E6DCD2;box-shadow:none}
+.bub{background:var(--raise);border:1px solid var(--line2);border-radius:3px 13px 13px 13px;padding:11px 14px;
+  font-size:15.5px;line-height:1.9;color:var(--cream);max-width:100%}
+.me{justify-content:flex-end}
+.me .bub{background:#2B2F2B;border-color:#3E473E;border-radius:13px 3px 13px 13px;color:var(--tx)}
+.react{margin-top:14px;padding-left:45px}
+
+.opts{display:flex;flex-direction:column;gap:8px;margin-top:18px}
+.opt{touch-action:manipulation;text-align:left;background:var(--ink2);border:1px solid var(--line);color:var(--tx);
+  border-radius:3px;padding:11px 14px;cursor:pointer;font:inherit;font-size:14.5px;line-height:1.7;
+  display:grid;grid-template-columns:auto 1fr;gap:4px 10px;align-items:baseline;transition:.18s}
+@media(hover:hover){.opt:hover{border-color:var(--her);background:#2A2219;transform:translateX(3px)}}
+.opt:focus-visible{outline:2px solid var(--sun);outline-offset:2px}
+.opt .k{font-family:"Space Mono",monospace;font-size:11px;color:var(--her)}
+.opt .tag{grid-column:2;font-size:10.5px;color:var(--tx3)}
+.opt .tx{grid-column:2;grid-row:1}
+.opt[disabled]{opacity:.34;cursor:default;transform:none}
+.opt.picked{border-color:var(--her);background:#2E2419;opacity:1}
+
+.btn{touch-action:manipulation;display:inline-flex;align-items:center;gap:8px;background:transparent;border:1px solid var(--her);
+  color:var(--her);padding:9px 20px;border-radius:99px;font:inherit;font-size:13.5px;letter-spacing:.05em;cursor:pointer;transition:.18s;margin-top:18px}
+@media(hover:hover){.btn:hover{background:var(--her);color:#1B1208}}
+.btn.g{border-color:var(--sys);color:var(--sys)}
+@media(hover:hover){.btn.g:hover{background:var(--sys);color:#10201B}}
+.btn.q{border-color:var(--line2);color:var(--tx2);font-size:12px;padding:6px 14px}
+@media(hover:hover){.btn.q:hover{background:var(--raise);color:var(--tx)}}
+.btn:focus-visible{outline:2px solid var(--sun);outline-offset:3px}
+.row{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+
+.banner{border-left:3px solid var(--sun);background:linear-gradient(90deg,rgba(239,192,76,.12),transparent 72%);
+  padding:9px 14px;margin-top:18px;font-size:13px;color:var(--sun)}
+.banner.v{border-color:var(--her);background:linear-gradient(90deg,rgba(232,134,79,.13),transparent 72%);color:var(--her)}
+.banner.c{border-color:var(--bad);background:linear-gradient(90deg,rgba(222,114,102,.13),transparent 72%);color:var(--bad)}
+.banner.s{border-color:var(--sys);background:linear-gradient(90deg,rgba(134,181,164,.12),transparent 72%);color:var(--sys)}
+
+.deltas{display:grid;grid-template-columns:repeat(auto-fit,minmax(104px,1fr));gap:8px;margin-top:14px}
+.dl{border:1px solid var(--line);padding:8px 10px;background:var(--ink2)}
+.dl .n{font-size:11px;color:var(--tx3)}
+.dl .v{font-family:"Space Mono",monospace;font-size:16px;font-variant-numeric:tabular-nums}
+.dl .c{font-family:"Space Mono",monospace;font-size:11px;margin-left:5px}
+.up{color:var(--good)}.dn{color:var(--bad)}.fl{color:var(--tx3)}
+
+.ilist{display:flex;flex-direction:column;gap:7px;margin-top:12px}
+.ia{touch-action:manipulation;display:grid;grid-template-columns:1fr auto;gap:10px;align-items:center;border:1px solid var(--line);
+  background:var(--ink2);padding:10px 12px;cursor:pointer;font:inherit;color:var(--tx);text-align:left;transition:.18s;border-radius:3px}
+@media(hover:hover){.ia:hover:not([disabled]){border-color:var(--sun);background:#2A2219}}
+.ia[disabled]{opacity:.36;cursor:default}
+.ia .nm{font-size:14px}
+.ia .cd{font-size:10.5px;color:var(--tx3);font-family:"Space Mono",monospace}
+.ia .st{font-size:11px;color:var(--sun);font-family:"Space Mono",monospace}
+
+/* 碎片图鉴 */
+.fgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:9px;margin-top:14px}
+.fc{border:1px solid var(--line);background:var(--ink2);padding:10px 11px;border-radius:3px;cursor:pointer;text-align:left;font:inherit;color:var(--tx);transition:.18s}
+.fc .r{font-family:"Space Mono",monospace;font-size:9.5px;letter-spacing:.14em}
+.fc .t{font-size:13.5px;margin-top:3px;line-height:1.5}
+.fc.lock{opacity:.3;cursor:default}
+.fc.n{border-color:var(--line2)} .fc.n .r{color:var(--tx3)}
+.fc.r2{border-color:rgba(239,192,76,.5)} .fc.r2 .r{color:var(--sun)}
+.fc.r3{border-color:rgba(232,134,79,.6);background:linear-gradient(140deg,rgba(232,134,79,.09),var(--ink2))} .fc.r3 .r{color:var(--her)}
+@media(hover:hover){.fc:not(.lock):hover{border-color:var(--sun)}}
+.story{border-left:3px solid var(--sun);padding:4px 0 4px 15px;margin-top:14px;color:var(--cream);font-size:15px;line-height:2}
+
+.nameform{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-top:18px}
+.nameform input{background:var(--ink2);border:1px solid var(--line2);color:var(--tx);font:inherit;font-size:17px;
+  padding:10px 14px;border-radius:3px;width:200px;max-width:100%;text-align:center;letter-spacing:.08em}
+.nameform input:focus{outline:2px solid var(--sun);outline-offset:2px;border-color:var(--sun)}
+.hint{font-size:12px;color:var(--tx3);margin-top:8px}
+
+.qnum{font-family:"Space Mono",monospace;font-size:11px;letter-spacing:.18em;color:var(--sun)}
+.qtxt{font-size:18.5px;line-height:1.75;margin:8px 0 2px;text-wrap:balance}
+.prog{display:flex;gap:4px;margin-top:14px}
+.prog i{height:2px;flex:1;background:#332A23}.prog i.on{background:var(--her)}
+
+.end{text-align:center;padding:28px 0}
+.end .tier{font-family:"Space Mono",monospace;font-size:11px;letter-spacing:.28em;color:var(--sun)}
+.end h2{font-family:"ZCOOL QingKe HuangYou",cursive;font-size:30px;margin:10px 0 14px;font-weight:400}
+.end p{color:var(--tx2);text-align:left;max-width:40em;margin:0 auto 12px;font-size:14.5px}
+.fin{color:var(--cream);font-size:16px;line-height:2;text-align:left;max-width:40em;margin:18px auto 0;
+  border-left:3px solid var(--her);padding-left:16px}
+
+#fx{position:fixed;inset:0;pointer-events:none;z-index:900;overflow:hidden;contain:strict}
+#fx span{position:absolute;left:0;top:0;will-change:transform,opacity;line-height:1;user-select:none}
+#fx .vig{position:absolute;inset:0;background:radial-gradient(ellipse at 50% 25%,transparent 36%,rgba(70,92,120,.38) 100%)}
+.fade{animation:fu .4s cubic-bezier(.2,.8,.3,1) both}
+@keyframes fu{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+.foot{margin-top:28px;color:var(--tx3);font-size:11.5px;display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+.lnk{color:var(--tx3);background:none;border:0;font:inherit;font-size:11.5px;text-decoration:underline;text-underline-offset:3px;cursor:pointer;padding:0}
+@media(hover:hover){.lnk:hover{color:var(--her)}}
+details{margin-top:14px;border-top:1px solid var(--line);padding-top:12px}
+summary{cursor:pointer;font-size:12px;color:var(--tx3);letter-spacing:.06em}
+details ul{margin:10px 0 0;padding-left:18px;color:var(--tx2);font-size:12.5px;line-height:1.9}
+
+@media(max-width:480px){
+  .wrap{padding:0 14px;padding-block:0 40px}
+  .hud{margin:0 -14px;padding:8px 14px 10px}
+  .hudtop{gap:7px;margin-bottom:7px}
+  .age{font-size:10px}.age b{font-size:17px}
+  .stg{font-size:10.5px;padding:1px 6px}
+  .frag{font-size:10.5px;padding:2px 7px}
+  .bars{grid-template-columns:1fr 1fr;gap:3px 10px}
+  .bar{grid-template-columns:62px 1fr 28px;gap:5px}
+  .bar .n{font-size:9.5px}
+  .bar .v{font-size:11px}
+  h1{font-size:30px;margin-top:24px}
+  .lede{font-size:13.5px}
+  .card{padding:15px 14px}
+  .qtxt{font-size:17px}
+  .scene{font-size:14px}
+  .bub{font-size:15px;padding:10px 12px}
+  .ava{flex:0 0 30px;height:30px;font-size:14px}
+  .react{padding-left:18px}
+  .opt{padding:13px;font-size:14px}
+  .btn{min-height:44px}
+  .deltas{grid-template-columns:repeat(auto-fit,minmax(88px,1fr));gap:7px}
+  .fgrid{grid-template-columns:1fr 1fr;gap:7px}
+  .end h2{font-size:25px}
+  .fin{font-size:15px}
+}
+</style>
+
+</head>
+<body>
+<div id="fx" aria-hidden="true"></div>
+<div class="wrap">
+  <div class="hud" id="hud" hidden></div>
+  <div id="app"></div>
+  <div class="foot">
+    <span id="gname">伴她长大</span>
+    <button class="lnk" id="restart">重新开始</button>
+    <span id="savenote"></span>
+  </div>
+</div>
+
+<script>
+/* ============ 指标与阶段 ============ */
+const IND={
+ trust:{n:"对你的信任",p:1}, love:{n:"对你的爱意",p:1}, eq:{n:"情商",p:1}, stress:{n:"心理压力",p:1,rev:1},
+ mood:{n:"心情"}, emo:{n:"情绪状态"},
+ grade:{n:"学习成绩"}, spress:{n:"学习压力",rev:1}, focus:{n:"专注力"},
+ ident:{n:"自我认同感"}, look:{n:"容貌焦虑",rev:1},
+ goal:{n:"目标清晰度"}, conf:{n:"自信心"},
+ major:{n:"专业适配度"}, social:{n:"社交适配度"}, intern:{n:"实习竞争力"},
+ work:{n:"工作能力"}, resil:{n:"职场抗压能力"}, money:{n:"经济安全感"}, rel:{n:"亲密关系满意度"},
+ career:{n:"事业满足感"}, accept:{n:"自我接纳度"}
+};
+const PERM=["trust","love","eq","stress"];
+const STG=[
+ {k:1,n:"小学",a0:7,a1:12,d0:1,d1:50,
+  ind:["grade","spress","focus","mood","emo","trust","love","eq","stress"],seal:["focus"],
+  w:{mood:3,grade:2.4,focus:1.8,spress:1.4},
+  intro:"她七岁，书包比后背还宽。所有的事都要先讲给你听。"},
+ {k:2,n:"初中",a0:13,a1:15,d0:51,d1:85,
+  ind:["grade","spress","ident","look","mood","emo","trust","love","eq","stress"],seal:["look"],
+  w:{ident:3,spress:2.4,mood:1.8,look:1.4},
+  intro:"她开始关门。镜子前站的时间变长了，话却变少了。"},
+ {k:3,n:"高中",a0:16,a1:18,d0:86,d1:115,
+  ind:["grade","spress","goal","conf","mood","emo","trust","love","eq","stress"],seal:["grade","spress"],
+  w:{spress:3,goal:2.4,conf:1.8,grade:1.4},
+  intro:"倒计时贴在墙上。她第一次认真问：我到底想成为什么样的人。"},
+ {k:4,n:"大学",a0:19,a1:22,d0:116,d1:150,
+  ind:["major","social","intern","conf","mood","emo","trust","love","eq","stress"],seal:["major"],
+  w:{major:3,intern:2.4,social:1.8,conf:1.4},
+  intro:"她终于自由了，也第一次发现自由是要自己扛的。"},
+ {k:5,n:"初入职场",a0:23,a1:27,d0:151,d1:182,
+  ind:["work","resil","money","rel","mood","emo","trust","love","eq","stress"],seal:[],
+  w:{resil:3,work:2.4,rel:1.8,money:1.4},
+  intro:"工位、房租、周报、甲方。她热情还在，只是开始需要省着用。"},
+ {k:6,n:"稳定抉择",a0:28,a1:30,d0:183,d1:200,
+  ind:["work","career","accept","rel","mood","emo","trust","love","eq","stress"],seal:[],
+  w:{accept:3,career:2.4,rel:1.8},
+  intro:"三十岁在前面。她开始问：我这一路，算不算过得好。"}
+];
+
+/* ============ 开局八题 ============ */
+const QUIZ=[
+ {q:"{N}举着自己画的画冲过来给你看。她最想要的是什么样的回应？",
+  o:["“真棒，挂起来吧”——一句明确的肯定","你指出画里某个具体的地方，说你被它打动了","帮她分析哪里还能画得更好","笑着摸摸头，说她真可爱"],a:1},
+ {q:"{N}被老师当众批评，明明不全是她的错。回来闷闷不乐。她更在意的是哪一点？",
+  o:["成绩会不会因此受影响","被同学看见了那一幕","老师是不是从此讨厌她","她有没有真的做错"],a:1},
+ {q:"出门玩到一半，{N}临时改主意，想去一个没去过的新地方。你的第一反应应该是？",
+  o:["先问她为什么突然想去","“走，正好我也没去过”","提醒她原计划已经排好了","让她自己决定，你无所谓"],a:1},
+ {q:"{N}特别爱跟你分享自己的想法、脑洞和梦想。她最怕的是什么？",
+  o:["你说“这个不现实”","你听完没反应，敷衍地“嗯”一声","你比她更兴奋，抢了话","你记不住她说过什么"],a:1},
+ {q:"{N}和好朋友闹矛盾，自尊心强，拉不下脸先低头。她心里真实的想法是？",
+  o:["她其实已经不在乎这个朋友了","她很想和好，但需要一个不丢面子的台阶","她在等对方先道歉，否则绝不原谅","她根本没把这事放心上"],a:1},
+ {q:"给{N}选兴趣班，她更可能喜欢哪一种？",
+  o:["安静独处、慢慢钻研的","热闹的、有舞台能被看见的","爸妈觉得有用的","朋友报了什么她就报什么"],a:1},
+ {q:"{N}很在意仪式感。生日那天，她更看重什么？",
+  o:["贵重的礼物","你记得她随口提过的一件小事，并且做到了","一桌子人热热闹闹","红包，实在"],a:1},
+ {q:"{N}情绪上头、有点暴躁的时候，哪种方式更容易把她安抚下来？",
+  o:["先讲道理，把事情掰扯清楚","让她自己冷静一会儿","先站在她这边认下她的情绪，再说别的","转移话题，带她去吃好吃的"],a:2}
+];
+const QEXP=[
+ "她要的是“你真的看进去了”。笼统的“真棒”，对狮子座＋ENFP来说约等于没说。",
+ "狮子座最难受的不是被说，是被当众说。面子这一下，比对错疼。",
+ "ENFP的新鲜感是一种邀请。她在试你愿不愿意跟她一起跳。",
+ "她最怕的是热情掉进空气里。被泼冷水会疼，但“嗯”一声的敷衍会让她下次不说了。",
+ "她想和好，只是需要一个不用低头的台阶。你的作用就是递那个台阶。",
+ "狮子座要的是舞台，ENFP要的是人群和表达。安静钻研会让她枯掉。",
+ "她要的不是价格，是“你记得”。专属感＞贵重。",
+ "先认情绪，再谈道理。顺序反了，她只会觉得你在审她。"
+];
+
+/* ============ 回忆碎片图鉴 ============ */
+const FRAG=[
+ {id:"f101",n:"第一张贴在冰箱上的画",r:1,st:1,t:"那张画其实画歪了，左边那只鸟没有脚。但你把它贴在了冰箱最中间，正对着门。她每天出门前都要看一眼。很多年后她说，那是她第一次觉得自己做的东西是值得被挂起来的。"},
+ {id:"f102",n:"被念错的名字",r:1,st:1,t:"开学点名，老师把她的名字念错了。全班笑了。她跟着笑，回家才哭。她没告诉任何人她哭过——除了你，而你当时假装没看见，只是把她的名字一笔一画写在了练习本封面上。"},
+ {id:"f103",n:"升旗仪式前一晚",r:2,st:1,t:"她被选去升旗仪式上发言。前一晚她在房间里对着墙练了四十七遍。你在门外听完了全部四十七遍，第二天早上什么也没说，只是把她的红领巾熨平了。"},
+ {id:"f104",n:"藏起来的那张卷子",r:2,st:1,t:"六十七分。她把卷子折成很小一块塞进书包夹层，整整三天。被发现那天她以为你会骂，你只说了一句：“这三天你一个人扛得很辛苦吧。”她那天哭得比考砸还凶。"},
+ {id:"f105",n:"她想当的第一个职业",r:3,st:1,t:"七岁那年她认真宣布：长大要当主持人。因为“主持人说话的时候，所有人都会看着她”。这个愿望她后来再没提过，但你一直记得她说这句话时眼睛的样子。"},
+ {id:"f106",n:"运动会的最后一名",r:1,st:1,t:"八百米她跑了最后一名，但她坚持跑完了。全场只剩下她一个人在跑道上。她说那一刻她听见有人在喊她名字——她一直以为是幻觉，其实是你。"},
+ {id:"f107",n:"把零花钱换成的东西",r:2,st:1,t:"她攒了两个月零花钱，买了一个很丑的马克杯送你。售货员说这个颜色不好卖。她说“可是这个最像太阳”。"},
+ {id:"f201",n:"第一次锁上的门",r:1,st:2,t:"十三岁那年她开始锁门。不是因为有秘密，是因为她突然发现自己需要一个地方，可以不好看、不开朗、不用对谁负责。"},
+ {id:"f202",n:"镜子前的四十分钟",r:1,st:2,t:"她开始在镜子前站很久。她不是在臭美，她是在确认：这张脸能不能让她在学校里安全地活着。"},
+ {id:"f203",n:"没送出去的那封信",r:2,st:2,t:"信写了三页，改了九遍，最后夹在课本里一直到毕业。她后来说：其实我不是怕他拒绝，我是怕全班都知道我被拒绝了。"},
+ {id:"f204",n:"被传开的外号",r:2,st:2,t:"一个很难听的外号在年级里传了两个月。她每天照常笑着上学。只有你发现她把那两个月的日记全部撕掉了。"},
+ {id:"f205",n:"她第一次说“我也可以”",r:3,st:2,t:"那次演讲比赛她本来没报名。是你随口说了一句“你讲话挺好听的”。她愣了很久，然后说：“……那我也可以试试吗。”她拿了二等奖，奖状至今压在玻璃板下面。"},
+ {id:"f206",n:"凌晨一点的台灯",r:1,st:2,t:"她假装睡了，等你走了再把台灯打开。不是为了学习，是为了看完那本小说。那是她那段时间唯一能呼吸的地方。"},
+ {id:"f301",n:"倒计时牌背面",r:1,st:3,t:"高考倒计时牌正面写着天数，背面她用铅笔很小地写了一句：“撑住，你以后会很酷的。”写完又用橡皮擦淡了一点，怕被人看见。"},
+ {id:"f302",n:"第一次说不想考",r:2,st:3,t:"她哭着说不想考了。你没有说“坚持一下”，你说“那我们聊聊不考会怎样”。聊到两点，她自己说：“……算了，我还是想考。”"},
+ {id:"f303",n:"志愿表上划掉的那一行",r:3,st:3,t:"她第一志愿本来写的是一个所有人都说“没前途”的专业。划掉的笔迹很重，划了三遍。她说：“没关系啊，我已经知道我想要什么了，这就够了。”——这句话她后来反复用来骗自己。"},
+ {id:"f304",n:"教室后排的星星",r:1,st:3,t:"她在课桌下贴了一张星空贴纸，只有低头的时候能看见。她说这样会觉得教室没那么小。"},
+ {id:"f305",n:"模考之后的那个电话",r:2,st:3,t:"排名掉了八十名那天她给你打电话，接通之后一句话没说，就那样听着你那边的声音，听了十一分钟才挂。"},
+ {id:"f401",n:"第一次一个人坐火车",r:1,st:4,t:"开学那天她坚持一个人走。上车后发了九条消息，最后一条是：“其实我有点害怕，但是不要告诉别人。”"},
+ {id:"f402",n:"社团招新的桌子",r:1,st:4,t:"她一口气报了五个社团，最后一个都没坚持下来。她很久以后才承认：不是三分钟热度，是每一个她都想要，而她不知道怎么选。"},
+ {id:"f403",n:"被退回来的第一份简历",r:2,st:4,t:"第一份简历石沉大海。她把它打印出来，贴在书桌上，旁边写：“版本1.0，纪念一下。”后来那面墙贴到了版本17。"},
+ {id:"f404",n:"宿舍楼下的那次争吵",r:2,st:4,t:"她和室友大吵一架，吵完一个人在楼下坐到十二点。她没哭，她在手机备忘录里写：“我是不是太用力了。”"},
+ {id:"f405",n:"她真正想做的那件事",r:3,st:4,t:"大三那年她跟你说了一件她没跟任何人说过的事——她想做的其实一直是那个被划掉的专业。说完她马上补一句“开玩笑的”，然后换了话题。"},
+ {id:"f501",n:"第一张工资条",r:1,st:5,t:"到手四千二。她截图发给你，配字三个感叹号。那天晚上她请你吃了一顿八十块的饭，坚持要抢着付。"},
+ {id:"f502",n:"厕所隔间的六分钟",r:2,st:5,t:"被领导当众说了之后，她在厕所隔间里待了六分钟。出来补好妆，笑着回工位。那六分钟没人知道，除了你——因为她给你发了一个句号。"},
+ {id:"f503",n:"她改了十七版的那个方案",r:2,st:5,t:"第十七版通过的那天，署名栏里没有她。她什么也没说，只是把前十六版存进了一个叫“我自己知道”的文件夹。"},
+ {id:"f504",n:"合租房的那盆绿植",r:1,st:5,t:"搬了三次家，那盆绿植一直带着。她说：“它活着，就说明我也还行。”"},
+ {id:"f505",n:"凌晨三点的那条语音",r:3,st:5,t:"六十八秒的语音，她只说了一句：“我今天突然想起我七岁的时候说要当主持人。”然后就是很长的呼吸声，直到自动结束。"},
+ {id:"f601",n:"三十岁前夜的清单",r:2,st:6,t:"她列了一张清单，题目是《我三十岁之前做到的事》。写了十七条，划掉了九条，最后在最下面加了一条：“认识了一个一直在的人。”"},
+ {id:"f602",n:"那个终于没被划掉的选项",r:3,st:6,t:"她最后还是做了那件事——那个十八岁被划掉三遍的方向。她说：“我绕了十二年。但我现在走的是我自己选的路，这一点很重要。”"},
+ {id:"f603",n:"她终于敢说的一句",r:3,st:6,t:"“我其实一直很怕，怕自己只是看起来很有活力，其实什么都没做成。”她说完顿了很久，又补上：“但今天我觉得，我好像也还不错。”"}
+];
+
+/* ============ 每日突发事件 ============
+   d 里的键若不在当前阶段生效指标内，会被自动忽略 */
+const EV=[
+/* ---------------- 阶段1 · 小学 7–12 ---------------- */
+{s:1,sc:"她举着一张画冲进屋，纸还在抖。",q:"你看你看！这个是我自己想出来的，老师都没教过！",
+ o:[{tag:"指出具体的一处",tx:"这只鸟的翅膀是往后飞的——你是想画它刚起飞对不对。",d:{mood:5,love:4,trust:3,conf:2,emo:3},r:"对！！就是刚起飞！！（她跳起来）只有你看出来了！",f:"f101"},
+    {tag:"笼统地夸",tx:"真棒，画得真好。",d:{mood:1,love:-1,emo:0},r:"哦……（她把画放下了）"},
+    {tag:"指导",tx:"不错，不过这里的比例还可以再准一点。",d:{mood:-5,love:-4,trust:-3,emo:-3,stress:3},r:"……我不画了。"}]},
+{s:1,sc:"开学点名，老师把她的名字念错了，全班哄笑。她回家一句没提。",q:"今天没什么事呀。真的。",
+ o:[{tag:"不戳穿，做一件事",tx:"（什么也没问，把她的名字一笔一画写在新练习本封面上）",d:{trust:5,love:4,mood:3,emo:4,stress:-4},r:"……（她摸了很久那几个字）你怎么知道。",f:"f102"},
+    {tag:"直接问",tx:"是不是在学校被笑了？",d:{mood:-3,trust:-1,emo:-2,stress:2},r:"没有！谁说的！"},
+    {tag:"教她大度",tx:"这种小事别放心上，笑一笑就过去了。",d:{mood:-4,trust:-4,love:-3,emo:-3},r:"嗯。（她以后真的不说了）"}]},
+{s:1,sc:"她被选中在升旗仪式上发言。夜里，房间传来一遍又一遍的背诵声。",q:"（第四十七遍）……我，我代表全体同学……",
+ o:[{tag:"默默做准备",tx:"（没有打断，第二天早上把她的红领巾熨平了）",d:{conf:0,trust:5,love:5,mood:4,emo:4,focus:3},r:"（她摸到那条平整的红领巾时愣了一下，什么也没说，但背挺得很直）",f:"f103"},
+    {tag:"进去鼓励",tx:"别练了，你已经很好了，快睡。",d:{mood:2,love:1,emo:1,stress:1},r:"……可是我还想再过一遍。"},
+    {tag:"纠正",tx:"这句你读得太快了，重来。",d:{mood:-4,conf:-4,stress:5,emo:-3},r:"……我是不是讲得很差。"}]},
+{s:1,sc:"你在她书包夹层里发现一张折得很小的卷子。六十七分，已经藏了三天。",q:"（她站在门口，没进来）",
+ o:[{tag:"先说那三天",tx:"这三天你一个人扛着，挺辛苦的吧。",d:{trust:6,love:5,emo:5,stress:-6,mood:3,grade:-1},r:"（她哇地哭出来）我以为你会骂我……",f:"f104"},
+    {tag:"就事论事",tx:"考砸了没关系，我们看看错在哪。",d:{grade:4,spress:3,trust:1,mood:-2,emo:-1},r:"……哦。好。"},
+    {tag:"责备藏卷子",tx:"分数我不管，但你为什么要藏？",d:{trust:-6,love:-5,emo:-5,stress:6,mood:-5},r:"……因为我知道你会这样。"}]},
+{s:1,sc:"晚饭桌上，她忽然很郑重地宣布了一件事。",q:"我决定了，我长大要当主持人！因为主持人说话的时候，所有人都会看着她。",
+ o:[{tag:"当真",tx:"那从今天起你就是我们家的主持人。明天的晚饭由你来报幕。",d:{mood:6,love:5,conf:5,trust:3,emo:4},r:"（她立刻站起来清了清嗓子）各位观众晚上好——",f:"f105"},
+    {tag:"笑一笑",tx:"哈哈，好啊好啊。",d:{mood:1,love:-1},r:"……你是不是不信。"},
+    {tag:"泼冷水",tx:"这个不好做的，先把成绩弄上去吧。",d:{mood:-6,love:-5,conf:-6,trust:-4,emo:-4,stress:4},r:"……哦。那算了。"}]},
+{s:1,sc:"运动会八百米，她跑了最后一名，但坚持跑完了。跑道上最后只剩她一个人。",q:"（她喘着气走过来，脸很红，不敢看你）",
+ o:[{tag:"只说那件事",tx:"全场最后那一圈，只有你还在跑。我喊你名字了，你听见没有。",d:{conf:6,mood:5,love:5,trust:4,emo:4},r:"……我以为是幻觉。（她忽然就哭了）",f:"f106"},
+    {tag:"安慰名次",tx:"没关系，重在参与。",d:{mood:-2,conf:-2,emo:-1},r:"嗯。"},
+    {tag:"提体能",tx:"以后多锻炼就跑得动了。",d:{mood:-4,conf:-4,trust:-2,emo:-2},r:"……我已经很努力了。"}]},
+{s:1,sc:"她攒了两个月零花钱，拎回来一个马克杯，颜色很奇怪。",q:"送你的！售货员说这个颜色不好卖，可是我觉得这个最像太阳。",
+ o:[{tag:"当场用上",tx:"（当场倒了水喝）那从今天起我只用这个。",d:{love:7,mood:6,trust:4,emo:4},r:"（她捂着脸在原地转圈）",f:"f107"},
+    {tag:"收好",tx:"真好看，我收起来，舍不得用。",d:{love:2,mood:1},r:"……要用啊。收起来干嘛。"},
+    {tag:"心疼钱",tx:"你干嘛花这个钱，攒着不好吗。",d:{love:-6,mood:-6,trust:-4,emo:-4},r:"……对不起。"}]},
+{s:1,sc:"该报兴趣班了。宣传单摊了一桌子。",q:"我想学那个！就是期末会上台表演的那个！",
+ o:[{tag:"顺她",tx:"那就报这个。上台那天我坐第一排。",d:{mood:6,conf:5,love:4,emo:3,focus:-1,grade:-1},r:"说好了！第一排！不许坐后面！"},
+    {tag:"折中",tx:"这个可以报，但我们也挑一个能静下心的，好不好。",d:{focus:5,grade:3,mood:-1,spress:2,eq:2},r:"……那好吧。但是上台那个一定要有。"},
+    {tag:"替她决定",tx:"学奥数吧，对升学有用。",d:{grade:5,spress:7,mood:-7,love:-5,trust:-5,conf:-4},r:"……哦。"}]},
+{s:1,sc:"家长会结束。老师说她“上课爱接话，影响纪律”。",q:"（她在校门口等你，一直在看你的脸色）",
+ o:[{tag:"先认她那一面",tx:"老师说你爱接话。我倒觉得，你是脑子转得比别人快一点。但下次我们举手，行吗。",d:{trust:6,conf:5,eq:4,mood:4,focus:3,emo:3},r:"……行！（她一路蹦回家）"},
+    {tag:"如实转达",tx:"老师说你影响纪律，以后注意。",d:{focus:3,mood:-4,conf:-4,trust:-3,emo:-2},r:"知道了。"},
+    {tag:"当众数落",tx:"（在校门口当着同学面说了她几句）",d:{mood:-9,trust:-8,love:-7,conf:-7,emo:-7,stress:7},r:"（她一路没说话。当晚也没有）"}]},
+{s:1,sc:"她和最好的朋友闹翻了，三天没说话。",q:"是她先不理我的。我才不要先去找她。",
+ o:[{tag:"递台阶",tx:"那我们明天带两颗糖，你假装是顺手给的。",d:{eq:6,mood:5,trust:5,emo:4,love:3},r:"……（眼睛亮了）那我带三颗，多的那颗是我的。"},
+    {tag:"讲道理",tx:"朋友之间要互相让步，你先去道歉。",d:{mood:-5,trust:-4,eq:-2,emo:-3,stress:4},r:"凭什么是我！"},
+    {tag:"不管",tx:"小孩子的事，过两天自己就好了。",d:{trust:-3,love:-3,mood:-2,eq:-1},r:"……哦。"}]},
+{s:1,sc:"她被老师当众表扬了一次，一进门就开始演。",q:"老师说！！我的作文！！是全班念得最响的那一篇！！",
+ o:[{tag:"配合演出",tx:"那现在请获奖者为我们朗读一遍。（鼓掌）",d:{mood:7,love:5,conf:5,emo:4},r:"（她真的站到沙发上念了一遍，念完还鞠躬）"},
+    {tag:"适度",tx:"真不错，继续保持。",d:{mood:1,conf:1},r:"……就这样啊。"},
+    {tag:"压一压",tx:"骄傲使人落后。",d:{mood:-7,conf:-6,love:-5,trust:-4,emo:-4},r:"……我知道了。"}]},
+{s:1,sc:"晚上九点，她抱着作业本坐在桌前，一个字也没写。",q:"我写不进去。脑子里好多东西在转。",
+ o:[{tag:"陪着拆小块",tx:"那我们先只做三道。做完就不许再逼自己了。",d:{focus:6,spress:-5,grade:3,trust:4,mood:3,emo:3},r:"……三道。那我试试。"},
+    {tag:"施压",tx:"别找借口，写完才能睡。",d:{grade:3,focus:-3,spress:8,mood:-6,trust:-5,emo:-5,stress:6},r:"（她写到十一点，字越来越潦草）"},
+    {tag:"放她走",tx:"那今天不写了，明天再说。",d:{mood:3,spress:-3,focus:-4,grade:-4},r:"耶！（第二天照样没写）"}]},
+/* ---------------- 阶段2 · 初中 13–15 ---------------- */
+{s:2,sc:"她的房门第一次从里面锁上了。",q:"（隔着门）没事，我就是想自己待会儿。",
+ o:[{tag:"尊重这扇门",tx:"好。我在客厅，你想出来随时出来。（没有敲第二次）",d:{trust:6,ident:5,emo:4,stress:-5,mood:3},r:"（一小时后她自己开门了）……谢谢你没一直敲。",f:"f201"},
+    {tag:"敲门追问",tx:"你到底怎么了？开门说清楚。",d:{trust:-6,ident:-4,mood:-5,emo:-5,stress:6},r:"我说了没事！"},
+    {tag:"拆掉门锁",tx:"这个家不许锁门。",d:{trust:-10,love:-8,ident:-8,emo:-8,stress:10},r:"（她再也没在家里哭过）"}]},
+{s:2,sc:"她在镜子前站了四十分钟，换了三套衣服。",q:"……我是不是很丑啊。",
+ o:[{tag:"把问题换掉",tx:"你今天这件穿得特别像你。不是好看不好看的问题，是像不像你。",d:{look:-6,ident:5,conf:3,mood:4,love:4,emo:3},r:"……（她又照了一次镜子，这次照得很快）",f:"f202"},
+    {tag:"直接否认",tx:"不丑啊，挺好看的。",d:{look:-1,mood:1},r:"你肯定是随便说的。"},
+    {tag:"说外貌不重要",tx:"这个年纪别老想这些，把心思放学习上。",d:{look:7,ident:-6,trust:-5,mood:-6,emo:-5,stress:5},r:"……知道了。"}]},
+{s:2,sc:"她课本里夹着一封信，写了三页，改了九遍，一直没送出去。",q:"（被你无意看到时她整个人僵住了）你看见了？",
+ o:[{tag:"把它还回去",tx:"（把信合上还给她）我什么都没看见。你想说的时候再说。",d:{trust:8,love:6,ident:4,emo:5,stress:-5},r:"……（很久）其实我不是怕他拒绝。我是怕全班都知道我被拒绝了。",f:"f203"},
+    {tag:"开玩笑",tx:"哟，小姑娘有心事了。",d:{trust:-5,mood:-5,ident:-4,emo:-4,look:3},r:"你还给我！"},
+    {tag:"严肃制止",tx:"这个年纪不能早恋，这封信撕了。",d:{trust:-10,love:-8,ident:-7,emo:-7,stress:9,mood:-8},r:"（她撕了。然后把日记也撕了）"}]},
+{s:2,sc:"一个很难听的外号在年级里传了两个月。她每天照常笑着上学。",q:"无所谓啦，他们爱叫就叫呗。",
+ o:[{tag:"不拆穿，先站定",tx:"两个月了。你笑了两个月，我也看了两个月。这事我们一起想办法，不用你一个人扛。",d:{trust:8,love:7,ident:6,emo:6,stress:-7,mood:5},r:"（她终于绷不住）……我每天都不想去。",f:"f204"},
+    {tag:"教她反击",tx:"下次他们再叫，你就骂回去。",d:{ident:-2,eq:-2,mood:-2,stress:3},r:"……我骂不过他们。"},
+    {tag:"信了她的无所谓",tx:"那就好，你心态不错。",d:{trust:-6,emo:-6,ident:-5,stress:7,mood:-5},r:"嗯。（她撕掉了那两个月的日记）"}]},
+{s:2,sc:"学校演讲比赛报名表贴出来了。她在公告栏前站了很久，什么也没说。",q:"……反正我也不行。",
+ o:[{tag:"轻轻推一把",tx:"你讲话挺好听的。要不要试试？不行也没人会知道。",d:{ident:7,conf:6,mood:5,love:4,emo:4},r:"……（很小声）那我也可以试试吗。",f:"f205"},
+    {tag:"替她报名",tx:"（直接帮她报了）",d:{ident:-4,conf:-3,stress:6,mood:-4,trust:-4},r:"你为什么不问我！"},
+    {tag:"顺她的话",tx:"那就不报吧，别勉强。",d:{mood:0,ident:-3,conf:-3},r:"……嗯。"}]},
+{s:2,sc:"凌晨一点，她房间的台灯又亮了。不是在学习，是在看小说。",q:"（被抓到时她把书塞进被子）",
+ o:[{tag:"给她留一块地方",tx:"看完这章就睡。……这本好看吗，回头讲给我听。",d:{trust:6,mood:5,love:4,emo:4,spress:-4,grade:-2},r:"（她眼睛一下亮了）好看！我跟你讲——",f:"f206"},
+    {tag:"没收",tx:"（把书收走）现在什么时候了。",d:{trust:-6,mood:-6,emo:-5,spress:4,stress:5,grade:2},r:"……"},
+    {tag:"装没看见",tx:"（关上门走了）",d:{trust:2,grade:-3,spress:-1,focus:-2},r:"（第二天她上课睡着了）"}]},
+{s:2,sc:"月考后，她的排名掉了三十位。她把成绩单压在书底下。",q:"你别看了，反正就那样。",
+ o:[{tag:"先问状态",tx:"分数我一会儿再看。先说你——这阵子是不是很累。",d:{trust:6,emo:5,stress:-6,spress:-5,mood:4,grade:1},r:"……（她点点头，眼泪一下掉下来）"},
+    {tag:"分析试卷",tx:"拿来，我们看看丢分在哪。",d:{grade:5,spress:4,trust:1,mood:-3,emo:-2},r:"……哦。"},
+    {tag:"拿别人比",tx:"你看人家XX，怎么就能稳住。",d:{ident:-9,mood:-8,trust:-7,love:-6,emo:-7,stress:8,spress:7},r:"那你让XX当你孩子好了。"}]},
+{s:2,sc:"她突然把头发剪短了，剪得有点失败。",q:"……很难看吧。你说实话。",
+ o:[{tag:"真诚且具体",tx:"侧面有点翘。但你敢一个人去剪这件事，比发型酷多了。",d:{look:-5,ident:6,conf:4,mood:4,love:4},r:"（她笑出声）那我明天就这么去学校。"},
+    {tag:"说好看",tx:"好看啊，真的。",d:{look:-1,mood:1,trust:-1},r:"骗人。"},
+    {tag:"说实话但只说难看",tx:"确实有点难看，你怎么不先问问我。",d:{look:7,ident:-6,conf:-6,mood:-7,emo:-5},r:"……我就知道。"}]},
+{s:2,sc:"她和同学约好周末出去，但那天是你早就定好的家庭安排。",q:"我能不能不去……我真的答应人家了。",
+ o:[{tag:"让她去",tx:"去吧。你跟朋友的约定也是约定。",d:{trust:6,love:5,ident:4,mood:5,emo:3},r:"……谢谢。（她回来后主动讲了一路见闻）"},
+    {tag:"商量换期",tx:"这次先跟我们走，下周我送你去找她们，好不好。",d:{eq:3,mood:-1,trust:2,emo:1},r:"……行吧。"},
+    {tag:"强行要求",tx:"家里的事更重要，推掉。",d:{trust:-7,love:-6,ident:-6,mood:-7,emo:-6,stress:6},r:"（她去了，全程没说话）"}]},
+{s:2,sc:"她第一次染了指甲，很淡的颜色，进门就把手背在身后。",q:"（她偷偷观察你的表情）",
+ o:[{tag:"看见但不审问",tx:"颜色挑得不错。学校查的话记得提前洗掉。",d:{trust:6,ident:5,look:-4,mood:4,eq:3},r:"……你居然不说我。"},
+    {tag:"立刻否定",tx:"学生染什么指甲，去洗了。",d:{trust:-7,ident:-6,look:5,mood:-6,emo:-5},r:"（她洗了。从此什么都不让你看见）"}]},
+{s:2,sc:"她在家长群里看到别的家长晒成绩，截图发给你。",q:"你是不是也希望我像她们一样。",
+ o:[{tag:"明确回答",tx:"不希望。我要的是你，不是她们的复制品。",d:{ident:8,trust:7,love:6,mood:5,emo:5,stress:-5},r:"……（她把那张截图删了）"},
+    {tag:"含糊",tx:"你要是能更努力一点当然更好。",d:{ident:-7,trust:-5,mood:-6,emo:-5,spress:6,stress:5},r:"嗯，我知道了。"}]},
+{s:2,sc:"她说她想学画画，但“现在学会不会太晚了”。",q:"我这个年纪再开始，是不是已经来不及了。",
+ o:[{tag:"把时间拆开",tx:"来不及成为谁。但来得及成为你自己喜欢的那个样子。先画一张试试。",d:{ident:6,mood:5,conf:4,love:4,emo:3,spress:2},r:"……那我今晚就画一张。"},
+    {tag:"讲现实",tx:"现在最重要的是中考，别分心。",d:{ident:-6,mood:-6,conf:-5,spress:6,stress:5,grade:3},r:"……也对。"}]}
+];
+
+EV.push(
+/* ---------------- 阶段3 · 高中 16–18 ---------------- */
+{s:3,sc:"墙上的倒计时牌换到了三位数。你偶然翻到它的背面。",q:"（铅笔字，被橡皮擦淡过）撑住，你以后会很酷的。",
+ o:[{tag:"不提，只回应",tx:"（第二天在她桌上留了一张纸条：会的。我见过你很酷的样子。）",d:{conf:7,goal:5,mood:5,love:5,trust:4,emo:4},r:"（她把那张纸条夹进了倒计时牌后面）",f:"f301"},
+    {tag:"当面读出来",tx:"你写在背面的那句我看到了，挺好的。",d:{conf:2,mood:-2,trust:-2},r:"……你看我东西干嘛。"}]},
+{s:3,sc:"晚上十一点，她突然推开书房的门，眼睛是红的。",q:"我不想考了。真的。我一点都不想了。",
+ o:[{tag:"顺着往下聊",tx:"那我们认真聊聊——不考的话，接下来会怎么样。",d:{trust:8,goal:6,spress:-8,emo:6,stress:-7,conf:3},r:"（聊到两点，她自己说）……算了，我还是想考。",f:"f302"},
+    {tag:"打气",tx:"坚持一下，就剩这几个月了。",d:{spress:6,mood:-4,trust:-3,emo:-3,stress:4},r:"……嗯。"},
+    {tag:"发火",tx:"说什么胡话，这么多年白读了？",d:{trust:-10,love:-9,conf:-8,emo:-8,stress:10,spress:9},r:"（她退出去，关上门）"}]},
+{s:3,sc:"志愿表草稿上，第一志愿那行被划了三遍。那是一个所有人都说“没前途”的专业。",q:"没关系啊，我已经知道我想要什么了，这就够了。",
+ o:[{tag:"不让她自己劝自己",tx:"那行你划了三遍。划这么重，说明你一点都不觉得没关系。我们把它写回去聊聊。",d:{goal:9,conf:7,trust:7,love:6,emo:5,stress:-5},r:"……（她很久没说话）你是第一个这么说的人。",f:"f303"},
+    {tag:"尊重划掉",tx:"你自己想清楚就好。",d:{goal:-3,conf:-3,trust:-1},r:"嗯，想清楚了。"},
+    {tag:"赞成划掉",tx:"划得对，那个专业确实不好找工作。",d:{goal:-8,conf:-7,ident:-5,love:-6,emo:-5,stress:5},r:"……嗯。"}]},
+{s:3,sc:"她的课桌下贴了一张星空贴纸，只有低头的时候才看得见。",q:"（被发现时她有点不好意思）这样会觉得教室没那么小。",
+ o:[{tag:"参与进去",tx:"那下次我给你带一张更大的，贴抽屉里，只有你知道。",d:{mood:6,love:5,conf:3,emo:4,spress:-4},r:"（她笑得很用力）好！",f:"f304"},
+    {tag:"提醒规矩",tx:"上课别老低头看这个。",d:{mood:-4,trust:-3,emo:-3,spress:3},r:"……我没有。"}]},
+{s:3,sc:"模考排名掉了八十名。她给你打电话，接通之后一句话没说。",q:"（电话那头只有呼吸声）",
+ o:[{tag:"陪着不挂",tx:"（也不说话，把手机开着免提，让她听见这边的声音）",d:{trust:9,love:7,emo:7,stress:-8,spress:-6,mood:4},r:"（十一分钟后她挂了。第二天她说：昨天谢谢你）",f:"f305"},
+    {tag:"开口追问",tx:"喂？你说话啊，怎么了？",d:{trust:-4,emo:-4,stress:4},r:"……没事。挂了。"},
+    {tag:"分析",tx:"掉八十名肯定是哪里出了问题，我们复盘一下。",d:{grade:4,spress:8,trust:-6,emo:-6,stress:7,conf:-5},r:"……好。"}]},
+{s:3,sc:"她说她想选文科，家里有人反对。",q:"他们说学文科以后没饭吃。……是不是真的。",
+ o:[{tag:"给她判断的工具",tx:"我不知道哪条路更好走。但我们可以一起查清楚，然后你自己选。",d:{goal:7,conf:5,trust:6,eq:4,emo:3},r:"……（她真的查了一晚上）我想好了。"},
+    {tag:"替她拍板",tx:"听我的，选理科。",d:{goal:-7,conf:-7,trust:-6,love:-5,emo:-5,stress:6},r:"……哦。"}]},
+{s:3,sc:"连着三周没睡够，她在饭桌上发呆，筷子停在半空。",q:"……嗯？你说什么。",
+ o:[{tag:"强制休息",tx:"今天晚自习不去了，睡觉。成绩我负责。",d:{spress:-9,stress:-8,emo:6,mood:6,trust:6,grade:-2},r:"……真的可以吗。（她那天睡了十一个小时）"},
+    {tag:"心疼但不作为",tx:"你要注意身体啊。",d:{mood:1,spress:1},r:"嗯。"},
+    {tag:"加码",tx:"再撑撑，考完就解放了。",d:{spress:8,stress:7,emo:-6,mood:-6,conf:-3},r:"……好。"}]},
+{s:3,sc:"她被同学当众指出一个很低级的错误，脸涨得通红。",q:"（回来路上一句话没说）",
+ o:[{tag:"先处理面子",tx:"那种场合被点出来，谁都受不了。错本身不大，难受的是当着人。",d:{conf:6,emo:5,trust:6,stress:-6,mood:4},r:"……（她点头）对。就是这个。"},
+    {tag:"强调错误",tx:"那个错确实不该犯。",d:{conf:-7,mood:-7,trust:-5,emo:-6,stress:6},r:"我知道了！"}]},
+{s:3,sc:"她偷偷报名了一个和学业无关的比赛，被你发现了。",q:"……我知道现在不该搞这些。",
+ o:[{tag:"支持但划线",tx:"该搞。给你两周，两周之后我们一起把进度补回来。",d:{goal:6,conf:6,mood:6,love:5,trust:5,spress:2,grade:-2},r:"成交！（她两周后真的补回来了）"},
+    {tag:"叫停",tx:"现在什么时候了，退了。",d:{conf:-7,goal:-6,mood:-7,trust:-6,emo:-5,stress:6,grade:2},r:"……退了。"}]},
+{s:3,sc:"高考前一周，她突然很平静。",q:"我昨天想明白了。考不好也没关系吧，反正人生很长。",
+ o:[{tag:"接住这份平静",tx:"对。而且你这三年不是为了一张卷子活的，这个我作证。",d:{conf:7,emo:6,stress:-7,spress:-7,goal:5,mood:5},r:"（她笑了，是真的松下来的那种笑）"},
+    {tag:"警惕",tx:"别想这些，现在松懈就前功尽弃了。",d:{spress:9,stress:8,emo:-7,conf:-6,mood:-6},r:"……好。"}]},
+{s:3,sc:"查分那天。她把手机推给你。",q:"你看。我不敢看。",
+ o:[{tag:"一起看",tx:"（握着她的手一起点开）不管多少，我们一起看。",d:{trust:8,love:7,emo:6,conf:5,mood:5},r:"（分数出来的一瞬间她先看的是你的表情）"},
+    {tag:"替她看",tx:"（自己看完，再决定怎么说）",d:{trust:2,emo:1,conf:-1},r:"……到底多少啊。"}]},
+{s:3,sc:"同学群里在互相对答案，她越看越慌。",q:"我那道大题好像做错了……完了。",
+ o:[{tag:"切断信息源",tx:"退群。现在改不了了，但你的心情还能改。",d:{spress:-7,stress:-6,emo:5,conf:4,mood:4},r:"……（她真的退了）好像是轻松了一点。"},
+    {tag:"陪她对",tx:"我们再核一遍，看看到底错没错。",d:{spress:7,stress:6,emo:-5,mood:-5,grade:1},r:"（对到凌晨三点，更慌了）"}]},
+/* ---------------- 阶段4 · 大学 19–22 ---------------- */
+{s:4,sc:"开学那天她坚持一个人坐火车。上车后给你发了九条消息。",q:"（第九条）其实我有点害怕，但是不要告诉别人。",
+ o:[{tag:"认真对待这句",tx:"收到。这句我替你保密。到站了跟我说一声。",d:{trust:8,love:6,conf:5,social:3,emo:5},r:"……（到站后她发了一张车站照片）我到了。我还行。",f:"f401"},
+    {tag:"安慰",tx:"别怕，都这样的。",d:{conf:-1,trust:-1,emo:0},r:"嗯。"},
+    {tag:"说她长大了",tx:"这不挺好的吗，终于独立了。",d:{trust:-5,emo:-5,conf:-4,stress:5},r:"……对。挺好的。"}]},
+{s:4,sc:"社团招新，她一口气报了五个。",q:"我全都想试！这个也好玩那个也好玩！",
+ o:[{tag:"允许她试错",tx:"报吧。两个月后你肯定会退掉三个，那也不丢人。",d:{social:6,mood:6,conf:4,love:4,major:-1,intern:-1},r:"才不会！（两个月后退了四个）",f:"f402"},
+    {tag:"先规划",tx:"挑一个能写进简历的就够了。",d:{intern:5,major:3,mood:-5,social:-4,conf:-3,trust:-3},r:"……哦。"},
+    {tag:"泼冷水",tx:"你每次都三分钟热度。",d:{conf:-8,mood:-8,ident:-5,love:-7,trust:-6,emo:-6,stress:6},r:"……那我一个都不报了。"}]},
+{s:4,sc:"第一份简历投出去，石沉大海。她把它打印出来贴在书桌上。",q:"版本1.0，纪念一下。（她笑着说的）",
+ o:[{tag:"陪她做2.0",tx:"那我们今晚做2.0。这面墙我要看见它贴满。",d:{intern:7,conf:6,trust:5,mood:5,emo:4},r:"（那面墙后来贴到了版本17）",f:"f403"},
+    {tag:"安慰",tx:"第一次都这样，别灰心。",d:{conf:1,mood:1,intern:0},r:"嗯。"},
+    {tag:"找原因",tx:"你这简历确实太空了，没什么能写的。",d:{conf:-8,intern:2,mood:-7,emo:-6,stress:6,love:-5},r:"……我知道。"}]},
+{s:4,sc:"她和室友大吵一架，一个人在宿舍楼下坐到十二点。",q:"我是不是太用力了。我是不是对谁都太热情了。",
+ o:[{tag:"不否定她的热情",tx:"你不是太用力。你只是把人当回事，而不是每个人都接得住。",d:{social:6,conf:6,ident:5,emo:6,trust:6,stress:-6},r:"……（她哭了）我以为是我有问题。",f:"f404"},
+    {tag:"教她收敛",tx:"以后对人别那么掏心掏肺。",d:{social:3,conf:-6,emo:-5,love:-5,mood:-5},r:"……嗯。那我以后注意。"},
+    {tag:"劝和",tx:"室友之间忍一忍就过去了。",d:{social:-3,trust:-4,emo:-4,mood:-4},r:"……算了。"}]},
+{s:4,sc:"大三的一个深夜，她忽然跟你说了一件没跟任何人说过的事。",q:"我想做的其实一直是那个被划掉的专业。……开玩笑的，当我没说。",
+ o:[{tag:"不让她收回去",tx:"不许当没说。你说一次要很大力气，我听见了，而且我记下来了。",d:{major:-2,conf:8,ident:7,trust:9,love:8,emo:7,stress:-6},r:"……（很久）谢谢你没笑我。",f:"f405"},
+    {tag:"顺着台阶",tx:"哈哈，那确实是玩笑话。",d:{trust:-7,love:-6,conf:-6,emo:-6,ident:-5},r:"……对吧。哈哈。"},
+    {tag:"讲现实",tx:"现在换太晚了，先把眼前的读完。",d:{major:3,conf:-7,ident:-6,trust:-6,emo:-5,stress:5},r:"嗯，我知道。"}]},
+{s:4,sc:"她在实习和出国交换之间犹豫，每天换一个答案。",q:"你帮我决定吧，我真的选不出来。",
+ o:[{tag:"陪她列，不替她选",tx:"我不替你决定。但我陪你列——两边最坏会怎样，你更受得了哪一个。",d:{major:5,intern:5,conf:6,trust:6,eq:4},r:"……（列完她自己拍板了）"},
+    {tag:"替她定",tx:"去实习，实际。",d:{intern:5,conf:-5,trust:-4,major:-3,emo:-3},r:"……好吧。"},
+    {tag:"推回去",tx:"你自己的事自己想。",d:{trust:-5,conf:-4,emo:-4,social:-2},r:"……哦。"}]},
+{s:4,sc:"她谈了第一段恋爱，对方不太在意她的分享。",q:"他说我讲话太多了。……是不是真的有点烦。",
+ o:[{tag:"给她标准",tx:"讲话多不是缺点，那是你这个人。只是他不是能接住的人而已。",d:{conf:7,ident:6,emo:6,trust:6,social:3,stress:-5},r:"……（她那天晚上分手了）"},
+    {tag:"劝她改",tx:"你是可以稍微收一点，别人会舒服些。",d:{conf:-7,ident:-6,emo:-5,social:2,love:-5},r:"……哦。那我注意。"}]},
+{s:4,sc:"她接了一个没报酬的项目，熬了半个月，成品很好，但没人署她的名。",q:"算了，就当练手。",
+ o:[{tag:"替她留证据",tx:"不算了。把过程稿和时间线存下来，这是你的作品集第一页。",d:{intern:7,conf:6,trust:6,work:0,emo:4,mood:4},r:"……对哦。（她建了一个文件夹）"},
+    {tag:"附和",tx:"确实，年轻的时候吃点亏是正常的。",d:{conf:-6,intern:-4,trust:-5,emo:-5,stress:5},r:"嗯。"}]},
+{s:4,sc:"她在朋友圈发了一条很长的、很用力的动态，发完三分钟就删了。",q:"（她私信你）你看到了吗。我是不是很幼稚。",
+ o:[{tag:"把它接住",tx:"看到了，而且我读完了。不幼稚——你只是把真心放在了一个不太安全的地方。放我这儿吧。",d:{ident:7,conf:6,trust:8,love:7,emo:6,stress:-6},r:"……（她把那条原文又发给了你一次）"},
+    {tag:"赞同删掉",tx:"删了好，那种话发出去容易被人说。",d:{ident:-6,conf:-5,emo:-5,trust:-5,social:2},r:"……嗯。"}]},
+{s:4,sc:"毕业前的最后一次社团演出，她站在了台上。",q:"（谢幕时她在人群里找你）",
+ o:[{tag:"让她找到",tx:"（第一排，站起来鼓掌）",d:{conf:8,mood:8,love:7,ident:6,emo:6,social:4},r:"（她在台上红了眼眶，下来第一句是：我看见你了）"},
+    {tag:"没能到场",tx:"（临时有事，没去）",d:{conf:-7,mood:-8,love:-8,trust:-6,emo:-6},r:"没关系啦，真的没关系。（她那天的照片一张都没发）"}]},
+{s:4,sc:"她第一次因为钱为难——想报一个很贵的课，又开不了口。",q:"……算了，那个课也不是非上不可。",
+ o:[{tag:"把难处摊开",tx:"多少钱？我们算算。这件事不丢人，我们一起想办法。",d:{trust:7,love:6,money:0,intern:5,emo:5,conf:4},r:"……（她把价格发过来，手是抖的）"},
+    {tag:"直接给钱",tx:"（二话不说转了钱）",d:{love:4,trust:3,conf:-2,intern:3,money:0},r:"……谢谢。（她有点不自在）"},
+    {tag:"说太贵",tx:"这么贵？不值吧。",d:{conf:-6,trust:-5,mood:-6,emo:-5,intern:-4},r:"嗯，我也觉得。"}]},
+{s:4,sc:"同宿舍的人都拿到了offer，她还没有。",q:"我是不是真的比别人差一点啊。",
+ o:[{tag:"把比较移开",tx:"你们投的不是一个赛道。而且我见过你改到第十七版的样子，那个劲儿不会白费。",d:{conf:7,intern:5,emo:6,trust:6,stress:-6,social:3},r:"……（她重新打开了电脑）"},
+    {tag:"催她",tx:"那你得抓紧了，别人都定了。",d:{conf:-8,stress:8,emo:-7,mood:-7,intern:2},r:"我知道！"}]}
+);
+
+EV.push(
+/* ---------------- 阶段5 · 初入职场 23–27 ---------------- */
+{s:5,sc:"第一笔工资到账，四千二。她截图发过来，配了三个感叹号。",q:"我自己挣的！！！今晚我请客！",
+ o:[{tag:"让她请",tx:"好。我吃最贵的那个，你别拦我。",d:{mood:7,love:6,conf:5,money:1,emo:5},r:"（那顿饭八十块，她抢着付，付完笑了一路）",f:"f501"},
+    {tag:"劝她存钱",tx:"刚工作还是存着吧，别乱花。",d:{mood:-6,love:-5,conf:-4,money:3,emo:-4},r:"……也是。那算了。"}]},
+{s:5,sc:"被领导当众说了之后，她在厕所隔间待了六分钟，出来补好妆，笑着回了工位。你只收到她一个句号。",q:"。",
+ o:[{tag:"读懂那个句号",tx:"六点下班我在楼下。什么都不用说，走一段就行。",d:{resil:7,trust:8,love:7,emo:7,stress:-8,mood:5},r:"（走到第三个路口她才开口）……今天好丢脸啊。",f:"f502"},
+    {tag:"问怎么了",tx:"？怎么了",d:{trust:-2,emo:-2},r:"没事，手滑。"},
+    {tag:"教她职场规则",tx:"职场就是这样，你要学会不往心里去。",d:{resil:2,trust:-7,love:-6,emo:-6,stress:6,mood:-6},r:"嗯，我知道。"}]},
+{s:5,sc:"她改了十七版的方案终于通过了，署名栏里没有她。",q:"无所谓啦，反正东西做出来了。",
+ o:[{tag:"不许她无所谓",tx:"有所谓。东西是你做的，这件事至少我们两个要记清楚。那十六版留着。",d:{work:6,resil:6,conf:6,trust:7,emo:6,stress:-5},r:"（她建了一个文件夹，名字叫“我自己知道”）",f:"f503"},
+    {tag:"劝她看开",tx:"刚入职都这样，熬熬就好了。",d:{resil:2,conf:-6,trust:-6,emo:-5,stress:6},r:"嗯。"},
+    {tag:"让她去争",tx:"你应该直接去找领导说清楚。",d:{resil:-3,work:1,stress:7,emo:-4,social:0,mood:-4},r:"……我不敢。"}]},
+{s:5,sc:"第三次搬家，她唯一舍不得扔的是一盆半死不活的绿植。",q:"它活着，就说明我也还行。",
+ o:[{tag:"郑重接过",tx:"（帮她抱上车，放在副驾）那它现在是正式乘客了。",d:{mood:6,love:6,emo:5,stress:-5,money:1},r:"（她笑得很用力，眼睛是红的）",f:"f504"},
+    {tag:"建议扔掉",tx:"都这样了，到了那边再买一盆呗。",d:{mood:-6,love:-5,emo:-5,trust:-4},r:"……也行。"}]},
+{s:5,sc:"凌晨三点，一条六十八秒的语音。",q:"我今天突然想起我七岁的时候说要当主持人。……（然后是很长的呼吸声）",
+ o:[{tag:"把那件事接住",tx:"我记得。你说因为主持人说话的时候，所有人都会看着她。那句话我记了二十年。",d:{trust:9,love:9,conf:7,career:0,emo:7,stress:-8,mood:6},r:"……（很久）你怎么还记得。",f:"f505"},
+    {tag:"劝她睡",tx:"这么晚了，快睡吧，明天还上班。",d:{trust:-6,love:-6,emo:-6,stress:5},r:"嗯，晚安。"},
+    {tag:"鼓励她去做",tx:"那你现在也可以啊，辞职去试试。",d:{resil:-4,stress:6,conf:-3,trust:-2,mood:-3},r:"……说得轻巧。"}]},
+{s:5,sc:"她在考虑跳槽，offer薪资高一点，但行业她不喜欢。",q:"钱多一点，但是我一点都不想去。你说我是不是太矫情了。",
+ o:[{tag:"把标准交给她",tx:"不矫情。先问你一句：现在这份，是在消耗你，还是在攒你。",d:{work:5,resil:5,career:0,conf:6,trust:6,eq:4},r:"……（她想了三天，自己做了决定）"},
+    {tag:"劝她拿钱",tx:"先拿钱，喜欢不喜欢以后再说。",d:{money:6,conf:-6,emo:-5,resil:-4,mood:-5},r:"……也对。"}]},
+{s:5,sc:"恋情出了问题。对方说她“情绪太多了”。",q:"是不是我真的太麻烦了。",
+ o:[{tag:"分清事实",tx:"你的情绪多，这是真的。但“多”不等于“错”——只等于不是谁都接得住。",d:{rel:6,conf:7,emo:7,trust:7,stress:-6},r:"……（她哭了很久，但是松的那种）"},
+    {tag:"劝她收敛",tx:"你确实可以少说一点，对方会轻松些。",d:{rel:-5,conf:-7,emo:-6,trust:-6,stress:6},r:"嗯，我改。"}]},
+{s:5,sc:"她连着加了两周班，今天忽然在电话里笑着说了一句很轻的话。",q:"我最近好像不太有感觉了。开心也不太开心，难过也懒得难过。",
+ o:[{tag:"当真",tx:"这句不是小事。这周末我过来，什么都不干，先把你捞出来。",d:{resil:5,emo:8,stress:-9,mood:7,trust:7,love:6,work:-2},r:"……好。（她那个周末睡了两天）"},
+    {tag:"当成疲劳",tx:"累的吧，睡一觉就好了。",d:{emo:-7,stress:7,mood:-6,trust:-5,resil:-3},r:"嗯，可能吧。"}]},
+{s:5,sc:"公司裁员名单传得满天飞，她每天上班前都要深呼吸。",q:"我不怕被裁，我怕被裁的时候别人觉得我活该。",
+ o:[{tag:"抓住真正的点",tx:"你怕的不是失业，是被人看笑话。这个我懂。真到那天，我第一个站你这边。",d:{resil:7,money:3,emo:6,trust:8,love:6,stress:-6},r:"……（她没说话，但第二天上班前没再深呼吸）"},
+    {tag:"讲现实",tx:"先把手头工作做好，被裁也是实力问题。",d:{work:3,resil:-6,conf:-6,emo:-6,stress:8,trust:-6},r:"嗯。"}]},
+{s:5,sc:"她攒了一年的钱，想买一个对她意义很大但并不实用的东西。",q:"我知道这个很不值。但是我真的、真的想要很久了。",
+ o:[{tag:"支持这份不值",tx:"你为它攒了一年。那它对你就是值的。买。",d:{mood:8,love:7,conf:5,money:-3,emo:6,accept:0},r:"（她拍下那一刻的截图，存到现在）"},
+    {tag:"算账",tx:"这个钱够你交两个月房租了。",d:{money:5,mood:-7,love:-6,conf:-5,emo:-5},r:"……算了，不买了。"}]},
+{s:5,sc:"同学聚会上，所有人都在比谁过得更好。她全程很活跃，回家后一个人坐了很久。",q:"我今天笑得脸都僵了。",
+ o:[{tag:"点破那个累",tx:"你不用在我这儿继续表演。今天那个场，撑下来已经很累了。",d:{emo:7,stress:-7,trust:7,love:6,accept:0,mood:5,resil:4},r:"……（她把高跟鞋脱了，整个人瘫下去）"},
+    {tag:"夸她会来事",tx:"你今天表现挺好的呀，大家都喜欢你。",d:{emo:-5,stress:5,trust:-4,mood:-4},r:"……是吧。"}]},
+{s:5,sc:"她第一次带了一个重要的项目，前一晚睡不着。",q:"万一我搞砸了怎么办。所有人都在看。",
+ o:[{tag:"给她退路",tx:"搞砸了也有我。但你准备了三周，这事你比谁都熟。",d:{work:6,resil:7,conf:7,stress:-6,emo:5,trust:6},r:"……（她第二天讲得很好）"},
+    {tag:"加压",tx:"所以更不能出错，再过一遍流程。",d:{work:4,stress:8,resil:-5,emo:-6,conf:-5,mood:-5},r:"……好。"}]},
+/* ---------------- 阶段6 · 稳定抉择 28–30 ---------------- */
+{s:6,sc:"三十岁生日前一晚，她列了一张清单：《我三十岁之前做到的事》。",q:"写了十七条，划掉九条。……剩下的八条好像也不怎么样。",
+ o:[{tag:"把剩下的念出来",tx:"（一条一条念出来，念完）这八条，是八件别人没替你做的事。",d:{accept:8,career:5,conf:6,love:6,emo:6,mood:6},r:"（她在最下面又加了一条：认识了一个一直在的人）",f:"f601"},
+    {tag:"安慰",tx:"三十岁还早呢，以后还有机会。",d:{accept:-3,emo:-3,mood:-3,career:-2},r:"嗯。"},
+    {tag:"看划掉的",tx:"那九条为什么没做到？",d:{accept:-7,conf:-6,emo:-6,stress:6,mood:-6},r:"……因为我不行吧。"}]},
+{s:6,sc:"她终于开始做那件事了——十八岁那年被划掉三遍的方向。",q:"我绕了十二年。是不是太晚了。",
+ o:[{tag:"把十二年算进去",tx:"不晚。而且那十二年不是绕路，是你现在能做好这件事的全部原因。",d:{accept:9,career:8,conf:7,goal:0,emo:6,love:6},r:"……（她很久说不出话）我现在走的是我自己选的路。这一点很重要。",f:"f602"},
+    {tag:"提醒风险",tx:"这个年纪换赛道，风险有点大。",d:{accept:-7,career:-7,conf:-6,emo:-5,stress:6,work:2},r:"……我再想想。"}]},
+{s:6,sc:"深夜，她忽然说了一句她从来没说过的话。",q:"我其实一直很怕，怕自己只是看起来很有活力，其实什么都没做成。",
+ o:[{tag:"不急着反驳",tx:"（没有立刻否认，等她说完）这句你憋了多少年了。",d:{accept:9,trust:9,love:8,emo:8,stress:-8},r:"……（很久）但今天我觉得，我好像也还不错。",f:"f603"},
+    {tag:"立刻反驳",tx:"怎么会，你做成了很多事啊！",d:{accept:-4,emo:-3,trust:-3},r:"……嗯，可能吧。"},
+    {tag:"附和",tx:"那你确实可以再努力一点。",d:{accept:-10,conf:-8,emo:-8,trust:-7,love:-7,stress:9},r:"……对。"}]},
+{s:6,sc:"亲戚饭桌上，有人当着所有人问她为什么还不结婚。",q:"（她笑着打哈哈，桌下的手攥着衣角）",
+ o:[{tag:"当场接过话头",tx:"（把话接过去，岔开了）这个我们回头聊，先吃菜。",d:{rel:6,accept:6,love:7,trust:7,emo:6,stress:-6},r:"（回去路上她说）……你刚才那一下，我记一辈子。"},
+    {tag:"沉默",tx:"（没出声）",d:{rel:-5,accept:-5,trust:-6,love:-5,emo:-5,stress:5},r:"没事呀，我习惯了。"},
+    {tag:"跟着劝",tx:"也是，是该考虑考虑了。",d:{rel:-9,accept:-8,trust:-9,love:-8,emo:-7,stress:8},r:"……嗯。"}]},
+{s:6,sc:"她现在的关系很稳定，稳定到有点闷。",q:"他挺好的。就是……我好像很久没有很兴奋过了。",
+ o:[{tag:"认真对待这件事",tx:"“挺好”和“想要”是两回事。你不用因为他没有错，就必须留下。",d:{rel:6,accept:7,conf:5,emo:5,trust:6},r:"……（她认真想了很久）"},
+    {tag:"劝她知足",tx:"到这个年纪，稳定比兴奋重要。",d:{rel:-6,accept:-7,emo:-6,conf:-5,stress:5},r:"……也是。"}]},
+{s:6,sc:"她在事业上遇到瓶颈，连着三个月没有进展。",q:"我是不是就到这儿了。",
+ o:[{tag:"把标准换掉",tx:"也可能是你到了一个新的台阶，只是这个台阶要站久一点。",d:{career:7,work:5,accept:6,conf:6,emo:5,stress:-5},r:"……（她重新打开了那个搁置的方案）"},
+    {tag:"催",tx:"那你得想办法突破啊，不能一直这样。",d:{career:-6,conf:-6,emo:-6,stress:8,accept:-5},r:"我知道！"}]},
+{s:6,sc:"她开始失眠，但坚持说自己没事。",q:"真的没事，就是睡不着而已。",
+ o:[{tag:"陪她去看看",tx:"睡不着不是小事。我陪你去看一次，不是因为你有病，是因为你值得睡个好觉。",d:{accept:7,emo:7,stress:-9,trust:7,love:6,work:1},r:"……（她去了。回来那天睡了八个小时）"},
+    {tag:"信她",tx:"那好，注意休息。",d:{emo:-5,stress:6,trust:-3,accept:-3},r:"嗯。"}]},
+{s:6,sc:"她被邀请去做一次公开分享。台下坐着两百个人。",q:"我可能讲不好。……但是我好想讲。",
+ o:[{tag:"推她上去",tx:"那就去讲。七岁那年你就说过，你喜欢所有人看着你的时候。",d:{career:8,conf:9,accept:7,mood:7,love:6,emo:6},r:"（她在台上讲完，下来第一件事是找你）"},
+    {tag:"劝她稳妥",tx:"没把握就别勉强，搞砸了影响不好。",d:{career:-8,conf:-9,accept:-7,mood:-7,emo:-6,stress:6},r:"……也对。我推掉了。"}]},
+{s:6,sc:"她第一次主动问起你。",q:"你呢。这些年你一直在管我，你自己怎么样。",
+ o:[{tag:"如实告诉她",tx:"有累的时候。但你今天问我这一句，比什么都管用。",d:{accept:7,rel:6,eq:6,love:8,trust:7,emo:6},r:"……（她愣了一下）那以后我也要问。"},
+    {tag:"推开",tx:"我没事，你顾好自己就行。",d:{accept:-4,rel:-4,trust:-4,love:-4,emo:-4},r:"……哦。"}]},
+{s:6,sc:"她做了一个很大的决定，但所有人都不看好。",q:"你也觉得我在胡闹吗。",
+ o:[{tag:"站她这边",tx:"我觉得你想清楚了。你说给我听一遍，我帮你查漏，不帮他们劝你。",d:{career:7,accept:8,conf:7,trust:8,love:7,emo:6},r:"（她讲了两个小时，越讲越亮）"},
+    {tag:"中立",tx:"我也说不好，你再想想。",d:{accept:-4,conf:-4,trust:-4,career:-3},r:"……嗯。"},
+    {tag:"跟着反对",tx:"说实话，我也觉得不太靠谱。",d:{career:-9,accept:-9,conf:-8,trust:-9,love:-8,emo:-7,stress:8},r:"……好。那我不做了。"}]},
+{s:6,sc:"一个很普通的周末下午，她在你旁边翻以前的照片。",q:"你看这张，我七岁。那时候我以为长大是一件特别厉害的事。",
+ o:[{tag:"告诉她结果",tx:"结果呢，你真的长成了挺厉害的人。只是过程比你想的吵一点。",d:{accept:8,mood:7,love:7,emo:6,career:4,stress:-5},r:"（她靠过来，把头搁在你肩上，很久没说话）"},
+    {tag:"感叹时间",tx:"是啊，一眨眼就这么大了。",d:{mood:2,love:1},r:"嗯。"}]},
+{s:6,sc:"三十岁当天，她起得很早。",q:"……今天开始，我就是三十岁的人了。",
+ o:[{tag:"把这一天交给她",tx:"那今天你说了算。想干什么，我们就干什么。",d:{mood:8,love:7,accept:6,rel:4,emo:6},r:"（她想了半天，说：我想去小时候那个公园坐一会儿）"},
+    {tag:"说年龄只是数字",tx:"三十岁又怎么样，年龄只是个数字。",d:{accept:1,mood:1},r:"……嗯，是啊。"}]}
+);
+
+/* ============ 主动休闲事件（5轮对话 + 1个小型分支） ============ */
+const LEI=[
+{id:"kfc",n:"带{N}去肯德基",st:[1,2],cd:"小学 / 初中",
+ i:"你说带她去吃顿好的。她从听见这句话起就没停下过。",
+ b:[{q:"真的吗真的吗！可以点全家桶吗！",o:[{tx:"点。今天你说了算。",d:{mood:4,love:3},r:"（她立刻开始背菜单）"},{tx:"点一半吧，吃不完浪费。",d:{mood:-2,eq:1},r:"……哦，好吧。"}]},
+    {q:"我跟你说，我们班有个人一个人吃了两个汉堡！",o:[{tx:"那他挺厉害。你最多能吃几个？",d:{mood:3,social:2,emo:2},r:"我！我能吃一个半！"},{tx:"吃那么多不健康。",d:{mood:-3,emo:-2},r:"……我又没说我要吃。"}]},
+    {q:"（她把薯条排成一排）你看，从大到小。",o:[{tx:"（也开始排自己的）那我们比比谁排得整齐。",d:{mood:5,love:4,emo:3},r:"哈哈哈你排得好丑！"},{tx:"快吃吧，凉了。",d:{mood:-2},r:"……哦。"}]},
+    {q:"……其实我今天在学校有点不开心。",o:[{tx:"（放下汉堡）你说，我听着。",d:{trust:5,emo:4,stress:-4,mood:3},r:"（她断断续续讲了很久）"},{tx:"怎么了？没事吧？快吃吧。",d:{trust:-3,emo:-3},r:"没什么。"}]},
+    {q:"下次……我们还能来吗。",o:[{tx:"能。而且下次换你带我来。",d:{love:5,mood:4,conf:3},r:"（她认真点头，像接下了一个任务）"},{tx:"看表现吧。",d:{love:-4,mood:-4,trust:-3},r:"……哦。"}]}],
+ fin:{sc:"走出店门，她忽然停住了。",q:"我可以把这个纸皇冠戴回家吗。……会不会很幼稚。",
+  o:[{tag:"给她戴上",tx:"（直接给她戴上）走，陛下。",d:{mood:7,love:6,conf:5,emo:5},r:"（她一路都没摘，到家才小心翼翼收进抽屉）",f:"f107"},
+     {tag:"让她收着",tx:"收包里吧，街上人多。",d:{mood:-3,conf:-3},r:"……嗯。"},
+     {tag:"说幼稚",tx:"确实有点幼稚了。",d:{mood:-7,conf:-6,love:-5,emo:-5},r:"（她把皇冠扔进了垃圾桶）"}]}},
+{id:"book",n:"周末一起逛书店",st:[1,2,3,4],cd:"小学 — 大学",
+ i:"下午三点的书店，人不多。她一进门就直奔某一排。",
+ b:[{q:"这本我想买！虽然我可能看不完。",o:[{tx:"看不完也买。书架上放着也是你的一部分。",d:{mood:4,ident:3,love:3},r:"（她抱着书不撒手）"},{tx:"你上次那本还没看完呢。",d:{mood:-3,ident:-2},r:"……那不买了。"}]},
+    {q:"你说，为什么有人能写出这种句子啊。",o:[{tx:"因为他认真活过。你以后也写得出来。",d:{ident:4,conf:3,mood:3},r:"……我才不行。（但她笑了）"},{tx:"人家是专业的。",d:{conf:-3,ident:-2},r:"也是。"}]},
+    {q:"（她念了一段给你听）好听吗？",o:[{tx:"好听。你念得比它本身好听。",d:{conf:5,mood:4,love:4},r:"（她又多念了三页）"},{tx:"嗯，还行。",d:{mood:-2,conf:-2},r:"……哦。"}]},
+    {q:"我以后也想写东西。但是写出来给谁看呢。",o:[{tx:"先给我看。我是你第一个读者。",d:{trust:5,love:5,ident:4,emo:3},r:"……（她把这句记了很多年）"},{tx:"先把正事做好再说吧。",d:{ident:-5,love:-4,mood:-4},r:"嗯。"}]},
+    {q:"我们在这儿待到打烊好不好。",o:[{tx:"好。我去买两杯水。",d:{mood:5,love:4,stress:-4},r:"（那天他们真的待到了打烊）"},{tx:"该回去了，还有事。",d:{mood:-3,love:-2},r:"……好吧。"}]}],
+ fin:{sc:"结账时她手里多了一本，是给你挑的。",q:"这个……我觉得你会喜欢。虽然我也不确定。",
+  o:[{tag:"当场拆开读",tx:"（当场拆了塑封，站在收银台边读了第一页）挑得准。",d:{love:7,mood:6,conf:5,ident:4},r:"（她在旁边偷偷笑了很久）"},
+     {tag:"收下",tx:"谢谢，我回去看。",d:{love:2,mood:1},r:"嗯。"},
+     {tag:"说不用",tx:"你自己的书钱都不够，别给我买。",d:{love:-6,mood:-6,conf:-5},r:"……哦。那我放回去。"}]}},
+{id:"park",n:"一起去游乐园",st:[1,2,3],cd:"小学 — 高中",
+ i:"她提前一周就开始列路线，列了三版。",
+ b:[{q:"先玩哪个？我做了攻略！（掏出三张纸）",o:[{tx:"听攻略的。总指挥是你。",d:{mood:5,conf:4,love:3},r:"（她立刻挺直了腰）那么现在，出发！"},{tx:"随便玩玩就行，别搞这么复杂。",d:{mood:-5,conf:-4,emo:-3},r:"……我做了一周。"}]},
+    {q:"那个过山车……你敢不敢坐。",o:[{tx:"你敢我就敢。",d:{mood:5,conf:4,emo:3},r:"（她其实很怕，但硬着头皮上了，下来腿是软的）"},{tx:"太刺激了，我们玩点别的。",d:{mood:-2,conf:-2},r:"……也行。"}]},
+    {q:"（排队两小时后）终于轮到我们了！",o:[{tx:"（全程陪她排完，没催一句）",d:{trust:5,emo:4,mood:4},r:"（她回头看了你好几次）"},{tx:"早说了这个要排很久。",d:{mood:-4,trust:-3},r:"……对不起。"}]},
+    {q:"我们拍张照吧！就在这儿！",o:[{tx:"（拍了二十张，让她挑）",d:{mood:5,love:4,ident:3},r:"（她挑了四十分钟）"},{tx:"拍一张就行了。",d:{mood:-3,love:-2},r:"哦。"}]},
+    {q:"今天是不是花了好多钱啊……",o:[{tx:"今天不算钱。今天只算你笑了几次。",d:{love:6,mood:5,emo:4,stress:-4},r:"……（她小声说）十七次。我数了。"},{tx:"确实不便宜，下次别来了。",d:{love:-6,mood:-6,emo:-4},r:"……嗯。"}]}],
+ fin:{sc:"闭园音乐响起，她站在原地没动。",q:"我有点不想走。……我是不是很贪心。",
+  o:[{tag:"陪她站完",tx:"（陪她站到灯一盏一盏灭完）不贪心。好日子本来就该舍不得。",d:{mood:7,love:7,emo:6,stress:-6,trust:5},r:"（这成了她很多年后还会讲起的一天）"},
+     {tag:"催她走",tx:"走吧，太晚了。",d:{mood:-4,emo:-3},r:"……哦。"},
+     {tag:"承诺下次",tx:"下次我们再来。",d:{mood:3,love:2},r:"真的吗？说好了。"}]}},
+{id:"show",n:"陪{N}参加文艺汇演",st:[1,2,3,4],cd:"小学 — 大学",
+ i:"她在后台换装，手一直在抖。",
+ b:[{q:"我忘词了怎么办。",o:[{tx:"忘了就看我。我在第一排，一直在。",d:{conf:6,emo:4,trust:4},r:"（她深吸了一口气）"},{tx:"不会忘的，你练了那么多遍。",d:{conf:1,emo:1},r:"……万一呢。"}]},
+    {q:"我这个妆是不是太浓了。",o:[{tx:"舞台妆就得这么浓。你站上去就知道了。",d:{conf:4,look:-3,mood:3},r:"好吧。那我信你。"},{tx:"是有点浓。",d:{conf:-5,look:4,mood:-4},r:"……来不及卸了。"}]},
+    {q:"（上场前）你会一直看着吗。",o:[{tx:"从头看到尾，一秒都不低头。",d:{conf:6,love:5,trust:5},r:"（她点头，转身上台）"},{tx:"我拍视频，到时候给你看。",d:{conf:-2,love:-2},r:"……哦。"}]},
+    {q:"（下台后）我是不是第三句唱破音了。",o:[{tx:"破了。但你后面那段稳住了，那个更难。",d:{conf:5,trust:5,ident:4},r:"……你听得这么细啊。"},{tx:"没有啊，很完美。",d:{trust:-3,conf:-1},r:"骗人。我自己听见了。"}]},
+    {q:"台下有人说我太爱出风头了。",o:[{tx:"想站在光里不是毛病。能站上去的人本来就不多。",d:{ident:6,conf:6,emo:4,stress:-4},r:"……（她把下巴抬起来了）"},{tx:"那你以后低调点。",d:{ident:-6,conf:-6,emo:-5},r:"……知道了。"}]}],
+ fin:{sc:"散场后，她从包里掏出一张纸。",q:"这是我写的串词。其实我本来想当主持人的，不是演员。",
+  o:[{tag:"郑重收下",tx:"（把串词折好收进钱包）那下次我帮你争取主持。",d:{conf:8,ident:7,love:7,goal:5,career:4,mood:6},r:"（她眼睛一下就红了）",f:"f105"},
+     {tag:"鼓励一句",tx:"那你以后试试呀。",d:{conf:2,mood:2},r:"嗯。"},
+     {tag:"现实",tx:"主持要专业训练的，不容易。",d:{conf:-7,ident:-6,goal:-5,mood:-6},r:"……我知道。随便说说的。"}]}},
+{id:"bday",n:"陪{N}过生日",st:[1,2,3,4,5,6],cd:"全阶段",
+ i:"八月五号。她嘴上说不过了，但一早就醒了。",
+ b:[{q:"今年就不折腾了吧，吃碗面就行。",o:[{tx:"不行。你一年就这一天，我要折腾。",d:{mood:5,love:5,emo:3},r:"……（她嘴角压不住）那随你。"},{tx:"行，那就吃面。",d:{mood:-5,love:-4,emo:-3},r:"嗯，挺好的。"}]},
+    {q:"你还记得我去年说想要什么吗。",o:[{tx:"记得。你说过一次，我记下来了。",d:{love:7,trust:6,mood:5},r:"……（她捂住脸）你怎么真的记得。"},{tx:"……啊，你说的是哪个来着？",d:{love:-6,trust:-5,mood:-6,emo:-4},r:"没什么。我也忘了。"}]},
+    {q:"蛋糕上要写什么字呀。",o:[{tx:"写“今年也要被偏爱”。",d:{mood:6,love:5,ident:4},r:"……好土。（但她拍了十几张照片）"},{tx:"写生日快乐就行。",d:{mood:-1},r:"哦，好。"}]},
+    {q:"许愿要说出来吗？说出来会不会不灵。",o:[{tx:"跟我说就灵。我帮你记着。",d:{trust:6,love:5,emo:4},r:"（她凑过来很小声说了三个愿望）"},{tx:"说出来就不灵了，自己想吧。",d:{trust:-3,love:-2},r:"……也对。"}]},
+    {q:"每年都有人陪我过生日，真好。",o:[{tx:"不是“有人”。是我。每年都是我。",d:{love:8,trust:6,emo:5,rel:3},r:"（她很久没说话，然后说：嗯。是你）"},{tx:"是啊，挺好的。",d:{love:-2,emo:-1},r:"嗯。"}]}],
+ fin:{sc:"蜡烛吹完，她忽然从身后拿出一个东西。",q:"这个……是给你的。不许笑。",
+  o:[{tag:"认真收下",tx:"（当场用上/戴上）为什么是我收到礼物。",d:{love:8,mood:7,trust:6,emo:5,accept:4},r:"因为今天是我生日呀。我想给。"},
+     {tag:"推辞",tx:"今天该我送你才对。",d:{love:1,mood:-1},r:"……你收下嘛。"},
+     {tag:"打趣",tx:"哈哈哈这什么东西。",d:{love:-7,mood:-7,conf:-6,emo:-5},r:"……说了不许笑。"}]}},
+{id:"heart",n:"陪{N}失恋谈心",st:[4,5,6],cd:"大学 — 三十岁",
+ i:"凌晨一点，她坐在地上，背靠着床。",
+ b:[{q:"我是不是特别失败。",o:[{tx:"分手不等于失败。你只是选错了一个人。",d:{conf:5,emo:5,stress:-5,rel:3},r:"……（她点头，又摇头）"},{tx:"早就跟你说过他不行。",d:{conf:-7,trust:-6,emo:-6},r:"……所以是我活该。"}]},
+    {q:"我给他发了四十二条。他一条都没回。",o:[{tx:"那四十二条不丢人。丢人的是收到了还不回的人。",d:{conf:6,emo:5,rel:4,trust:5},r:"（她笑了一下，笑得很难看）"},{tx:"你发那么多干嘛，太掉价了。",d:{conf:-8,emo:-7,rel:-5,stress:6},r:"……对。我知道。"}]},
+    {q:"我以后是不是再也遇不到了。",o:[{tx:"会遇到。而且下一个要能接住你全部的话，不然不算。",d:{rel:6,conf:5,emo:4},r:"……门槛这么高啊。"},{tx:"这种事谁说得准。",d:{emo:-3,rel:-3},r:"嗯。"}]},
+    {q:"你别走好不好。",o:[{tx:"不走。我就坐这儿，你困了再说。",d:{trust:7,love:6,emo:6,stress:-6},r:"（她后来是在地板上睡着的）"},{tx:"你早点睡吧，我明天再来。",d:{trust:-5,love:-5,emo:-5,stress:5},r:"……好。"}]},
+    {q:"（天快亮了）我是不是哭得很丑。",o:[{tx:"丑死了。但这是今晚你说的第一句玩笑话。",d:{emo:6,mood:5,conf:4,accept:3},r:"（她破涕为笑）"},{tx:"没有，你哭起来也好看。",d:{emo:1,mood:1},r:"……骗人。"}]}],
+ fin:{sc:"天亮了。她站在窗边。",q:"我决定了。我不发第四十三条了。",
+  o:[{tag:"郑重记下",tx:"好。这一条我见证了。以后你要是想发，先发给我。",d:{conf:8,rel:7,emo:7,trust:7,accept:6,stress:-6},r:"（她把手机递过来，让你看着她删了对话框）"},
+     {tag:"叫好",tx:"早该这样了！",d:{conf:2,emo:1},r:"嗯。"},
+     {tag:"怀疑",tx:"你能忍住吗。",d:{conf:-6,rel:-5,emo:-5,trust:-5},r:"……你看不起我。"}]}},
+{id:"ot",n:"加班陪{N}改方案",st:[5,6],cd:"职场 — 三十岁",
+ i:"晚上十点，办公楼只剩两层灯。你带了两杯咖啡上去。",
+ b:[{q:"你怎么来了……我还要很久。",o:[{tx:"那我陪你很久。咖啡放这儿。",d:{resil:5,trust:5,love:4,work:2},r:"（她眼眶热了一下，马上低头改文件）"},{tx:"我就送个咖啡，马上走。",d:{trust:-3,love:-3,emo:-2},r:"哦，谢谢。"}]},
+    {q:"这一版你帮我看看，是不是还是不行。",o:[{tx:"（认真看完）第三页那个点是整份里最好的，别改掉。",d:{work:6,conf:5,trust:5},r:"……真的吗。那我留着。"},{tx:"我也不懂你们这行。",d:{work:-2,trust:-3,conf:-2},r:"……也是。"}]},
+    {q:"我是不是能力真的不行啊。",o:[{tx:"第十六版的人说自己不行，那前面十五版是谁改的。",d:{conf:7,resil:6,work:4,emo:5},r:"（她愣住，然后笑了）"},{tx:"别想了，改完再说。",d:{conf:-4,emo:-3,stress:4},r:"嗯。"}]},
+    {q:"（凌晨一点）你困不困，你先回去吧。",o:[{tx:"不困。我在这儿你能安心一点，对吧。",d:{trust:6,love:5,emo:5,stress:-5},r:"……（她很小声）对。"},{tx:"那我先走了，你加油。",d:{trust:-5,love:-4,emo:-4,stress:5},r:"嗯，路上小心。"}]},
+    {q:"（两点）好了。我发出去了。",o:[{tx:"（鼓掌）十七版，结束。走，吃宵夜。",d:{mood:7,resil:5,love:5,work:3},r:"（那顿宵夜她吃了两碗）"},{tx:"终于啊，赶紧回家睡。",d:{mood:-2},r:"嗯。"}]}],
+ fin:{sc:"下楼的时候，整栋楼只有电梯的声音。",q:"……谢谢你。我没跟别人说过我加班，怕别人觉得我不行。",
+  o:[{tag:"把这句接住",tx:"加班不等于不行。而且以后你不用一个人在这栋楼里。",d:{resil:8,trust:8,love:7,emo:7,stress:-7,accept:5},r:"（她在电梯里哭了，哭完自己擦干净）",f:"f503"},
+     {tag:"说应该的",tx:"小事，别客气。",d:{trust:1,love:1},r:"嗯。"},
+     {tag:"提建议",tx:"那你以后效率得提上来，少加点班。",d:{resil:-6,conf:-6,trust:-6,emo:-5,stress:6},r:"……我尽量。"}]}},
+{id:"peace",n:"和{N}吵架之后主动和解",st:[1,2,3,4,5,6],cd:"全阶段",
+ i:"你们冷战了三天。第四天，你先去敲了门。",
+ b:[{q:"……你来干嘛。",o:[{tx:"来认错的。不是来讲道理的。",d:{trust:6,emo:5,stress:-5},r:"（她让开了半步）"},{tx:"我们该谈谈那件事了。",d:{trust:-4,emo:-4,stress:4},r:"我不想谈。"}]},
+    {q:"你那天说的话，我到现在还记得。",o:[{tx:"我也记得。那句我说错了，我收回。",d:{trust:7,love:6,emo:6},r:"……（她眼圈红了）"},{tx:"你也说了不好听的啊。",d:{trust:-6,love:-6,emo:-6,stress:5},r:"行，那你走吧。"}]},
+    {q:"我那天也不对。但是我拉不下脸。",o:[{tx:"我知道。所以这次我先来。下次换你，行吗。",d:{eq:6,trust:6,love:5,emo:5},r:"……行。（她很小声）"},{tx:"你总是这样，死要面子。",d:{trust:-7,love:-6,ident:-5,emo:-6},r:"……对，我就是这样。"}]},
+    {q:"你是不是觉得我很难搞。",o:[{tx:"难搞。但我没打算搞别人。",d:{love:7,trust:6,ident:5,mood:5},r:"（她终于笑了一下）"},{tx:"有时候是挺难搞的。",d:{love:-5,ident:-5,mood:-5},r:"……哦。"}]},
+    {q:"那……我们算和好了吗。",o:[{tx:"算。而且这三天不算你的错。",d:{trust:7,love:6,emo:6,mood:5,stress:-5},r:"（她抱了你一下，很快就松开，耳朵是红的）"},{tx:"算了吧，以后注意点。",d:{trust:-4,love:-4,mood:-3},r:"……嗯。"}]}],
+ fin:{sc:"气氛缓过来之后，她忽然说了一句。",q:"其实这三天……我每天都在等你来敲门。",
+  o:[{tag:"告诉她规则",tx:"那以后不用等。我们定个规矩：冷战不过夜，谁想起来谁先说。",d:{trust:9,love:8,eq:7,emo:7,stress:-7,rel:4},r:"（这条规矩他们后来守了很多年）"},
+     {tag:"心疼",tx:"傻不傻，等什么。",d:{love:3,trust:2},r:"……就是等嘛。"},
+     {tag:"追责",tx:"那你为什么不先来找我。",d:{trust:-7,love:-6,ident:-6,emo:-6},r:"……算了，当我没说。"}]}}
+];
+
+/* ============ 阶段隐藏剧情（需信任+爱意达标） ============ */
+const SLINE={
+1:{need:{trust:68,love:68},bt:"✨ 童年限定 · 她偷偷藏起来的那件事",
+ sc:"一个很普通的晚上，她爬上沙发，很认真地说有件事要告诉你。",q:"……我有一个秘密。我谁都没说过。你不能笑我。",
+ o:[{tag:"郑重对待",tx:"（关掉电视，坐正）你说。我不笑。",d:{trust:8,love:8,mood:6,conf:6,emo:6},r:"（她讲了十分钟，讲的是她以为自己“不如别人聪明”这件事。讲完她说：说出来好像没那么可怕了）",f:"f105"},
+    {tag:"随口听听",tx:"（一边看电视一边听）嗯，你说。",d:{trust:-7,love:-6,conf:-5,emo:-5},r:"……算了，不说了。"}]},
+2:{need:{trust:68,love:68},bt:"✨ 青春期限定 · 她第一次承认自己不好过",
+ sc:"她把房门留了一条缝，这是三个月以来第一次。",q:"……我最近好像不太对劲。我不知道怎么说。",
+ o:[{tag:"推开那条缝",tx:"（坐在门口的地上，没进去）那就慢慢说，说不清也没关系。",d:{trust:9,ident:8,emo:8,stress:-8,look:-5},r:"（她在门里坐下，隔着那条缝讲到了半夜）",f:"f204"},
+    {tag:"让她想清楚再说",tx:"那你想清楚了再来找我。",d:{trust:-8,ident:-7,emo:-7,stress:7},r:"（门关上了。之后再没开过缝）"}]},
+3:{need:{trust:72,love:72},bt:"✨ 十八岁限定 · 她真正想要的那条路",
+ sc:"高考结束的那个晚上，她没有去同学的散伙饭。",q:"我想跟你说一件事。说完你可能会觉得我疯了。",
+ o:[{tag:"先不评价",tx:"（没打断，听完全部）说完了？那我们来看看怎么能做到。",d:{goal:9,conf:8,trust:8,love:7,emo:6},r:"（她讲了她真正想做的那件事。这是她第一次完整地讲出来）",f:"f303"},
+    {tag:"先讲现实",tx:"你先说，但我提前讲，有些事不是想就能成的。",d:{goal:-8,conf:-7,trust:-7,emo:-6},r:"……那算了。没什么。"}]},
+4:{need:{trust:72,love:72},bt:"✨ 大学限定 · 她最用力也最怕的一面",
+ sc:"她喝了一点酒，话比平时多，然后突然安静下来。",q:"你有没有觉得……我对所有人都太好了，好到像在求人喜欢我。",
+ o:[{tag:"分清两件事",tx:"你是对人好。但你不是在求谁。这两件事差很远，别混。",d:{ident:9,conf:8,social:6,trust:8,emo:7,stress:-7},r:"（她趴在桌上哭了，第二天说那是她大学哭得最舒服的一次）",f:"f404"},
+    {tag:"顺着她说",tx:"确实，你有时候是热情过头了。",d:{ident:-9,conf:-8,social:-5,emo:-7,stress:7},r:"……嗯。我改。"}]},
+5:{need:{trust:75,love:75},bt:"✨ 职场限定 · 她把面具摘下来的那一次",
+ sc:"项目结束的庆功宴上，她笑了一整晚。散场后她在车里没下车。",q:"我今天好开心。……但是我怎么一点都不开心。",
+ o:[{tag:"承认这种分裂",tx:"因为开心是演给别人看的，累是你自己的。这两样可以同时成立。",d:{accept:8,emo:8,resil:7,trust:8,stress:-9,rel:4},r:"（她在车里坐了四十分钟，什么也没干，就是坐着）",f:"f505"},
+    {tag:"劝她知足",tx:"项目成了啊，该高兴的。",d:{accept:-8,emo:-7,resil:-6,trust:-6,stress:7},r:"……对，我该高兴的。"}]},
+6:{need:{trust:78,love:78},bt:"✨ 三十岁限定 · 她终于回答了七岁那个问题",
+ sc:"她约你去小时候常去的那个公园。坐在那张旧长椅上。",q:"你记不记得我七岁的时候说要当主持人。……我今天想跟你说，我好像不需要所有人都看着我了。",
+ o:[{tag:"问她现在要什么",tx:"那现在呢。你想要什么。",d:{accept:10,career:8,conf:8,trust:8,love:8,emo:7},r:"（她想了很久）……我想要有几个人，是真的在看我。不用很多。有你就算一个。",f:"f603"},
+    {tag:"感慨",tx:"长大了就是这样。",d:{accept:-6,emo:-5,trust:-4},r:"……嗯。"}]}
+};
+
+/* ============ 结局 ============ */
+const ENDS={
+ perfect:{tier:"完美温情结局",t:"她长成了她自己",
+  p:["三十岁这一年，她不再需要向谁证明什么。","她依然热情、依然话多、依然会为一件小事高兴一整天。只是现在，这些不再是她争取喜欢的方式，而只是她本来的样子。事业走在她自己选的那条路上，情绪有去处，脆弱有人接。","而你，是她二十三年里唯一一个从头陪到尾的人。"],
+  f:"“你知道我最庆幸的是什么吗。”<br>“不是我做成了什么。”<br>“是我这一路上，没有一次是一个人撑过来的。”"},
+ calm:{tier:"安稳普通结局",t:"还不错的三十岁",
+  p:["各项都还稳，没有坍塌，也没有特别亮的地方。","她过得不错——有工作，有生活，偶尔疲惫，偶尔开心。你们还联系，节日会互发消息，有事会找对方。","只是有些话，她后来再没对你讲过了。"],
+  f:"“挺好的呀，现在这样。”<br>“真的，我没有不满意。”"},
+ burn:{tier:"内耗敏感结局",t:"看起来很好的人",
+  p:["多项指标卡在六十上下。她没有垮，但一直在耗。","朋友圈里她永远是最热闹的那个，评论区最先回复的那个，聚会上最会接话的那个。回到家，她能在沙发上坐两个小时不动。","她知道自己不对劲，但她不知道从哪里开始修。"],
+  f:"“我没事啊。”<br>“就是……有点累。”<br>“但大家不都这样吗。”"},
+ ill:{tier:"心理疾病坏结局",t:"她把灯关掉了",
+  p:["长期低于底线的那几项，最终把她拖了下去。","她停掉了所有的分享。朋友圈空了，语音不再发了，连敷衍的“嗯”也越来越少。她去看了医生，但那件事她没有告诉你。","你们之间最后剩下的，是一条很长的、没有回复的对话框。"],
+  f:"“对不起。”<br>“我现在没办法回应任何人。”<br>“你别等我了。”"},
+ cut:{tier:"决裂结局",t:"她把你删掉了",
+  p:["信任和爱意一路跌穿。到某一天，她不再把你当成可以说话的人。","没有大吵。她只是慢慢停止了分享，然后在某个很普通的下午，清空了和你的所有聊天记录。","这一局提前结束了。"],
+  f:"“我以前真的什么都跟你说。”<br>“现在想想，是我太天真了。”"}
+};
+const AFTER={t:"隐藏后记 · 她写给你的那封信",
+ p:["你集齐了她全部的回忆碎片。那意味着这二十三年里，她每一次欲言又止，你都接住了。","三十岁生日那天，她给了你一个信封。"],
+ f:"“我从七岁开始，就一直在偷偷观察一件事：<br>到底要做到什么程度，才会有人一直不走。”<br>“我试过考好成绩，试过当最开朗的那个，试过把所有人都照顾好。”<br>“后来我发现，答案根本不在我这边。”<br>“答案是——有的人就是会留下来。”<br>“谢谢你是那个人。”"};
+
+/* ============ 引擎 ============ */
+const $=id=>document.getElementById(id);
+const cl=v=>Math.max(0,Math.min(100,Math.round(v*10)/10));
+const shuf=n=>{const a=[...Array(n).keys()];for(let i=n-1;i>0;i--){const j=Math.random()*(i+1)|0;[a[i],a[j]]=[a[j],a[i]]}return a};
+const R=(x,y)=>x+Math.random()*(y-x), RI=(x,y)=>Math.floor(R(x,y+1)), PICK=a=>a[RI(0,a.length-1)];
+let S=null;
+const T=s=>String(s==null?"":s).replace(/\{N\}/g,(S&&S.nm)||"她");
+const hp=k=>IND[k].rev?100-S.A[k]:S.A[k];
+const stageOf=d=>STG.find(s=>d>=s.d0&&d<=s.d1)||STG[STG.length-1];
+const ageOf=d=>{const s=stageOf(d);return Math.min(s.a1,s.a0+Math.floor((d-s.d0)/(s.d1-s.d0+1)*(s.a1-s.a0+1)))};
+
+/* ---------- 特效：对=爱心 / 错=哭泣 / 不对不错=微笑 ---------- */
+const FX={
+ love:{g:[["❤️","💗","💖"],["♥","❥","❣"],["💘","💝","💞"],["🩷","💕","💓"],["❤","♡","💗"],["💖","✨","💝"],["🌟","💕","❤️","✨"]],
+  p:[["#FF6B9D","#FFC2D8","#FF3D7F"],["#EFC04C","#FFE6A8","#E8864F"],["#FF8A5B","#FFC978","#FF5E78"],["#E0697A","#FFD1DC","#C2426B"],["#F3A8CC","#FFFFFF","#FF79B0"],["#EFC04C","#FFF0C4","#FFAD5B"],["#FF4D6D","#FFB3C6","#FFE0E9"]],
+  m:["rise","burst","spiral","corners","wave"],badge:"pump",cap:110,base:18,per:5},
+ cry:{g:[["💧","😢","💔"],["😭","💧","🥺"],["💧","💧","🌧"],["💔","🥀","💧"],["😞","💧","💧"]],
+  p:[["#7FA6D9","#BBD2EE","#4F6E9E"],["#8E9BE8","#C7CDF5","#5A63A8"],["#9AA5B8","#D3DAE6","#6B7385"],["#6FC3C0","#C4EAE8","#3F7F7D"],["#A08FB8","#D8CCE8","#6B5A82"]],
+  m:["fall","drip","streak","welldown","sink"],badge:"crack",vig:1,cap:95,base:15,per:4},
+ smile:{g:[["😊","·"],["😊","🙂","·"],["😊","☺","·"],["🙂","😊","·"]],
+  p:[["#D9C9A8","#EFE4CE","#B9A98A"],["#C7D6C0","#E6EFE1","#9FB398"],["#E8D3B0","#F6ECD9","#C0A880"],["#CFD8DE","#E9EFF3","#A3B0BA"]],
+  m:["rise","wave","corners"],badge:null,cap:18,base:9,per:0}};
+let fxSeq=0;
+function judge(g){
+  let h=0,net=0;
+  for(const k in g){const rv=IND[k]&&IND[k].rev?-1:1;net+=g[k]*rv;if(g[k]*rv<0)h-=g[k]*rv}
+  if(net>=4)return{v:1,mag:Math.max(1,net/4)};
+  if(net<=-4)return{v:-1,mag:Math.max(1,h/3)};
+  return{v:0,mag:1};
+}
+function burst(kind,mag){
+  const fx=$("fx");if(!fx)return;const cfg=FX[kind]||FX.smile;
+  const box=$("fragbtn");
+  if(box){box.classList.remove("pump","crack");if(cfg.badge){void box.offsetWidth;box.classList.add(cfg.badge)}}
+  if(window.matchMedia&&matchMedia("(prefers-reduced-motion: reduce)").matches)return;
+  const W=innerWidth,H=innerHeight;
+  const gl=PICK(cfg.g),pal=PICK(cfg.p),mode=cfg.m[(fxSeq+++RI(0,2))%cfg.m.length];
+  const dens=Math.min(1,Math.max(.4,(W*H)/(1280*800)));
+  const n=Math.max(kind==="smile"?6:8,Math.round(Math.min(cfg.cap,cfg.base+mag*cfg.per+R(0,kind==="smile"?6:14))*dens));
+  if(cfg.vig){const vg=document.createElement("div");vg.className="vig";fx.appendChild(vg);
+    const va=vg.animate([{opacity:0},{opacity:1,offset:.25},{opacity:0}],{duration:R(1100,1800),easing:"ease-in-out",fill:"forwards"});
+    va.onfinish=()=>vg.remove();setTimeout(()=>vg.remove(),2400)}
+  for(let i=0;i<n;i++){
+    const el=document.createElement("span");el.textContent=PICK(gl);
+    el.style.fontSize=R(kind==="smile"?14:12,kind==="smile"?34:42)*(Math.random()<.12?1.6:1)+"px";
+    if(Math.random()<(kind==="love"?.45:.8)){const c=PICK(pal);el.style.color=c;el.style.textShadow="0 0 "+R(5,18)+"px "+c}
+    let kf,x,y,dur=R(1400,3000),delay=R(0,kind==="smile"?420:680);
+    if(mode==="rise"){x=R(-20,W);y=H+40;const dx=R(-130,130);
+      kf=[{transform:`translate(${x}px,${y}px) scale(.4)`,opacity:0},{offset:.12,opacity:1},
+          {offset:.6,transform:`translate(${x+dx*.6}px,${y-H*.62}px) rotate(${R(-40,40)}deg) scale(1)`},
+          {transform:`translate(${x+dx}px,${y-H-120}px) rotate(${R(-120,120)}deg) scale(.7)`,opacity:0}];}
+    else if(mode==="burst"){const cx=W/2,cy=H/2,a=R(0,6.283),d=R(120,Math.max(W,H)*.78);dur=R(900,1900);
+      kf=[{transform:`translate(${cx}px,${cy}px) scale(.2)`,opacity:0},
+          {offset:.15,opacity:1,transform:`translate(${cx+Math.cos(a)*d*.25}px,${cy+Math.sin(a)*d*.25}px) scale(1.1)`},
+          {transform:`translate(${cx+Math.cos(a)*d}px,${cy+Math.sin(a)*d+R(0,160)}px) scale(.5) rotate(${R(-200,200)}deg)`,opacity:0}];}
+    else if(mode==="spiral"){const cx=W/2,cy=H*.56,a0=R(0,6.283),rr=R(90,Math.min(W,H)*.55),tn=R(1.2,2.4);dur=R(1800,3200);
+      kf=[{transform:`translate(${cx}px,${cy}px) scale(.3)`,opacity:0},{offset:.2,opacity:1},
+          {offset:.6,transform:`translate(${cx+Math.cos(a0+tn*3.14)*rr*.5}px,${cy+Math.sin(a0+tn*3.14)*rr*.5-H*.1}px) scale(1.05)`},
+          {transform:`translate(${cx+Math.cos(a0+tn*6.28)*rr}px,${cy+Math.sin(a0+tn*6.28)*rr-H*.35}px) scale(.6) rotate(${R(-220,220)}deg)`,opacity:0}];}
+    else if(mode==="corners"){const lf=Math.random()<.5,sx=lf?-30:W+30,sy=H+30,ex=lf?R(W*.3,W):R(0,W*.7);
+      kf=[{transform:`translate(${sx}px,${sy}px) scale(.3)`,opacity:0},{offset:.14,opacity:1},
+          {offset:.55,transform:`translate(${(sx+ex)/2}px,${R(H*.1,H*.4)}px) scale(1.1) rotate(${R(-60,60)}deg)`},
+          {transform:`translate(${ex}px,-80px) scale(.6) rotate(${R(-160,160)}deg)`,opacity:0}];}
+    else if(mode==="wave"){x=R(0,W);y=H*R(.45,.95);const am=R(40,150);
+      kf=[{transform:`translate(${x}px,${y}px) scale(.3)`,opacity:0},
+          {offset:.2,opacity:1,transform:`translate(${x+am}px,${y-H*.2}px) scale(1)`},
+          {offset:.6,transform:`translate(${x-am*.7}px,${y-H*.5}px) scale(1.05) rotate(${R(-50,50)}deg)`},
+          {transform:`translate(${x+am*.4}px,-70px) scale(.55) rotate(${R(-140,140)}deg)`,opacity:0}];}
+    else if(mode==="fall"){x=R(0,W);y=-50;const dx=R(-40,40);
+      kf=[{transform:`translate(${x}px,${y}px) scale(.5)`,opacity:0},{offset:.12,opacity:1},
+          {transform:`translate(${x+dx}px,${H+70}px) scale(.8) rotate(${R(-40,40)}deg)`,opacity:0}];}
+    else if(mode==="drip"){x=R(W*.2,W*.8);y=-40;dur=R(900,1700);
+      kf=[{transform:`translate(${x}px,${y}px) scaleY(.6)`,opacity:0},{offset:.1,opacity:1},
+          {offset:.8,transform:`translate(${x+R(-14,14)}px,${H*.86}px) scaleY(1.5) scaleX(.75)`,opacity:1},
+          {transform:`translate(${x+R(-26,26)}px,${H*.95}px) scaleY(.4) scaleX(1.6)`,opacity:0}];}
+    else if(mode==="streak"){const dir=Math.random()<.5?1:-1;x=dir>0?R(-120,W*.6):R(W*.4,W+120);y=-60;dur=R(800,1500);
+      kf=[{transform:`translate(${x}px,${y}px) rotate(${dir*16}deg) scale(.6)`,opacity:0},{offset:.1,opacity:.95},
+          {transform:`translate(${x+dir*R(160,420)}px,${H+80}px) rotate(${dir*16}deg) scale(1)`,opacity:0}];}
+    else if(mode==="welldown"){const cx=W/2,cy=H*.3,a=R(.25,2.89),d=R(120,Math.max(W,H)*.7);dur=R(1200,2200);
+      kf=[{transform:`translate(${cx}px,${cy}px) scale(.2)`,opacity:0},
+          {offset:.18,opacity:1,transform:`translate(${cx+Math.cos(a)*d*.3}px,${cy+Math.sin(a)*d*.3}px) scale(1)`},
+          {transform:`translate(${cx+Math.cos(a)*d}px,${cy+Math.sin(a)*d+H*.35}px) scale(.6)`,opacity:0}];}
+    else{x=R(0,W);y=H*R(.2,.6);dur=R(1800,3200);
+      kf=[{transform:`translate(${x}px,${y}px) scale(.4)`,opacity:0},{offset:.2,opacity:.9},
+          {transform:`translate(${x+R(-50,50)}px,${H+60}px) scale(.7)`,opacity:0}];}
+    fx.appendChild(el);
+    const an=el.animate(kf,{duration:dur,delay,easing:PICK(["cubic-bezier(.2,.7,.3,1)","ease-out","linear"]),fill:"forwards"});
+    an.onfinish=()=>el.remove();setTimeout(()=>el.remove(),dur+delay+400);
+  }
+}
+const SADFACE=["😢","🥺","😔","😞","😣","🙁"];
+
+/* ---------- 状态 ---------- */
+function fresh(){return{ph:"name",nm:"",qi:0,qc:0,qlog:[],qord:null,day:1,A:{},risk:0,
+  frags:[],used:[],acts:0,label:null,lines:{},pre:{},ban:[],cur:null,phase2:0,bonus:0,end:null,back:null};}
+function save(){try{localStorage.setItem("bzd_save",JSON.stringify(S))}catch(e){}}
+function load(){try{const r=localStorage.getItem("bzd_save");return r?JSON.parse(r):null}catch(e){return null}}
+function ban(t,c){S.ban.push({t,c})}
+function bans(){const b=S.ban.map(x=>`<div class="banner ${x.t}">${T(x.c)}</div>`).join("");S.ban=[];return b}
+
+function apply(d){
+  const act=stageOf(S.day).ind, out={};
+  for(const k in d){
+    if(!act.includes(k))continue;
+    const before=S.A[k];S.A[k]=cl(before+d[k]);
+    out[k]=Math.round((S.A[k]-before)*10)/10;
+  }
+  return out;
+}
+function getFrag(id){
+  if(!id||S.frags.includes(id))return;
+  const f=FRAG.find(x=>x.id===id);if(!f)return;
+  S.frags.push(id);
+  ban(f.r===3?"v":f.r===2?"":"s",(f.r===3?"🔶 限定碎片":f.r===2?"🔸 稀有碎片":"🔹 回忆碎片")+"【"+T(f.n)+"】已收入图鉴。");
+  const lvl=Math.floor(S.frags.length/6);
+  if(lvl>S.bonus){S.bonus=lvl;["trust","love","eq"].forEach(k=>{if(S.A[k]!=null)S.A[k]=cl(S.A[k]+2)});
+    ban("s","🔹 碎片收集达到 "+S.frags.length+" 块：信任、爱意、情商各永久 +2。")}
+}
+function riskTick(){
+  const act=stageOf(S.day).ind;let bad=0;
+  act.forEach(k=>{const h=hp(k);if(h<60){S.risk+=(60-h)*0.013;bad++}});
+  if(!bad)S.risk=Math.max(0,S.risk-0.8);
+  const lv=S.risk>=80?3:S.risk>=50?2:S.risk>=25?1:0;
+  if(lv>(S.rlv||0)){S.rlv=lv;
+    ban("c",["","⚠️ 心理隐患 · 一级：她开始睡不好，话变少了。有指标长期低于 60。",
+      "⚠️ 心理隐患 · 二级：她不再主动分享。再这样下去会出事。",
+      "⚠️ 心理隐患 · 三级：她已经撑不住了。再不扭转，就来不及了。"][lv])}
+  else if(lv<(S.rlv||0)){S.rlv=lv;ban("s","🟢 隐患等级回落。她最近气色好了一些。")}
+  if(S.risk>=100)return "ill";
+  if(S.A.trust<=15||S.A.love<=15)return "cut";
+  return null;
+}
+
+/* ---------- 渲染 ---------- */
+function render(h){$("app").innerHTML=h;const c=$("app").firstElementChild;if(c)c.classList.add("fade");save()}
+function on(id,fn){const e=$(id);if(e)e.onclick=fn}
+function say(q,av){return q?`<div class="say"><span class="ava ${av?"sad":""}">${av||T("{N}").slice(0,1)}</span><div class="bub">${T(q)}</div></div>`:""}
+function hud(){
+  const h=$("hud");if(S.ph==="name"||S.ph==="quiz"){h.hidden=true;return}
+  h.hidden=false;
+  const st=stageOf(S.day),A=S.A;
+  const spine=STG.map(s=>{const done=S.day>s.d1,now=s.k===st.k;
+    const p=now?Math.round((S.day-s.d0+1)/(s.d1-s.d0+1)*100):0;
+    return `<i class="${done?"done":""} ${now?"now":""}" style="--p:${p}%"></i>`}).join("");
+  const bars=st.ind.map(k=>{const v=A[k],hv=hp(k),rev=IND[k].rev;
+    const c=hv>=75?"var(--good)":hv>=60?"var(--sun)":hv>=45?"var(--her)":"var(--bad)";
+    return `<div class="bar ${rev?"rev":""} ${hv<60?"low":hv>=75?"hi":""}">
+      <span class="n">${IND[k].n}${IND[k].p?"<i>永</i>":""}</span>
+      <span class="t"><span class="f" style="width:${v}%;background:${c}"></span></span>
+      <span class="v">${Math.round(v)}</span></div>`}).join("");
+  h.innerHTML=`<div class="hudtop">
+      <span class="age">AGE <b>${ageOf(S.day)}</b></span>
+      <span class="stg">${st.n}</span>
+      <span class="age" style="color:var(--tx3)">第 ${S.day} / 200 天</span>
+      <button class="frag" id="fragbtn">碎片 ${S.frags.length}/${FRAG.length}</button>
+    </div>
+    <div class="spine">${spine}</div>
+    <div class="bars">${bars}</div>`;
+  on("fragbtn",()=>{S.back=S.ph;S.ph="atlas";atlas()});
+}
+
+/* ---------- 取名 ---------- */
+function nameScreen(){
+  hud();
+  render(`<div><h1><small>陪伴养育 · 7岁 → 30岁 · 200天</small>伴<span style="color:var(--her)">她</span>长大</h1>
+  <p class="lede">这是一个陪一个女孩从七岁走到三十岁的游戏。她狮子座，ENFP：热情、话多、想象力旺盛，要强又爱面子；共情力很强，也很容易内耗。她把所有事都第一时间讲给你听——前提是你一直在听。</p>
+  <p class="lede" style="margin-top:14px">先给她一个名字。整个游戏里，她的名字、她说的每一句话、她藏起来的每一段回忆，都会用这个名字。</p>
+  <div class="nameform">
+    <input id="nm" maxlength="8" placeholder="输入她的名字" autocomplete="off">
+    <button class="btn" id="go">就叫这个名字</button>
+  </div>
+  <p class="hint">不填的话，默认叫「SC」。最多 8 个字。</p>
+  <details><summary>玩法与底线（展开）</summary><ul>
+  <li>一共 <b>200 天</b>，分六个阶段：小学 → 初中 → 高中 → 大学 → 初入职场 → 稳定抉择。每天一个突发事件。</li>
+  <li>每个阶段<b>开放不同指标</b>；专属指标在升学后封存，<b>信任、爱意、情商、心理压力</b>四项永久继承。</li>
+  <li>任何一项生效指标<b>长期低于 60</b>，会累积心理隐患；累满触发心理疾病坏结局。信任或爱意跌穿，直接决裂。</li>
+  <li>每天可以主动发起一次<b>休闲事件</b>（去肯德基、逛书店、过生日、吵架后和解……），每次五轮对话加一个分支。</li>
+  <li><b>回忆碎片</b>分普通 / 稀有 / 限定三种。限定碎片只在特定年龄段出现，<b>错过永远拿不到</b>。集齐全套解锁隐藏后记。</li>
+  <li>每次选择都有反馈：<b>对了落爱心，错了落眼泪，不对不错是一脸微笑</b>。</li>
+  </ul></details></div>`);
+  const inp=$("nm");if(inp)inp.focus();
+  const go=()=>{const v=(($("nm")||{}).value||"").trim();S.nm=v||"SC";
+    try{$("gname").textContent="伴"+S.nm+"长大"}catch(e){}
+    S.ph="quiz";quiz()};
+  on("go",go);
+  if(inp)inp.onkeydown=e=>{if(e.key==="Enter")go()};
+}
+
+/* ---------- 摸底 ---------- */
+function quiz(){
+  hud();
+  if(!S.qord||S.qord.length!==QUIZ.length)S.qord=QUIZ.map(q=>shuf(q.o.length));
+  const Q=QUIZ[S.qi],od=S.qord[S.qi];
+  render(`<div style="padding-top:24px"><div class="eyebrow">开局摸底 · 你有多懂${T("{N}")}</div>
+   <div class="card"><span class="qnum">第 ${S.qi+1} 题 / 共 8 题</span>
+    <div class="qtxt">${T(Q.q)}</div>
+    <div class="opts">${od.map((oi,i)=>`<button class="opt" data-i="${oi}"><span class="k">${"ABCD"[i]}</span><span class="tx">${T(Q.o[oi])}</span></button>`).join("")}</div>
+    <div class="prog">${QUIZ.map((_,i)=>`<i class="${i<=S.qi?"on":""}"></i>`).join("")}</div>
+   </div></div>`);
+  document.querySelectorAll(".opt").forEach(b=>b.onclick=()=>{
+    const i=+b.dataset.i,ok=i===Q.a;S.qlog.push(ok);if(ok)S.qc++;
+    S.qi++;S.qi<8?quiz():quizEnd();
+  });
+}
+function quizEnd(){
+  const base=Math.max(35,Math.min(72,55+S.qc*3-(8-S.qc)*2));
+  STG[0].ind.forEach(k=>{S.A[k]=IND[k].rev?cl(100-base):cl(base+RI(-3,3))});
+  S.A.love=cl(Math.min(base,50));
+  S.ph="day";S.day=1;
+  const word=S.qc>=7?"你几乎全中。你是真的看得见她。":S.qc>=5?"你大致懂她。剩下的，二十三年里慢慢补。":
+    S.qc>=3?"你只摸到了她的外壳。她很多话不会直说，你要学着听。":"你几乎不了解她。这二十三年会走得很吃力。";
+  hud();
+  render(`<div style="padding-top:18px"><div class="eyebrow">摸底结算</div>
+   <h1 style="margin-top:6px;font-size:26px">答对 ${S.qc} / 8</h1>
+   <p class="lede">${word}</p>
+   <div class="card"><div class="eyebrow">答案</div><ul style="color:var(--tx2);font-size:13px;line-height:2;padding-left:18px;margin:10px 0 0">
+    ${QUIZ.map((q,i)=>`<li>${S.qlog[i]?"<span class='up'>✓</span>":"<span class='dn'>✗</span>"} ${T(QEXP[i])}</li>`).join("")}</ul></div>
+   <div class="card"><div class="eyebrow">小学阶段 · 初始面板</div>
+    <div class="deltas">${STG[0].ind.map(k=>`<div class="dl"><div class="n">${IND[k].n}</div><div class="v">${Math.round(S.A[k])}</div></div>`).join("")}</div>
+    <p style="color:var(--tx3);font-size:12px;margin:12px 0 0">心理压力与学习压力是反向指标，越低越好。爱意开局不会太高——那是要一天一天陪出来的。</p></div>
+   ${say("（她抬头看你，书包带滑到了胳膊肘）<br>你是来接我的吗？<br>……那我跟你说，我今天在学校画了一张画！")}
+   <button class="btn" id="go">开始第 1 天</button></div>`);
+  on("go",()=>{nextEvent()});
+}
+
+/* ---------- 每日事件 ---------- */
+function pickEvent(){
+  const st=stageOf(S.day).k;
+  let pool=EV.map((e,i)=>({e,i})).filter(o=>o.e.s===st&&!S.used.includes(o.i));
+  if(!pool.length){S.used=S.used.filter(i=>EV[i].s!==st);pool=EV.map((e,i)=>({e,i})).filter(o=>o.e.s===st)}
+  const p=pool[Math.floor(Math.random()*pool.length)];S.used.push(p.i);
+  return {k:"ev",d:p.e,ord:shuf(p.e.o.length)};
+}
+function nextEvent(){
+  const st=stageOf(S.day);
+  const L=SLINE[st.k];
+  if(L&&!S.lines[st.k]&&S.A.trust>=L.need.trust&&S.A.love>=L.need.love&&S.day>=st.d0+4){
+    S.lines[st.k]=1;S.cur={k:"st",d:L,ord:shuf(L.o.length)};
+  } else S.cur=pickEvent();
+  S.acts=0;S.pre={...S.A};
+  step();
+}
+function step(){
+  hud();const it=S.cur,d=it.d;
+  render(`<div style="padding-top:16px">${bans()}
+    ${d.bt?`<div class="banner v">${T(d.bt)}</div>`:""}
+    <div class="card"><div class="eyebrow">${ageOf(S.day)} 岁 · ${stageOf(S.day).n} · 第 ${S.day} 天</div>
+      <p class="scene">${T(d.sc)}</p>${say(d.q)}
+      <div class="opts">${it.ord.map((oi,i)=>{const o=d.o[oi];
+        return `<button class="opt" data-i="${oi}"><span class="k">${"ABCD"[i]}</span><span class="tx">${T(o.tx)}</span>${o.tag?`<span class="tag">倾向：${T(o.tag)}</span>`:""}</button>`}).join("")}</div>
+    </div></div>`);
+  document.querySelectorAll(".opt").forEach(b=>b.onclick=()=>resolve(+b.dataset.i));
+}
+function resolve(i){
+  const it=S.cur,d=it.d,o=d.o[i],pos=it.ord.indexOf(i);
+  const g=apply(o.d);if(o.f)getFrag(o.f);
+  const J=judge(o.d);
+  hud();
+  render(`<div style="padding-top:16px"><div class="card">
+      <div class="eyebrow">${ageOf(S.day)} 岁 · ${stageOf(S.day).n} · 第 ${S.day} 天</div>
+      <p class="scene">${T(d.sc)}</p>${say(d.q)}
+      <div class="opts"><button class="opt picked" disabled><span class="k">${"ABCD"[pos<0?0:pos]}</span><span class="tx">${T(o.tx)}</span></button></div>
+      <div class="react">${say(o.r,J.v<0?PICK(SADFACE):"")}</div>
+    </div>${bans()}
+    <button class="btn" id="nx">继续</button></div>`);
+  burst(J.v>0?"love":J.v<0?"cry":"smile",J.mag);
+  on("nx",dayEnd);
+}
+
+/* ---------- 一天结束 ---------- */
+function dayEnd(){
+  const r=riskTick();
+  hud();
+  if(r)return ending(r);
+  const A=S.A,p=S.pre,st=stageOf(S.day);
+  const rows=st.ind.filter(k=>Math.abs((A[k]||0)-(p[k]||0))>0.05).map(k=>{
+    const c=Math.round((A[k]-p[k])*10)/10,good=IND[k].rev?c<0:c>0;
+    return `<div class="dl"><div class="n">${IND[k].n}</div><div class="v">${Math.round(A[k])}<span class="c ${good?"up":"dn"}">${c>0?"▲"+c:"▼"+Math.abs(c)}</span></div></div>`}).join("");
+  const avail=LEI.filter(l=>l.st.includes(st.k));
+  const list=avail.map(l=>`<button class="ia" data-id="${l.id}" ${S.acts?"disabled":""}>
+    <span><span class="nm">${T(l.n)}</span><br><span class="cd">${l.cd}</span></span>
+    <span class="st">${S.acts?"今日已用":"发起"}</span></button>`).join("");
+  const last=S.day>=200, boundary=S.day===st.d1&&!last;
+  render(`<div style="padding-top:16px">${bans()}
+    <div class="card"><div class="eyebrow">第 ${S.day} 天 · 变动</div>
+      ${rows?`<div class="deltas">${rows}</div>`:`<p class="scene" style="margin:0">今天风平浪静。</p>`}</div>
+    <div class="card"><div class="eyebrow">主动陪她做点什么 · 每天一次</div><div class="ilist">${list}</div></div>
+    <div class="row">
+      <button class="btn" id="nx">${last?"三十岁 · 终章结算":boundary?"进入下一个阶段":"进入第 "+(S.day+1)+" 天"}</button>
+      ${last?"":`<button class="btn q" id="sk">快进 7 天（自动中庸应对）</button>`}
+    </div></div>`);
+  document.querySelectorAll(".ia").forEach(b=>b.onclick=()=>leisure(b.dataset.id));
+  on("nx",()=>{ if(last)return finale(); advance(); });
+  on("sk",skip);
+}
+function advance(){
+  const old=stageOf(S.day);
+  S.day++;
+  const nw=stageOf(S.day);
+  if(nw.k!==old.k)return stageBreak(old,nw);
+  nextEvent();
+}
+function skip(){
+  for(let n=0;n<7&&S.day<200;n++){
+    const old=stageOf(S.day);
+    S.day++;
+    const nw=stageOf(S.day);
+    if(nw.k!==old.k){return stageBreak(old,nw)}
+    S.cur=pickEvent();S.acts=0;S.pre={...S.A};
+    const d=S.cur.d;
+    let best=d.o[0],bn=1e9;
+    d.o.forEach(o=>{const j=judge(o.d);const sc=Math.abs(j.v);if(sc<bn){bn=sc;best=o}});
+    apply(best.d);
+    const r=riskTick();
+    if(r){hud();return ending(r)}
+  }
+  S.cur=pickEvent();S.acts=0;S.pre={...S.A};
+  if(S.day>=200)return finale();
+  step();
+}
+
+/* ---------- 阶段结算 ---------- */
+function stageBreak(old,nw){
+  old.seal.forEach(k=>{});
+  nw.ind.forEach(k=>{
+    if(S.A[k]!=null)return;
+    const hs=old.ind.filter(x=>!IND[x].rev).map(x=>S.A[x]);
+    const avg=hs.reduce((a,b)=>a+b,0)/(hs.length||1);
+    const seed=cl(avg*0.55+26+RI(-5,5));
+    S.A[k]=IND[k].rev?cl(100-seed):seed;
+  });
+  S.ph="day";hud();
+  const sealed=old.seal.map(k=>IND[k].n+" "+Math.round(S.A[k])).join("　");
+  render(`<div style="padding-top:18px">${bans()}
+    <div class="banner">📌 阶段结算 · ${old.n}（${old.a0}–${old.a1}岁）结束</div>
+    <div class="card"><div class="eyebrow">${old.n}阶段 · 最终面板</div>
+      <div class="deltas">${old.ind.map(k=>{const hv=hp(k);
+        return `<div class="dl"><div class="n">${IND[k].n}</div><div class="v" style="color:${hv>=75?"var(--good)":hv>=60?"var(--tx)":"var(--bad)"}">${Math.round(S.A[k])}</div></div>`}).join("")}</div>
+      ${sealed?`<p style="color:var(--tx3);font-size:12px;margin:12px 0 0">本阶段专属指标已封存：${sealed}</p>`:""}
+      <p style="color:var(--tx3);font-size:12px;margin:6px 0 0">碎片进度 ${S.frags.length}/${FRAG.length}　｜　本阶段限定碎片 ${FRAG.filter(f=>f.st===old.k&&S.frags.includes(f.id)).length}/${FRAG.filter(f=>f.st===old.k).length}（错过的已永久关闭）</p>
+    </div>
+    <div class="card"><div class="eyebrow">下一阶段 · ${nw.n}（${nw.a0}–${nw.a1}岁）</div>
+      <p class="scene">${T(nw.intro)}</p>
+      <div class="deltas">${nw.ind.filter(k=>!old.ind.includes(k)).map(k=>`<div class="dl"><div class="n">${IND[k].n}<span style="color:var(--sun)"> 新</span></div><div class="v">${Math.round(S.A[k])}</div></div>`).join("")}</div>
+    </div>
+    <button class="btn" id="nx">开始 ${nw.n}</button></div>`);
+  on("nx",nextEvent);
+}
+
+/* ---------- 休闲事件 ---------- */
+function leisure(id,bi,log){
+  const l=LEI.find(x=>x.id===id);if(!l)return;
+  bi=bi||0;log=log||"";
+  hud();
+  if(bi<l.b.length){
+    const b=l.b[bi],od=shuf(b.o.length);
+    render(`<div style="padding-top:16px"><div class="banner v">💛 ${T(l.n)} · 第 ${bi+1}/${l.b.length} 轮</div>
+      <div class="card">${bi===0?`<p class="scene">${T(l.i)}</p>`:""}${log}${say(b.q)}
+      <div class="opts">${od.map((oi,i)=>`<button class="opt" data-i="${oi}"><span class="k">${"ABCD"[i]}</span><span class="tx">${T(b.o[oi].tx)}</span></button>`).join("")}</div>
+      </div></div>`);
+    document.querySelectorAll(".opt").forEach(x=>x.onclick=()=>{
+      const o=b.o[+x.dataset.i];const J=judge(o.d);apply(o.d);
+      burst(J.v>0?"love":J.v<0?"cry":"smile",J.mag);
+      const nl=log+say(b.q)+`<div class="say me"><div class="bub">${T(o.tx)}</div></div>`+
+        `<div class="react">${say(o.r,J.v<0?PICK(SADFACE):"")}</div>`;
+      leisure(id,bi+1,nl);
+    });
+    return;
+  }
+  const f=l.fin,od=shuf(f.o.length);
+  render(`<div style="padding-top:16px"><div class="banner">💛 ${T(l.n)} · 结尾分支</div>
+    <div class="card"><p class="scene">${T(f.sc)}</p>${say(f.q)}
+    <div class="opts">${od.map((oi,i)=>`<button class="opt" data-i="${oi}"><span class="k">${"ABCD"[i]}</span><span class="tx">${T(f.o[oi].tx)}</span><span class="tag">倾向：${T(f.o[oi].tag)}</span></button>`).join("")}</div>
+    </div></div>`);
+  document.querySelectorAll(".opt").forEach(x=>x.onclick=()=>{
+    const o=f.o[+x.dataset.i];const J=judge(o.d);apply(o.d);if(o.f)getFrag(o.f);
+    S.acts=1;hud();
+    render(`<div style="padding-top:16px"><div class="card"><p class="scene">${T(f.sc)}</p>${say(f.q)}
+      <div class="opts"><button class="opt picked" disabled><span class="tx">${T(o.tx)}</span></button></div>
+      <div class="react">${say(o.r,J.v<0?PICK(SADFACE):"")}</div></div>${bans()}
+      <button class="btn" id="bk">回到今天</button></div>`);
+    burst(J.v>0?"love":J.v<0?"cry":"smile",J.mag);
+    on("bk",()=>{const r=S.A.trust<=15||S.A.love<=15?"cut":null;if(r)return ending(r);dayEndQuiet()});
+  });
+}
+function dayEndQuiet(){S.pre={...S.pre};dayEnd2()}
+function dayEnd2(){
+  hud();const A=S.A,st=stageOf(S.day);
+  const avail=LEI.filter(l=>l.st.includes(st.k));
+  const list=avail.map(l=>`<button class="ia" disabled><span><span class="nm">${T(l.n)}</span><br><span class="cd">${l.cd}</span></span><span class="st">今日已用</span></button>`).join("");
+  const last=S.day>=200,boundary=S.day===st.d1&&!last;
+  render(`<div style="padding-top:16px">${bans()}
+    <div class="card"><div class="eyebrow">第 ${S.day} 天 · 当前面板</div>
+      <div class="deltas">${st.ind.map(k=>`<div class="dl"><div class="n">${IND[k].n}</div><div class="v">${Math.round(A[k])}</div></div>`).join("")}</div></div>
+    <div class="card"><div class="eyebrow">主动陪她做点什么 · 每天一次</div><div class="ilist">${list}</div></div>
+    <div class="row"><button class="btn" id="nx">${last?"三十岁 · 终章结算":boundary?"进入下一个阶段":"进入第 "+(S.day+1)+" 天"}</button></div></div>`);
+  on("nx",()=>{if(last)return finale();advance()});
+}
+
+/* ---------- 碎片图鉴 ---------- */
+function atlas(){
+  hud();
+  const byStage=STG.map(s=>{
+    const fs=FRAG.filter(f=>f.st===s.k);
+    const got=fs.filter(f=>S.frags.includes(f.id)).length;
+    const missed=S.day>s.d1;
+    return `<div class="card"><div class="eyebrow">${s.n} · ${s.a0}–${s.a1}岁 · ${got}/${fs.length}${missed&&got<fs.length?"　<span style='color:var(--bad)'>已永久关闭</span>":""}</div>
+      <div class="fgrid">${fs.map(f=>{const has=S.frags.includes(f.id);
+        return `<button class="fc ${has?(f.r===3?"r3":f.r===2?"r2":"n"):"lock"}" ${has?`data-id="${f.id}"`:"disabled"}>
+          <div class="r">${f.r===3?"LIMITED":f.r===2?"RARE":"COMMON"}</div>
+          <div class="t">${has?T(f.n):"？？？"}</div></button>`}).join("")}</div></div>`}).join("");
+  render(`<div style="padding-top:16px">
+    <div class="eyebrow">回忆碎片图鉴</div>
+    <h1 style="font-size:26px;margin-top:6px">${T("{N}")}藏起来的 ${S.frags.length} 段</h1>
+    <p class="lede">她很多话不会直接说。你接住过的那些瞬间，都在这里。</p>
+    ${byStage}
+    <button class="btn" id="bk">返回</button></div>`);
+  document.querySelectorAll(".fc[data-id]").forEach(b=>b.onclick=()=>{
+    const f=FRAG.find(x=>x.id===b.dataset.id);
+    render(`<div style="padding-top:16px"><div class="eyebrow">${f.r===3?"限定碎片":f.r===2?"稀有碎片":"回忆碎片"} · ${STG[f.st-1].n}</div>
+      <h1 style="font-size:25px;margin-top:6px">${T(f.n)}</h1>
+      <div class="story">${T(f.t)}</div>
+      <button class="btn" id="bk">返回图鉴</button></div>`);
+    on("bk",atlas);
+  });
+  on("bk",()=>{S.ph="day";if(S.end)return ending(S.end);S.cur?step():nextEvent()});
+}
+
+/* ---------- 结局 ---------- */
+function finale(){
+  const st=STG[5],hs=st.ind.map(hp);
+  if(hs.every(h=>h>=75))return ending("perfect");
+  if(hs.every(h=>h>=60))return ending("calm");
+  if(hs.filter(h=>h<60).length<=3&&hs.every(h=>h>=48))return ending("burn");
+  return ending("ill");
+}
+function ending(k){
+  S.end=k;S.ph="end";const e=ENDS[k];const full=S.frags.length>=FRAG.length;
+  hud();
+  render(`<div class="end" style="padding-top:8px">
+    <div class="tier">${e.tier} · ${ageOf(S.day)}岁 · 第 ${S.day} 天</div>
+    <h2>${T(e.t)}</h2>
+    ${e.p.map(x=>`<p>${T(x)}</p>`).join("")}
+    <div class="fin">${T(e.f)}</div>
+    ${k==="perfect"&&full?`<div class="banner v" style="text-align:left">🔶 全碎片收集完成，解锁隐藏后记。</div>
+      <h2 style="font-size:24px;margin-top:22px">${T(AFTER.t)}</h2>
+      ${AFTER.p.map(x=>`<p>${T(x)}</p>`).join("")}
+      <div class="fin">${T(AFTER.f)}</div>`:""}
+    <div class="card" style="text-align:left"><div class="eyebrow">终章数据</div>
+      <div class="deltas">${STG[5].ind.map(x=>`<div class="dl"><div class="n">${IND[x].n}</div><div class="v">${Math.round(S.A[x])}</div></div>`).join("")}</div>
+      <p style="color:var(--tx3);font-size:12px;margin:12px 0 0">回忆碎片 ${S.frags.length}/${FRAG.length}　｜　心理隐患值 ${Math.round(S.risk)}　｜　阶段隐藏剧情 ${Object.keys(S.lines).length}/6</p>
+    </div>
+    <div class="row" style="justify-content:center">
+      <button class="btn g" id="atl">查看碎片图鉴</button>
+      <button class="btn" id="again">重新开始</button></div></div>`);
+  on("atl",()=>{S.ph="atlas";atlas()});
+  on("again",reset);
+}
+function reset(){try{localStorage.removeItem("bzd_save")}catch(e){}S=fresh();nameScreen()}
+
+/* ---------- 启动 ---------- */
+function boot(hot){
+  S=(hot&&hot.S)||load()||fresh();
+  if(!S.A||!S.nm&&S.ph!=="name")S=fresh();
+  S.ban=S.ban||[];
+  try{if(S.nm)$("gname").textContent="伴"+S.nm+"长大"}catch(e){}
+  if(S.ph==="end"&&S.end)return ending(S.end);
+  if(S.ph==="atlas")return atlas();
+  if(S.ph==="quiz")return quiz();
+  if(S.ph==="day")return S.cur?step():nextEvent();
+  nameScreen();
+}
+$("restart").onclick=()=>{if(confirm("重新开始？当前进度会被清空。"))reset()};
+try{if(localStorage.getItem("bzd_save"))$("savenote").textContent="· 进度自动保存在本机"}catch(e){}
+if(window.claude&&window.claude.hot){
+  window.claude.hot.snapshot(()=>({S}));
+  window.claude.hot.ready?window.claude.hot.ready(d=>boot(d)):boot(window.claude.hot.data);
+}else boot();
+</script>
+</body>
+</html>
