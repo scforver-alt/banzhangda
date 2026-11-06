@@ -1159,9 +1159,9 @@ function hud(){
   const bars=`<div class="grp">本阶段</div><div class="bars">${own.map(mk).join("")}</div>
     <div class="grp">一直带着</div><div class="bars">${per.map(mk).join("")}</div>`;
   h.innerHTML=`<div class="hudtop">
-      <span class="age">AGE <b>${ageOf(S.day)}</b></span>
+      <span class="agebox"><s>AGE</s><b>${ageOf(S.day)}</b><u>岁</u></span>
       <span class="stg">${st.n}</span>
-      <span class="age" style="color:var(--tx3)">第 ${S.day} / 200 天</span>
+      <span class="dayno">DAY ${S.day}/200</span>
       <button class="frag" id="fragbtn">碎片 ${S.frags.length}/${FRAG.length}</button>
     </div>
     <div class="spine">${spine}</div>
