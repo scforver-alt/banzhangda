@@ -12,19 +12,42 @@ html{color-scheme:dark}
 body{margin:0;font:14px/1.5 system-ui,-apple-system,sans-serif;background:#191411}
 img{max-width:100%}
 [hidden]{display:none!important}
+
+/* ---- 人物与场景 ---- */
+.card.pic{padding:0;overflow:hidden}
+.band{display:block;width:100%;height:70px}
+.evbody{padding:0 18px 2px;display:grid;grid-template-columns:100px 1fr;gap:15px;align-items:start}
+.pfwrap{margin-top:-52px}
+.pt{display:block;border-radius:12px;box-shadow:0 12px 26px -16px #000,0 0 0 2px var(--panel2)}
+.evfoot{padding:4px 18px 16px}
+.hd{border-radius:50%;background:#2A221B;display:block}
+.ava{overflow:hidden;background:none!important;box-shadow:0 0 0 1px rgba(240,196,78,.35),0 6px 16px -9px rgba(232,134,79,.9)!important}
+.ava.sad{box-shadow:0 0 0 1px rgba(140,130,120,.4)!important}
+.todaystrip{display:flex;flex-wrap:wrap;gap:6px 14px;align-items:baseline;
+  border-top:1px dashed var(--line2);border-bottom:1px dashed var(--line2);
+  padding:9px 0;margin:14px 0 2px;font-size:12px;color:var(--tx3)}
+.todaystrip b{color:var(--tx2);font-weight:400}
+.todaystrip .sep{color:var(--line3)}
+.bigpt{display:flex;gap:18px;align-items:center;flex-wrap:wrap}
+@media(max-width:480px){
+  .evbody{grid-template-columns:76px 1fr;gap:11px;padding:0 14px 2px}
+  .pfwrap{margin-top:-40px}
+  .evfoot{padding:4px 14px 14px}
+  .band{height:58px}
+}
 </style>
 <title>伴她长大</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=ZCOOL+QingKe+HuangYou&family=Noto+Sans+SC:wght@300;400;500;700&family=Space+Mono:wght@400;700&display=swap">
 <style>
 :root{
-  --ink:#191411; --ink2:#201A16; --panel:#26201B; --raise:#312821;
-  --line:#3C3229; --line2:#52453A;
-  --tx:#F3EBE1; --tx2:#BCADA0; --tx3:#8A7A6D;
-  --her:#E8864F;       /* 她的声音 · 暖橙，狮子座的那点太阳 */
-  --sun:#EFC04C;       /* 强调 · 金 */
-  --sys:#86B5A4;       /* 系统 · 远一点的青 */
-  --good:#8FC08B; --bad:#DE7266; --cream:#FBF4EA;
-  --shadow:0 18px 40px -26px rgba(0,0,0,.95);
+  --ink:#171310; --ink2:#1E1915; --panel:#241E19; --panel2:#2B241D; --raise:#342B22;
+  --line:#3A3028; --line2:#4E4136; --line3:#6B5A49;
+  --tx:#F6EFE5; --tx2:#C0B2A3; --tx3:#8C7C6D;
+  --her:#E8864F; --sun:#F0C44E; --sys:#8CBBA8;
+  --good:#8FC08B; --bad:#DE7266; --cream:#FCF6EC;
+  --r:10px;
+  --sh1:0 1px 0 rgba(255,236,206,.045) inset;
+  --sh2:0 20px 46px -30px rgba(0,0,0,.95);
   color-scheme:dark;
 }
 *{box-sizing:border-box}
@@ -34,173 +57,238 @@ body{margin:0;background:var(--ink);color:var(--tx);
   font-family:"Noto Sans SC",-apple-system,BlinkMacSystemFont,"PingFang SC",sans-serif;
   font-size:15px;line-height:1.75;-webkit-font-smoothing:antialiased;
   background-image:
-    radial-gradient(900px 480px at 88% -10%, rgba(239,192,76,.11), transparent 60%),
-    radial-gradient(700px 420px at 4% 102%, rgba(232,134,79,.09), transparent 62%);
+    radial-gradient(1000px 520px at 86% -14%, rgba(240,196,78,.13), transparent 58%),
+    radial-gradient(760px 440px at 2% 104%, rgba(232,134,79,.10), transparent 60%),
+    linear-gradient(180deg, rgba(255,255,255,.012), transparent 30%);
   background-attachment:fixed}
-.wrap{max-width:640px;margin:0 auto;padding:0 18px;padding-block:0 56px}
+.wrap{max-width:660px;margin:0 auto;padding:0 20px;padding-block:0 60px}
 
-/* ---- 顶部 ---- */
+/* ================= HUD ================= */
 .hud{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;
-  background:linear-gradient(180deg,rgba(25,20,17,.985) 74%,rgba(25,20,17,.86));
-  backdrop-filter:blur(10px);margin:0 -18px;padding:9px 18px 11px;border-bottom:1px solid var(--line)}
-.hudtop{display:flex;align-items:center;gap:9px;flex-wrap:wrap;margin-bottom:8px}
-.age{font-family:"Space Mono",monospace;font-size:11px;letter-spacing:.12em;color:var(--sun)}
-.age b{font-size:19px;color:var(--tx)}
-.stg{font-size:11.5px;color:var(--tx2);border:1px solid var(--line2);padding:1px 8px;border-radius:99px}
-.frag{margin-left:auto;font-family:"Space Mono",monospace;font-size:11.5px;color:var(--sys);
-  border:1px solid rgba(134,181,164,.4);padding:2px 9px;border-radius:99px;cursor:pointer;background:none}
-@media(hover:hover){.frag:hover{background:rgba(134,181,164,.12)}}
-.spine{display:flex;gap:3px;margin-bottom:9px}
-.spine i{height:3px;flex:1;background:#332A23;position:relative;overflow:hidden}
-.spine i.done{background:var(--line2)}
-.spine i.now::after{content:"";position:absolute;inset:0;width:var(--p,0%);background:var(--sun)}
-.bars{display:grid;grid-template-columns:1fr 1fr;gap:4px 16px}
-.bar{display:grid;grid-template-columns:72px 1fr 32px;align-items:center;gap:7px}
+  background:linear-gradient(180deg,rgba(23,19,16,.986) 72%,rgba(23,19,16,.84));
+  backdrop-filter:blur(12px);margin:0 -20px;padding:10px 20px 13px;
+  border-bottom:1px solid var(--line)}
+.hudtop{display:flex;align-items:center;gap:10px;margin-bottom:10px}
+.agebox{display:flex;align-items:baseline;gap:6px;padding:2px 11px 3px;border-radius:99px;
+  background:radial-gradient(70% 140% at 50% 120%, rgba(240,196,78,.26), rgba(240,196,78,.06));
+  border:1px solid rgba(240,196,78,.34)}
+.agebox s{text-decoration:none;font-family:"Space Mono",monospace;font-size:9.5px;letter-spacing:.2em;color:var(--sun);opacity:.8}
+.agebox b{font-family:"ZCOOL QingKe HuangYou",cursive;font-size:21px;color:var(--cream);line-height:1.1}
+.agebox u{text-decoration:none;font-size:10.5px;color:var(--sun)}
+.stg{font-size:12px;color:var(--tx2);letter-spacing:.06em}
+.dayno{font-family:"Space Mono",monospace;font-size:10.5px;color:var(--tx3);letter-spacing:.06em}
+.frag{margin-left:auto;font-family:"Space Mono",monospace;font-size:11px;color:var(--sys);
+  border:1px solid rgba(140,187,168,.38);padding:3px 10px;border-radius:99px;cursor:pointer;background:rgba(140,187,168,.05);
+  transition:.18s;white-space:nowrap}
+@media(hover:hover){.frag:hover{background:rgba(140,187,168,.16);border-color:var(--sys)}}
+.frag.pump{animation:pump .7s cubic-bezier(.3,1.5,.4,1)}
+.frag.crack{animation:crk .66s ease}
+@keyframes pump{0%{transform:scale(1)}26%{transform:scale(1.22)}55%{transform:scale(.97)}100%{transform:scale(1)}}
+@keyframes crk{0%,100%{transform:translateX(0)}20%{transform:translateX(-4px)}40%{transform:translateX(4px)}60%{transform:translateX(-3px)}80%{transform:translateX(2px)}}
+
+.spine{display:flex;gap:3px;margin-bottom:11px}
+.spine i{height:4px;flex:1;background:#2E2721;border-radius:99px;position:relative;overflow:hidden}
+.spine i.done{background:var(--line3)}
+.spine i.now{background:#38302a}
+.spine i.now::after{content:"";position:absolute;inset:0;width:var(--p,0%);
+  background:linear-gradient(90deg,var(--her),var(--sun));border-radius:99px}
+
+.grp{font-family:"Space Mono",monospace;font-size:9px;letter-spacing:.2em;color:var(--tx3);
+  margin:2px 0 5px;display:flex;align-items:center;gap:8px}
+.grp::after{content:"";flex:1;height:1px;background:var(--line)}
+.bars{display:grid;grid-template-columns:1fr 1fr;gap:5px 18px;margin-bottom:7px}
+.bar{display:grid;grid-template-columns:1fr auto;gap:1px 8px;align-items:baseline}
 .bar .n{font-size:11px;color:var(--tx2);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.bar .n i{font-style:normal;color:var(--sun);font-size:9px;vertical-align:super}
-.bar .t{height:5px;background:#332A23;position:relative;overflow:hidden}
-.bar .f{height:100%;transition:width .5s cubic-bezier(.2,.8,.3,1)}
-.bar .v{font-family:"Space Mono",monospace;font-size:12px;text-align:right;font-variant-numeric:tabular-nums}
-.bar .t::after{content:"";position:absolute;top:-2px;bottom:-2px;width:1px;background:var(--line2);left:60%}
+.bar .v{font-family:"Space Mono",monospace;font-size:12.5px;font-variant-numeric:tabular-nums;text-align:right}
+.bar .t{grid-column:1/3;height:5px;background:#2E2721;border-radius:99px;position:relative;overflow:hidden;margin-top:1px}
+.bar .f{height:100%;border-radius:99px;transition:width .55s cubic-bezier(.2,.8,.3,1)}
+.bar .t::after{content:"";position:absolute;top:0;bottom:0;width:1px;background:rgba(255,255,255,.18);left:60%}
 .bar.rev .t::after{left:40%}
-.bar.low .v{color:var(--bad)}
-.bar.hi .v{color:var(--good)}
-.chips{display:flex;flex-wrap:wrap;gap:5px;margin-top:8px}
-.chip{font-size:10.5px;padding:2px 8px;border:1px solid var(--line2);color:var(--tx2)}
-.chip.b{border-color:rgba(143,192,139,.45);color:var(--good);background:rgba(143,192,139,.07)}
-.chip.d{border-color:rgba(222,114,102,.45);color:var(--bad);background:rgba(222,114,102,.07)}
+.bar .dt{font-family:"Space Mono",monospace;font-size:9.5px;margin-left:4px}
+.bar.low .v{color:var(--bad)} .bar.hi .v{color:var(--good)}
 
-h1{font-family:"ZCOOL QingKe HuangYou",cursive;font-size:38px;font-weight:400;letter-spacing:.03em;margin:32px 0 6px;line-height:1.3}
-h1 small{display:block;font-family:"Noto Sans SC";font-size:12px;font-weight:300;letter-spacing:.3em;color:var(--sun);margin-bottom:10px}
-.lede{color:var(--tx2);font-size:14px;max-width:46em}
-.eyebrow{font-size:11px;letter-spacing:.24em;color:var(--tx3);font-family:"Space Mono",monospace}
+.chips{display:flex;flex-wrap:wrap;gap:5px;margin-top:9px}
+.chip{font-size:10.5px;padding:2px 9px;border-radius:99px;border:1px solid var(--line2);color:var(--tx2)}
+.chip.b{border-color:rgba(143,192,139,.45);color:var(--good);background:rgba(143,192,139,.08)}
+.chip.d{border-color:rgba(222,114,102,.45);color:var(--bad);background:rgba(222,114,102,.08)}
 
-.card{background:var(--panel);border:1px solid var(--line);border-radius:3px;padding:18px;box-shadow:var(--shadow);margin-top:16px}
+/* ================= 版式 ================= */
+h1{font-family:"ZCOOL QingKe HuangYou",cursive;font-size:40px;font-weight:400;letter-spacing:.03em;
+  margin:34px 0 8px;line-height:1.25;text-wrap:balance}
+h1 small{display:block;font-family:"Noto Sans SC";font-size:11.5px;font-weight:300;letter-spacing:.34em;
+  color:var(--sun);margin-bottom:12px;opacity:.85}
+.lede{color:var(--tx2);font-size:14.5px;max-width:44em}
+.eyebrow{font-size:10.5px;letter-spacing:.24em;color:var(--tx3);font-family:"Space Mono",monospace}
+
+.daybar{display:flex;align-items:center;gap:10px;margin:18px 0 2px}
+.daybar .d{font-family:"ZCOOL QingKe HuangYou",cursive;font-size:19px;color:var(--cream)}
+.daybar .s{font-size:11.5px;color:var(--tx3)}
+.daybar::after{content:"";flex:1;height:1px;background:linear-gradient(90deg,var(--line2),transparent)}
+
+.card{background:linear-gradient(180deg,var(--panel2),var(--panel));border:1px solid var(--line);
+  border-radius:var(--r);padding:18px 18px 16px;box-shadow:var(--sh1),var(--sh2);margin-top:14px}
+.card.tight{padding:14px 16px}
 .scene{color:var(--tx2);font-size:14.5px;line-height:1.95}
-.scene::before{content:"";display:block;width:24px;height:2px;background:var(--sun);margin-bottom:12px}
-.say{display:flex;gap:11px;margin-top:16px;align-items:flex-start}
-.ava{flex:0 0 34px;height:34px;border-radius:50%;display:grid;place-items:center;
-  font-family:"ZCOOL QingKe HuangYou",cursive;font-size:15px;color:#2A1A10;
-  background:linear-gradient(150deg,#F7C97F,#E8864F);box-shadow:0 0 18px -6px rgba(232,134,79,.7)}
-.ava.sad{background:linear-gradient(150deg,#8E8077,#5E534B);color:#E6DCD2;box-shadow:none}
-.bub{background:var(--raise);border:1px solid var(--line2);border-radius:3px 13px 13px 13px;padding:11px 14px;
-  font-size:15.5px;line-height:1.9;color:var(--cream);max-width:100%}
-.me{justify-content:flex-end}
-.me .bub{background:#2B2F2B;border-color:#3E473E;border-radius:13px 3px 13px 13px;color:var(--tx)}
-.react{margin-top:14px;padding-left:45px}
+.scene::before{content:"";display:block;width:22px;height:3px;border-radius:3px;
+  background:linear-gradient(90deg,var(--sun),var(--her));margin-bottom:12px}
 
-.opts{display:flex;flex-direction:column;gap:8px;margin-top:18px}
+.say{display:flex;gap:11px;margin-top:16px;align-items:flex-start}
+.ava{flex:0 0 36px;height:36px;border-radius:50%;display:grid;place-items:center;
+  font-family:"ZCOOL QingKe HuangYou",cursive;font-size:16px;color:#2A1A10;
+  background:linear-gradient(150deg,#FAD591,#E8864F);
+  box-shadow:0 0 0 1px rgba(240,196,78,.3),0 6px 18px -8px rgba(232,134,79,.9)}
+.ava.sad{background:linear-gradient(150deg,#8E8077,#5A4F47);color:#E6DCD2;box-shadow:none}
+.bub{background:var(--raise);border:1px solid var(--line2);border-radius:4px 14px 14px 14px;
+  padding:11px 15px;font-size:15.5px;line-height:1.9;color:var(--cream);max-width:100%;box-shadow:var(--sh1)}
+.me{justify-content:flex-end}
+.me .bub{background:#262D27;border-color:#3A453A;border-radius:14px 4px 14px 14px;color:var(--tx)}
+.react{margin-top:14px;padding-left:47px}
+
+/* ================= 选项 ================= */
+.opts{display:flex;flex-direction:column;gap:9px;margin-top:18px}
 .opt{touch-action:manipulation;text-align:left;background:var(--ink2);border:1px solid var(--line);color:var(--tx);
-  border-radius:3px;padding:11px 14px;cursor:pointer;font:inherit;font-size:14.5px;line-height:1.7;
-  display:grid;grid-template-columns:auto 1fr;gap:4px 10px;align-items:baseline;transition:.18s}
-@media(hover:hover){.opt:hover{border-color:var(--her);background:#2A2219;transform:translateX(3px)}}
+  border-radius:8px;padding:12px 15px;cursor:pointer;font:inherit;font-size:14.5px;line-height:1.7;
+  display:grid;grid-template-columns:auto 1fr;gap:3px 11px;align-items:baseline;
+  transition:border-color .18s,background .18s,transform .18s,box-shadow .18s}
+@media(hover:hover){.opt:hover{border-color:var(--her);background:#2B2219;transform:translateY(-1px);
+  box-shadow:0 8px 22px -16px rgba(232,134,79,.9)}}
 .opt:focus-visible{outline:2px solid var(--sun);outline-offset:2px}
-.opt .k{font-family:"Space Mono",monospace;font-size:11px;color:var(--her)}
+.opt .k{font-family:"Space Mono",monospace;font-size:11px;color:var(--her);opacity:.85}
 .opt .tag{grid-column:2;font-size:10.5px;color:var(--tx3)}
 .opt .tx{grid-column:2;grid-row:1}
 .opt[disabled]{opacity:.34;cursor:default;transform:none}
-.opt.picked{border-color:var(--her);background:#2E2419;opacity:1}
+.opt.picked{border-color:var(--her);background:#31261B;opacity:1;box-shadow:var(--sh1)}
 
-.btn{touch-action:manipulation;display:inline-flex;align-items:center;gap:8px;background:transparent;border:1px solid var(--her);
-  color:var(--her);padding:9px 20px;border-radius:99px;font:inherit;font-size:13.5px;letter-spacing:.05em;cursor:pointer;transition:.18s;margin-top:18px}
-@media(hover:hover){.btn:hover{background:var(--her);color:#1B1208}}
-.btn.g{border-color:var(--sys);color:var(--sys)}
+/* ================= 日程 ================= */
+.routine{display:flex;gap:13px;align-items:flex-start;border-radius:var(--r);
+  background:linear-gradient(100deg,rgba(240,196,78,.10),rgba(240,196,78,.02));
+  border:1px solid rgba(240,196,78,.22);padding:12px 15px;margin-top:14px}
+.routine .ic{flex:0 0 34px;height:34px;border-radius:9px;display:grid;place-items:center;font-size:17px;
+  background:rgba(240,196,78,.14);border:1px solid rgba(240,196,78,.28)}
+.routine .h{font-size:13.5px;color:var(--sun);letter-spacing:.04em}
+.routine .p{font-size:12.5px;color:var(--tx2);line-height:1.7;margin-top:1px}
+
+.agrid{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-top:14px}
+.act{touch-action:manipulation;text-align:left;background:var(--ink2);border:1px solid var(--line);
+  border-radius:9px;padding:12px 13px;cursor:pointer;font:inherit;color:var(--tx);
+  display:flex;flex-direction:column;gap:6px;transition:.18s;min-height:92px}
+@media(hover:hover){.act:hover{border-color:var(--sun);background:#2B2419;transform:translateY(-2px);
+  box-shadow:0 10px 24px -18px rgba(240,196,78,.9)}}
+.act:focus-visible{outline:2px solid var(--sun);outline-offset:2px}
+.act .an{font-size:14.5px;line-height:1.4}
+.act .at{font-size:11.5px;color:var(--tx3);line-height:1.55;flex:1}
+.act .fx{display:flex;flex-wrap:wrap;gap:4px}
+.act.sp{background:linear-gradient(140deg,rgba(232,134,79,.13),var(--ink2));border-color:rgba(232,134,79,.45)}
+.act.sp .an{color:var(--her)}
+.eff{font-size:10px;padding:1px 7px;border-radius:99px;font-family:"Space Mono",monospace;letter-spacing:.02em;white-space:nowrap}
+.eff.u{background:rgba(143,192,139,.14);color:#A9D5A4;border:1px solid rgba(143,192,139,.3)}
+.eff.d{background:rgba(222,114,102,.13);color:#E9968C;border:1px solid rgba(222,114,102,.3)}
+
+/* ================= 按钮 ================= */
+.btn{touch-action:manipulation;display:inline-flex;align-items:center;gap:8px;
+  background:linear-gradient(180deg,rgba(232,134,79,.16),rgba(232,134,79,.06));
+  border:1px solid var(--her);color:#FFD9BE;padding:10px 22px;border-radius:99px;
+  font:inherit;font-size:13.5px;letter-spacing:.05em;cursor:pointer;transition:.18s;margin-top:18px}
+@media(hover:hover){.btn:hover{background:var(--her);color:#1B1208;box-shadow:0 10px 26px -16px rgba(232,134,79,1)}}
+.btn.g{border-color:var(--sys);color:#BCE0D1;background:linear-gradient(180deg,rgba(140,187,168,.16),rgba(140,187,168,.05))}
 @media(hover:hover){.btn.g:hover{background:var(--sys);color:#10201B}}
-.btn.q{border-color:var(--line2);color:var(--tx2);font-size:12px;padding:6px 14px}
+.btn.q{border-color:var(--line2);color:var(--tx2);background:none;font-size:12px;padding:7px 15px}
 @media(hover:hover){.btn.q:hover{background:var(--raise);color:var(--tx)}}
 .btn:focus-visible{outline:2px solid var(--sun);outline-offset:3px}
 .row{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
 
-.banner{border-left:3px solid var(--sun);background:linear-gradient(90deg,rgba(239,192,76,.12),transparent 72%);
-  padding:9px 14px;margin-top:18px;font-size:13px;color:var(--sun)}
-.banner.v{border-color:var(--her);background:linear-gradient(90deg,rgba(232,134,79,.13),transparent 72%);color:var(--her)}
-.banner.c{border-color:var(--bad);background:linear-gradient(90deg,rgba(222,114,102,.13),transparent 72%);color:var(--bad)}
-.banner.s{border-color:var(--sys);background:linear-gradient(90deg,rgba(134,181,164,.12),transparent 72%);color:var(--sys)}
+.banner{border-radius:8px;border:1px solid rgba(240,196,78,.3);
+  background:linear-gradient(100deg,rgba(240,196,78,.13),transparent 76%);
+  padding:10px 15px;margin-top:16px;font-size:13px;color:var(--sun)}
+.banner.v{border-color:rgba(232,134,79,.35);background:linear-gradient(100deg,rgba(232,134,79,.14),transparent 76%);color:#F7A878}
+.banner.c{border-color:rgba(222,114,102,.38);background:linear-gradient(100deg,rgba(222,114,102,.14),transparent 76%);color:#EE9388}
+.banner.s{border-color:rgba(140,187,168,.35);background:linear-gradient(100deg,rgba(140,187,168,.13),transparent 76%);color:#A6D3C0}
 
-.deltas{display:grid;grid-template-columns:repeat(auto-fit,minmax(104px,1fr));gap:8px;margin-top:14px}
-.dl{border:1px solid var(--line);padding:8px 10px;background:var(--ink2)}
+.deltas{display:grid;grid-template-columns:repeat(auto-fit,minmax(102px,1fr));gap:8px;margin-top:14px}
+.dl{border:1px solid var(--line);border-radius:7px;padding:9px 11px;background:var(--ink2)}
 .dl .n{font-size:11px;color:var(--tx3)}
-.dl .v{font-family:"Space Mono",monospace;font-size:16px;font-variant-numeric:tabular-nums}
+.dl .v{font-family:"Space Mono",monospace;font-size:17px;font-variant-numeric:tabular-nums}
 .dl .c{font-family:"Space Mono",monospace;font-size:11px;margin-left:5px}
 .up{color:var(--good)}.dn{color:var(--bad)}.fl{color:var(--tx3)}
 
-.ilist{display:flex;flex-direction:column;gap:7px;margin-top:12px}
-.ia{touch-action:manipulation;display:grid;grid-template-columns:1fr auto;gap:10px;align-items:center;border:1px solid var(--line);
-  background:var(--ink2);padding:10px 12px;cursor:pointer;font:inherit;color:var(--tx);text-align:left;transition:.18s;border-radius:3px}
-@media(hover:hover){.ia:hover:not([disabled]){border-color:var(--sun);background:#2A2219}}
-.ia[disabled]{opacity:.36;cursor:default}
-.ia .nm{font-size:14px}
-.ia .cd{font-size:10.5px;color:var(--tx3);font-family:"Space Mono",monospace}
-.ia .st{font-size:11px;color:var(--sun);font-family:"Space Mono",monospace}
-
-/* 碎片图鉴 */
-.fgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:9px;margin-top:14px}
-.fc{border:1px solid var(--line);background:var(--ink2);padding:10px 11px;border-radius:3px;cursor:pointer;text-align:left;font:inherit;color:var(--tx);transition:.18s}
-.fc .r{font-family:"Space Mono",monospace;font-size:9.5px;letter-spacing:.14em}
-.fc .t{font-size:13.5px;margin-top:3px;line-height:1.5}
-.fc.lock{opacity:.3;cursor:default}
+/* ================= 图鉴 ================= */
+.fgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(152px,1fr));gap:9px;margin-top:14px}
+.fc{border:1px solid var(--line);background:var(--ink2);padding:11px 12px;border-radius:8px;cursor:pointer;
+  text-align:left;font:inherit;color:var(--tx);transition:.18s;min-height:72px}
+.fc .r{font-family:"Space Mono",monospace;font-size:9px;letter-spacing:.16em}
+.fc .t{font-size:13.5px;margin-top:4px;line-height:1.5}
+.fc.lock{opacity:.26;cursor:default}
 .fc.n{border-color:var(--line2)} .fc.n .r{color:var(--tx3)}
-.fc.r2{border-color:rgba(239,192,76,.5)} .fc.r2 .r{color:var(--sun)}
-.fc.r3{border-color:rgba(232,134,79,.6);background:linear-gradient(140deg,rgba(232,134,79,.09),var(--ink2))} .fc.r3 .r{color:var(--her)}
-@media(hover:hover){.fc:not(.lock):hover{border-color:var(--sun)}}
-.story{border-left:3px solid var(--sun);padding:4px 0 4px 15px;margin-top:14px;color:var(--cream);font-size:15px;line-height:2}
+.fc.r2{border-color:rgba(240,196,78,.5);background:linear-gradient(145deg,rgba(240,196,78,.07),var(--ink2))} .fc.r2 .r{color:var(--sun)}
+.fc.r3{border-color:rgba(232,134,79,.65);background:linear-gradient(145deg,rgba(232,134,79,.13),var(--ink2));
+  box-shadow:0 0 22px -14px rgba(232,134,79,1)} .fc.r3 .r{color:var(--her)}
+@media(hover:hover){.fc:not(.lock):hover{border-color:var(--sun);transform:translateY(-2px)}}
+.story{border-left:3px solid var(--sun);padding:6px 0 6px 17px;margin-top:16px;color:var(--cream);font-size:15.5px;line-height:2.05}
 
-.nameform{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-top:18px}
-.nameform input{background:var(--ink2);border:1px solid var(--line2);color:var(--tx);font:inherit;font-size:17px;
-  padding:10px 14px;border-radius:3px;width:200px;max-width:100%;text-align:center;letter-spacing:.08em}
+.nameform{display:flex;gap:11px;flex-wrap:wrap;align-items:center;margin-top:20px}
+.nameform input{background:var(--ink2);border:1px solid var(--line2);color:var(--tx);font:inherit;font-size:18px;
+  padding:11px 16px;border-radius:9px;width:210px;max-width:100%;text-align:center;letter-spacing:.1em;
+  font-family:"ZCOOL QingKe HuangYou",cursive}
 .nameform input:focus{outline:2px solid var(--sun);outline-offset:2px;border-color:var(--sun)}
-.hint{font-size:12px;color:var(--tx3);margin-top:8px}
+.nameform .btn{margin-top:0}
+.hint{font-size:12px;color:var(--tx3);margin-top:9px}
 
-.qnum{font-family:"Space Mono",monospace;font-size:11px;letter-spacing:.18em;color:var(--sun)}
-.qtxt{font-size:18.5px;line-height:1.75;margin:8px 0 2px;text-wrap:balance}
-.prog{display:flex;gap:4px;margin-top:14px}
-.prog i{height:2px;flex:1;background:#332A23}.prog i.on{background:var(--her)}
+.qnum{font-family:"Space Mono",monospace;font-size:10.5px;letter-spacing:.18em;color:var(--sun)}
+.qtxt{font-size:19px;line-height:1.75;margin:9px 0 2px;text-wrap:balance}
+.prog{display:flex;gap:4px;margin-top:16px}
+.prog i{height:3px;flex:1;background:#2E2721;border-radius:99px}
+.prog i.on{background:linear-gradient(90deg,var(--her),var(--sun))}
 
-.end{text-align:center;padding:28px 0}
-.end .tier{font-family:"Space Mono",monospace;font-size:11px;letter-spacing:.28em;color:var(--sun)}
-.end h2{font-family:"ZCOOL QingKe HuangYou",cursive;font-size:30px;margin:10px 0 14px;font-weight:400}
+.end{text-align:center;padding:26px 0}
+.end .tier{font-family:"Space Mono",monospace;font-size:10.5px;letter-spacing:.28em;color:var(--sun)}
+.end h2{font-family:"ZCOOL QingKe HuangYou",cursive;font-size:32px;margin:12px 0 16px;font-weight:400}
 .end p{color:var(--tx2);text-align:left;max-width:40em;margin:0 auto 12px;font-size:14.5px}
-.fin{color:var(--cream);font-size:16px;line-height:2;text-align:left;max-width:40em;margin:18px auto 0;
-  border-left:3px solid var(--her);padding-left:16px}
+.fin{color:var(--cream);font-size:16.5px;line-height:2.05;text-align:left;max-width:40em;margin:20px auto 0;
+  border-left:3px solid var(--her);padding-left:17px}
 
 #fx{position:fixed;inset:0;pointer-events:none;z-index:900;overflow:hidden;contain:strict}
 #fx span{position:absolute;left:0;top:0;will-change:transform,opacity;line-height:1;user-select:none}
 #fx .vig{position:absolute;inset:0;background:radial-gradient(ellipse at 50% 25%,transparent 36%,rgba(70,92,120,.38) 100%)}
-.fade{animation:fu .4s cubic-bezier(.2,.8,.3,1) both}
-@keyframes fu{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.fade{animation:fu .42s cubic-bezier(.2,.8,.3,1) both}
+@keyframes fu{from{opacity:0;transform:translateY(9px)}to{opacity:1;transform:none}}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
-.foot{margin-top:28px;color:var(--tx3);font-size:11.5px;display:flex;gap:12px;flex-wrap:wrap;align-items:center}
-.lnk{color:var(--tx3);background:none;border:0;font:inherit;font-size:11.5px;text-decoration:underline;text-underline-offset:3px;cursor:pointer;padding:0}
+.foot{margin-top:30px;color:var(--tx3);font-size:11.5px;display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+.lnk{color:var(--tx3);background:none;border:0;font:inherit;font-size:11.5px;text-decoration:underline;
+  text-underline-offset:3px;cursor:pointer;padding:0}
 @media(hover:hover){.lnk:hover{color:var(--her)}}
-details{margin-top:14px;border-top:1px solid var(--line);padding-top:12px}
+details{margin-top:16px;border-top:1px solid var(--line);padding-top:13px}
 summary{cursor:pointer;font-size:12px;color:var(--tx3);letter-spacing:.06em}
-details ul{margin:10px 0 0;padding-left:18px;color:var(--tx2);font-size:12.5px;line-height:1.9}
+details ul{margin:10px 0 0;padding-left:18px;color:var(--tx2);font-size:12.5px;line-height:1.95}
 
 @media(max-width:480px){
   .wrap{padding:0 14px;padding-block:0 40px}
-  .hud{margin:0 -14px;padding:8px 14px 10px}
-  .hudtop{gap:7px;margin-bottom:7px}
-  .age{font-size:10px}.age b{font-size:17px}
-  .stg{font-size:10.5px;padding:1px 6px}
-  .frag{font-size:10.5px;padding:2px 7px}
-  .bars{grid-template-columns:1fr 1fr;gap:3px 10px}
-  .bar{grid-template-columns:62px 1fr 28px;gap:5px}
-  .bar .n{font-size:9.5px}
-  .bar .v{font-size:11px}
-  h1{font-size:30px;margin-top:24px}
+  .hud{margin:0 -14px;padding:8px 14px 11px}
+  .hudtop{gap:7px;margin-bottom:8px}
+  .agebox{padding:1px 9px 2px}.agebox b{font-size:18px}.agebox s{font-size:8.5px}
+  .stg{font-size:11px}.dayno{display:none}
+  .frag{font-size:10px;padding:2px 8px}
+  .bars{grid-template-columns:1fr 1fr;gap:4px 12px}
+  .bar .n{font-size:10px}.bar .v{font-size:11.5px}
+  .grp{font-size:8.5px;margin:1px 0 4px}
+  h1{font-size:31px;margin-top:24px}
   .lede{font-size:13.5px}
-  .card{padding:15px 14px}
+  .card{padding:15px 14px 14px}
+  .daybar .d{font-size:17px}
   .qtxt{font-size:17px}
   .scene{font-size:14px}
-  .bub{font-size:15px;padding:10px 12px}
+  .bub{font-size:15px;padding:10px 13px}
   .ava{flex:0 0 30px;height:30px;font-size:14px}
   .react{padding-left:18px}
   .opt{padding:13px;font-size:14px}
+  .agrid{grid-template-columns:1fr 1fr;gap:7px}
+  .act{padding:10px 11px;min-height:84px}
+  .act .an{font-size:13.5px}.act .at{font-size:11px}
+  .eff{font-size:9.5px;padding:1px 6px}
+  .routine{padding:10px 12px;gap:10px}
   .btn{min-height:44px}
-  .deltas{grid-template-columns:repeat(auto-fit,minmax(88px,1fr));gap:7px}
+  .deltas{grid-template-columns:repeat(auto-fit,minmax(86px,1fr));gap:7px}
   .fgrid{grid-template-columns:1fr 1fr;gap:7px}
-  .end h2{font-size:25px}
-  .fin{font-size:15px}
+  .end h2{font-size:26px}.fin{font-size:15.5px}
 }
 </style>
 
@@ -736,6 +824,185 @@ const AFTER={t:"隐藏后记 · 她写给你的那封信",
  p:["你集齐了她全部的回忆碎片。那意味着这二十三年里，她每一次欲言又止，你都接住了。","三十岁生日那天，她给了你一个信封。"],
  f:"“我从七岁开始，就一直在偷偷观察一件事：<br>到底要做到什么程度，才会有人一直不走。”<br>“我试过考好成绩，试过当最开朗的那个，试过把所有人都照顾好。”<br>“后来我发现，答案根本不在我这边。”<br>“答案是——有的人就是会留下来。”<br>“谢谢你是那个人。”"};
 
+/* ============ 人物形象 · 内联SVG（六个阶段不同长相，三种表情） ============ */
+const SKIN="#F2C9A8", SKIN2="#E0AE89", HAIRD="#2A1C16", HAIRL="#4A3226", LIP="#C96A5C";
+const LOOK={
+1:{hair:"bob",cloth:"#EDE7DC",cloth2:"#C9C0B2",acc:"scarf",accC:"#D4473F",face:1.0,eye:1.18,bang:"full",tail:"twin",hairC:"#30211A"},
+2:{hair:"long",cloth:"#6E86B8",cloth2:"#53678F",acc:"zip",accC:"#E8E4DC",face:.96,eye:1.08,bang:"full",tail:"pony",hairC:"#2A1C16"},
+3:{hair:"pony",cloth:"#E4E1D8",cloth2:"#A9B4C4",acc:"collar",accC:"#7E93B5",face:.94,eye:1.02,bang:"side",tail:"high",hairC:"#2A1C16"},
+4:{hair:"down",cloth:"#D9C7A8",cloth2:"#B9A484",acc:"phones",accC:"#3A332C",face:.93,eye:1.0,bang:"side",tail:"down",hairC:"#3A2419"},
+5:{hair:"half",cloth:"#E9E6E0",cloth2:"#B7B3AB",acc:"badge",accC:"#8CBBA8",face:.92,eye:.97,bang:"side",tail:"half",hairC:"#2E1F17"},
+6:{hair:"short",cloth:"#E0914F",cloth2:"#BF7236",acc:"earring",accC:"#F0C44E",face:.92,eye:.97,bang:"part",tail:"low",hairC:"#36231A"}
+};
+function face(expr){
+  // expr: happy / calm / sad
+  if(expr==="happy")return{
+    eyeL:'<path d="M40 60 q6 -7 12 0" stroke="#2A1C16" stroke-width="3" fill="none" stroke-linecap="round"/>',
+    eyeR:'<path d="M68 60 q6 -7 12 0" stroke="#2A1C16" stroke-width="3" fill="none" stroke-linecap="round"/>',
+    mouth:'<path d="M53 75 q7 9 14 0" stroke="'+LIP+'" stroke-width="3" fill="none" stroke-linecap="round"/>',
+    brow:'<path d="M39 50 q7 -4 14 -1 M67 49 q7 -3 14 1" stroke="#3A281F" stroke-width="2.2" fill="none" stroke-linecap="round" opacity=".75"/>',
+    blush:'<ellipse cx="38" cy="70" rx="7" ry="4" fill="#E99A83" opacity=".4"/><ellipse cx="82" cy="70" rx="7" ry="4" fill="#E99A83" opacity=".4"/>',extra:""};
+  if(expr==="sad")return{
+    eyeL:'<path d="M40 62 q6 5 12 0" stroke="#2A1C16" stroke-width="3" fill="none" stroke-linecap="round"/>',
+    eyeR:'<path d="M68 62 q6 5 12 0" stroke="#2A1C16" stroke-width="3" fill="none" stroke-linecap="round"/>',
+    mouth:'<path d="M54 79 q6 -6 12 0" stroke="'+LIP+'" stroke-width="2.8" fill="none" stroke-linecap="round"/>',
+    brow:'<path d="M39 48 q7 3 14 5 M67 53 q7 -2 14 -5" stroke="#3A281F" stroke-width="2.2" fill="none" stroke-linecap="round" opacity=".8"/>',
+    blush:"",extra:'<path d="M48 66 q1 8 -1 13" stroke="#8FC4E8" stroke-width="2.6" fill="none" stroke-linecap="round" opacity=".9"/><circle cx="46.6" cy="80" r="2.4" fill="#8FC4E8" opacity=".9"/>'};
+  return{
+    eyeL:'<ellipse cx="46" cy="61" rx="3.4" ry="4.2" fill="#2A1C16"/>',
+    eyeR:'<ellipse cx="74" cy="61" rx="3.4" ry="4.2" fill="#2A1C16"/>',
+    mouth:'<path d="M55 76 q5 4 10 0" stroke="'+LIP+'" stroke-width="2.6" fill="none" stroke-linecap="round"/>',
+    brow:'<path d="M39 50 q7 -2 14 0 M67 50 q7 -2 14 0" stroke="#3A281F" stroke-width="2.2" fill="none" stroke-linecap="round" opacity=".7"/>',
+    blush:'<ellipse cx="38" cy="70" rx="6" ry="3.5" fill="#E99A83" opacity=".26"/><ellipse cx="82" cy="70" rx="6" ry="3.5" fill="#E99A83" opacity=".26"/>',extra:""};
+}
+function hairBack(L){
+  const c=L.hairC;
+  if(L.tail==="twin")return `<ellipse cx="26" cy="72" rx="9" ry="15" fill="${c}"/><ellipse cx="94" cy="72" rx="9" ry="15" fill="${c}"/>`;
+  if(L.tail==="pony")return `<path d="M78 40 q26 16 20 56 q-3 14 -14 12 q8 -34 -10 -60z" fill="${c}"/>`;
+  if(L.tail==="high")return `<path d="M72 26 q30 6 26 44 q-2 18 -12 18 q6 -32 -16 -54z" fill="${c}"/>`;
+  if(L.tail==="down")return `<path d="M22 46 q-10 52 2 78 l96 0 q12 -28 2 -78z" fill="${c}"/>`;
+  if(L.tail==="half")return `<path d="M24 48 q-7 40 1 62 l110 0 q8 -24 1 -62z" fill="${c}"/>`;
+  return `<path d="M26 46 q-6 26 0 40 l88 0 q6 -16 0 -40z" fill="${c}"/>`;
+}
+function hairFront(L){
+  const c=L.hairC;
+  let top=`<path d="M60 20 q34 0 36 34 q1 10 -2 14 q-2 -26 -14 -30 q-16 8 -40 2 q-10 4 -12 28 q-4 -6 -3 -16 q2 -32 35 -32z" fill="${c}"/>`;
+  if(L.bang==="full")top=`<path d="M60 19 q35 0 36 35 q0 8 -2 12 l-2 -16 q-30 8 -62 -2 l-2 18 q-4 -8 -3 -16 q2 -31 35 -31z" fill="${c}"/>
+    <path d="M26 48 q16 10 34 8 q20 -2 34 -10 q2 8 1 14 q-34 10 -70 0 q-1 -6 1 -12z" fill="${c}"/>`;
+  if(L.bang==="side")top=`<path d="M60 19 q35 0 36 35 q0 8 -2 12 l-2 -16 q-26 8 -56 -4 l-6 22 q-5 -8 -4 -18 q2 -31 34 -31z" fill="${c}"/>`;
+  if(L.bang==="part")top=`<path d="M60 19 q35 0 36 35 q0 8 -2 12 l-3 -18 q-14 -8 -31 -6 q-17 -2 -27 8 l-3 14 q-4 -8 -3 -16 q2 -29 33 -29z" fill="${c}"/>`;
+  return top;
+}
+function cloth(L){
+  let acc="";
+  if(L.acc==="scarf")acc=`<path d="M48 108 l12 10 l12 -10 l-4 -4 l-8 7 l-8 -7z" fill="${L.accC}"/><path d="M58 118 l4 0 l5 22 l-7 3 l-6 -3z" fill="${L.accC}"/>`;
+  if(L.acc==="zip")acc=`<rect x="58.5" y="104" width="3" height="40" fill="${L.accC}" opacity=".85"/><path d="M44 106 l16 10 l16 -10" stroke="${L.accC}" stroke-width="3" fill="none"/>`;
+  if(L.acc==="collar")acc=`<path d="M46 104 l14 14 l14 -14 l6 4 l-20 19 l-20 -19z" fill="${L.accC}"/>`;
+  if(L.acc==="phones")acc=`<path d="M34 92 q26 22 52 0" stroke="${L.accC}" stroke-width="4" fill="none" stroke-linecap="round"/><circle cx="33" cy="92" r="6" fill="${L.accC}"/><circle cx="87" cy="92" r="6" fill="${L.accC}"/>`;
+  if(L.acc==="badge")acc=`<path d="M52 104 l8 12 l8 -12" stroke="${L.accC}" stroke-width="2.5" fill="none"/><rect x="66" y="122" width="15" height="19" rx="2.5" fill="${L.accC}" opacity=".9"/><rect x="69" y="126" width="9" height="2" rx="1" fill="#1F2A26"/>`;
+  if(L.acc==="earring")acc=`<circle cx="27" cy="74" r="3.2" fill="${L.accC}"/><circle cx="93" cy="74" r="3.2" fill="${L.accC}"/>`;
+  return `<path d="M60 96 q-30 6 -38 26 q-5 12 -6 22 l88 0 q-1 -10 -6 -22 q-8 -20 -38 -26z" fill="${L.cloth}"/>
+    <path d="M60 96 q-16 4 -24 12 l10 36 l28 0 l10 -36 q-8 -8 -24 -12z" fill="${L.cloth2}" opacity=".55"/>${acc}`;
+}
+function portrait(stage,expr,size){
+  const L=LOOK[stage]||LOOK[1],f=face(expr||"calm"),s=L.face,w=size||120;
+  return `<svg class="pt" viewBox="0 0 120 146" width="${w}" height="${Math.round(w*146/120)}" aria-hidden="true">
+   <defs><clipPath id="pc${stage}"><rect x="0" y="0" width="120" height="146" rx="12"/></clipPath>
+   <linearGradient id="pg${stage}" x1="0" y1="0" x2="0" y2="1">
+     <stop offset="0" stop-color="#3A2F26"/><stop offset="1" stop-color="#241D18"/></linearGradient></defs>
+   <g clip-path="url(#pc${stage})">
+    <rect width="120" height="146" fill="url(#pg${stage})"/>
+    <circle cx="60" cy="40" r="46" fill="#F0C44E" opacity=".10"/>
+    ${hairBack(L)}
+    <g transform="translate(60 68) scale(${s}) translate(-60 -68)">
+      <path d="M38 96 q22 10 44 0 l0 -14 l-44 0z" fill="${SKIN2}"/>
+      <ellipse cx="60" cy="62" rx="31" ry="35" fill="${SKIN}"/>
+      <ellipse cx="29" cy="66" rx="5" ry="7" fill="${SKIN}"/><ellipse cx="91" cy="66" rx="5" ry="7" fill="${SKIN}"/>
+      ${f.blush}${f.brow}
+      <g transform="translate(60 61) scale(${L.eye}) translate(-60 -61)">${f.eyeL}${f.eyeR}</g>
+      <path d="M60 64 q2 5 -1 7" stroke="${SKIN2}" stroke-width="2" fill="none" stroke-linecap="round"/>
+      ${f.mouth}${f.extra}
+      ${hairFront(L)}
+    </g>
+    ${cloth(L)}
+   </g></svg>`;
+}
+/* 小头像（对话用） */
+function head(stage,expr){
+  return `<svg class="hd" viewBox="22 26 76 76" width="38" height="38" aria-hidden="true">${
+    portrait(stage,expr,120).replace(/^<svg[^>]*>/,"").replace(/<\/svg>$/,"")}</svg>`;
+}
+
+/* ============ 场景插画 ============ */
+const SCN={
+ school:{sky:["#3C4A63","#263142"],art:`<rect x="22" y="26" width="46" height="34" rx="2" fill="#4E5F7A" opacity=".8"/><rect x="26" y="30" width="38" height="26" fill="#90A6C4" opacity=".55"/><line x1="45" y1="30" x2="45" y2="56" stroke="#2A3445" stroke-width="2"/><rect x="88" y="40" width="54" height="22" rx="2" fill="#5A4433"/><rect x="92" y="34" width="46" height="8" rx="1.5" fill="#6E5540"/><rect x="170" y="18" width="70" height="44" rx="2" fill="#2F4A3A"/><rect x="176" y="24" width="58" height="32" fill="#3C5C48"/><circle cx="268" cy="26" r="11" fill="#F0C44E" opacity=".65"/>`},
+ home:{sky:["#4A3A30","#2A211B"],art:`<rect x="20" y="30" width="60" height="32" rx="3" fill="#5E4937"/><rect x="26" y="36" width="48" height="26" fill="#7A6049" opacity=".7"/><path d="M110 62 l0 -24 q12 -10 24 0 l0 24z" fill="#C97B4A" opacity=".85"/><rect x="118" y="20" width="8" height="18" fill="#8A6A4E"/><rect x="170" y="36" width="58" height="26" rx="3" fill="#6B5240"/><circle cx="252" cy="28" r="13" fill="#F0C44E" opacity=".5"/><rect x="244" y="40" width="16" height="22" fill="#9A7A58"/>`},
+ night:{sky:["#2A2E46","#15171F"],art:`<circle cx="248" cy="24" r="12" fill="#EFE6C8" opacity=".85"/><circle cx="243" cy="21" r="12" fill="#15171F"/><circle cx="60" cy="18" r="1.6" fill="#FFF" opacity=".8"/><circle cx="120" cy="30" r="1.3" fill="#FFF" opacity=".6"/><circle cx="190" cy="16" r="1.5" fill="#FFF" opacity=".7"/><circle cx="90" cy="44" r="1.2" fill="#FFF" opacity=".5"/><rect x="24" y="44" width="52" height="18" fill="#232838"/><rect x="96" y="36" width="40" height="26" fill="#1E2331"/><rect x="104" y="42" width="10" height="10" fill="#F0C44E" opacity=".75"/><rect x="156" y="48" width="64" height="14" fill="#232838"/>`},
+ office:{sky:["#2E3742","#1B2128"],art:`<rect x="18" y="34" width="70" height="28" rx="2" fill="#3C4752"/><rect x="24" y="38" width="58" height="18" fill="#59707F" opacity=".6"/><rect x="104" y="28" width="52" height="34" rx="2" fill="#39434E"/><rect x="110" y="34" width="40" height="22" fill="#6D8494" opacity=".5"/><rect x="172" y="40" width="78" height="22" rx="2" fill="#44505C"/><rect x="180" y="26" width="26" height="14" rx="2" fill="#5B6C79"/><circle cx="268" cy="24" r="9" fill="#E8864F" opacity=".5"/>`},
+ out:{sky:["#4C6A7A","#2B3C46"],art:`<path d="M0 62 q40 -22 86 -6 q40 14 84 -4 q44 -18 110 2 l0 10 l-280 0z" fill="#3E5C46"/><circle cx="246" cy="22" r="14" fill="#F0C44E" opacity=".7"/><path d="M60 62 l0 -20 q-10 -2 -8 -10 q8 -6 16 0 q10 -2 10 8 q0 6 -8 8 l0 14z" fill="#3A5742"/><path d="M196 62 l0 -16 q-8 -2 -6 -9 q7 -5 14 0 q8 -1 8 7 q0 5 -7 7 l0 11z" fill="#36523E"/>`},
+ stage:{sky:["#3B2740","#1E1424"],art:`<path d="M30 62 l34 -44 l12 0 l-30 44z" fill="#F0C44E" opacity=".22"/><path d="M250 62 l-34 -44 l-12 0 l30 44z" fill="#E8864F" opacity=".22"/><rect x="0" y="54" width="280" height="8" fill="#5A3C2A"/><circle cx="140" cy="34" r="16" fill="#F0C44E" opacity=".35"/><rect x="18" y="14" width="10" height="40" fill="#2A1C2E"/><rect x="252" y="14" width="10" height="40" fill="#2A1C2E"/>`},
+ party:{sky:["#50323A","#2A1B20"],art:`<circle cx="60" cy="26" r="10" fill="#E8864F" opacity=".7"/><circle cx="96" cy="20" r="7" fill="#F0C44E" opacity=".7"/><circle cx="130" cy="28" r="8" fill="#8CBBA8" opacity=".6"/><rect x="96" y="40" width="88" height="22" rx="4" fill="#E6D2BA"/><rect x="96" y="40" width="88" height="7" rx="3" fill="#D8B493"/><rect x="138" y="28" width="3" height="12" fill="#F0C44E"/><circle cx="139.5" cy="26" r="3" fill="#FFD98A"/><path d="M200 62 l0 -18 l18 0 l0 18z" fill="#B5704A"/>`},
+ clinic:{sky:["#38444A","#20282C"],art:`<rect x="20" y="30" width="64" height="32" rx="3" fill="#D8DEE0" opacity=".25"/><path d="M46 36 l12 0 l0 8 l8 0 l0 12 l-8 0 l0 8 l-12 0 l0 -8 l-8 0 l0 -12 l8 0z" fill="#8CBBA8" opacity=".55"/><rect x="110" y="42" width="80" height="20" rx="3" fill="#46525A"/><rect x="118" y="34" width="26" height="8" rx="2" fill="#5E6E78"/><rect x="214" y="36" width="46" height="26" rx="3" fill="#404C54"/>`}
+};
+function sceneBand(key){
+  const c=SCN[key]||SCN.home;
+  return `<svg class="band" viewBox="0 0 280 62" preserveAspectRatio="none" aria-hidden="true">
+    <defs><linearGradient id="sg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="${c.sky[0]}"/><stop offset="1" stop-color="${c.sky[1]}"/></linearGradient></defs>
+    <rect width="280" height="62" fill="url(#sg)"/>${c.art}</svg>`;
+}
+function motifOf(txt,stage){
+  const t=String(txt||"");
+  if(/凌晨|半夜|深夜|台灯|睡不着|夜里|两点|三点|一点/.test(t))return "night";
+  if(/台上|演出|汇演|舞台|谢幕|主持|分享|演讲/.test(t))return "stage";
+  if(/生日|蛋糕|礼物|清单/.test(t))return "party";
+  if(/体检|医院|报告|失眠|药/.test(t))return "clinic";
+  if(/操场|跑|运动会|公园|长椅|火车|地铁|街/.test(t))return "out";
+  if(/工位|加班|方案|领导|周报|甲方|会议|简历|实习|offer|裁员|署名|同事/i.test(t))return "office";
+  if(/教室|老师|同学|班|考|点名|卷子|家长会|学校|课/.test(t))return "school";
+  return stage>=5?"office":stage>=4?"out":"home";
+}
+
+/* ============ 白天固定日程 ============ */
+const ROUTINE={
+ 1:{n:"上学",ic:"🎒",t:"七点半的闹钟，排队做早操，四节课，中午在食堂抢窗口。",d:{grade:0.7,spress:0.6,focus:0.25,eq:0.1}},
+ 2:{n:"上学",ic:"📘",t:"早自习到晚自习，中间隔着一整个青春期。",d:{grade:0.8,spress:0.9,ident:-0.1}},
+ 3:{n:"上学 · 高考倒计时",ic:"⏳",t:"五点半起，十一点回。墙上的数字每天少一个。",d:{grade:1.0,spress:1.3,goal:0.1}},
+ 4:{n:"上课",ic:"🎓",t:"大课小课，点名靠运气，课表自己排。",d:{major:0.6,spress:0,social:0.15}},
+ 5:{n:"上班",ic:"💼",t:"九点打卡，日报周报，会从下午两点开到六点。",d:{work:0.8,money:0.45,stress:0.9}},
+ 6:{n:"上班",ic:"🏙",t:"熟门熟路了。熟到有时候会走神想别的。",d:{work:0.55,career:0.1,stress:0.7}}
+};
+/* ============ 放学后 / 下班后 · 自选安排 ============ */
+const ACTV=[
+/* --- 小学 --- */
+{s:1,n:"写作业",t:"摊开本子，一道一道啃。",d:{grade:3.4,focus:2.2,spress:1.6,mood:-1.4},r:"写完了！你检查一下嘛。"},
+{s:1,n:"上补习班",t:"周三周五各一次，回来天已经黑了。",d:{grade:5,focus:1.6,spress:4,mood:-3,emo:-1.2},r:"……我今天好困。但是那道题我会了。"},
+{s:1,n:"兴趣班 · 上台那种",t:"合唱、朗诵、小主持，哪个都想试。",d:{mood:4.6,love:1.6,emo:2,eq:1.2,grade:-1.4,focus:-0.8},r:"老师让我站第一排！"},
+{s:1,n:"楼下疯跑一小时",t:"和一群小孩玩到路灯亮。",d:{mood:5,stress:-4.5,emo:2.6,eq:1,grade:-2,focus:-1.2},r:"我们玩了一个新游戏！规则是我定的！"},
+{s:1,n:"一起读绘本",t:"一人一页，念错要重来。",d:{focus:4,eq:2.2,trust:2.4,mood:2.2,grade:1},r:"下一页我念！你别抢。"},
+{s:1,n:"看动画片",t:"就看一集。说好的。",d:{mood:3.6,stress:-2.6,focus:-2.6,grade:-1.4},r:"再一集……最后一集！"},
+{s:1,n:"今天早点睡",t:"九点关灯，台灯也关。",d:{stress:-5,emo:3.4,spress:-3,grade:-1.2,focus:1.2},r:"那你讲个故事再走。"},
+/* --- 初中 --- */
+{s:2,n:"刷题",t:"一本五三，一支红笔。",d:{grade:4.4,spress:3.4,focus:1.4,mood:-2},r:"错了七道。……别看。"},
+{s:2,n:"上补习班",t:"周末两个半天，教室在六楼。",d:{grade:5.4,spress:4.4,mood:-3,emo:-1.4},r:"今天讲的我都会了。真的。"},
+{s:2,n:"去操场跑两圈",t:"不为别的，就是想喘口气。",d:{look:-3.6,stress:-4.4,emo:2.6,mood:2.4,grade:-1.2},r:"跑完好像没那么烦了。"},
+{s:2,n:"和朋友出去玩",t:"奶茶店坐一下午，什么正事也没干。",d:{ident:3.6,mood:4.4,eq:2.2,social:0,grade:-2,spress:-2.4},r:"她们说我讲笑话最好笑。"},
+{s:2,n:"研究穿搭和护肤",t:"对着镜子换了五套。",d:{look:-5,mood:3,ident:2.4,grade:-1.6},r:"这样是不是好看一点……算了你别看。"},
+{s:2,n:"写日记",t:"写给谁都不是，就写给自己。",d:{emo:3.6,ident:2.8,stress:-3.4,eq:1},r:"……不给你看。"},
+{s:2,n:"今天早点睡",t:"十点半，手机扣下。",d:{stress:-5,emo:3.4,spress:-3,look:-1.2,grade:-1.2},r:"行吧。那你别吵我。"},
+/* --- 高中 --- */
+{s:3,n:"刷题到十一点",t:"做完一套理综，手是抖的。",d:{grade:5,spress:4.6,emo:-2.2,mood:-2.2},r:"还行。再来一套我也行。"},
+{s:3,n:"一对一补课",t:"贵，但确实补得动。",d:{grade:6,spress:3.4,conf:1.4,mood:-2.4},r:"老师说我那块其实不弱。"},
+{s:3,n:"查大学和专业",t:"招生简章翻到凌晨。",d:{goal:5.4,conf:2.4,mood:1.6,grade:-1.6},r:"我找到一个特别想去的学校。你听我说——"},
+{s:3,n:"跑步",t:"晚自习前绕操场四圈。",d:{stress:-5,emo:3,conf:1.8,spress:-2.6,grade:-1},r:"跑的时候脑子是空的，挺好。"},
+{s:3,n:"去找老师聊聊",t:"不是聊分数，是聊以后。",d:{goal:4.6,conf:2.6,eq:2,trust:1.4,grade:1},r:"老师说我适合跟人打交道的方向。"},
+{s:3,n:"偷偷画画 / 看小说",t:"课本下面压着另一本。",d:{mood:5,stress:-3.6,emo:2.4,conf:1.4,grade:-2.6,spress:-1.4},r:"就二十分钟。真的就二十分钟。"},
+{s:3,n:"今天早点睡",t:"十点半熄灯，闹钟往后调半小时。",d:{stress:-5.6,emo:3.8,spress:-3.6,grade:-1.4},r:"……好。那明天我早起补。"},
+/* --- 大学 --- */
+{s:4,n:"泡图书馆",t:"啃专业书，啃到闭馆音乐响。",d:{major:5,intern:1.6,conf:1.4,social:-1.6,mood:-1.6},r:"今天看懂了一整章。"},
+{s:4,n:"跑社团活动",t:"策划、拉赞助、熬夜改海报。",d:{social:5,mood:3.6,conf:2.4,eq:2,major:-2,stress:1.4},r:"这次活动是我主持的！"},
+{s:4,n:"改简历 / 作品集",t:"又是一个版本号。",d:{intern:5.4,conf:-1.4,stress:2.4,major:1},r:"版本11。总有一版能行吧。"},
+{s:4,n:"去实习",t:"地铁一小时，打杂也认。",d:{intern:6,major:2,stress:3,mood:-2.2,money:0},r:"今天带教让我自己做了一页。"},
+{s:4,n:"健身房",t:"练到说不出话。",d:{stress:-5,conf:2.6,emo:3,mood:2},r:"我今天加了五公斤。"},
+{s:4,n:"和朋友通宵聊天",t:"从食堂聊到天台。",d:{social:5,emo:3,mood:4.4,eq:1.6,stress:1.6,major:-1.6},r:"我们聊到四点。她们都说我特别会聊。"},
+{s:4,n:"一个人待一天",t:"谁也不见，给自己充电。",d:{stress:-5.6,emo:4,social:-2.4,mood:1.6},r:"今天谁都没理，舒服。"},
+/* --- 职场 --- */
+{s:5,n:"加班打磨方案",t:"办公楼最后两层灯。",d:{work:5.4,money:1.6,stress:4,mood:-3,resil:-1},r:"这版我自己挺满意的。"},
+{s:5,n:"复盘 / 学新技能",t:"下班后再给自己上两小时课。",d:{work:4.6,resil:2.4,career:0,mood:-1.6,stress:1.4},r:"学了个新工具，下次能快一半。"},
+{s:5,n:"攒钱 / 理财",t:"记账，退订，比价。",d:{money:5,mood:-2,resil:1.4},r:"这个月存下来了。有点安全感。"},
+{s:5,n:"接个副业",t:"周末两天全搭进去。",d:{money:5.4,work:1.6,stress:3.6,mood:-2.4,rel:-1.4},r:"多一份收入，心就定一点。"},
+{s:5,n:"经营亲密关系",t:"好好吃一顿饭，手机扣着。",d:{rel:5,mood:3.4,emo:2.4,eq:1.6,work:-1.6},r:"今天没聊工作，挺好的。"},
+{s:5,n:"运动",t:"夜跑五公里。",d:{stress:-5.4,resil:2.6,emo:3,mood:2},r:"跑完才觉得这一天是我自己的。"},
+{s:5,n:"请假躺一天",t:"窗帘不拉开，什么也不干。",d:{stress:-7,emo:4.6,mood:4,work:-2.4,money:-1.4},r:"……我好久没有这样了。"},
+/* --- 稳定 --- */
+{s:6,n:"深耕手上的项目",t:"做那件已经做了很久的事。",d:{career:5,work:3.4,stress:2.2,mood:-1.4},r:"它开始像个东西了。"},
+{s:6,n:"做那件一直想做的事",t:"没人要求你做，所以更难开始。",d:{career:5.4,accept:4.4,mood:3.4,work:-2,stress:1.4},r:"今天写了第一行。只写了第一行。"},
+{s:6,n:"去做心理咨询",t:"一周一次，五十分钟。",d:{accept:5.4,stress:-5.4,emo:4,rel:1.4,work:-1},r:"她问了我一个我自己从来不敢问的问题。"},
+{s:6,n:"经营亲密关系",t:"把时间真的花在那个人身上。",d:{rel:5.4,mood:3.4,emo:2.4,eq:1.6,work:-1.6},r:"我们今天聊了以后的事。"},
+{s:6,n:"规律作息 + 运动",t:"十一点睡，七点起，跑三公里。",d:{stress:-5.6,emo:3.6,accept:2.4,work:1.4},r:"身体好像在还我钱。"},
+{s:6,n:"带新人 / 对外分享",t:"把自己踩过的坑讲给别人。",d:{career:4,eq:3,work:2.4,conf:0,mood:2},r:"有人说我讲得清楚。……我挺开心的。"},
+{s:6,n:"彻底放空一天",t:"不计划，不复盘，不自责。",d:{stress:-6.6,emo:4.6,accept:3.4,mood:3.4,work:-2,career:-1.4},r:"原来什么都不干也不会塌。"}
+];
+
 /* ============ 引擎 ============ */
 const $=id=>document.getElementById(id);
 const cl=v=>Math.max(0,Math.min(100,Math.round(v*10)/10));
@@ -759,7 +1026,7 @@ const FX={
   p:[["#D9C9A8","#EFE4CE","#B9A98A"],["#C7D6C0","#E6EFE1","#9FB398"],["#E8D3B0","#F6ECD9","#C0A880"],["#CFD8DE","#E9EFF3","#A3B0BA"]],
   m:["rise","wave","corners"],badge:null,cap:18,base:9,per:0}};
 let fxSeq=0;
-function judge(g){
+function J0(g){
   let h=0,net=0;
   for(const k in g){const rv=IND[k]&&IND[k].rev?-1:1;net+=g[k]*rv;if(g[k]*rv<0)h-=g[k]*rv}
   if(net>=4)return{v:1,mag:Math.max(1,net/4)};
@@ -872,7 +1139,8 @@ function riskTick(){
 /* ---------- 渲染 ---------- */
 function render(h){$("app").innerHTML=h;const c=$("app").firstElementChild;if(c)c.classList.add("fade");save()}
 function on(id,fn){const e=$(id);if(e)e.onclick=fn}
-function say(q,av){return q?`<div class="say"><span class="ava ${av?"sad":""}">${av||T("{N}").slice(0,1)}</span><div class="bub">${T(q)}</div></div>`:""}
+function curExpr(){const m=S.A.mood||50,e=S.A.emo||50;return (m>=70&&e>=65)?"happy":(m<=45||e<=45)?"sad":"calm"}
+function say(q,ex){const x=ex||curExpr();return q?`<div class="say"><span class="ava ${x==="sad"?"sad":""}">${head(stageOf(S.day).k,x)}</span><div class="bub">${T(q)}</div></div>`:""}
 function hud(){
   const h=$("hud");if(S.ph==="name"||S.ph==="quiz"){h.hidden=true;return}
   h.hidden=false;
@@ -971,73 +1239,111 @@ function pickEvent(){
   return {k:"ev",d:p.e,ord:shuf(p.e.o.length)};
 }
 function nextEvent(){
-  const st=stageOf(S.day);
-  const L=SLINE[st.k];
+  const st=stageOf(S.day),L=SLINE[st.k];
   if(L&&!S.lines[st.k]&&S.A.trust>=L.need.trust&&S.A.love>=L.need.love&&S.day>=st.d0+4){
     S.lines[st.k]=1;S.cur={k:"st",d:L,ord:shuf(L.o.length)};
   } else S.cur=pickEvent();
-  S.acts=0;S.pre={...S.A};
-  step();
+  S.acts=0;S.today=null;S.pre={...S.A};
+  actStep();
+}
+function effChips(d){
+  const act=stageOf(S.day).ind;
+  return Object.keys(d).filter(k=>act.includes(k)&&Math.abs(d[k])>=1).sort((a,b)=>Math.abs(d[b])-Math.abs(d[a])).slice(0,4)
+   .map(k=>{const good=IND[k].rev?d[k]<0:d[k]>0;const big=Math.abs(d[k])>=4;
+     return `<span class="eff ${good?"u":"d"}">${IND[k].n}${good?"↑":"↓"}${big?(good?"↑":"↓"):""}</span>`}).join("");
+}
+function actStep(){
+  hud();const st=stageOf(S.day),rt=ROUTINE[st.k];
+  const list=ACTV.filter(a=>a.s===st.k);
+  const lei=LEI.filter(l=>l.st.includes(st.k));
+  render(`<div style="padding-top:12px">${bans()}
+    <div class="daybar"><span class="d">第 ${S.day} 天</span><span class="s">${ageOf(S.day)} 岁 · ${st.n}</span></div>
+    <div class="routine"><span class="ic">${rt.ic}</span>
+      <span><span class="h">白天 · ${T(rt.n)}（固定）</span><span class="p">${T(rt.t)}</span></span></div>
+    <div class="card tight"><div class="eyebrow">${st.k>=5?"下班之后":"放学之后"} · 今天安排她做什么</div>
+      <div class="agrid">
+        ${list.map((a,i)=>`<button class="act" data-i="${i}">
+            <span class="an">${T(a.n)}</span><span class="at">${T(a.t)}</span>
+            <span class="fx">${effChips(a.d)}</span></button>`).join("")}
+        ${lei.length?`<button class="act sp" data-lei="1">
+            <span class="an">陪${T("{N}")}出去</span><span class="at">把这半天整个给她。五轮对话 + 一个分支。</span>
+            <span class="fx"><span class="eff u">信任↑</span><span class="eff u">爱意↑</span><span class="eff u">碎片</span></span></button>`:""}
+      </div></div></div>`);
+  document.querySelectorAll(".act").forEach(b=>b.onclick=()=>{
+    apply(rt.d);
+    if(b.dataset.lei){leisurePick();return}
+    const a=list[+b.dataset.i];apply(a.d);
+    S.today={r:T(rt.n),a:T(a.n),ar:T(a.r)};
+    step();
+  });
+}
+function leisurePick(){
+  hud();const st=stageOf(S.day),lei=LEI.filter(l=>l.st.includes(st.k));
+  render(`<div style="padding-top:12px">
+    <div class="daybar"><span class="d">第 ${S.day} 天</span><span class="s">陪${T("{N}")}出去</span></div>
+    <div class="card tight"><div class="eyebrow">选一件事</div><div class="agrid">
+      ${lei.map(l=>`<button class="act sp" data-id="${l.id}"><span class="an">${T(l.n)}</span><span class="at">${l.cd}</span></button>`).join("")}
+    </div></div></div>`);
+  document.querySelectorAll(".act").forEach(b=>b.onclick=()=>leisure(b.dataset.id));
 }
 function step(){
-  hud();const it=S.cur,d=it.d;
-  render(`<div style="padding-top:16px">${bans()}
+  hud();const it=S.cur,d=it.d,st=stageOf(S.day);
+  const mo=motifOf(T(d.sc)+T(d.q),st.k);
+  render(`<div style="padding-top:12px">${bans()}
     ${d.bt?`<div class="banner v">${T(d.bt)}</div>`:""}
-    <div class="card"><div class="eyebrow">${ageOf(S.day)} 岁 · ${stageOf(S.day).n} · 第 ${S.day} 天</div>
-      <p class="scene">${T(d.sc)}</p>${say(d.q)}
-      <div class="opts">${it.ord.map((oi,i)=>{const o=d.o[oi];
-        return `<button class="opt" data-i="${oi}"><span class="k">${"ABCD"[i]}</span><span class="tx">${T(o.tx)}</span>${o.tag?`<span class="tag">倾向：${T(o.tag)}</span>`:""}</button>`}).join("")}</div>
-    </div></div>`);
+    <div class="card pic">
+      ${sceneBand(mo)}
+      <div class="evbody">
+        <div class="pfwrap">${portrait(st.k,curExpr(),100)}</div>
+        <div><div class="eyebrow">${ageOf(S.day)} 岁 · ${st.n} · 第 ${S.day} 天</div>
+          ${S.today?`<div class="todaystrip"><span>白天 <b>${S.today.r}</b></span><span class="sep">·</span>
+             <span>放学后 <b>${S.today.a}</b></span></div>
+             <p class="scene" style="margin-top:10px">${T(d.sc)}</p>`
+            :`<p class="scene" style="margin-top:10px">${T(d.sc)}</p>`}
+        </div>
+      </div>
+      <div class="evfoot">
+        ${S.today&&S.today.ar?say(S.today.ar,"happy"):""}
+        ${say(d.q)}
+        <div class="opts">${it.ord.map((oi,i)=>{const o=d.o[oi];
+          return `<button class="opt" data-i="${oi}"><span class="k">${"ABCD"[i]}</span><span class="tx">${T(o.tx)}</span>${o.tag?`<span class="tag">倾向：${T(o.tag)}</span>`:""}</button>`}).join("")}</div>
+      </div></div></div>`);
   document.querySelectorAll(".opt").forEach(b=>b.onclick=()=>resolve(+b.dataset.i));
 }
 function resolve(i){
-  const it=S.cur,d=it.d,o=d.o[i],pos=it.ord.indexOf(i);
-  const g=apply(o.d);if(o.f)getFrag(o.f);
-  const J=judge(o.d);if(J.v>0)apply({eq:0.8});
-  hud();
-  render(`<div style="padding-top:16px"><div class="card">
-      <div class="eyebrow">${ageOf(S.day)} 岁 · ${stageOf(S.day).n} · 第 ${S.day} 天</div>
-      <p class="scene">${T(d.sc)}</p>${say(d.q)}
-      <div class="opts"><button class="opt picked" disabled><span class="k">${"ABCD"[pos<0?0:pos]}</span><span class="tx">${T(o.tx)}</span></button></div>
-      <div class="react">${say(o.r,J.v<0?PICK(SADFACE):"")}</div>
-    </div>${bans()}
-    <button class="btn" id="nx">继续</button></div>`);
-  burst(J.v>0?"love":J.v<0?"cry":"smile",J.mag);
-  on("nx",dayEnd);
-}
-
-/* ---------- 一天结束 ---------- */
-function dayEnd(){
+  const it=S.cur,d=it.d,o=d.o[i],pos=it.ord.indexOf(i),st=stageOf(S.day);
+  apply(o.d);if(J0(o.d).v>0)apply({eq:0.8});if(o.f)getFrag(o.f);
+  const J=J0(o.d);
   const r=riskTick();
   hud();
-  if(r)return ending(r);
-  const A=S.A,p=S.pre,st=stageOf(S.day);
+  const A=S.A,p=S.pre;
   const rows=st.ind.filter(k=>Math.abs((A[k]||0)-(p[k]||0))>0.05).map(k=>{
     const c=Math.round((A[k]-p[k])*10)/10,good=IND[k].rev?c<0:c>0;
     return `<div class="dl"><div class="n">${IND[k].n}</div><div class="v">${Math.round(A[k])}<span class="c ${good?"up":"dn"}">${c>0?"▲"+c:"▼"+Math.abs(c)}</span></div></div>`}).join("");
-  const avail=LEI.filter(l=>l.st.includes(st.k));
-  const list=avail.map(l=>`<button class="ia" data-id="${l.id}" ${S.acts?"disabled":""}>
-    <span><span class="nm">${T(l.n)}</span><br><span class="cd">${l.cd}</span></span>
-    <span class="st">${S.acts?"今日已用":"发起"}</span></button>`).join("");
-  const last=S.day>=200, boundary=S.day===st.d1&&!last;
-  render(`<div style="padding-top:16px">${bans()}
-    <div class="card"><div class="eyebrow">第 ${S.day} 天 · 变动</div>
-      ${rows?`<div class="deltas">${rows}</div>`:`<p class="scene" style="margin:0">今天风平浪静。</p>`}</div>
-    <div class="card"><div class="eyebrow">主动陪她做点什么 · 每天一次</div><div class="ilist">${list}</div></div>
-    <div class="row">
-      <button class="btn" id="nx">${last?"三十岁 · 终章结算":boundary?"进入下一个阶段":"进入第 "+(S.day+1)+" 天"}</button>
-      ${last?"":`<button class="btn q" id="sk">快进 7 天（自动中庸应对）</button>`}
-    </div></div>`);
-  document.querySelectorAll(".ia").forEach(b=>b.onclick=()=>leisure(b.dataset.id));
-  on("nx",()=>{ if(last)return finale(); advance(); });
+  const last=S.day>=200,boundary=S.day===st.d1&&!last;
+  render(`<div style="padding-top:12px"><div class="card pic">
+      ${sceneBand(motifOf(T(d.sc)+T(d.q),st.k))}
+      <div class="evbody"><div class="pfwrap">${portrait(st.k,J.v>0?"happy":J.v<0?"sad":"calm",100)}</div>
+        <div><div class="eyebrow">${ageOf(S.day)} 岁 · ${st.n} · 第 ${S.day} 天</div>
+        <p class="scene" style="margin-top:10px">${T(d.sc)}</p></div></div>
+      <div class="evfoot">${say(d.q)}
+        <div class="opts"><button class="opt picked" disabled><span class="k">${"ABCD"[pos<0?0:pos]}</span><span class="tx">${T(o.tx)}</span></button></div>
+        <div class="react">${say(o.r,J.v>0?"happy":J.v<0?"sad":"calm")}</div></div>
+    </div>${bans()}
+    ${rows?`<div class="card tight"><div class="eyebrow">今天的变动</div><div class="deltas">${rows}</div></div>`:""}
+    <div class="row"><button class="btn" id="nx">${last?"三十岁 · 终章结算":boundary?"进入下一个阶段":"进入第 "+(S.day+1)+" 天"}</button>
+      ${last?"":`<button class="btn q" id="sk">快进 7 天（自动中庸）</button>`}</div></div>`);
+  burst(J.v>0?"love":J.v<0?"cry":"smile",J.mag);
+  if(r)return on("nx",()=>ending(r)),on("sk",()=>ending(r));
+  on("nx",()=>{if(last)return finale();advance()});
   on("sk",skip);
 }
 function decay(){
-  // 生活是会往下漂的：每过一天，所有生效指标的“健康度”自然下滑，
-  // 你每天只能顾到三四项，剩下的就会掉——这是这个游戏真正的取舍。
+  // 生活会往下漂：高于62的生效指标每天自然回落，低于62就不再掉。
+  // 你一天只顾得上三四项，想让某一项真正站稳，就得反复回去喂它。
   const act=stageOf(S.day).ind;
   act.forEach(k=>{
-    if(hp(k)<=62)return;              // 只磨损盈余，不会把她单独推进危险区
+    if(hp(k)<=62)return;
     const d=IND[k].p?0.35:0.8;
     S.A[k]=cl(S.A[k]+(IND[k].rev?d:-d));
   });
@@ -1052,24 +1358,24 @@ function advance(){
 }
 function skip(){
   for(let n=0;n<7&&S.day<200;n++){
-    const old=stageOf(S.day);
-    S.day++;
-    const nw=stageOf(S.day);
-    if(nw.k!==old.k){return stageBreak(old,nw)}
     decay();
-    S.cur=pickEvent();S.acts=0;S.pre={...S.A};
-    const d=S.cur.d;
-    let best=d.o[0],bn=1e9;
-    d.o.forEach(o=>{const j=judge(o.d);const sc=Math.abs(j.v);if(sc<bn){bn=sc;best=o}});
+    const old=stageOf(S.day);S.day++;
+    const nw=stageOf(S.day);
+    if(nw.k!==old.k)return stageBreak(old,nw);
+    const st=nw,rt=ROUTINE[st.k];apply(rt.d);
+    const pool=ACTV.filter(a=>a.s===st.k);
+    let pa=pool[0],pb=1e9;pool.forEach(a=>{const v=Math.abs(J0(a.d).v);if(v<pb){pb=v;pa=a}});
+    apply(pa.d);
+    S.cur=pickEvent();S.acts=0;S.today={r:T(rt.n),a:T(pa.n),ar:T(pa.r)};S.pre={...S.A};
+    const d=S.cur.d;let best=d.o[0],bn=1e9;
+    d.o.forEach(o=>{const v=Math.abs(J0(o.d).v);if(v<bn){bn=v;best=o}});
     apply(best.d);
     const r=riskTick();
     if(r){hud();return ending(r)}
   }
-  S.cur=pickEvent();S.acts=0;S.pre={...S.A};
   if(S.day>=200)return finale();
-  step();
+  nextEvent();
 }
-
 /* ---------- 阶段结算 ---------- */
 function stageBreak(old,nw){
   old.seal.forEach(k=>{});
@@ -1110,7 +1416,7 @@ function leisure(id,bi,log){
       <div class="opts">${od.map((oi,i)=>`<button class="opt" data-i="${oi}"><span class="k">${"ABCD"[i]}</span><span class="tx">${T(b.o[oi].tx)}</span></button>`).join("")}</div>
       </div></div>`);
     document.querySelectorAll(".opt").forEach(x=>x.onclick=()=>{
-      const o=b.o[+x.dataset.i];const J=judge(o.d);if(J.v>0)apply({eq:0.8});apply(o.d);
+      const o=b.o[+x.dataset.i];const J=J0(o.d);if(J.v>0)apply({eq:0.8});apply(o.d);
       burst(J.v>0?"love":J.v<0?"cry":"smile",J.mag);
       const nl=log+say(b.q)+`<div class="say me"><div class="bub">${T(o.tx)}</div></div>`+
         `<div class="react">${say(o.r,J.v<0?PICK(SADFACE):"")}</div>`;
@@ -1124,30 +1430,16 @@ function leisure(id,bi,log){
     <div class="opts">${od.map((oi,i)=>`<button class="opt" data-i="${oi}"><span class="k">${"ABCD"[i]}</span><span class="tx">${T(f.o[oi].tx)}</span><span class="tag">倾向：${T(f.o[oi].tag)}</span></button>`).join("")}</div>
     </div></div>`);
   document.querySelectorAll(".opt").forEach(x=>x.onclick=()=>{
-    const o=f.o[+x.dataset.i];const J=judge(o.d);if(J.v>0)apply({eq:0.8});apply(o.d);if(o.f)getFrag(o.f);
+    const o=f.o[+x.dataset.i];const J=J0(o.d);if(J.v>0)apply({eq:0.8});apply(o.d);if(o.f)getFrag(o.f);
     S.acts=1;hud();
     render(`<div style="padding-top:16px"><div class="card"><p class="scene">${T(f.sc)}</p>${say(f.q)}
       <div class="opts"><button class="opt picked" disabled><span class="tx">${T(o.tx)}</span></button></div>
       <div class="react">${say(o.r,J.v<0?PICK(SADFACE):"")}</div></div>${bans()}
       <button class="btn" id="bk">回到今天</button></div>`);
     burst(J.v>0?"love":J.v<0?"cry":"smile",J.mag);
-    on("bk",()=>{const r=S.A.trust<=15||S.A.love<=15?"cut":null;if(r)return ending(r);dayEndQuiet()});
+    on("bk",()=>{const r=S.A.trust<=15||S.A.love<=15?"cut":null;if(r)return ending(r);S.today={r:T(ROUTINE[stageOf(S.day).k].n),a:T(l.n),ar:""};step()});
   });
 }
-function dayEndQuiet(){S.pre={...S.pre};dayEnd2()}
-function dayEnd2(){
-  hud();const A=S.A,st=stageOf(S.day);
-  const avail=LEI.filter(l=>l.st.includes(st.k));
-  const list=avail.map(l=>`<button class="ia" disabled><span><span class="nm">${T(l.n)}</span><br><span class="cd">${l.cd}</span></span><span class="st">今日已用</span></button>`).join("");
-  const last=S.day>=200,boundary=S.day===st.d1&&!last;
-  render(`<div style="padding-top:16px">${bans()}
-    <div class="card"><div class="eyebrow">第 ${S.day} 天 · 当前面板</div>
-      <div class="deltas">${st.ind.map(k=>`<div class="dl"><div class="n">${IND[k].n}</div><div class="v">${Math.round(A[k])}</div></div>`).join("")}</div></div>
-    <div class="card"><div class="eyebrow">主动陪她做点什么 · 每天一次</div><div class="ilist">${list}</div></div>
-    <div class="row"><button class="btn" id="nx">${last?"三十岁 · 终章结算":boundary?"进入下一个阶段":"进入第 "+(S.day+1)+" 天"}</button></div></div>`);
-  on("nx",()=>{if(last)return finale();advance()});
-}
-
 /* ---------- 碎片图鉴 ---------- */
 function atlas(){
   hud();
